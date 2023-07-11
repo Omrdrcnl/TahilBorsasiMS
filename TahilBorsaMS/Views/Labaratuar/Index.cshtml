@@ -1,0 +1,33 @@
+﻿@using TahilBorsaMS.Models.Entity
+@model List<tblLabData> 
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container">
+
+    <h2>Labaratuar Verileri</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Ürün Adı</th>
+            <th>Ürün Değeri</th>
+            <th>Sahibi</th>
+
+        </tr>
+        @foreach (var l in Model)
+        {
+            <tr>
+                <td>@l.Id</td>
+                <td>@l.tblProduct.Name</td>
+                <td>@l.NutritionalValue</td>
+                <td>@l.tblFarmer.FirstName &nbsp;@l.tblFarmer.LastName</td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+

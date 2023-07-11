@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FarmerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LabaratuarController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\TradesmanController.cs" />
     <Compile Include="Global.asax.cs">
@@ -250,6 +251,7 @@
     <Content Include="Views\Product\AddProduct.cshtml" />
     <Content Include="Views\Farmer\Farmer.cshtml" />
     <Content Include="Views\Tradesman\Index.cshtml" />
+    <Content Include="Views\Labaratuar\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
