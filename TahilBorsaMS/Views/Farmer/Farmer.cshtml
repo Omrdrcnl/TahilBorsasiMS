@@ -1,0 +1,35 @@
+﻿@using TahilBorsaMS.Models.Entity
+
+@model List<tblFarmer>
+
+
+@{
+    ViewBag.Title = "Farmer";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="container">
+    <h2>Çiftçi Paneli</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Adı</th>
+            <th>Soyadı</th>
+            <th>İletişim</th>
+            <th>Adres</th>
+           
+        </tr>
+        @foreach (var f in Model)
+        {
+            <tr>
+                <td>@f.Id</td>
+                <td>@f.FirstName</td>
+                <td>@f.LastName</td>
+                <td>@f.Contact</td>
+                <td>@f.tblAddress.FullAddress</td>
+                <td class="text-center"> <button class="btn btn-success">Güncelle</button>  <button class="btn btn-danger">Sil</button></td>
+               
+            </tr>
+        }
+    </table>
+    <button class="btn btn-primary">Yeni Kayıt Ekle</button>
+</div>

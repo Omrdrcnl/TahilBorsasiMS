@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahilBorsaMS", "TahilBorsaMS\TahilBorsaMS.csproj", "{F3590A36-D518-4F12-A187-AA4985880AFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3590A36-D518-4F12-A187-AA4985880AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3590A36-D518-4F12-A187-AA4985880AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3590A36-D518-4F12-A187-AA4985880AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3590A36-D518-4F12-A187-AA4985880AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54E094ED-AE2A-4B9A-974B-A6C9275382D9}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,31 @@
+﻿@using TahilBorsaMS.Models.Entity  @*@@// MODELİN İÇİNDEKİ DEĞERLERE ULAŞIYORUZ*@
+@model List<tblProduct>  
+    @*@@// BU MODEL ARACILIGIYLADA TABLOYA ULASACAZ.*@
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2 style="margin:auto">Index</h2>
+
+<h1 style="margin:auto">Burası Product sayfası</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            Ürün Id
+        </th>
+        <th>
+            Ürün Adı
+        </th>
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Name</td>
+        </tr>
+    }
+</table>
+<a href="~/Product/AddProduct" class="btn btn-primary">Yeni Ürün Ekle</a>
