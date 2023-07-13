@@ -18,7 +18,6 @@ namespace TahilBorsaMS.Models.Entity
         public tblProduct()
         {
             this.tblLabData = new HashSet<tblLabData>();
-            this.tblSales = new HashSet<tblSales>();
         }
     
         public int Id { get; set; }

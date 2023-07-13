@@ -22,9 +22,5 @@ namespace TahilBorsaMS.Models.Entity
         public Nullable<decimal> BasePrice { get; set; }
         public Nullable<decimal> ActualPrice { get; set; }
         public Nullable<int> Quantity { get; set; }
-    
-        public virtual tblFarmer tblFarmer { get; set; }
-        public virtual tblProduct tblProduct { get; set; }
-        public virtual tblTradesman tblTradesman { get; set; }
     }
 }
