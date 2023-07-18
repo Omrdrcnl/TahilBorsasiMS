@@ -8,7 +8,7 @@
 
 
 
-@using (Html.BeginForm("EditProduct", "Product", FormMethod.Post))
+@using (Html.BeginForm("EditFarmer", "Farmer", FormMethod.Post))
 {
     <div class="form form-control container">
 
@@ -21,9 +21,11 @@
         <label>Soyadı</label>
         @Html.TextAreaFor(p => p.LastName, new { @class = "form-control" })
         <label>Şehir</label>
-        @Html.TextBoxFor(p => p.tblAddress.tblDistrict.tblCity.Name, new { @class = "form-control" })
+        @Html.DropDownListFor(p => p.tblAddress.CityId, ViewBag.CityList as IEnumerable<SelectListItem>, "Şehir Seçin", new { @class = "form-control" })
         <label>İlçe</label>
-        @Html.TextBoxFor(p => p.tblAddress.tblDistrict.Name, new { @class = "form-control" })
+        @Html.DropDownListFor(p => p.tblAddress.DistrictId, ViewBag.DistrictList as IEnumerable<SelectListItem>, "İlçe Seçin", new { @class = "form-control" })
+        <label>Mahalle/Köy</label>
+        @Html.TextBoxFor(p => p.tblAddress.NeighborhoodName, new { @class = "form-control" })
         <label>Çiftçi Adres</label>
         @Html.TextBoxFor(p => p.tblAddress.FullAddress, new { @class = "form-control" })
         <label>İletişim</label>

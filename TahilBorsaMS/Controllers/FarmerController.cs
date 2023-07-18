@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using TahilBorsaMS.Models.Entity;
 using TahilBorsaMS.Controllers;
 using System.Data.Entity.Validation;
+using Antlr.Runtime;
 
 namespace TahilBorsaMS.Controllers
 {
@@ -27,7 +28,7 @@ namespace TahilBorsaMS.Controllers
                                              Text = f.Name,
                                              Value = f.Id.ToString(),
                                          }).ToList();
-            ViewBag.Farmer = list;
+            ViewBag.CityList = list;
 
             List<SelectListItem> listD = (from f in db.tblDistrict.ToList()
                                           select new SelectListItem
@@ -36,7 +37,7 @@ namespace TahilBorsaMS.Controllers
                                               Value = f.Id.ToString(),
 
                                           }).ToList();
-            ViewBag.City = listD;
+            ViewBag.District = listD;
 
             return View();
         }
@@ -46,11 +47,11 @@ namespace TahilBorsaMS.Controllers
         {
             if (ModelState.IsValid)
             {
-              
+
                 //Adres nesnesi olusturup bilgileri adres tablosuna gönderiyoruz
                 tblAddress address = new tblAddress
                 {
-                    CityId= farmer.tblAddress.tblDistrict.tblCity.Id,
+                    CityId = farmer.tblAddress.tblDistrict.tblCity.Id,
                     NeighborhoodName = farmer.tblAddress.NeighborhoodName,
                     DistrictId = farmer.tblAddress.tblDistrict.Id,
                     FullAddress = farmer.tblAddress.FullAddress
@@ -58,16 +59,13 @@ namespace TahilBorsaMS.Controllers
 
                 farmer.tblAddress = address;
 
-                
+
                 db.tblFarmer.Add(farmer);
                 db.SaveChanges();
 
                 return RedirectToAction("Index");
             }
 
-           
-            ViewBag.CityList = new SelectList(db.tblCity.ToList(), "Id", "Name");
-            ViewBag.DistrictList = new SelectList(db.tblDistrict.ToList(), "Id", "Name");
 
             return View(farmer);
         }
@@ -87,35 +85,49 @@ namespace TahilBorsaMS.Controllers
         {
             var f = db.tblFarmer.Find(id);
 
+            //İL VE İLÇELERİ CALL SAYFASINA TAŞIMA
+
+            ViewBag.CityList = new SelectList(db.tblCity.ToList(), "Id", "Name");
+            ViewBag.DistrictList = new SelectList(db.tblDistrict.ToList(), "Id", "Name");
 
             return View(f);
         }
+
+       
         public ActionResult EditFarmer(tblFarmer f)
         {
-            var farmer = db.tblFarmer.Find(f.Id);
-            farmer.FirstName = f.FirstName;
-            farmer.LastName = f.LastName;
-            farmer.BirthDate = f.BirthDate;
-            farmer.Contact = f.Contact;
+            if (ModelState.IsValid)
+            {
+                var farmer = db.tblFarmer.Find(f.Id);
 
-            farmer.AddressID = f.AddressID;
-            try
-            {
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            catch (DbEntityValidationException ex)
-            {
-                foreach (var validationErrors in ex.EntityValidationErrors)
+                if (farmer != null)
                 {
-                    foreach (var validationError in validationErrors.ValidationErrors)
+                    farmer.FirstName = f.FirstName;
+                    farmer.LastName = f.LastName;
+                    farmer.BirthDate = f.BirthDate;
+                    farmer.Contact = f.Contact;
+                
+                    tblAddress address = new tblAddress
                     {
-                        System.Diagnostics.Debug.WriteLine($"Property: {validationError.PropertyName} Error: {validationError.ErrorMessage}");
-                    }
-                }
-                throw;
-            }
+                        Id = f.tblAddress.Id,
+                        CityId = f.tblAddress.CityId,
+                        DistrictId = f.tblAddress.DistrictId,
+                        FullAddress = f.tblAddress.FullAddress,
+                        NeighborhoodName = f.tblAddress.NeighborhoodName,
+                    };
+                    farmer.tblAddress = address;
 
+
+
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+
+
+                }
+            }
+         
+
+            return RedirectToAction("Index");
 
         }
     }
