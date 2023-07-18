@@ -1,0 +1,35 @@
+﻿@model TahilBorsaMS.Models.Entity.tblFarmer
+
+@{
+    ViewBag.Title = "CallFarmer";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+
+@using (Html.BeginForm("EditProduct", "Product", FormMethod.Post))
+{
+    <div class="form form-control container">
+
+        <h1>Çiftçi Bilgilerini Güncelle</h1>
+        <br />
+        <label>Id</label>
+        @Html.TextBoxFor(p => p.Id, new { @class = "form-control" })
+        <label>Adı</label>
+        @Html.TextBoxFor(p => p.FirstName, new { @class = "form-control" })
+        <label>Soyadı</label>
+        @Html.TextAreaFor(p => p.LastName, new { @class = "form-control" })
+        <label>Şehir</label>
+        @Html.TextBoxFor(p => p.tblAddress.tblDistrict.tblCity.Name, new { @class = "form-control" })
+        <label>İlçe</label>
+        @Html.TextBoxFor(p => p.tblAddress.tblDistrict.Name, new { @class = "form-control" })
+        <label>Çiftçi Adres</label>
+        @Html.TextBoxFor(p => p.tblAddress.FullAddress, new { @class = "form-control" })
+        <label>İletişim</label>
+        @Html.TextBoxFor(p => p.Contact, new { @class = "form-control" })
+        <label>Doğum Tarihi</label>
+        @Html.TextBoxFor(p => p.BirthDate, new { @class = "form-control" })
+        <button class="btn my-3 btn-warning">Çiftçi Bilgilerini Güncelle</button>
+    </div>
+}

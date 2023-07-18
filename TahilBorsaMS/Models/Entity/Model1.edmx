@@ -20,9 +20,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DistrictId" Type="int" Nullable="false" />
-          <Property Name="NeighborhoodName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="FullAddress" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DistrictId" Type="int" />
+          <Property Name="CityId" Type="int" />
+          <Property Name="NeighborhoodName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullAddress" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="tblCity">
           <Key>
@@ -57,7 +58,7 @@
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Contact" Type="nvarchar" MaxLength="50" />
-          <Property Name="AddressID" Type="int" Nullable="false" />
+          <Property Name="AddressID" Type="int" />
           <Property Name="BirthDate" Type="date" />
         </EntityType>
         <EntityType Name="tblLabData">
@@ -110,11 +111,23 @@
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Contact" Type="nvarchar" MaxLength="50" />
-          <Property Name="AddressId" Type="int" Nullable="false" />
+          <Property Name="AddressId" Type="int" />
           <Property Name="Birthdate" Type="date" />
         </EntityType>
+        <Association Name="FK_tblAddress_tblCity">
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
+          <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblAddress">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tblAddress_tblDistrict1">
-          <End Role="tblDistrict" Type="Self.tblDistrict" Multiplicity="1" />
+          <End Role="tblDistrict" Type="Self.tblDistrict" Multiplicity="0..1" />
           <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblDistrict">
@@ -162,7 +175,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_tblFarmer_tblAddress">
-          <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="1" />
+          <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="0..1" />
           <End Role="tblFarmer" Type="Self.tblFarmer" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblAddress">
@@ -234,7 +247,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_tblTradesman_tblAddress">
-          <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="1" />
+          <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="0..1" />
           <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblAddress">
@@ -258,6 +271,10 @@
           <EntitySet Name="tblSale" EntityType="Self.tblSale" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblSaleTrades" EntityType="Self.tblSaleTrades" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblTradesman" EntityType="Self.tblTradesman" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tblAddress_tblCity" Association="Self.FK_tblAddress_tblCity">
+            <End Role="tblCity" EntitySet="tblCity" />
+            <End Role="tblAddress" EntitySet="tblAddress" />
+          </AssociationSet>
           <AssociationSet Name="FK_tblAddress_tblDistrict1" Association="Self.FK_tblAddress_tblDistrict1">
             <End Role="tblDistrict" EntitySet="tblDistrict" />
             <End Role="tblAddress" EntitySet="tblAddress" />
@@ -323,9 +340,11 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DistrictId" Type="Int32" Nullable="false" />
-          <Property Name="NeighborhoodName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="FullAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DistrictId" Type="Int32" />
+          <Property Name="CityId" Type="Int32" />
+          <Property Name="NeighborhoodName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblCity" Relationship="Self.FK_tblAddress_tblCity" FromRole="tblAddress" ToRole="tblCity" />
           <NavigationProperty Name="tblDistrict" Relationship="Self.FK_tblAddress_tblDistrict1" FromRole="tblAddress" ToRole="tblDistrict" />
           <NavigationProperty Name="tblFarmer" Relationship="Self.FK_tblFarmer_tblAddress" FromRole="tblAddress" ToRole="tblFarmer" />
           <NavigationProperty Name="tblTradesman" Relationship="Self.FK_tblTradesman_tblAddress" FromRole="tblAddress" ToRole="tblTradesman" />
@@ -336,6 +355,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblAddress_tblCity" FromRole="tblCity" ToRole="tblAddress" />
           <NavigationProperty Name="tblDistrict" Relationship="Self.FK_tblDistrict_tblCity1" FromRole="tblCity" ToRole="tblDistrict" />
         </EntityType>
         <EntityType Name="tblDistrict">
@@ -369,7 +389,7 @@
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="AddressID" Type="Int32" Nullable="false" />
+          <Property Name="AddressID" Type="Int32" />
           <Property Name="BirthDate" Type="DateTime" Precision="0" />
           <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblFarmer_tblAddress" FromRole="tblFarmer" ToRole="tblAddress" />
           <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblEntryProduct_tblFarmer" FromRole="tblFarmer" ToRole="tblEntryProduct" />
@@ -433,13 +453,25 @@
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="AddressId" Type="Int32" Nullable="false" />
+          <Property Name="AddressId" Type="Int32" />
           <Property Name="Birthdate" Type="DateTime" Precision="0" />
           <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblTradesman_tblAddress" FromRole="tblTradesman" ToRole="tblAddress" />
           <NavigationProperty Name="tblSaleTrades" Relationship="Self.FK_tblSaleTrades_tblTradesman" FromRole="tblTradesman" ToRole="tblSaleTrades" />
         </EntityType>
+        <Association Name="FK_tblAddress_tblCity">
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
+          <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblAddress">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tblAddress_tblDistrict1">
-          <End Role="tblDistrict" Type="Self.tblDistrict" Multiplicity="1" />
+          <End Role="tblDistrict" Type="Self.tblDistrict" Multiplicity="0..1" />
           <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblDistrict">
@@ -451,7 +483,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_tblFarmer_tblAddress">
-          <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="1" />
+          <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="0..1" />
           <End Role="tblFarmer" Type="Self.tblFarmer" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblAddress">
@@ -463,7 +495,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_tblTradesman_tblAddress">
-          <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="1" />
+          <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="0..1" />
           <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblAddress">
@@ -570,7 +602,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DbTahilEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DbGrainExchangeEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="tblAddress" EntityType="Self.tblAddress" />
           <EntitySet Name="tblCity" EntityType="Self.tblCity" />
@@ -583,6 +615,10 @@
           <EntitySet Name="tblSale" EntityType="Self.tblSale" />
           <EntitySet Name="tblSaleTrades" EntityType="Self.tblSaleTrades" />
           <EntitySet Name="tblTradesman" EntityType="Self.tblTradesman" />
+          <AssociationSet Name="FK_tblAddress_tblCity" Association="Self.FK_tblAddress_tblCity">
+            <End Role="tblCity" EntitySet="tblCity" />
+            <End Role="tblAddress" EntitySet="tblAddress" />
+          </AssociationSet>
           <AssociationSet Name="FK_tblAddress_tblDistrict1" Association="Self.FK_tblAddress_tblDistrict1">
             <End Role="tblDistrict" EntitySet="tblDistrict" />
             <End Role="tblAddress" EntitySet="tblAddress" />
@@ -633,7 +669,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DbGrainExchangeModelStoreContainer" CdmEntityContainer="DbTahilEntities">
+        <EntityContainerMapping StorageEntityContainer="DbGrainExchangeModelStoreContainer" CdmEntityContainer="DbGrainExchangeEntities2">
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
@@ -650,6 +686,7 @@
               <MappingFragment StoreEntitySet="tblAddress">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
                 <ScalarProperty Name="NeighborhoodName" ColumnName="NeighborhoodName" />
                 <ScalarProperty Name="FullAddress" ColumnName="FullAddress" />
               </MappingFragment>

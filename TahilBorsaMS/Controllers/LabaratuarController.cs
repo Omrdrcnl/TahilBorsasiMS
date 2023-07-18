@@ -10,7 +10,7 @@ namespace TahilBorsaMS.Controllers
 {
     public class LabaratuarController : Controller
     {
-        DbTahilEntities db = new DbTahilEntities();
+        DbGrainExchangeEntities2 db = new DbGrainExchangeEntities2();
 
         public ActionResult Index() 
         {

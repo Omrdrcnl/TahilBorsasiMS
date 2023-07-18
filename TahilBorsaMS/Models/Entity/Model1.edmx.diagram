@@ -4,19 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1af7e7654e33405ab1af235e06d36724" Name="Diagram1">
-        <EntityTypeShape EntityType="DbGrainExchangeModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblAddress" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblCity" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblDistrict" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblEntryProduct" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblFarmer" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblLabData" Width="1.5" PointX="12" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblLastProduct" Width="1.5" PointX="14.25" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblProductName" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblSale" Width="1.5" PointX="16.5" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblSaleTrades" Width="1.5" PointX="18.75" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblTradesman" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
+      <Diagram DiagramId="7b9014e853654344bb90c68a68e55701" Name="Diagram1">
+        <EntityTypeShape EntityType="DbGrainExchangeModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblAddress" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblCity" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblDistrict" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblEntryProduct" Width="1.5" PointX="9.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblFarmer" Width="1.5" PointX="7.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblLabData" Width="1.5" PointX="12" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblLastProduct" Width="1.5" PointX="14.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblProductName" Width="1.5" PointX="7.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblSale" Width="1.5" PointX="16.5" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblSaleTrades" Width="1.5" PointX="18.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblTradesman" Width="1.5" PointX="7.5" PointY="9.25" IsExpanded="true" />
+        <AssociationConnector Association="DbGrainExchangeModel.FK_tblAddress_tblCity" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblAddress_tblDistrict1" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblFarmer_tblAddress" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblTradesman_tblAddress" ManuallyRouted="false" />

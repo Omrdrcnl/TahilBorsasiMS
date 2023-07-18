@@ -4,7 +4,7 @@
 
 
 @{
-    ViewBag.Title = "Farmer";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 <div class="container">
@@ -14,8 +14,14 @@
             <th>Id</th>
             <th>Adı</th>
             <th>Soyadı</th>
+            <th>Doğum Tarihi</th>
             <th>İletişim</th>
+            <th>Şehir</th>
+            <th>İlçe</th>
+            <th>Mahalle/Köy</th>
             <th>Adres</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
            
         </tr>
         @foreach (var f in Model)
@@ -24,12 +30,17 @@
                 <td>@f.Id</td>
                 <td>@f.FirstName</td>
                 <td>@f.LastName</td>
+                <td>@f.BirthDate</td>
                 <td>@f.Contact</td>
+                <td>@f.tblAddress.tblCity.Name</td>
+                <td>@f.tblAddress.tblDistrict.Name</td>
+                <td>@f.tblAddress.NeighborhoodName</td>
                 <td>@f.tblAddress.FullAddress</td>
-                <td class="text-center"> <button class="btn btn-success">Güncelle</button>  <button class="btn btn-danger">Sil</button></td>
+                <td><a class="btn btn-danger" href="~/Farmer/DeleteFarmer/@f.Id">Sil</a></td>
+                <td><a class="btn btn-success" href="~/Farmer/CallFarmer/@f.Id">Güncelle</a></td>
                
             </tr>
         }
     </table>
-    <button class="btn btn-primary">Yeni Kayıt Ekle</button>
+    <a href="~/Farmer/AddFarmer" class="btn btn-primary">Yeni Kayıt Ekle</a>
 </div>

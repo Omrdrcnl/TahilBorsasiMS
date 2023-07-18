@@ -24,7 +24,7 @@ namespace TahilBorsaMS.Models.Entity
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Contact { get; set; }
-        public int AddressID { get; set; }
+        public Nullable<int> AddressID { get; set; }
         public Nullable<System.DateTime> BirthDate { get; set; }
     
         public virtual tblAddress tblAddress { get; set; }

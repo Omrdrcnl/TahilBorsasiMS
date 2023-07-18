@@ -1,0 +1,33 @@
+﻿@model TahilBorsaMS.Models.Entity.tblFarmer
+
+@{
+    ViewBag.Title = "AddFarmer";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<form class="form-control container" method="post">
+
+    <label>Adı</label>
+    @Html.TextBoxFor(p => p.FirstName, new { @class = "form-control" })
+    <label>Soyadı</label>
+    @Html.TextBoxFor(p => p.LastName, new { @class = "form-control" })
+    <label>Şehir</label>
+    @Html.DropDownListFor(P => P.tblAddress.tblDistrict.tblCity.Id, (List<SelectListItem>)ViewBag.Farmer, new { @class = "form-control" })
+
+    <label>İlçe</label>
+    @Html.DropDownListFor(P => P.tblAddress.tblDistrict.Id, (List<SelectListItem>)ViewBag.City, new { @class = "form-control" })
+    <label>Mahalle/Köy</label>
+    @Html.TextBoxFor(p => p.tblAddress.NeighborhoodName, new { @class = "form-control" })
+    <label>Adres</label>
+    @Html.TextBoxFor(p => p.tblAddress.FullAddress, new { @class = "form-control" })
+    <label>İletişim</label>
+    @Html.TextBoxFor(p => p.Contact, new { @class = "form-control" })
+    <label>Doğum Tarihi</label>
+    @Html.TextBoxFor(p => p.BirthDate, new { @class = "form-control" })
+
+
+
+
+    <button type="submit" class="btn my-3 btn-warning">Çiftçi Bilgilerini Ekle</button>
+</form>
+
+

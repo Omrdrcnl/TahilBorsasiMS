@@ -261,11 +261,13 @@
     <Content Include="Views\Shared\Layout.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Product\AddProduct.cshtml" />
-    <Content Include="Views\Farmer\Farmer.cshtml" />
+    <Content Include="Views\Farmer\Index.cshtml" />
     <Content Include="Views\Tradesman\Index.cshtml" />
     <Content Include="Views\Labaratuar\Index.cshtml" />
     <Content Include="Views\Labaratuar\AddLabData.cshtml" />
     <Content Include="Views\Product\CallProduct.cshtml" />
+    <Content Include="Views\Farmer\CallFarmer.cshtml" />
+    <Content Include="Views\Farmer\AddFarmer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

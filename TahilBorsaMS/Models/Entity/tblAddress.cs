@@ -22,10 +22,12 @@ namespace TahilBorsaMS.Models.Entity
         }
     
         public int Id { get; set; }
-        public int DistrictId { get; set; }
+        public Nullable<int> DistrictId { get; set; }
+        public Nullable<int> CityId { get; set; }
         public string NeighborhoodName { get; set; }
         public string FullAddress { get; set; }
     
+        public virtual tblCity tblCity { get; set; }
         public virtual tblDistrict tblDistrict { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblFarmer> tblFarmer { get; set; }
