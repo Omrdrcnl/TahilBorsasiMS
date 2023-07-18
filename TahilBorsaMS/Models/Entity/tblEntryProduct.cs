@@ -12,20 +12,23 @@ namespace TahilBorsaMS.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class tblLabData
+    public partial class tblEntryProduct
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblLabData()
+        public tblEntryProduct()
         {
-            this.tblLastProduct = new HashSet<tblLastProduct>();
+            this.tblLabData = new HashSet<tblLabData>();
         }
     
         public int Id { get; set; }
-        public Nullable<int> EntryProductId { get; set; }
-        public Nullable<int> NutritionalValue { get; set; }
+        public Nullable<byte> ProductNameId { get; set; }
+        public Nullable<int> FarmerId { get; set; }
+        public Nullable<int> Quantity { get; set; }
+        public Nullable<System.DateTime> DateTime { get; set; }
     
-        public virtual tblEntryProduct tblEntryProduct { get; set; }
+        public virtual tblFarmer tblFarmer { get; set; }
+        public virtual tblProductName tblProductName { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblLastProduct> tblLastProduct { get; set; }
+        public virtual ICollection<tblLabData> tblLabData { get; set; }
     }
 }

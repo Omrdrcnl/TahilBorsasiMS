@@ -10,12 +10,25 @@ namespace TahilBorsaMS.Controllers
 {
     public class LabaratuarController : Controller
     {
-        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
-        // GET: Labaratuar
-        public ActionResult Index()
+        DbTahilEntities db = new DbTahilEntities();
+
+        public ActionResult Index() 
         {
-            var lab = db.tblLabData.ToList();
-            return View(lab);
+            var data = db.tblLabData.ToList();
+            return View(data);
+        }
+        [HttpGet]
+        public ActionResult AddLaBData()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddLaBData(tblLabData l)
+        {
+            db.tblLabData.Add(l);
+            db.SaveChanges();
+            return View();
         }
     }
 }

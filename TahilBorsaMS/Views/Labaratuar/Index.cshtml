@@ -1,5 +1,7 @@
 ﻿@using TahilBorsaMS.Models.Entity
-@model List<tblLabData> 
+
+@model List<tblLabData>
+
 
 @{
     ViewBag.Title = "Index";
@@ -8,22 +10,29 @@
 
 <div class="container">
 
-    <h2>Labaratuar Verileri</h2>
+    <h2>Yeni Veri Girişi</h2>
+
+    <div class="my-5">
+       <a class="btn btn-primary" href="~/Labaratuar/AddLabData">Yeni Veri Girişi</a>
+    </div>
+
+    <h2>Geçmiş Labaratuar Verileri</h2>
     <table class="table table-bordered">
         <tr>
             <th>Id</th>
             <th>Ürün Adı</th>
             <th>Ürün Değeri</th>
             <th>Sahibi</th>
-
         </tr>
+
         @foreach (var l in Model)
         {
             <tr>
-                <td>@l.Id</td>
-                <td>@l.tblProduct.Name</td>
+                
+                <td>@l.ProductId</td>
+                <td>@l.ProductId</td>
                 <td>@l.NutritionalValue</td>
-                <td>@l.tblFarmer.FirstName &nbsp;@l.tblFarmer.LastName</td>
+                @*<td>@l.tblFarmer.FirstName</td>*@
             </tr>
         }
 

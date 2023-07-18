@@ -17,7 +17,7 @@ namespace TahilBorsaMS.Models.Entity
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tblTradesman()
         {
-            this.tblSales = new HashSet<tblSales>();
+            this.tblSaleTrades = new HashSet<tblSaleTrades>();
         }
     
         public int Id { get; set; }
@@ -29,6 +29,6 @@ namespace TahilBorsaMS.Models.Entity
     
         public virtual tblAddress tblAddress { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblSales> tblSales { get; set; }
+        public virtual ICollection<tblSaleTrades> tblSaleTrades { get; set; }
     }
 }

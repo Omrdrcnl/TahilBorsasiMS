@@ -1,31 +1,38 @@
 ﻿@using TahilBorsaMS.Models.Entity  @*@@// MODELİN İÇİNDEKİ DEĞERLERE ULAŞIYORUZ*@
-@model List<tblProduct>  
-    @*@@// BU MODEL ARACILIGIYLADA TABLOYA ULASACAZ.*@
+@model List<tblProductName>
+@*@@// BU MODEL ARACILIGIYLADA TABLOYA ULASACAZ.*@
 
 @{
     ViewBag.Title = "Product";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<h2 style="margin:auto">Index</h2>
-
-<h1 style="margin:auto">Burası Product sayfası</h1>
-
-<table class="table table-bordered">
-    <tr>
-        <th>
-            Ürün Id
-        </th>
-        <th>
-            Ürün Adı
-        </th>
-    </tr>
-    @foreach (var product in Model)
-    {
+<div class="container">
+    <table class="table table-bordered">
         <tr>
-            <td>@product.Id</td>
-            <td>@product.Name</td>
+            <th>
+                Ürün Id
+            </th>
+            <th>
+                Ürün Adı
+            </th>
+            <th>
+                Ürün Hakkında Bilgiler
+            </th>
+            <th>Sil</th>
+            <th>Güncelle</th>
         </tr>
-    }
-</table>
-<a href="~/Product/AddProduct" class="btn btn-primary">Yeni Ürün Ekle</a>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Information</td>
+                <td><a href="~/Product/DeleteProduct/@product.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="~/Product/CallProduct/@product.Id" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="~/Product/AddProduct" class="btn btn-primary">Yeni Ürün Ekle</a>
+</div>
+

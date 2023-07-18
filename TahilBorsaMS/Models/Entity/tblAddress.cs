@@ -26,10 +26,10 @@ namespace TahilBorsaMS.Models.Entity
         public string NeighborhoodName { get; set; }
         public string FullAddress { get; set; }
     
+        public virtual tblDistrict tblDistrict { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblFarmer> tblFarmer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblTradesman> tblTradesman { get; set; }
-        public virtual tblDistrict tblDistrict { get; set; }
     }
 }

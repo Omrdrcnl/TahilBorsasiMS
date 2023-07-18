@@ -1,0 +1,21 @@
+﻿@model TahilBorsaMS.Models.Entity.tblLabData
+@{
+    ViewBag.Title = "AddLaBData";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container">
+    <form class="form form-control" method="post">
+        <div class="my-5">
+            <label>Ürün Id</label>
+            <p>Buraya Ürünler dropboxla yerleşecek</p>
+        </div>
+        <div class="my-5">
+            <label>Ürün Besin Değeri</label>
+            @Html.TextBoxFor( l => l.NutritionalValue, new { @Class = "form-control" })
+        </div>
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
+   
+</div>
+

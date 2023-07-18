@@ -1,0 +1,22 @@
+﻿
+@model TahilBorsaMS.Models.Entity.tblProductName
+@{
+    ViewBag.Title = "CallProduct";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("EditProduct", "Product", FormMethod.Post))
+{
+    <div class="form form-control container">
+        
+        <h1>Ürün Güncelle</h1>
+        <br />
+        <label>Ürün Id</label>
+        @Html.TextBoxFor(p => p.Id, new { @class = "form-control" })
+        <label>Ürün Adı</label>
+        @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
+        <label>Ürün Bilgisi</label>
+        @Html.TextAreaFor(p => p.Information, new { @class = "form-control" })
+        <button class="btn my-3 btn-warning">Ürünü Güncelle</button>
+    </div>
+}

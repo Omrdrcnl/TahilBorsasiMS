@@ -151,6 +151,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\tblAddress.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -160,16 +163,25 @@
     <Compile Include="Models\Entity\tblDistrict.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\tblEntryProduct.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\tblFarmer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\tblLabData.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entity\tblProduct.cs">
+    <Compile Include="Models\Entity\tblLastProduct.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entity\tblSales.cs">
+    <Compile Include="Models\Entity\tblProductName.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\tblSale.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\tblSaleTrades.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\tblTradesman.cs">
@@ -252,6 +264,8 @@
     <Content Include="Views\Farmer\Farmer.cshtml" />
     <Content Include="Views\Tradesman\Index.cshtml" />
     <Content Include="Views\Labaratuar\Index.cshtml" />
+    <Content Include="Views\Labaratuar\AddLabData.cshtml" />
+    <Content Include="Views\Product\CallProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

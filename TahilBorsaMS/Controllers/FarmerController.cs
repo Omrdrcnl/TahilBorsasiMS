@@ -10,7 +10,7 @@ namespace TahilBorsaMS.Controllers
 {
     public class FarmerController : Controller
     {
-        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
+        DbTahilEntities db = new DbTahilEntities();
         // GET: Farmer
         public ActionResult Farmer()
         {

@@ -13,10 +13,10 @@ namespace TahilBorsaMS.Models.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DbGrainExchangeEntities : DbContext
+    public partial class DbTahilEntities : DbContext
     {
-        public DbGrainExchangeEntities()
-            : base("name=DbGrainExchangeEntities")
+        public DbTahilEntities()
+            : base("name=DbTahilEntities")
         {
         }
     
@@ -25,13 +25,17 @@ namespace TahilBorsaMS.Models.Entity
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<tblAddress> tblAddress { get; set; }
         public virtual DbSet<tblCity> tblCity { get; set; }
         public virtual DbSet<tblDistrict> tblDistrict { get; set; }
+        public virtual DbSet<tblEntryProduct> tblEntryProduct { get; set; }
         public virtual DbSet<tblFarmer> tblFarmer { get; set; }
         public virtual DbSet<tblLabData> tblLabData { get; set; }
-        public virtual DbSet<tblProduct> tblProduct { get; set; }
-        public virtual DbSet<tblSales> tblSales { get; set; }
+        public virtual DbSet<tblLastProduct> tblLastProduct { get; set; }
+        public virtual DbSet<tblProductName> tblProductName { get; set; }
+        public virtual DbSet<tblSale> tblSale { get; set; }
+        public virtual DbSet<tblSaleTrades> tblSaleTrades { get; set; }
         public virtual DbSet<tblTradesman> tblTradesman { get; set; }
     }
 }

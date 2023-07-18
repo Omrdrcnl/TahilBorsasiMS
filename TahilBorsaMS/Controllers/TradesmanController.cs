@@ -10,7 +10,7 @@ namespace TahilBorsaMS.Controllers
 {
     public class TradesmanController : Controller
     {
-        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
+        DbTahilEntities db = new DbTahilEntities();
         // GET: Tradesman
         public ActionResult Index()
         {
