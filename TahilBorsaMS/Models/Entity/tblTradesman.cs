@@ -23,6 +23,7 @@ namespace TahilBorsaMS.Models.Entity
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string IdentityNo { get; set; }
         public string Contact { get; set; }
         public Nullable<int> AddressId { get; set; }
         public Nullable<System.DateTime> Birthdate { get; set; }
@@ -30,5 +31,7 @@ namespace TahilBorsaMS.Models.Entity
         public virtual tblAddress tblAddress { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblSaleTrades> tblSaleTrades { get; set; }
+        public virtual tblTradesman tblTradesman1 { get; set; }
+        public virtual tblTradesman tblTradesman2 { get; set; }
     }
 }

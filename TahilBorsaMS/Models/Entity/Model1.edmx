@@ -57,6 +57,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IdentityNo" Type="nchar" MaxLength="11" Nullable="false" />
           <Property Name="Contact" Type="nvarchar" MaxLength="50" />
           <Property Name="AddressID" Type="int" />
           <Property Name="BirthDate" Type="date" />
@@ -107,9 +108,10 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IdentityNo" Type="nchar" MaxLength="11" Nullable="false" />
           <Property Name="Contact" Type="nvarchar" MaxLength="50" />
           <Property Name="AddressId" Type="int" />
           <Property Name="Birthdate" Type="date" />
@@ -258,6 +260,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tblTradesman_tblTradesman">
+          <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="1" />
+          <End Role="tblTradesman1" Type="Self.tblTradesman" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tblTradesman">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblTradesman1">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="DbGrainExchangeModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblAddress" EntityType="Self.tblAddress" Schema="dbo" store:Type="Tables" />
@@ -318,6 +332,10 @@
           <AssociationSet Name="FK_tblTradesman_tblAddress" Association="Self.FK_tblTradesman_tblAddress">
             <End Role="tblAddress" EntitySet="tblAddress" />
             <End Role="tblTradesman" EntitySet="tblTradesman" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTradesman_tblTradesman" Association="Self.FK_tblTradesman_tblTradesman">
+            <End Role="tblTradesman" EntitySet="tblTradesman" />
+            <End Role="tblTradesman1" EntitySet="tblTradesman" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -388,6 +406,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdentityNo" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="AddressID" Type="Int32" />
           <Property Name="BirthDate" Type="DateTime" Precision="0" />
@@ -449,14 +468,17 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdentityNo" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="AddressId" Type="Int32" />
           <Property Name="Birthdate" Type="DateTime" Precision="0" />
           <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblTradesman_tblAddress" FromRole="tblTradesman" ToRole="tblAddress" />
           <NavigationProperty Name="tblSaleTrades" Relationship="Self.FK_tblSaleTrades_tblTradesman" FromRole="tblTradesman" ToRole="tblSaleTrades" />
+          <NavigationProperty Name="tblTradesman1" Relationship="Self.FK_tblTradesman_tblTradesman" FromRole="tblTradesman" ToRole="tblTradesman1" />
+          <NavigationProperty Name="tblTradesman2" Relationship="Self.FK_tblTradesman_tblTradesman" FromRole="tblTradesman1" ToRole="tblTradesman" />
         </EntityType>
         <Association Name="FK_tblAddress_tblCity">
           <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
@@ -602,7 +624,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DbGrainExchangeEntities2" annotation:LazyLoadingEnabled="true">
+        <Association Name="FK_tblTradesman_tblTradesman">
+          <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="1" />
+          <End Role="tblTradesman1" Type="Self.tblTradesman" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tblTradesman">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblTradesman1">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DbGrainExchangeEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="tblAddress" EntityType="Self.tblAddress" />
           <EntitySet Name="tblCity" EntityType="Self.tblCity" />
@@ -663,13 +697,17 @@
             <End Role="tblTradesman" EntitySet="tblTradesman" />
             <End Role="tblSaleTrades" EntitySet="tblSaleTrades" />
           </AssociationSet>
+          <AssociationSet Name="FK_tblTradesman_tblTradesman" Association="Self.FK_tblTradesman_tblTradesman">
+            <End Role="tblTradesman" EntitySet="tblTradesman" />
+            <End Role="tblTradesman1" EntitySet="tblTradesman" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DbGrainExchangeModelStoreContainer" CdmEntityContainer="DbGrainExchangeEntities2">
+        <EntityContainerMapping StorageEntityContainer="DbGrainExchangeModelStoreContainer" CdmEntityContainer="DbGrainExchangeEntities3">
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
@@ -726,6 +764,7 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
                 <ScalarProperty Name="Contact" ColumnName="Contact" />
                 <ScalarProperty Name="AddressID" ColumnName="AddressID" />
                 <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
@@ -785,6 +824,7 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
                 <ScalarProperty Name="Contact" ColumnName="Contact" />
                 <ScalarProperty Name="AddressId" ColumnName="AddressId" />
                 <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />

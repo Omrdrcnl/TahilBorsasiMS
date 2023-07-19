@@ -23,6 +23,7 @@ namespace TahilBorsaMS.Models.Entity
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string IdentityNo { get; set; }
         public string Contact { get; set; }
         public Nullable<int> AddressID { get; set; }
         public Nullable<System.DateTime> BirthDate { get; set; }

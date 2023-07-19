@@ -1,38 +1,60 @@
-﻿@using TahilBorsaMS.Models.Entity
-@model List<tblTradesman>
+﻿@using PagedList.Mvc
+@using PagedList
 
+@model PagedList.IPagedList<TahilBorsaMS.Models.Entity.tblTradesman>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 <div class="container">
-    <h2>Tüccar Paneli</h2>
+    <h2>Esnaf Paneli</h2>
+    @*Arama işlem penceresi*@
+    @using (Html.BeginForm("Index", "Tradesman", FormMethod.Get))
+    {<div class="form-control input-group">
+            @Html.TextBox("f", null, new { @class = "input-group-text", placeholder = "Esnaf Ara" })
+            <button class="btn btn-outline-primary">Ara</button>
+        </div>
+    }
+
     <table class="table table-bordered">
         <tr>
             <th>Id</th>
             <th>Adı</th>
             <th>Soyadı</th>
+            <th>Kimlik No</th>
             <th>İletişim</th>
+            <th>Şehir</th>
+            <th>İlçe</th>
+            <th>Mahalle/Köy</th>
             <th>Adres</th>
-            <th class="text-center">İşlem</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
 
         </tr>
-        @foreach (var t in Model)
+        @foreach (var f in Model)
         {
             <tr>
-                <td>@t.Id</td>
-                <td>@t.FirstName</td>
-                <td>@t.LastName</td>
-                <td>@t.Contact</td>
-                <td>@t.tblAddress.FullAddress</td>
-                <td class="text-center"> <button class="btn btn-success">Güncelle</button>  <button class="btn btn-danger">Sil</button></td>
+                <td>@f.Id</td>
+                <td>@f.FirstName</td>
+                <td>@f.LastName</td>
+                <td>@f.IdentityNo</td>
+                <td>@f.Contact</td>
+                <td>@f.tblAddress.tblCity.Name</td>
+                <td>@f.tblAddress.tblDistrict.Name</td>
+                <td>@f.tblAddress.NeighborhoodName</td>
+                <td>@f.tblAddress.FullAddress</td>
+                <td><a class="btn btn-danger" href="~/Tradesman/DeleteTradesman/@f.Id">Sil</a></td>
+                <td><a class="btn btn-success" href="~/Tradesman/CallTradesman/@f.Id">Güncelle</a></td>
+
             </tr>
         }
     </table>
-    <div>
-        <button class="btn btn-primary">Yeni Kayıt Ekle</button>
+    <div class="d-flex justify-content-center pagination">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions { LiElementClasses = new[] { "page-link " }, UlElementClasses = new[] { "page-item d-flex" } })
     </div>
+    <a href="~/Tradesman/AddTradesman" class="btn btn-primary">Yeni Esnaf Kaydı Oluştur</a>
 </div>
+
 
 

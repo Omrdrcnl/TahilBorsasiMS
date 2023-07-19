@@ -1,7 +1,7 @@
-﻿@using TahilBorsaMS.Models.Entity
+﻿@using PagedList.Mvc
+@using PagedList
 
-@model List<tblFarmer>
-
+@model PagedList.IPagedList<TahilBorsaMS.Models.Entity.tblFarmer>
 
 @{
     ViewBag.Title = "Index";
@@ -9,11 +9,20 @@
 }
 <div class="container">
     <h2>Çiftçi Paneli</h2>
+    @*Arama işlem penceresi*@ 
+    @using (Html.BeginForm("Index", "Farmer", FormMethod.Get))
+    {<div class="form-control input-group">
+            @Html.TextBox("f",null, new {@class= "input-group-text",placeholder= "Çiftçi Ara" })
+            <button class="btn btn-outline-primary">Ara</button>
+        </div>
+    }
+
     <table class="table table-bordered">
         <tr>
             <th>Id</th>
             <th>Adı</th>
             <th>Soyadı</th>
+            <th>Kimlik No</th>
             <th>Doğum Tarihi</th>
             <th>İletişim</th>
             <th>Şehir</th>
@@ -22,7 +31,7 @@
             <th>Adres</th>
             <th>Sil</th>
             <th>Güncelle</th>
-           
+
         </tr>
         @foreach (var f in Model)
         {
@@ -30,6 +39,7 @@
                 <td>@f.Id</td>
                 <td>@f.FirstName</td>
                 <td>@f.LastName</td>
+                <td>@f.IdentityNo</td>
                 <td>@f.BirthDate</td>
                 <td>@f.Contact</td>
                 <td>@f.tblAddress.tblCity.Name</td>
@@ -38,9 +48,12 @@
                 <td>@f.tblAddress.FullAddress</td>
                 <td><a class="btn btn-danger" href="~/Farmer/DeleteFarmer/@f.Id">Sil</a></td>
                 <td><a class="btn btn-success" href="~/Farmer/CallFarmer/@f.Id">Güncelle</a></td>
-               
+
             </tr>
         }
     </table>
+    <div class="d-flex justify-content-center pagination">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions { LiElementClasses = new[] { "page-link " }, UlElementClasses = new[] { "page-item d-flex" } })
+    </div>
     <a href="~/Farmer/AddFarmer" class="btn btn-primary">Yeni Kayıt Ekle</a>
 </div>

@@ -7,16 +7,25 @@ using TahilBorsaMS.Models.Entity;
 using TahilBorsaMS.Controllers;
 using System.Data.Entity.Validation;
 using Antlr.Runtime;
+using PagedList;
+using PagedList.Mvc;
 
 namespace TahilBorsaMS.Controllers
 {
     public class FarmerController : Controller
     {
-        DbGrainExchangeEntities2 db = new DbGrainExchangeEntities2();
+        DbGrainExchangeEntities3 db = new DbGrainExchangeEntities3();
         // GET: Farmer
-        public ActionResult Index()
+        public ActionResult Index(string f, int page=1)
         {
-            var value = db.tblFarmer.ToList();
+            var value = db.tblFarmer.ToList().ToPagedList(page, 3);
+            //indexten gelen string f degeriyle harf duyarlılığını kaldırarak arama işlemi yapma
+            if (!string.IsNullOrEmpty(f))
+            {
+                f = f.ToLower();
+                value = value.Where(p => p.FirstName.ToLower().Contains(f) || p.LastName.ToLower().Contains(f)).ToList().ToPagedList(page, 3);
+            }
+
             return View(value);
         }
         [HttpGet]
@@ -63,7 +72,7 @@ namespace TahilBorsaMS.Controllers
                 db.tblFarmer.Add(farmer);
                 db.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index",farmer);
             }
 
 
@@ -93,7 +102,7 @@ namespace TahilBorsaMS.Controllers
             return View(f);
         }
 
-       
+
         public ActionResult EditFarmer(tblFarmer f)
         {
             if (ModelState.IsValid)
@@ -104,9 +113,10 @@ namespace TahilBorsaMS.Controllers
                 {
                     farmer.FirstName = f.FirstName;
                     farmer.LastName = f.LastName;
+                    farmer.IdentityNo = f.IdentityNo;
                     farmer.BirthDate = f.BirthDate;
                     farmer.Contact = f.Contact;
-                
+
                     tblAddress address = new tblAddress
                     {
                         Id = f.tblAddress.Id,
@@ -125,7 +135,7 @@ namespace TahilBorsaMS.Controllers
 
                 }
             }
-         
+
 
             return RedirectToAction("Index");
 

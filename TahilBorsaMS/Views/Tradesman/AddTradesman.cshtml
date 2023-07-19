@@ -1,9 +1,10 @@
-﻿@model TahilBorsaMS.Models.Entity.tblFarmer
+﻿@model TahilBorsaMS.Models.Entity.tblTradesman
 
 @{
-    ViewBag.Title = "AddFarmer";
+    ViewBag.Title = "AddTradesman";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
+
 <form class="form-control container" method="post">
 
     <label>Adı</label>
@@ -22,13 +23,11 @@
     @Html.TextBoxFor(p => p.tblAddress.FullAddress, new { @class = "form-control" })
     <label>İletişim</label>
     @Html.TextBoxFor(p => p.Contact, new { @class = "form-control" })
-    <label>Doğum Tarihi</label>
-    @Html.TextBoxFor(p => p.BirthDate, new { @class = "form-control", placeholder = "gg/aa/yyyy" })
+    @*<label>Doğum Tarihi</label>
+        @Html.TextBoxFor(p => p.BirthDate, new { @class = "form-control", placeholder = "gg/aa/yyyy" })*@
 
 
 
 
-    <button type="submit" class="btn my-3 btn-warning">Çiftçi Bilgilerini Ekle</button>
+    <button type="submit" class="btn my-3 btn-warning">Esnaf Bilgilerini Ekle</button>
 </form>
-
-
