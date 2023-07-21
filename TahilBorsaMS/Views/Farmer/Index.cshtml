@@ -40,7 +40,7 @@
                 <td>@f.FirstName</td>
                 <td>@f.LastName</td>
                 <td>@f.IdentityNo</td>
-                <td>@f.BirthDate</td>
+                <td>@(f.BirthDate.HasValue ? f.BirthDate.Value.ToString("dd/MM/yyyy") : "")</td>
                 <td>@f.Contact</td>
                 <td>@f.tblAddress.tblCity.Name</td>
                 <td>@f.tblAddress.tblDistrict.Name</td>
@@ -53,7 +53,7 @@
         }
     </table>
     <div class="d-flex justify-content-center pagination">
-        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions { LiElementClasses = new[] { "page-link " }, UlElementClasses = new[] { "page-item d-flex" } })
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions { LiElementClasses = new[] { "page-link btn " }, UlElementClasses = new[] { "page-item d-flex" } })
     </div>
     <a href="~/Farmer/AddFarmer" class="btn btn-primary">Yeni Kayıt Ekle</a>
 </div>

@@ -20,6 +20,7 @@
     <table class="table table-bordered">
         <tr>
             <th>Id</th>
+            <th>Giriş Id</th>
             <th>Ürün Adı</th>
             <th>Ürün Değeri</th>
             <th>Sahibi</th>
@@ -28,11 +29,13 @@
         @foreach (var l in Model)
         {
             <tr>
-                
-                <td>@l.ProductId</td>
-                <td>@l.ProductId</td>
+
+                <td>@l.Id</td>
+                <td>@l.EntryProductId</td>
+                <td>@l.tblEntryProduct.tblProductName.Name</td>
                 <td>@l.NutritionalValue</td>
-                @*<td>@l.tblFarmer.FirstName</td>*@
+                <td>@l.tblEntryProduct.tblFarmer.FirstName +""+>@l.tblEntryProduct.tblFarmer.LastName </td>
+              
             </tr>
         }
 

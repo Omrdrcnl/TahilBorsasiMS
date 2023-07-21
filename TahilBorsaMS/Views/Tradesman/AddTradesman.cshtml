@@ -14,7 +14,8 @@
     <label>Kimlik No</label>
     @Html.TextBoxFor(p => p.IdentityNo, new { @class = "form-control" })
     <label>Şehir</label>
-    @Html.DropDownListFor(P => P.tblAddress.tblDistrict.tblCity.Id, (List<SelectListItem>)ViewBag.CityList, new { @class = "form-control" })
+    @*Vievbagla iki farklı tasıma yontemi aşagıda*@
+    @Html.DropDownListFor(P => P.tblAddress.tblDistrict.tblCity.Id, ViewBag.CityList as IEnumerable<SelectListItem>, new { @class = "form-control" })
     <label>İlçe</label>
     @Html.DropDownListFor(P => P.tblAddress.tblDistrict.Id, (List<SelectListItem>)ViewBag.District, new { @class = "form-control" })
     <label>Mahalle/Köy</label>

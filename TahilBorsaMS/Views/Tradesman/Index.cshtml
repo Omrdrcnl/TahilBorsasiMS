@@ -51,7 +51,7 @@
         }
     </table>
     <div class="d-flex justify-content-center pagination">
-        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions { LiElementClasses = new[] { "page-link " }, UlElementClasses = new[] { "page-item d-flex" } })
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions { LiElementClasses = new[] { "page-link btn " }, UlElementClasses = new[] { "page-item d-flex" } })
     </div>
     <a href="~/Tradesman/AddTradesman" class="btn btn-primary">Yeni Esnaf Kaydı Oluştur</a>
 </div>
