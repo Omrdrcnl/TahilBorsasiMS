@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblAddress" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblCity" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblDistrict" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblEntryProduct" Width="1.5" PointX="9.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblEntryProduct" Width="1.5" PointX="9.375" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblFarmer" Width="1.5" PointX="7.5" PointY="6.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblLabData" Width="1.5" PointX="12" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblLastProduct" Width="1.5" PointX="14.25" PointY="6.875" IsExpanded="true" />

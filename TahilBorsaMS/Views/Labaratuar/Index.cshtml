@@ -1,6 +1,6 @@
 ﻿@using TahilBorsaMS.Models.Entity
 
-@model List<tblLabData>
+@model List<tblEntryProduct>
 
 
 @{
@@ -10,20 +10,16 @@
 
 <div class="container">
 
-    <h2>Yeni Veri Girişi</h2>
 
-    <div class="my-5">
-       <a class="btn btn-primary" href="~/Labaratuar/AddLabData">Yeni Veri Girişi</a>
-    </div>
-
-    <h2>Geçmiş Labaratuar Verileri</h2>
+    <h2>İşlem Bekleyen Liste</h2>
     <table class="table table-bordered">
         <tr>
-            <th>Id</th>
             <th>Giriş Id</th>
+            <th>Çiftçi Id</th>
             <th>Ürün Adı</th>
-            <th>Ürün Değeri</th>
-            <th>Sahibi</th>
+            <th>Miktarı</th>
+            <th>Ürün Giriş Tarihi</th>
+            <th>Besin Değerini Gir</th>
         </tr>
 
         @foreach (var l in Model)
@@ -31,15 +27,21 @@
             <tr>
 
                 <td>@l.Id</td>
-                <td>@l.EntryProductId</td>
-                <td>@l.tblEntryProduct.tblProductName.Name</td>
-                <td>@l.NutritionalValue</td>
-                <td>@l.tblEntryProduct.tblFarmer.FirstName +""+>@l.tblEntryProduct.tblFarmer.LastName </td>
-              
+                <td>@l.FarmerId</td>
+                <td>@l.tblProductName.Name</td>
+                <td>@l.Quantity</td>
+                <td>@l.DateTime</td>
+                <td><a href="/Labaratuar/AddLabData/" class="btn btn-warning">Besin Değerini Gir</a></td>
             </tr>
         }
 
     </table>
+    
+
+    <div class="mt-5 d-grid gap-2 d-md-flex justify-content-md-end">
+        <a class="btn btn-primary" href="~/Labaratuar/LabDataList/">Geçmiş Veriler</a>
+    </div>
+
 </div>
 
 

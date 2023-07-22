@@ -14,21 +14,43 @@ namespace TahilBorsaMS.Controllers
 
         public ActionResult Index() 
         {
-            var data = db.tblLabData.ToList();
-            return View(data);
+            IQueryable<tblEntryProduct> data = db.tblEntryProduct.Where(x => x.Process == true);
+            
+            return View(data.ToList());
         }
         [HttpGet]
         public ActionResult AddLaBData()
         {
+            
             return View();
+
         }
 
         [HttpPost]
         public ActionResult AddLaBData(tblLabData l)
         {
             db.tblLabData.Add(l);
+            var pro = db.tblEntryProduct.Find(l.EntryProductId);
+            if (pro != null)
+            {
+                pro.Process = false;
+                db.SaveChanges();
+            }
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
+
         }
+        public ActionResult LabDataList(string e)
+        {
+            IQueryable<tblLabData> k = db.tblLabData.Where(x => x.Process == false);
+
+            if (!string.IsNullOrEmpty(e))
+            {
+                k = k.Where(x => x.tblEntryProduct.tblFarmer.IdentityNo.Contains(e));
+            }
+
+            return View(k.ToList());
+        }
+
     }
 }

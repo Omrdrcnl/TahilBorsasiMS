@@ -23,6 +23,7 @@ namespace TahilBorsaMS.Models.Entity
         public int Id { get; set; }
         public Nullable<int> EntryProductId { get; set; }
         public Nullable<int> NutritionalValue { get; set; }
+        public Nullable<bool> Process { get; set; }
     
         public virtual tblEntryProduct tblEntryProduct { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

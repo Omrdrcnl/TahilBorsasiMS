@@ -1,22 +1,22 @@
 ﻿@model TahilBorsaMS.Models.Entity.tblLabData
+
 @{
     ViewBag.Title = "AddLaBData";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<div class="container">
-    <form class="form form-control" method="post">
-        <div class="my-5">
-            <label>Ürün Id</label>
-            <p>Buraya Ürünler dropboxla yerleşecek, entrye tablosuna işlem adında bi sutun açıp değerinin true olanları buraya listeleriz.
-            sonra onu false çekip burada işlem sutunun true yaparız satış sayfasında da öyle listeleme yaparız.            </p>
-        </div>
-        <div class="my-5">
-            <label>Ürün Besin Değeri</label>
-            @Html.TextBoxFor( l => l.NutritionalValue, new { @Class = "form-control" })
-        </div>
-        <button type="submit" class="btn btn-primary">Kaydet</button>
-    </form>
-   
-</div>
-
+@using (Html.BeginForm("AddLabData", "Labaratuar", FormMethod.Post))
+{
+    <div class="form-control">
+        <h1>Ürün Besin Değeri Girişi</h1>
+        <br />
+        <label>Ürün Giriş Id</label>
+        @Html.TextBoxFor(x => x.EntryProductId, new { @class = "form-control"})  
+        <br />
+        <label>Ürün Besin Değerini Giriniz</label>
+        @Html.TextBoxFor(x => x.NutritionalValue, new { @class = "form-control" })
+        <br />
+        <input type="hidden" value="true" name="Process" />
+        <button class="btn btn-primary">Kaydet</button>
+    </div>
+}

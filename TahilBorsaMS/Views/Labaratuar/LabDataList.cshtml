@@ -1,0 +1,37 @@
+﻿@using TahilBorsaMS.Models.Entity
+@model List<tblLabData>
+
+@{
+    ViewBag.Title = "LabDataList";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("LabDataList", "Labaratuar", FormMethod.Get))
+{<div class="form-control input-group">
+        @Html.TextBox("e", null, new { @class = "input-group-text", placeholder = "Çiftçi Ara" })
+        <button class="btn btn-outline-primary">Ara</button>
+    </div>
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Giriş Id</th>
+        <th>Çiftçi Id</th>
+        <th>Çiftçi Kimlik no</th>
+        <th>Ürün Besin Değeri</th>
+        <th>Tarihi</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.EntryProductId</td>
+            <td>@k.tblEntryProduct.FarmerId</td>
+            <td>@k.tblEntryProduct.tblFarmer.IdentityNo</td>
+            <td>@k.NutritionalValue</td>
+            <td>@k.tblEntryProduct.DateTime</td>
+        </tr>
+    }
+</table>
+<div>
+    <a class="btn btn-info" href="/Labaratuar/Index">Geri</a>
+</div>

@@ -26,7 +26,20 @@ namespace TahilBorsaMS.Controllers
         public ActionResult AddEntryProduct(tblEntryProduct p)
         {
             db.tblEntryProduct.Add(p);
-            return View();
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
+        public ActionResult EntryProductList(string e)
+        {
+            IQueryable<tblEntryProduct> k = db.tblEntryProduct.Where(x => x.Process == false);
+
+            if (!string.IsNullOrEmpty(e))
+            {
+                k = k.Where(x => x.tblFarmer.IdentityNo.Contains(e));
+            }
+
+            return View(k.ToList());
+        }
+
     }
 }

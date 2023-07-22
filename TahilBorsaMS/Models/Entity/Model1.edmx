@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DbGrainExchangeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DbGrainExchangeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -48,7 +48,8 @@
           <Property Name="ProductNameId" Type="tinyint" />
           <Property Name="FarmerId" Type="int" />
           <Property Name="Quantity" Type="int" />
-          <Property Name="DateTime" Type="date" />
+          <Property Name="DateTime" Type="smalldatetime" />
+          <Property Name="Process" Type="bit" />
         </EntityType>
         <EntityType Name="tblFarmer">
           <Key>
@@ -69,6 +70,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EntryProductId" Type="int" />
           <Property Name="NutritionalValue" Type="int" />
+          <Property Name="Process" Type="bit" />
         </EntityType>
         <EntityType Name="tblLastProduct">
           <Key>
@@ -338,8 +340,7 @@
             <End Role="tblTradesman1" EntitySet="tblTradesman" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbGrainExchangeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -398,6 +399,7 @@
           <NavigationProperty Name="tblFarmer" Relationship="Self.FK_tblEntryProduct_tblFarmer" FromRole="tblEntryProduct" ToRole="tblFarmer" />
           <NavigationProperty Name="tblProductName" Relationship="Self.FK_tblEntryProduct_tblProductName" FromRole="tblEntryProduct" ToRole="tblProductName" />
           <NavigationProperty Name="tblLabData" Relationship="Self.FK_tblLabData_tblEntryProduct" FromRole="tblEntryProduct" ToRole="tblLabData" />
+          <Property Name="Process" Type="Boolean" />
         </EntityType>
         <EntityType Name="tblFarmer">
           <Key>
@@ -422,6 +424,7 @@
           <Property Name="NutritionalValue" Type="Int32" />
           <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblLabData_tblEntryProduct" FromRole="tblLabData" ToRole="tblEntryProduct" />
           <NavigationProperty Name="tblLastProduct" Relationship="Self.FK_tblLastProduct_tblLabData" FromRole="tblLabData" ToRole="tblLastProduct" />
+          <Property Name="Process" Type="Boolean" />
         </EntityType>
         <EntityType Name="tblLastProduct">
           <Key>
@@ -750,6 +753,7 @@
           <EntitySetMapping Name="tblEntryProduct">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.tblEntryProduct">
               <MappingFragment StoreEntitySet="tblEntryProduct">
+                <ScalarProperty Name="Process" ColumnName="Process" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ProductNameId" ColumnName="ProductNameId" />
                 <ScalarProperty Name="FarmerId" ColumnName="FarmerId" />
@@ -774,6 +778,7 @@
           <EntitySetMapping Name="tblLabData">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.tblLabData">
               <MappingFragment StoreEntitySet="tblLabData">
+                <ScalarProperty Name="Process" ColumnName="Process" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="EntryProductId" ColumnName="EntryProductId" />
                 <ScalarProperty Name="NutritionalValue" ColumnName="NutritionalValue" />
