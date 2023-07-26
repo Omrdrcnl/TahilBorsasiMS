@@ -1,0 +1,42 @@
+﻿@using TahilBorsaMS.Models.Entity
+@model List<tblSale>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Satışa Hazır Ürünler</h2>
+@using (Html.BeginForm("Index", "Sale", FormMethod.Get))
+
+{
+    <table class="table table-bordered">
+        <tr>
+            <th>Giriş Id</th>
+            <th>Çiftçi Id</th>
+            <th>Çiftçi Kimlik no</th>
+            <th>Ürün Besin Değeri</th>
+
+        </tr>
+        @foreach (var k in Model)
+        {
+            <tr>
+                <td>@k.EntryProductId</td>
+                <td>@k.tblEntryProduct.FarmerId</td>
+                <td>@k.tblEntryProduct.tblFarmer.IdentityNo</td>
+                <td>@k.tblLabData.NutritionalValue</td>
+                <td><a href="/Sale/CallSale/@k.Id" class="btn btn-success">Satış Gir</a></td>
+
+            </tr>
+        }
+    </table>
+    <div class="btn-group btn-group-lg d-flex justify-content-between">
+        <div>
+            <a href="/Sale/EnterSale/" class="btn btn-primary btn-lg">Yeni Satış</a>
+        </div>
+        <div>
+            <a class="btn btn-danger btn-lg">Geçmiş Satış Verileri</a>
+        </div>
+
+    </div>
+}

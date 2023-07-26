@@ -139,10 +139,12 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LabaratuarController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\SaleController.cs" />
     <Compile Include="Controllers\TradesmanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Classes\ClassAddLab.cs" />
     <Compile Include="Models\Entity\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -179,16 +181,10 @@
     <Compile Include="Models\Entity\tblLabData.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entity\tblLastProduct.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Entity\tblProductName.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\tblSale.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Entity\tblSaleTrades.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\tblTradesman.cs">
@@ -281,6 +277,8 @@
     <Content Include="Views\EntryProduct\Index.cshtml" />
     <Content Include="Views\EntryProduct\EntryProductList.cshtml" />
     <Content Include="Views\Labaratuar\LabDataList.cshtml" />
+    <Content Include="Views\Sale\Index.cshtml" />
+    <Content Include="Views\Sale\CallSale.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

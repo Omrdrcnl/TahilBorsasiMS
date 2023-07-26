@@ -1,0 +1,30 @@
+﻿@model TahilBorsaMS.Models.Entity.tblSale
+
+@{
+    ViewBag.Title = "CallSale";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("EnterSale", "Sale", FormMethod.Post))
+{
+    <div class="form-control">
+        <h1>Satış Gerçekleştir</h1>
+        <br />
+        <label>Ürün Giriş Id</label>
+        @Html.TextBoxFor(x => x.EntryProductId, new { @class = "form-control" })
+        <br />
+        <label>Ürün Başlangıç Fiyatı</label>
+        @Html.TextBoxFor(x => x.BasePrice, new { @class = "form-control" })
+        <br />
+        <label>Ürün Satış Gerçekleşen Fiyatı</label>
+        @Html.TextBoxFor(x => x.ActualPrice, new { @class = "form-control" })
+        <br />
+        <label>Satın Alan Esnaf Id</label>
+        @Html.TextBoxFor(x => x.TradesmanId, new { @class = "form-control" })
+        <br />
+        <input name="Date" type="datetime" value="@DateTime.Now.ToShortDateString()" class="form-control" />
+        <br />
+        <input type="hidden" value="true" name="Process" />
+        <button class="btn btn-primary">Kaydet</button>
+    </div>
+}

@@ -18,6 +18,7 @@ namespace TahilBorsaMS.Models.Entity
         public tblEntryProduct()
         {
             this.tblLabData = new HashSet<tblLabData>();
+            this.tblSale = new HashSet<tblSale>();
         }
     
         public int Id { get; set; }
@@ -31,5 +32,7 @@ namespace TahilBorsaMS.Models.Entity
         public virtual tblProductName tblProductName { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblLabData> tblLabData { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tblSale> tblSale { get; set; }
     }
 }

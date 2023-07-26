@@ -72,13 +72,6 @@
           <Property Name="NutritionalValue" Type="int" />
           <Property Name="Process" Type="bit" />
         </EntityType>
-        <EntityType Name="tblLastProduct">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="LabId" Type="int" />
-        </EntityType>
         <EntityType Name="tblProductName">
           <Key>
             <PropertyRef Name="Id" />
@@ -92,19 +85,14 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="LastProductId" Type="int" />
+          <Property Name="EntryProductId" Type="int" />
+          <Property Name="LabId" Type="int" />
           <Property Name="BasePrice" Type="decimal" Precision="18" Scale="2" />
           <Property Name="ActualPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Quantity" Type="int" />
           <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
-        </EntityType>
-        <EntityType Name="tblSaleTrades">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SaleId" Type="int" />
           <Property Name="TradesmanId" Type="int" />
-          <Property Name="Date" Type="date" />
+          <Property Name="Date" Type="smalldatetime" />
         </EntityType>
         <EntityType Name="tblTradesman">
           <Key>
@@ -202,50 +190,38 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblLastProduct_tblLabData">
+        <Association Name="FK_tblSale_tblEntryProduct">
+          <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="0..1" />
+          <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEntryProduct">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblSale">
+              <PropertyRef Name="EntryProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSale_tblLabData">
           <End Role="tblLabData" Type="Self.tblLabData" Multiplicity="0..1" />
-          <End Role="tblLastProduct" Type="Self.tblLastProduct" Multiplicity="*" />
+          <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblLabData">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="tblLastProduct">
+            <Dependent Role="tblSale">
               <PropertyRef Name="LabId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSale_tblLastProduct">
-          <End Role="tblLastProduct" Type="Self.tblLastProduct" Multiplicity="0..1" />
-          <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblLastProduct">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblSale">
-              <PropertyRef Name="LastProductId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSaleTrades_tblSale">
-          <End Role="tblSale" Type="Self.tblSale" Multiplicity="0..1" />
-          <End Role="tblSaleTrades" Type="Self.tblSaleTrades" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblSale">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblSaleTrades">
-              <PropertyRef Name="SaleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSaleTrades_tblTradesman">
+        <Association Name="FK_tblSale_tblTradesman">
           <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="0..1" />
-          <End Role="tblSaleTrades" Type="Self.tblSaleTrades" Multiplicity="*" />
+          <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblTradesman">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="tblSaleTrades">
+            <Dependent Role="tblSale">
               <PropertyRef Name="TradesmanId" />
             </Dependent>
           </ReferentialConstraint>
@@ -262,18 +238,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblTradesman_tblTradesman">
-          <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="1" />
-          <End Role="tblTradesman1" Type="Self.tblTradesman" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="tblTradesman">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblTradesman1">
-              <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="DbGrainExchangeModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblAddress" EntityType="Self.tblAddress" Schema="dbo" store:Type="Tables" />
@@ -282,10 +246,8 @@
           <EntitySet Name="tblEntryProduct" EntityType="Self.tblEntryProduct" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblFarmer" EntityType="Self.tblFarmer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblLabData" EntityType="Self.tblLabData" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tblLastProduct" EntityType="Self.tblLastProduct" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblProductName" EntityType="Self.tblProductName" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblSale" EntityType="Self.tblSale" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tblSaleTrades" EntityType="Self.tblSaleTrades" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblTradesman" EntityType="Self.tblTradesman" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_tblAddress_tblCity" Association="Self.FK_tblAddress_tblCity">
             <End Role="tblCity" EntitySet="tblCity" />
@@ -315,29 +277,21 @@
             <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
             <End Role="tblLabData" EntitySet="tblLabData" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblLastProduct_tblLabData" Association="Self.FK_tblLastProduct_tblLabData">
+          <AssociationSet Name="FK_tblSale_tblEntryProduct" Association="Self.FK_tblSale_tblEntryProduct">
+            <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
+            <End Role="tblSale" EntitySet="tblSale" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSale_tblLabData" Association="Self.FK_tblSale_tblLabData">
             <End Role="tblLabData" EntitySet="tblLabData" />
-            <End Role="tblLastProduct" EntitySet="tblLastProduct" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSale_tblLastProduct" Association="Self.FK_tblSale_tblLastProduct">
-            <End Role="tblLastProduct" EntitySet="tblLastProduct" />
             <End Role="tblSale" EntitySet="tblSale" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSaleTrades_tblSale" Association="Self.FK_tblSaleTrades_tblSale">
-            <End Role="tblSale" EntitySet="tblSale" />
-            <End Role="tblSaleTrades" EntitySet="tblSaleTrades" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSaleTrades_tblTradesman" Association="Self.FK_tblSaleTrades_tblTradesman">
+          <AssociationSet Name="FK_tblSale_tblTradesman" Association="Self.FK_tblSale_tblTradesman">
             <End Role="tblTradesman" EntitySet="tblTradesman" />
-            <End Role="tblSaleTrades" EntitySet="tblSaleTrades" />
+            <End Role="tblSale" EntitySet="tblSale" />
           </AssociationSet>
           <AssociationSet Name="FK_tblTradesman_tblAddress" Association="Self.FK_tblTradesman_tblAddress">
             <End Role="tblAddress" EntitySet="tblAddress" />
             <End Role="tblTradesman" EntitySet="tblTradesman" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblTradesman_tblTradesman" Association="Self.FK_tblTradesman_tblTradesman">
-            <End Role="tblTradesman" EntitySet="tblTradesman" />
-            <End Role="tblTradesman1" EntitySet="tblTradesman" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -400,6 +354,7 @@
           <NavigationProperty Name="tblProductName" Relationship="Self.FK_tblEntryProduct_tblProductName" FromRole="tblEntryProduct" ToRole="tblProductName" />
           <NavigationProperty Name="tblLabData" Relationship="Self.FK_tblLabData_tblEntryProduct" FromRole="tblEntryProduct" ToRole="tblLabData" />
           <Property Name="Process" Type="Boolean" />
+          <NavigationProperty Name="tblSale" Relationship="DbGrainExchangeModel.FK_tblSale_tblEntryProduct" FromRole="tblEntryProduct" ToRole="tblSale" />
         </EntityType>
         <EntityType Name="tblFarmer">
           <Key>
@@ -423,17 +378,8 @@
           <Property Name="EntryProductId" Type="Int32" />
           <Property Name="NutritionalValue" Type="Int32" />
           <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblLabData_tblEntryProduct" FromRole="tblLabData" ToRole="tblEntryProduct" />
-          <NavigationProperty Name="tblLastProduct" Relationship="Self.FK_tblLastProduct_tblLabData" FromRole="tblLabData" ToRole="tblLastProduct" />
           <Property Name="Process" Type="Boolean" />
-        </EntityType>
-        <EntityType Name="tblLastProduct">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LabId" Type="Int32" />
-          <NavigationProperty Name="tblLabData" Relationship="Self.FK_tblLastProduct_tblLabData" FromRole="tblLastProduct" ToRole="tblLabData" />
-          <NavigationProperty Name="tblSale" Relationship="Self.FK_tblSale_tblLastProduct" FromRole="tblLastProduct" ToRole="tblSale" />
+          <NavigationProperty Name="tblSale" Relationship="DbGrainExchangeModel.FK_tblSale_tblLabData" FromRole="tblLabData" ToRole="tblSale" />
         </EntityType>
         <EntityType Name="tblProductName">
           <Key>
@@ -449,23 +395,17 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LastProductId" Type="Int32" />
           <Property Name="BasePrice" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="ActualPrice" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
-          <NavigationProperty Name="tblLastProduct" Relationship="Self.FK_tblSale_tblLastProduct" FromRole="tblSale" ToRole="tblLastProduct" />
-          <NavigationProperty Name="tblSaleTrades" Relationship="Self.FK_tblSaleTrades_tblSale" FromRole="tblSale" ToRole="tblSaleTrades" />
-        </EntityType>
-        <EntityType Name="tblSaleTrades">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SaleId" Type="Int32" />
+          <Property Name="EntryProductId" Type="Int32" />
           <Property Name="TradesmanId" Type="Int32" />
           <Property Name="Date" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="tblSale" Relationship="Self.FK_tblSaleTrades_tblSale" FromRole="tblSaleTrades" ToRole="tblSale" />
-          <NavigationProperty Name="tblTradesman" Relationship="Self.FK_tblSaleTrades_tblTradesman" FromRole="tblSaleTrades" ToRole="tblTradesman" />
+          <NavigationProperty Name="tblEntryProduct" Relationship="DbGrainExchangeModel.FK_tblSale_tblEntryProduct" FromRole="tblSale" ToRole="tblEntryProduct" />
+          <NavigationProperty Name="tblTradesman" Relationship="DbGrainExchangeModel.FK_tblSale_tblTradesman" FromRole="tblSale" ToRole="tblTradesman" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="LabId" Type="Int32" />
+          <NavigationProperty Name="tblLabData" Relationship="DbGrainExchangeModel.FK_tblSale_tblLabData" FromRole="tblSale" ToRole="tblLabData" />
         </EntityType>
         <EntityType Name="tblTradesman">
           <Key>
@@ -479,9 +419,9 @@
           <Property Name="AddressId" Type="Int32" />
           <Property Name="Birthdate" Type="DateTime" Precision="0" />
           <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblTradesman_tblAddress" FromRole="tblTradesman" ToRole="tblAddress" />
-          <NavigationProperty Name="tblSaleTrades" Relationship="Self.FK_tblSaleTrades_tblTradesman" FromRole="tblTradesman" ToRole="tblSaleTrades" />
           <NavigationProperty Name="tblTradesman1" Relationship="Self.FK_tblTradesman_tblTradesman" FromRole="tblTradesman" ToRole="tblTradesman1" />
           <NavigationProperty Name="tblTradesman2" Relationship="Self.FK_tblTradesman_tblTradesman" FromRole="tblTradesman1" ToRole="tblTradesman" />
+          <NavigationProperty Name="tblSale" Relationship="DbGrainExchangeModel.FK_tblSale_tblTradesman" FromRole="tblTradesman" ToRole="tblSale" />
         </EntityType>
         <Association Name="FK_tblAddress_tblCity">
           <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
@@ -579,54 +519,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblLastProduct_tblLabData">
-          <End Role="tblLabData" Type="Self.tblLabData" Multiplicity="0..1" />
-          <End Role="tblLastProduct" Type="Self.tblLastProduct" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblLabData">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblLastProduct">
-              <PropertyRef Name="LabId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSale_tblLastProduct">
-          <End Role="tblLastProduct" Type="Self.tblLastProduct" Multiplicity="0..1" />
-          <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblLastProduct">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblSale">
-              <PropertyRef Name="LastProductId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSaleTrades_tblSale">
-          <End Role="tblSale" Type="Self.tblSale" Multiplicity="0..1" />
-          <End Role="tblSaleTrades" Type="Self.tblSaleTrades" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblSale">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblSaleTrades">
-              <PropertyRef Name="SaleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSaleTrades_tblTradesman">
-          <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="0..1" />
-          <End Role="tblSaleTrades" Type="Self.tblSaleTrades" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblTradesman">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblSaleTrades">
-              <PropertyRef Name="TradesmanId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_tblTradesman_tblTradesman">
           <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="1" />
           <End Role="tblTradesman1" Type="Self.tblTradesman" Multiplicity="0..1" />
@@ -647,10 +539,8 @@
           <EntitySet Name="tblEntryProduct" EntityType="Self.tblEntryProduct" />
           <EntitySet Name="tblFarmer" EntityType="Self.tblFarmer" />
           <EntitySet Name="tblLabData" EntityType="Self.tblLabData" />
-          <EntitySet Name="tblLastProduct" EntityType="Self.tblLastProduct" />
           <EntitySet Name="tblProductName" EntityType="Self.tblProductName" />
           <EntitySet Name="tblSale" EntityType="Self.tblSale" />
-          <EntitySet Name="tblSaleTrades" EntityType="Self.tblSaleTrades" />
           <EntitySet Name="tblTradesman" EntityType="Self.tblTradesman" />
           <AssociationSet Name="FK_tblAddress_tblCity" Association="Self.FK_tblAddress_tblCity">
             <End Role="tblCity" EntitySet="tblCity" />
@@ -684,27 +574,59 @@
             <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
             <End Role="tblLabData" EntitySet="tblLabData" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblLastProduct_tblLabData" Association="Self.FK_tblLastProduct_tblLabData">
-            <End Role="tblLabData" EntitySet="tblLabData" />
-            <End Role="tblLastProduct" EntitySet="tblLastProduct" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSale_tblLastProduct" Association="Self.FK_tblSale_tblLastProduct">
-            <End Role="tblLastProduct" EntitySet="tblLastProduct" />
-            <End Role="tblSale" EntitySet="tblSale" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSaleTrades_tblSale" Association="Self.FK_tblSaleTrades_tblSale">
-            <End Role="tblSale" EntitySet="tblSale" />
-            <End Role="tblSaleTrades" EntitySet="tblSaleTrades" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSaleTrades_tblTradesman" Association="Self.FK_tblSaleTrades_tblTradesman">
-            <End Role="tblTradesman" EntitySet="tblTradesman" />
-            <End Role="tblSaleTrades" EntitySet="tblSaleTrades" />
-          </AssociationSet>
           <AssociationSet Name="FK_tblTradesman_tblTradesman" Association="Self.FK_tblTradesman_tblTradesman">
             <End Role="tblTradesman" EntitySet="tblTradesman" />
             <End Role="tblTradesman1" EntitySet="tblTradesman" />
           </AssociationSet>
+          <AssociationSet Name="FK_tblSale_tblEntryProduct" Association="DbGrainExchangeModel.FK_tblSale_tblEntryProduct">
+            <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
+            <End Role="tblSale" EntitySet="tblSale" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSale_tblTradesman" Association="DbGrainExchangeModel.FK_tblSale_tblTradesman">
+            <End Role="tblTradesman" EntitySet="tblTradesman" />
+            <End Role="tblSale" EntitySet="tblSale" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSale_tblLabData" Association="DbGrainExchangeModel.FK_tblSale_tblLabData">
+            <End Role="tblLabData" EntitySet="tblLabData" />
+            <End Role="tblSale" EntitySet="tblSale" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_tblSale_tblEntryProduct">
+          <End Type="DbGrainExchangeModel.tblEntryProduct" Role="tblEntryProduct" Multiplicity="0..1" />
+          <End Type="DbGrainExchangeModel.tblSale" Role="tblSale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEntryProduct">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblSale">
+              <PropertyRef Name="EntryProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSale_tblTradesman">
+          <End Type="DbGrainExchangeModel.tblTradesman" Role="tblTradesman" Multiplicity="0..1" />
+          <End Type="DbGrainExchangeModel.tblSale" Role="tblSale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTradesman">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblSale">
+              <PropertyRef Name="TradesmanId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSale_tblLabData">
+          <End Type="DbGrainExchangeModel.tblLabData" Role="tblLabData" Multiplicity="0..1" />
+          <End Type="DbGrainExchangeModel.tblSale" Role="tblSale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblLabData">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblSale">
+              <PropertyRef Name="LabId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -785,14 +707,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tblLastProduct">
-            <EntityTypeMapping TypeName="DbGrainExchangeModel.tblLastProduct">
-              <MappingFragment StoreEntitySet="tblLastProduct">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="LabId" ColumnName="LabId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tblProductName">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.tblProductName">
               <MappingFragment StoreEntitySet="tblProductName">
@@ -805,21 +719,15 @@
           <EntitySetMapping Name="tblSale">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.tblSale">
               <MappingFragment StoreEntitySet="tblSale">
+                <ScalarProperty Name="LabId" ColumnName="LabId" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="TradesmanId" ColumnName="TradesmanId" />
+                <ScalarProperty Name="EntryProductId" ColumnName="EntryProductId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="LastProductId" ColumnName="LastProductId" />
                 <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
                 <ScalarProperty Name="ActualPrice" ColumnName="ActualPrice" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tblSaleTrades">
-            <EntityTypeMapping TypeName="DbGrainExchangeModel.tblSaleTrades">
-              <MappingFragment StoreEntitySet="tblSaleTrades">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="SaleId" ColumnName="SaleId" />
-                <ScalarProperty Name="TradesmanId" ColumnName="TradesmanId" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

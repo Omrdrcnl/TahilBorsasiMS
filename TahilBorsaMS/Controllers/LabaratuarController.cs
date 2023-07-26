@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using TahilBorsaMS.Controllers;
 using TahilBorsaMS.Models.Entity;
+using TahilBorsaMS.Models.Classes;
 
 namespace TahilBorsaMS.Controllers
 {
@@ -12,16 +13,16 @@ namespace TahilBorsaMS.Controllers
     {
         DbGrainExchangeEntities3 db = new DbGrainExchangeEntities3();
 
-        public ActionResult Index() 
+        public ActionResult Index()
         {
-            IQueryable<tblEntryProduct> data = db.tblEntryProduct.Where(x => x.Process == true);
-            
+            IQueryable<tblEntryProduct> data = db.tblEntryProduct.Where(x => x.Process == false);
+
             return View(data.ToList());
         }
         [HttpGet]
         public ActionResult AddLaBData()
         {
-            
+
             return View();
 
         }
@@ -33,7 +34,17 @@ namespace TahilBorsaMS.Controllers
             var pro = db.tblEntryProduct.Find(l.EntryProductId);
             if (pro != null)
             {
-                pro.Process = false;
+                pro.Process = true;
+
+                tblSale data = new tblSale()
+                {
+                    EntryProductId = l.EntryProductId,
+                    Quantity =l.tblEntryProduct.Quantity,
+                    LabId = l.Id
+                    
+                };
+
+                db.tblSale.Add(data);
                 db.SaveChanges();
             }
             db.SaveChanges();
@@ -42,7 +53,7 @@ namespace TahilBorsaMS.Controllers
         }
         public ActionResult LabDataList(string e)
         {
-            IQueryable<tblLabData> k = db.tblLabData.Where(x => x.Process == false);
+            IQueryable<tblLabData> k = db.tblLabData.Where(x => x.Process == true);
 
             if (!string.IsNullOrEmpty(e))
             {

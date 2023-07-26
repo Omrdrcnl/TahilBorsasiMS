@@ -1,5 +1,6 @@
 ﻿@model TahilBorsaMS.Models.Entity.tblLabData
 
+
 @{
     ViewBag.Title = "AddLaBData";
     Layout = "~/Views/Shared/Layout.cshtml";
@@ -11,7 +12,7 @@
         <h1>Ürün Besin Değeri Girişi</h1>
         <br />
         <label>Ürün Giriş Id</label>
-        @Html.TextBoxFor(x => x.EntryProductId, new { @class = "form-control"})  
+        @Html.TextBoxFor(x => x.EntryProductId, new { @class = "form-control" })
         <br />
         <label>Ürün Besin Değerini Giriniz</label>
         @Html.TextBoxFor(x => x.NutritionalValue, new { @class = "form-control" })

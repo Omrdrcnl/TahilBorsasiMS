@@ -14,20 +14,18 @@ namespace TahilBorsaMS.Models.Entity
     
     public partial class tblSale
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblSale()
-        {
-            this.tblSaleTrades = new HashSet<tblSaleTrades>();
-        }
-    
         public int Id { get; set; }
-        public Nullable<int> LastProductId { get; set; }
         public Nullable<decimal> BasePrice { get; set; }
         public Nullable<decimal> ActualPrice { get; set; }
         public Nullable<decimal> Amount { get; set; }
+        public Nullable<int> EntryProductId { get; set; }
+        public Nullable<int> TradesmanId { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<int> Quantity { get; set; }
+        public Nullable<int> LabId { get; set; }
     
-        public virtual tblLastProduct tblLastProduct { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblSaleTrades> tblSaleTrades { get; set; }
+        public virtual tblEntryProduct tblEntryProduct { get; set; }
+        public virtual tblTradesman tblTradesman { get; set; }
+        public virtual tblLabData tblLabData { get; set; }
     }
 }
