@@ -279,6 +279,7 @@
     <Content Include="Views\Labaratuar\LabDataList.cshtml" />
     <Content Include="Views\Sale\Index.cshtml" />
     <Content Include="Views\Sale\CallSale.cshtml" />
+    <Content Include="Views\Sale\Saled.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

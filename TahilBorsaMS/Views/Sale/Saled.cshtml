@@ -1,8 +1,10 @@
-﻿@using TahilBorsaMS.Models.Entity
+﻿
+
+@using TahilBorsaMS.Models.Entity
 @model List<tblSale>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Saled";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
@@ -26,14 +28,14 @@
                 <td>@k.tblEntryProduct.FarmerId</td>
                 <td>@k.tblEntryProduct.tblFarmer.IdentityNo</td>
                 <td>@k.tblLabData.NutritionalValue</td>
-                <td class="text-center"><a href="/Sale/CallSale/@k.Id" class="btn btn-success">Satış Gir</a></td>
+                <td class="text-center"><a class="btn btn-info">Detay</a></td>
 
             </tr>
         }
     </table>
     <div class="btn-group btn-group-lg d-flex justify-content-between">
         <div>
-            <a href="/Sale/Saled" class="btn btn-warning btn-lg">Geçmiş Satış Verileri</a>
+            <a href="/Sale/Index/" class="btn btn-primary btn-lg">Geri</a>
         </div>
 
     </div>

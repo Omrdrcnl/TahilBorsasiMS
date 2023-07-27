@@ -10,8 +10,11 @@
     <div class="form-control">
         <h1>Satış Gerçekleştir</h1>
         <br />
+        <label>Satış Id</label>
+        @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
+        <br />
         <label>Ürün Giriş Id</label>
-        @Html.TextBoxFor(x => x.EntryProductId, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.EntryProductId, new { @class = "form-control", @readonly = "readonly" })
         <br />
         <label>Ürün Başlangıç Fiyatı</label>
         @Html.TextBoxFor(x => x.BasePrice, new { @class = "form-control" })
@@ -25,6 +28,6 @@
         <input name="Date" type="datetime" value="@DateTime.Now.ToShortDateString()" class="form-control" />
         <br />
         <input type="hidden" value="true" name="Process" />
-        <button class="btn btn-primary">Kaydet</button>
+        <button type="submit" class="btn btn-primary btn-lg">Satışı Gerçekleştir</button>
     </div>
 }

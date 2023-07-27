@@ -23,6 +23,7 @@ namespace TahilBorsaMS.Models.Entity
         public Nullable<System.DateTime> Date { get; set; }
         public Nullable<int> Quantity { get; set; }
         public Nullable<int> LabId { get; set; }
+        public Nullable<bool> Process { get; set; }
     
         public virtual tblEntryProduct tblEntryProduct { get; set; }
         public virtual tblTradesman tblTradesman { get; set; }

@@ -40,7 +40,9 @@ namespace TahilBorsaMS.Controllers
                 {
                     EntryProductId = l.EntryProductId,
                     Quantity =l.tblEntryProduct.Quantity,
-                    LabId = l.Id
+                    LabId = l.Id,
+                    Process=false
+                    
                     
                 };
 

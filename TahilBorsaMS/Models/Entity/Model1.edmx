@@ -79,6 +79,7 @@
           <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="Information" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="tblSale">
           <Key>
@@ -93,6 +94,7 @@
           <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
           <Property Name="TradesmanId" Type="int" />
           <Property Name="Date" Type="smalldatetime" />
+          <Property Name="Process" Type="bit" />
         </EntityType>
         <EntityType Name="tblTradesman">
           <Key>
@@ -389,6 +391,7 @@
           <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Information" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblEntryProduct_tblProductName" FromRole="tblProductName" ToRole="tblEntryProduct" />
+          <Property Name="Photo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tblSale">
           <Key>
@@ -406,6 +409,7 @@
           <Property Name="Quantity" Type="Int32" />
           <Property Name="LabId" Type="Int32" />
           <NavigationProperty Name="tblLabData" Relationship="DbGrainExchangeModel.FK_tblSale_tblLabData" FromRole="tblSale" ToRole="tblLabData" />
+          <Property Name="Process" Type="Boolean" />
         </EntityType>
         <EntityType Name="tblTradesman">
           <Key>
@@ -710,6 +714,7 @@
           <EntitySetMapping Name="tblProductName">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.tblProductName">
               <MappingFragment StoreEntitySet="tblProductName">
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Information" ColumnName="Information" />
@@ -719,6 +724,7 @@
           <EntitySetMapping Name="tblSale">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.tblSale">
               <MappingFragment StoreEntitySet="tblSale">
+                <ScalarProperty Name="Process" ColumnName="Process" />
                 <ScalarProperty Name="LabId" ColumnName="LabId" />
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="Date" ColumnName="Date" />

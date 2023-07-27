@@ -8,31 +8,28 @@
 }
 
 <div class="container">
-    <table class="table table-bordered">
-        <tr>
-            <th>
-                Ürün Id
-            </th>
-            <th>
-                Ürün Adı
-            </th>
-            <th>
-                Ürün Hakkında Bilgiler
-            </th>
-            <th>Sil</th>
-            <th>Güncelle</th>
-        </tr>
+    <h2>Borsamızda İşlem Gören Ürünler</h2>
+    <br />
+    <div class="row row-cols-1 row-cols-md-2 g-4">
         @foreach (var product in Model)
         {
-            <tr>
-                <td>@product.Id</td>
-                <td>@product.Name</td>
-                <td>@product.Information</td>
-                <td><a href="~/Product/DeleteProduct/@product.Id" class="btn btn-danger">Sil</a></td>
-                <td><a href="~/Product/CallProduct/@product.Id" class="btn btn-success">Güncelle</a></td>
-            </tr>
+
+            <div class="card  mb-3">
+                <img src="@product.Photo" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                    <p class="card-text">@product.Information</p>
+
+                </div>
+                <p class="card-text"><small class="text-muted">İşlem Numarası:"@product.Id"</small></p>
+                <div class="btn-group m-1">
+                    <a href="~/Product/DeleteProduct/@product.Id" class="btn btn-outline-danger">Sil</a>
+                    <a href="~/Product/CallProduct/@product.Id" class="btn btn-outline-success">Güncelle</a>
+                </div>
+            </div>
+
         }
-    </table>
+    </div>
     <a href="~/Product/AddProduct" class="btn btn-primary">Yeni Ürün Ekle</a>
 </div>
 
