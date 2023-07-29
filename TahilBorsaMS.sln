@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahilBorsaMS", "TahilBorsaMS\TahilBorsaMS.csproj", "{F3590A36-D518-4F12-A187-AA4985880AFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahilBorsa.Api", "TahilBorsa.Api\TahilBorsa.Api.csproj", "{664B0197-C5E6-46B2-8F04-A9EFBB142E17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TahilBorsa.Api", "TahilBorsa.Api\TahilBorsa.Api.csproj", "{664B0197-C5E6-46B2-8F04-A9EFBB142E17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahilBorsa.Repository", "TahilBorsa.Repository\TahilBorsa.Repository.csproj", "{BFA99E21-C599-476B-97EC-5047A8BDFADB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{664B0197-C5E6-46B2-8F04-A9EFBB142E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{664B0197-C5E6-46B2-8F04-A9EFBB142E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{664B0197-C5E6-46B2-8F04-A9EFBB142E17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFA99E21-C599-476B-97EC-5047A8BDFADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA99E21-C599-476B-97EC-5047A8BDFADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA99E21-C599-476B-97EC-5047A8BDFADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA99E21-C599-476B-97EC-5047A8BDFADB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
