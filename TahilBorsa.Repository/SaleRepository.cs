@@ -10,6 +10,8 @@ namespace TahilBorsasi.Repository
     public class SaleRepository : RepositoryBase<tblSale>
     {
         public SaleRepository(RepositoryContext context) : base(context) { }
+
+       
     }
 
 }

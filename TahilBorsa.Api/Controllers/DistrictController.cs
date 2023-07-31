@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using TahilBorsa.Repository;
 using TahilBorsaMS.Models.Entity;
 
@@ -8,11 +9,10 @@ namespace TahilBorsa.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DistrictController : ControllerBase
+    public class DistrictController : BaseController
     {
-        private RepositoryWrapper repo;
 
-        public DistrictController(RepositoryWrapper repo)
+        public DistrictController(RepositoryWrapper repo, IMemoryCache cache) : base(repo, cache)
         {
             this.repo = repo;
         }
@@ -29,29 +29,18 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        // GET api/<DistrictController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("IllerinIlçeleri")]
+        public dynamic DistrictsByCity(int ilPlaka)
         {
-            return "value";
-        }
+            List<tblDistrict> items = repo.DistrictRepository.DistrictsByCity(ilPlaka).ToList();
 
-        // POST api/<DistrictController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+            return new
+            {
+                success = true,
+                data = items
+            };
 
-        // PUT api/<DistrictController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
         }
-
-        // DELETE api/<DistrictController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+       
     }
 }

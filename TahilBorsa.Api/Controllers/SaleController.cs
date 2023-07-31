@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using TahilBorsa.Repository;
 using TahilBorsaMS.Models.Entity;
 
@@ -7,11 +8,10 @@ namespace TahilBorsa.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SaleController : ControllerBase
+    public class SaleController : BaseController
     {
-        private RepositoryWrapper repo;
 
-        public SaleController(RepositoryWrapper repo)
+        public SaleController(RepositoryWrapper repo, IMemoryCache cache) : base(repo, cache)
         {
             this.repo = repo;
         }
@@ -27,10 +27,51 @@ namespace TahilBorsa.Api.Controllers
                 data = Sales
             };
         }
-        //[HttpGet("Gerçekleşen Satışlar")]
-        //public dynamic Saled()
+        [HttpGet("GerçekleşenSatışlar")]
+        public dynamic Saled()
+        {
+            List<tblSale> items = repo.SaleRepository.FindByCondition(z => z.Process == true).ToList<tblSale>();
+
+            return new
+            {
+                success = true,
+                data = items
+            };
+        }
+
+        [HttpGet("EsnafaGöreSatışlar/{tblTradesmanId}")]
+        public dynamic SaleTradesman(int tradesmanId)
+        {
+            List<tblSale> items = repo.SaleRepository.FindByCondition(z => z.tblTradesmanId == tradesmanId).ToList<tblSale>();
+
+            return new
+            {
+                success = true,
+                data = items
+            };
+        }
+        [HttpGet("ÇiftiçiyeGöreSatışlar/{tblFarmerId}")]
+        public dynamic Get(int farmerId)
+        {
+            List<tblSale> items = repo.SaleRepository.FindByCondition(z => z.tblEntryProduct.tblFarmerId == farmerId).ToList<tblSale>();
+
+            return new
+            {
+                success = true,
+                data = items
+            };
+        }
+
+        //[HttpGet("/{TradesmanId}")]
+        //public dynamic SalaryByTradesman(int tradesmanId)
         //{
-        //    List<tblSale> Saled = repo.SaleRepository.FindByCondition().Where(z=>z.Process=true).ToList();
+        //    List<tblSale> items = repo.SaleRepository.GetSaledByTradesman(tradesmanId);
+
+        //    return new
+        //    {
+        //        success = true,
+        //        data = items
+        //    };
         //}
     }
 }

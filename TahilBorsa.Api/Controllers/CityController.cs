@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using TahilBorsa.Repository;
 using TahilBorsaMS.Models.Entity;
 
@@ -7,11 +8,10 @@ namespace TahilBorsa.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CityController : ControllerBase
+    public class CityController : BaseController
     {
-        private RepositoryWrapper repo;
 
-        public CityController(RepositoryWrapper repo)
+        public CityController(RepositoryWrapper repo, IMemoryCache cache) : base(repo, cache)
         {
             this.repo = repo;
         }

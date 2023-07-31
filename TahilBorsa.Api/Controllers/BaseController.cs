@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using TahilBorsa.Repository;
 
 
@@ -9,9 +10,12 @@ namespace TahilBorsa.Api.Controllers
     public class BaseController : ControllerBase
     {
         protected RepositoryWrapper repo;
-        public BaseController(RepositoryWrapper repo)
+        //cache dahil et
+        protected IMemoryCache cache;
+        public BaseController(RepositoryWrapper repo, IMemoryCache cache)
         {
             this.repo = repo;
+            this.cache = cache;
         }
       
     }
