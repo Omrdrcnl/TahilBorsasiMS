@@ -11,7 +11,10 @@ namespace TahilBorsaMS.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    [Table("tblEntryProduct")]
+
     public partial class tblEntryProduct
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,14 +25,14 @@ namespace TahilBorsaMS.Models.Entity
         }
     
         public int Id { get; set; }
-        public Nullable<byte> ProductNameId { get; set; }
-        public Nullable<int> FarmerId { get; set; }
+        public byte tblProductId { get; set; }
+        public int tblFarmerId { get; set; }
         public Nullable<int> Quantity { get; set; }
         public Nullable<System.DateTime> DateTime { get; set; }
         public Nullable<bool> Process { get; set; }
     
         public virtual tblFarmer tblFarmer { get; set; }
-        public virtual tblProductName tblProductName { get; set; }
+        public virtual tblProduct tblProduct { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblLabData> tblLabData { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -24,8 +24,8 @@
     @foreach (var k in Model)
     {
         <tr>
-            <td>@k.EntryProductId</td>
-            <td>@k.tblEntryProduct.FarmerId</td>
+            <td>@k.tblEntryProductId</td>
+            <td>@k.tblEntryProduct.tblFarmerId</td>
             <td>@k.tblEntryProduct.tblFarmer.IdentityNo</td>
             <td>@k.NutritionalValue</td>
             <td>@k.tblEntryProduct.DateTime</td>

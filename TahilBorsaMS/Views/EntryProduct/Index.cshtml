@@ -13,10 +13,10 @@
         @Html.TextBoxFor(x => x.Id, new { @type = "hidden" })
         <label>Çiftçi Id</label>
         <br />
-        @Html.TextBoxFor(x => x.FarmerId, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.tblFarmerId, new { @class = "form-control" })
         <br />
         <label>Ürün Çeşidi</label>
-        @Html.DropDownListFor(x => x.ProductNameId, ViewBag.ProductList as IEnumerable<SelectListItem>, new { @class = "form-control" })
+        @Html.DropDownListFor(x => x.tblProductId, ViewBag.ProductList as IEnumerable<SelectListItem>, new { @class = "form-control" })
         <br />
         <label>Ürün Miktarı (kg)</label>
         @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control" })

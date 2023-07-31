@@ -14,7 +14,7 @@ namespace TahilBorsaMS.Controllers
 {
     public class FarmerController : Controller
     {
-        DbGrainExchangeEntities3 db = new DbGrainExchangeEntities3();
+        DbGrainExchangeEntities4 db = new DbGrainExchangeEntities4();
         // GET: Farmer
         public ActionResult Index(string f, int page=1)
         {
@@ -60,9 +60,9 @@ namespace TahilBorsaMS.Controllers
                 //Adres nesnesi olusturup bilgileri adres tablosuna gönderiyoruz
                 tblAddress address = new tblAddress
                 {
-                    CityId = farmer.tblAddress.tblDistrict.tblCity.Id,
+                    tblCityId = farmer.tblAddress.tblDistrict.tblCity.Id,
                     NeighborhoodName = farmer.tblAddress.NeighborhoodName,
-                    DistrictId = farmer.tblAddress.tblDistrict.Id,
+                    tblDistrictId = farmer.tblAddress.tblDistrict.Id,
                     FullAddress = farmer.tblAddress.FullAddress
                 };
 
@@ -120,8 +120,8 @@ namespace TahilBorsaMS.Controllers
                     tblAddress address = new tblAddress
                     {
                         Id = f.tblAddress.Id,
-                        CityId = f.tblAddress.CityId,
-                        DistrictId = f.tblAddress.DistrictId,
+                        tblCityId = f.tblAddress.tblCityId,
+                        tblDistrictId = f.tblAddress.tblDistrictId,
                         FullAddress = f.tblAddress.FullAddress,
                         NeighborhoodName = f.tblAddress.NeighborhoodName,
                     };

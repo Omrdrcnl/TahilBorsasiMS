@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DbGrainExchangeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DbGrainExchangeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -20,8 +20,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DistrictId" Type="int" />
-          <Property Name="CityId" Type="int" />
+          <Property Name="tblDistrictId" Type="int" />
+          <Property Name="tblCityId" Type="int" />
           <Property Name="NeighborhoodName" Type="nvarchar" MaxLength="50" />
           <Property Name="FullAddress" Type="nvarchar" MaxLength="100" />
         </EntityType>
@@ -38,15 +38,15 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="tblCityId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tblEntryProduct">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ProductNameId" Type="tinyint" />
-          <Property Name="FarmerId" Type="int" />
+          <Property Name="tblProductId" Type="tinyint" Nullable="false" />
+          <Property Name="tblFarmerId" Type="int" Nullable="false" />
           <Property Name="Quantity" Type="int" />
           <Property Name="DateTime" Type="smalldatetime" />
           <Property Name="Process" Type="bit" />
@@ -60,7 +60,7 @@
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="IdentityNo" Type="nchar" MaxLength="11" Nullable="false" />
           <Property Name="Contact" Type="nvarchar" MaxLength="50" />
-          <Property Name="AddressID" Type="int" />
+          <Property Name="tblAddressId" Type="int" />
           <Property Name="BirthDate" Type="date" />
         </EntityType>
         <EntityType Name="tblLabData">
@@ -68,11 +68,11 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="EntryProductId" Type="int" />
+          <Property Name="tblEntryProductId" Type="int" />
           <Property Name="NutritionalValue" Type="int" />
           <Property Name="Process" Type="bit" />
         </EntityType>
-        <EntityType Name="tblProductName">
+        <EntityType Name="tblProduct">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -86,13 +86,13 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="EntryProductId" Type="int" />
-          <Property Name="LabId" Type="int" />
+          <Property Name="tblEntryProductId" Type="int" Nullable="false" />
+          <Property Name="tblLabDataId" Type="int" Nullable="false" />
           <Property Name="BasePrice" Type="decimal" Precision="18" Scale="2" />
           <Property Name="ActualPrice" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Quantity" Type="int" />
           <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="TradesmanId" Type="int" />
+          <Property Name="tblTradesmanId" Type="int" />
           <Property Name="Date" Type="smalldatetime" />
           <Property Name="Process" Type="bit" />
         </EntityType>
@@ -105,7 +105,7 @@
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="IdentityNo" Type="nchar" MaxLength="11" Nullable="false" />
           <Property Name="Contact" Type="nvarchar" MaxLength="50" />
-          <Property Name="AddressId" Type="int" />
+          <Property Name="tblAddressId" Type="int" />
           <Property Name="Birthdate" Type="date" />
         </EntityType>
         <Association Name="FK_tblAddress_tblCity">
@@ -116,7 +116,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblAddress">
-              <PropertyRef Name="CityId" />
+              <PropertyRef Name="tblCityId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -128,7 +128,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblAddress">
-              <PropertyRef Name="DistrictId" />
+              <PropertyRef Name="tblDistrictId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -140,31 +140,31 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblDistrict">
-              <PropertyRef Name="CityId" />
+              <PropertyRef Name="tblCityId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_tblEntryProduct_tblFarmer">
-          <End Role="tblFarmer" Type="Self.tblFarmer" Multiplicity="0..1" />
+          <End Role="tblFarmer" Type="Self.tblFarmer" Multiplicity="1" />
           <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblFarmer">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblEntryProduct">
-              <PropertyRef Name="FarmerId" />
+              <PropertyRef Name="tblFarmerId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblEntryProduct_tblProductName">
-          <End Role="tblProductName" Type="Self.tblProductName" Multiplicity="0..1" />
+        <Association Name="FK_tblEntryProduct_tblProduct">
+          <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="1" />
           <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="tblProductName">
+            <Principal Role="tblProduct">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblEntryProduct">
-              <PropertyRef Name="ProductNameId" />
+              <PropertyRef Name="tblProductId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -176,7 +176,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblFarmer">
-              <PropertyRef Name="AddressID" />
+              <PropertyRef Name="tblAddressId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -188,31 +188,31 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblLabData">
-              <PropertyRef Name="EntryProductId" />
+              <PropertyRef Name="tblEntryProductId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_tblSale_tblEntryProduct">
-          <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="0..1" />
+          <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="1" />
           <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblEntryProduct">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblSale">
-              <PropertyRef Name="EntryProductId" />
+              <PropertyRef Name="tblEntryProductId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_tblSale_tblLabData">
-          <End Role="tblLabData" Type="Self.tblLabData" Multiplicity="0..1" />
+          <End Role="tblLabData" Type="Self.tblLabData" Multiplicity="1" />
           <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblLabData">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblSale">
-              <PropertyRef Name="LabId" />
+              <PropertyRef Name="tblLabDataId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -224,7 +224,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblSale">
-              <PropertyRef Name="TradesmanId" />
+              <PropertyRef Name="tblTradesmanId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -236,7 +236,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblTradesman">
-              <PropertyRef Name="AddressId" />
+              <PropertyRef Name="tblAddressId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -248,7 +248,7 @@
           <EntitySet Name="tblEntryProduct" EntityType="Self.tblEntryProduct" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblFarmer" EntityType="Self.tblFarmer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblLabData" EntityType="Self.tblLabData" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tblProductName" EntityType="Self.tblProductName" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblProduct" EntityType="Self.tblProduct" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblSale" EntityType="Self.tblSale" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblTradesman" EntityType="Self.tblTradesman" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_tblAddress_tblCity" Association="Self.FK_tblAddress_tblCity">
@@ -267,8 +267,8 @@
             <End Role="tblFarmer" EntitySet="tblFarmer" />
             <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblEntryProduct_tblProductName" Association="Self.FK_tblEntryProduct_tblProductName">
-            <End Role="tblProductName" EntitySet="tblProductName" />
+          <AssociationSet Name="FK_tblEntryProduct_tblProduct" Association="Self.FK_tblEntryProduct_tblProduct">
+            <End Role="tblProduct" EntitySet="tblProduct" />
             <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
           </AssociationSet>
           <AssociationSet Name="FK_tblFarmer_tblAddress" Association="Self.FK_tblFarmer_tblAddress">
@@ -296,7 +296,8 @@
             <End Role="tblTradesman" EntitySet="tblTradesman" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbGrainExchangeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -315,8 +316,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DistrictId" Type="Int32" />
-          <Property Name="CityId" Type="Int32" />
+          <Property Name="tblDistrictId" Type="Int32" />
+          <Property Name="tblCityId" Type="Int32" />
           <Property Name="NeighborhoodName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="FullAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="tblCity" Relationship="Self.FK_tblAddress_tblCity" FromRole="tblAddress" ToRole="tblCity" />
@@ -339,7 +340,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <Property Name="tblCityId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblAddress_tblDistrict1" FromRole="tblDistrict" ToRole="tblAddress" />
           <NavigationProperty Name="tblCity" Relationship="Self.FK_tblDistrict_tblCity1" FromRole="tblDistrict" ToRole="tblCity" />
         </EntityType>
@@ -348,15 +349,15 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ProductNameId" Type="Byte" />
-          <Property Name="FarmerId" Type="Int32" />
+          <Property Name="tblProductId" Type="Byte" Nullable="false" />
+          <Property Name="tblFarmerId" Type="Int32" Nullable="false" />
           <Property Name="Quantity" Type="Int32" />
           <Property Name="DateTime" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="tblFarmer" Relationship="Self.FK_tblEntryProduct_tblFarmer" FromRole="tblEntryProduct" ToRole="tblFarmer" />
-          <NavigationProperty Name="tblProductName" Relationship="Self.FK_tblEntryProduct_tblProductName" FromRole="tblEntryProduct" ToRole="tblProductName" />
-          <NavigationProperty Name="tblLabData" Relationship="Self.FK_tblLabData_tblEntryProduct" FromRole="tblEntryProduct" ToRole="tblLabData" />
           <Property Name="Process" Type="Boolean" />
-          <NavigationProperty Name="tblSale" Relationship="DbGrainExchangeModel.FK_tblSale_tblEntryProduct" FromRole="tblEntryProduct" ToRole="tblSale" />
+          <NavigationProperty Name="tblFarmer" Relationship="Self.FK_tblEntryProduct_tblFarmer" FromRole="tblEntryProduct" ToRole="tblFarmer" />
+          <NavigationProperty Name="tblProduct" Relationship="Self.FK_tblEntryProduct_tblProduct" FromRole="tblEntryProduct" ToRole="tblProduct" />
+          <NavigationProperty Name="tblLabData" Relationship="Self.FK_tblLabData_tblEntryProduct" FromRole="tblEntryProduct" ToRole="tblLabData" />
+          <NavigationProperty Name="tblSale" Relationship="Self.FK_tblSale_tblEntryProduct" FromRole="tblEntryProduct" ToRole="tblSale" />
         </EntityType>
         <EntityType Name="tblFarmer">
           <Key>
@@ -367,7 +368,7 @@
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IdentityNo" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="AddressID" Type="Int32" />
+          <Property Name="tblAddressId" Type="Int32" />
           <Property Name="BirthDate" Type="DateTime" Precision="0" />
           <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblFarmer_tblAddress" FromRole="tblFarmer" ToRole="tblAddress" />
           <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblEntryProduct_tblFarmer" FromRole="tblFarmer" ToRole="tblEntryProduct" />
@@ -377,39 +378,39 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="EntryProductId" Type="Int32" />
+          <Property Name="tblEntryProductId" Type="Int32" />
           <Property Name="NutritionalValue" Type="Int32" />
-          <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblLabData_tblEntryProduct" FromRole="tblLabData" ToRole="tblEntryProduct" />
           <Property Name="Process" Type="Boolean" />
-          <NavigationProperty Name="tblSale" Relationship="DbGrainExchangeModel.FK_tblSale_tblLabData" FromRole="tblLabData" ToRole="tblSale" />
+          <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblLabData_tblEntryProduct" FromRole="tblLabData" ToRole="tblEntryProduct" />
+          <NavigationProperty Name="tblSale" Relationship="Self.FK_tblSale_tblLabData" FromRole="tblLabData" ToRole="tblSale" />
         </EntityType>
-        <EntityType Name="tblProductName">
+        <EntityType Name="tblProduct">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Information" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblEntryProduct_tblProductName" FromRole="tblProductName" ToRole="tblEntryProduct" />
           <Property Name="Photo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblEntryProduct_tblProduct" FromRole="tblProduct" ToRole="tblEntryProduct" />
         </EntityType>
         <EntityType Name="tblSale">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tblEntryProductId" Type="Int32" Nullable="false" />
+          <Property Name="tblLabDataId" Type="Int32" Nullable="false" />
           <Property Name="BasePrice" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="ActualPrice" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="EntryProductId" Type="Int32" />
-          <Property Name="TradesmanId" Type="Int32" />
-          <Property Name="Date" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="tblEntryProduct" Relationship="DbGrainExchangeModel.FK_tblSale_tblEntryProduct" FromRole="tblSale" ToRole="tblEntryProduct" />
-          <NavigationProperty Name="tblTradesman" Relationship="DbGrainExchangeModel.FK_tblSale_tblTradesman" FromRole="tblSale" ToRole="tblTradesman" />
           <Property Name="Quantity" Type="Int32" />
-          <Property Name="LabId" Type="Int32" />
-          <NavigationProperty Name="tblLabData" Relationship="DbGrainExchangeModel.FK_tblSale_tblLabData" FromRole="tblSale" ToRole="tblLabData" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="tblTradesmanId" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="Process" Type="Boolean" />
+          <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblSale_tblEntryProduct" FromRole="tblSale" ToRole="tblEntryProduct" />
+          <NavigationProperty Name="tblLabData" Relationship="Self.FK_tblSale_tblLabData" FromRole="tblSale" ToRole="tblLabData" />
+          <NavigationProperty Name="tblTradesman" Relationship="Self.FK_tblSale_tblTradesman" FromRole="tblSale" ToRole="tblTradesman" />
         </EntityType>
         <EntityType Name="tblTradesman">
           <Key>
@@ -420,12 +421,10 @@
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IdentityNo" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="AddressId" Type="Int32" />
+          <Property Name="tblAddressId" Type="Int32" />
           <Property Name="Birthdate" Type="DateTime" Precision="0" />
           <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblTradesman_tblAddress" FromRole="tblTradesman" ToRole="tblAddress" />
-          <NavigationProperty Name="tblTradesman1" Relationship="Self.FK_tblTradesman_tblTradesman" FromRole="tblTradesman" ToRole="tblTradesman1" />
-          <NavigationProperty Name="tblTradesman2" Relationship="Self.FK_tblTradesman_tblTradesman" FromRole="tblTradesman1" ToRole="tblTradesman" />
-          <NavigationProperty Name="tblSale" Relationship="DbGrainExchangeModel.FK_tblSale_tblTradesman" FromRole="tblTradesman" ToRole="tblSale" />
+          <NavigationProperty Name="tblSale" Relationship="Self.FK_tblSale_tblTradesman" FromRole="tblTradesman" ToRole="tblSale" />
         </EntityType>
         <Association Name="FK_tblAddress_tblCity">
           <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
@@ -435,7 +434,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblAddress">
-              <PropertyRef Name="CityId" />
+              <PropertyRef Name="tblCityId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -447,7 +446,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblAddress">
-              <PropertyRef Name="DistrictId" />
+              <PropertyRef Name="tblDistrictId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -459,7 +458,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblFarmer">
-              <PropertyRef Name="AddressID" />
+              <PropertyRef Name="tblAddressId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -471,7 +470,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblTradesman">
-              <PropertyRef Name="AddressId" />
+              <PropertyRef Name="tblAddressId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -483,31 +482,31 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblDistrict">
-              <PropertyRef Name="CityId" />
+              <PropertyRef Name="tblCityId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_tblEntryProduct_tblFarmer">
-          <End Role="tblFarmer" Type="Self.tblFarmer" Multiplicity="0..1" />
+          <End Role="tblFarmer" Type="Self.tblFarmer" Multiplicity="1" />
           <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblFarmer">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblEntryProduct">
-              <PropertyRef Name="FarmerId" />
+              <PropertyRef Name="tblFarmerId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblEntryProduct_tblProductName">
-          <End Role="tblProductName" Type="Self.tblProductName" Multiplicity="0..1" />
+        <Association Name="FK_tblEntryProduct_tblProduct">
+          <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="1" />
           <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="tblProductName">
+            <Principal Role="tblProduct">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblEntryProduct">
-              <PropertyRef Name="ProductNameId" />
+              <PropertyRef Name="tblProductId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -519,23 +518,47 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tblLabData">
-              <PropertyRef Name="EntryProductId" />
+              <PropertyRef Name="tblEntryProductId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblTradesman_tblTradesman">
-          <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="1" />
-          <End Role="tblTradesman1" Type="Self.tblTradesman" Multiplicity="0..1" />
+        <Association Name="FK_tblSale_tblEntryProduct">
+          <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="1" />
+          <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEntryProduct">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblSale">
+              <PropertyRef Name="tblEntryProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSale_tblLabData">
+          <End Role="tblLabData" Type="Self.tblLabData" Multiplicity="1" />
+          <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblLabData">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblSale">
+              <PropertyRef Name="tblLabDataId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSale_tblTradesman">
+          <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="0..1" />
+          <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblTradesman">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="tblTradesman1">
-              <PropertyRef Name="Id" />
+            <Dependent Role="tblSale">
+              <PropertyRef Name="tblTradesmanId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DbGrainExchangeEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DbGrainExchangeEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="tblAddress" EntityType="Self.tblAddress" />
           <EntitySet Name="tblCity" EntityType="Self.tblCity" />
@@ -543,7 +566,7 @@
           <EntitySet Name="tblEntryProduct" EntityType="Self.tblEntryProduct" />
           <EntitySet Name="tblFarmer" EntityType="Self.tblFarmer" />
           <EntitySet Name="tblLabData" EntityType="Self.tblLabData" />
-          <EntitySet Name="tblProductName" EntityType="Self.tblProductName" />
+          <EntitySet Name="tblProduct" EntityType="Self.tblProduct" />
           <EntitySet Name="tblSale" EntityType="Self.tblSale" />
           <EntitySet Name="tblTradesman" EntityType="Self.tblTradesman" />
           <AssociationSet Name="FK_tblAddress_tblCity" Association="Self.FK_tblAddress_tblCity">
@@ -570,73 +593,33 @@
             <End Role="tblFarmer" EntitySet="tblFarmer" />
             <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblEntryProduct_tblProductName" Association="Self.FK_tblEntryProduct_tblProductName">
-            <End Role="tblProductName" EntitySet="tblProductName" />
+          <AssociationSet Name="FK_tblEntryProduct_tblProduct" Association="Self.FK_tblEntryProduct_tblProduct">
+            <End Role="tblProduct" EntitySet="tblProduct" />
             <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
           </AssociationSet>
           <AssociationSet Name="FK_tblLabData_tblEntryProduct" Association="Self.FK_tblLabData_tblEntryProduct">
             <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
             <End Role="tblLabData" EntitySet="tblLabData" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblTradesman_tblTradesman" Association="Self.FK_tblTradesman_tblTradesman">
-            <End Role="tblTradesman" EntitySet="tblTradesman" />
-            <End Role="tblTradesman1" EntitySet="tblTradesman" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSale_tblEntryProduct" Association="DbGrainExchangeModel.FK_tblSale_tblEntryProduct">
+          <AssociationSet Name="FK_tblSale_tblEntryProduct" Association="Self.FK_tblSale_tblEntryProduct">
             <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
             <End Role="tblSale" EntitySet="tblSale" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSale_tblTradesman" Association="DbGrainExchangeModel.FK_tblSale_tblTradesman">
-            <End Role="tblTradesman" EntitySet="tblTradesman" />
-            <End Role="tblSale" EntitySet="tblSale" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSale_tblLabData" Association="DbGrainExchangeModel.FK_tblSale_tblLabData">
+          <AssociationSet Name="FK_tblSale_tblLabData" Association="Self.FK_tblSale_tblLabData">
             <End Role="tblLabData" EntitySet="tblLabData" />
             <End Role="tblSale" EntitySet="tblSale" />
           </AssociationSet>
+          <AssociationSet Name="FK_tblSale_tblTradesman" Association="Self.FK_tblSale_tblTradesman">
+            <End Role="tblTradesman" EntitySet="tblTradesman" />
+            <End Role="tblSale" EntitySet="tblSale" />
+          </AssociationSet>
         </EntityContainer>
-        <Association Name="FK_tblSale_tblEntryProduct">
-          <End Type="DbGrainExchangeModel.tblEntryProduct" Role="tblEntryProduct" Multiplicity="0..1" />
-          <End Type="DbGrainExchangeModel.tblSale" Role="tblSale" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblEntryProduct">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblSale">
-              <PropertyRef Name="EntryProductId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSale_tblTradesman">
-          <End Type="DbGrainExchangeModel.tblTradesman" Role="tblTradesman" Multiplicity="0..1" />
-          <End Type="DbGrainExchangeModel.tblSale" Role="tblSale" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblTradesman">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblSale">
-              <PropertyRef Name="TradesmanId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSale_tblLabData">
-          <End Type="DbGrainExchangeModel.tblLabData" Role="tblLabData" Multiplicity="0..1" />
-          <End Type="DbGrainExchangeModel.tblSale" Role="tblSale" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblLabData">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblSale">
-              <PropertyRef Name="LabId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DbGrainExchangeModelStoreContainer" CdmEntityContainer="DbGrainExchangeEntities3">
+        <EntityContainerMapping StorageEntityContainer="DbGrainExchangeModelStoreContainer" CdmEntityContainer="DbGrainExchangeEntities4">
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
@@ -652,8 +635,8 @@
             <EntityTypeMapping TypeName="DbGrainExchangeModel.tblAddress">
               <MappingFragment StoreEntitySet="tblAddress">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
-                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="tblDistrictId" ColumnName="tblDistrictId" />
+                <ScalarProperty Name="tblCityId" ColumnName="tblCityId" />
                 <ScalarProperty Name="NeighborhoodName" ColumnName="NeighborhoodName" />
                 <ScalarProperty Name="FullAddress" ColumnName="FullAddress" />
               </MappingFragment>
@@ -672,19 +655,19 @@
               <MappingFragment StoreEntitySet="tblDistrict">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="tblCityId" ColumnName="tblCityId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblEntryProduct">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.tblEntryProduct">
               <MappingFragment StoreEntitySet="tblEntryProduct">
-                <ScalarProperty Name="Process" ColumnName="Process" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="ProductNameId" ColumnName="ProductNameId" />
-                <ScalarProperty Name="FarmerId" ColumnName="FarmerId" />
+                <ScalarProperty Name="tblProductId" ColumnName="tblProductId" />
+                <ScalarProperty Name="tblFarmerId" ColumnName="tblFarmerId" />
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -696,7 +679,7 @@
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
                 <ScalarProperty Name="Contact" ColumnName="Contact" />
-                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="tblAddressId" ColumnName="tblAddressId" />
                 <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -704,36 +687,36 @@
           <EntitySetMapping Name="tblLabData">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.tblLabData">
               <MappingFragment StoreEntitySet="tblLabData">
-                <ScalarProperty Name="Process" ColumnName="Process" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="EntryProductId" ColumnName="EntryProductId" />
+                <ScalarProperty Name="tblEntryProductId" ColumnName="tblEntryProductId" />
                 <ScalarProperty Name="NutritionalValue" ColumnName="NutritionalValue" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tblProductName">
-            <EntityTypeMapping TypeName="DbGrainExchangeModel.tblProductName">
-              <MappingFragment StoreEntitySet="tblProductName">
-                <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <EntitySetMapping Name="tblProduct">
+            <EntityTypeMapping TypeName="DbGrainExchangeModel.tblProduct">
+              <MappingFragment StoreEntitySet="tblProduct">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Information" ColumnName="Information" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblSale">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.tblSale">
               <MappingFragment StoreEntitySet="tblSale">
-                <ScalarProperty Name="Process" ColumnName="Process" />
-                <ScalarProperty Name="LabId" ColumnName="LabId" />
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="TradesmanId" ColumnName="TradesmanId" />
-                <ScalarProperty Name="EntryProductId" ColumnName="EntryProductId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="tblEntryProductId" ColumnName="tblEntryProductId" />
+                <ScalarProperty Name="tblLabDataId" ColumnName="tblLabDataId" />
                 <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
                 <ScalarProperty Name="ActualPrice" ColumnName="ActualPrice" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="tblTradesmanId" ColumnName="tblTradesmanId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -745,7 +728,7 @@
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
                 <ScalarProperty Name="Contact" ColumnName="Contact" />
-                <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+                <ScalarProperty Name="tblAddressId" ColumnName="tblAddressId" />
                 <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
               </MappingFragment>
             </EntityTypeMapping>

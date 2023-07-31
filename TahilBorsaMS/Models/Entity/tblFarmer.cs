@@ -11,7 +11,10 @@ namespace TahilBorsaMS.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    [Table("tblFarmer")]
+
     public partial class tblFarmer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,7 +28,7 @@ namespace TahilBorsaMS.Models.Entity
         public string LastName { get; set; }
         public string IdentityNo { get; set; }
         public string Contact { get; set; }
-        public Nullable<int> AddressID { get; set; }
+        public Nullable<int> tblAddressId { get; set; }
         public Nullable<System.DateTime> BirthDate { get; set; }
     
         public virtual tblAddress tblAddress { get; set; }

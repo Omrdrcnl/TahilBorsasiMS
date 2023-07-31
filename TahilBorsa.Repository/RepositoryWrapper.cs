@@ -11,15 +11,15 @@ namespace TahilBorsa.Repository
     {
         private RepositoryContext context;
 
-        private AddressRepository addressRepository;
-        private CityRepository cityRepository;
-        private DistrictRepository districtRepository;
-        private EntryProductRepository entryProductRepository;
-        private FarmerRepository farmerRepository;
-        private LabDataRepository labDataRepository;
-        private ProductNameRepository productNameRepository;
-        private SaleRepository saleRepository;
-        private TradesmanRepository tradesmanRepository;
+        private AddressRepository? addressRepository;
+        private CityRepository? cityRepository;
+        private DistrictRepository? districtRepository;
+        private EntryProductRepository? entryProductRepository;
+        private FarmerRepository? farmerRepository;
+        private LabaratuarRepository? labaratuarRepository;
+        private ProductRepository? productRepository;
+        private SaleRepository? saleRepository;
+        private TradesmanRepository? tradesmanRepository;
 
         public RepositoryWrapper(RepositoryContext context)
         {
@@ -76,23 +76,23 @@ namespace TahilBorsa.Repository
             }
         }
 
-        public LabDataRepository LabDataRepository
+        public LabaratuarRepository LabDataRepository
         {
             get
             {
-                if (labDataRepository == null)
-                    labDataRepository = new LabDataRepository(context);
-                return labDataRepository;
+                if (labaratuarRepository == null)
+                    labaratuarRepository = new LabaratuarRepository(context);
+                return labaratuarRepository;
             }
         }
 
-        public ProductNameRepository ProductNameRepository
+        public ProductRepository ProductRepository
         {
             get
             {
-                if (productNameRepository == null)
-                    productNameRepository = new ProductNameRepository(context);
-                return productNameRepository;
+                if (productRepository == null)
+                    productRepository = new ProductRepository(context);
+                return productRepository;
             }
         }
 

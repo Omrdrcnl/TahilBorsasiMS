@@ -21,7 +21,7 @@ namespace TahilBorsa.Api.Controllers
         [HttpGet("TumIlceler")]
         public dynamic TumIlceler()
         {
-            List<District> item = repo.DistrictRepository.FindAll().ToList<District>();
+            List<tblDistrict> item = repo.DistrictRepository.FindAll().ToList<tblDistrict>();
             return new
             {
                 success = true,

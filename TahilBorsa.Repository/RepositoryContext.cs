@@ -12,20 +12,21 @@ namespace TahilBorsasi.Repository
 {
     public class RepositoryContext : DbContext
     {
-        public RepositoryContext(DbContextOptions options) : base(options) 
+        public RepositoryContext(DbContextOptions options) : base(options)
         {
             this.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
-    
-    public DbSet<tblProductName> tblProductName {  get; set; }
-    public DbSet<tblFarmer> tblFarmer { get; set; }
-    public DbSet<tblAddress> tblAddress { get; set; }
-    public DbSet<tblCity> tblCity { get; set; }
-    public DbSet<District> District { get; set; }
-    public DbSet<tblEntryProduct> tblEntryProduct { get; set; }
-    public DbSet<tblLabData> tblLabData { get; set; }
-    public DbSet<tblTradesman> tblTradesman { get; set; }
-    public DbSet<tblSale> tblSale { get; set; }
+
+
+        public DbSet<tblProduct> Products { get; set; }
+        public DbSet<tblFarmer> Farmers { get; set; }
+        public DbSet<tblAddress> Addresses { get; set; }
+        public DbSet<tblCity> Cities { get; set; }
+        public DbSet<tblDistrict> Districts { get; set; }
+        public DbSet<tblEntryProduct> EntryProducts { get; set; }
+        public DbSet<tblLabData> LabDatas { get; set; }
+        public DbSet<tblTradesman> Tradesmans { get; set; }
+        public DbSet<tblSale> Sales { get; set; }
 
     }
 }

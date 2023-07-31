@@ -11,11 +11,14 @@ namespace TahilBorsaMS.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class tblProductName
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    [Table("tblProduct")]
+
+    public partial class tblProduct
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblProductName()
+        public tblProduct()
         {
             this.tblEntryProduct = new HashSet<tblEntryProduct>();
         }

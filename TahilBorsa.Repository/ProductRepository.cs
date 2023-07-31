@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using TahilBorsaMS.Models.Entity;
 
+
 namespace TahilBorsasi.Repository
 {
-    public class LabDataRepository : RepositoryBase<tblLabData>
+    public class ProductRepository : RepositoryBase<tblProduct>
     {
-        public LabDataRepository(RepositoryContext context) : base(context) { }
+        public ProductRepository(RepositoryContext context) : base(context) { }
     }
- 
 }

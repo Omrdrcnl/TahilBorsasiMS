@@ -11,7 +11,7 @@ namespace TahilBorsaMS.Controllers
 {
     public class LabaratuarController : Controller
     {
-        DbGrainExchangeEntities3 db = new DbGrainExchangeEntities3();
+        DbGrainExchangeEntities4 db = new DbGrainExchangeEntities4();
 
         public ActionResult Index()
         {
@@ -31,16 +31,16 @@ namespace TahilBorsaMS.Controllers
         public ActionResult AddLaBData(tblLabData l)
         {
             db.tblLabData.Add(l);
-            var pro = db.tblEntryProduct.Find(l.EntryProductId);
+            var pro = db.tblEntryProduct.Find(l.tblEntryProductId);
             if (pro != null)
             {
                 pro.Process = true;
 
                 tblSale data = new tblSale()
                 {
-                    EntryProductId = l.EntryProductId,
+                    tblEntryProductId = (int)l.tblEntryProductId,
                     Quantity =l.tblEntryProduct.Quantity,
-                    LabId = l.Id,
+                    tblLabDataId = l.Id,
                     Process=false
                     
                     

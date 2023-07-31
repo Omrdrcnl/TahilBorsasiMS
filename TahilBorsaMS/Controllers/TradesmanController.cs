@@ -11,7 +11,7 @@ namespace TahilBorsaMS.Controllers
 {
     public class TradesmanController : Controller
     {
-        DbGrainExchangeEntities3 db = new DbGrainExchangeEntities3();
+        DbGrainExchangeEntities4 db = new DbGrainExchangeEntities4();
         // GET: Tradesman
         public ActionResult Index(string f, int page = 1)
         {
@@ -57,9 +57,9 @@ namespace TahilBorsaMS.Controllers
                 //Adres nesnesi olusturup bilgileri adres tablosuna gönderiyoruz
                 tblAddress address = new tblAddress
                 {
-                    CityId = tradesman.tblAddress.tblDistrict.tblCity.Id,
+                    tblCityId = tradesman.tblAddress.tblDistrict.tblCity.Id,
                     NeighborhoodName = tradesman.tblAddress.NeighborhoodName,
-                    DistrictId = tradesman.tblAddress.tblDistrict.Id,
+                    tblDistrictId = tradesman.tblAddress.tblDistrict.Id,
                     FullAddress = tradesman.tblAddress.FullAddress
                 };
 
@@ -116,8 +116,8 @@ namespace TahilBorsaMS.Controllers
                     tblAddress address = new tblAddress
                     {
                         Id = t.tblAddress.Id,
-                        CityId = t.tblAddress.CityId,
-                        DistrictId = t.tblAddress.DistrictId,
+                        tblCityId = t.tblAddress.tblCityId,
+                        tblDistrictId = t.tblAddress.tblDistrictId,
                         FullAddress = t.tblAddress.FullAddress,
                         NeighborhoodName = t.tblAddress.NeighborhoodName,
                     };

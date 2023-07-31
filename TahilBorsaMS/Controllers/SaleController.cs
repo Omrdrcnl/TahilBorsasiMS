@@ -11,7 +11,7 @@ namespace TahilBorsaMS.Controllers
     public class SaleController : Controller
     {
         // GET: Sale
-        DbGrainExchangeEntities3 db = new DbGrainExchangeEntities3 ();
+        DbGrainExchangeEntities4 db = new DbGrainExchangeEntities4 ();
         public ActionResult Index()
         {
             var lab = db.tblSale.Where(x=> x.Process==false).ToList();
@@ -37,10 +37,10 @@ namespace TahilBorsaMS.Controllers
         {
             var value = db.tblSale.Find (s.Id);
 
-            value.EntryProductId = s.EntryProductId;
+            value.tblEntryProductId = s.tblEntryProductId;
             value.BasePrice = s.BasePrice;
             value.ActualPrice = s.ActualPrice;
-            value.TradesmanId = s.TradesmanId;
+            value.tblTradesmanId = s.tblTradesmanId;
             value.Date = s.Date;
             value.Process = true;
 

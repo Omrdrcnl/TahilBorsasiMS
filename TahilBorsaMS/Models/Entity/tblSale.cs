@@ -11,22 +11,24 @@ namespace TahilBorsaMS.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    [Table("tblSale")]
     public partial class tblSale
     {
         public int Id { get; set; }
+        public int tblEntryProductId { get; set; }
+        public int tblLabDataId { get; set; }
         public Nullable<decimal> BasePrice { get; set; }
         public Nullable<decimal> ActualPrice { get; set; }
-        public Nullable<decimal> Amount { get; set; }
-        public Nullable<int> EntryProductId { get; set; }
-        public Nullable<int> TradesmanId { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
         public Nullable<int> Quantity { get; set; }
-        public Nullable<int> LabId { get; set; }
+        public Nullable<decimal> Amount { get; set; }
+        public Nullable<int> tblTradesmanId { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
         public Nullable<bool> Process { get; set; }
     
         public virtual tblEntryProduct tblEntryProduct { get; set; }
-        public virtual tblTradesman tblTradesman { get; set; }
         public virtual tblLabData tblLabData { get; set; }
+        public virtual tblTradesman tblTradesman { get; set; }
     }
 }

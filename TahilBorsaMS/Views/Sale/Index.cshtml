@@ -22,8 +22,8 @@
         @foreach (var k in Model)
         {
             <tr>
-                <td>@k.EntryProductId</td>
-                <td>@k.tblEntryProduct.FarmerId</td>
+                <td>@k.tblEntryProductId</td>
+                <td>@k.tblEntryProduct.tblFarmerId</td>
                 <td>@k.tblEntryProduct.tblFarmer.IdentityNo</td>
                 <td>@k.tblLabData.NutritionalValue</td>
                 <td class="text-center"><a href="/Sale/CallSale/@k.Id" class="btn btn-success">Satış Gir</a></td>

@@ -20,9 +20,9 @@
         <label>Kimlik No</label>
         @Html.TextBoxFor(p => p.IdentityNo, new { @class = "form-control" })
         <label>Şehir</label>
-        @Html.DropDownListFor(p => p.tblAddress.CityId, ViewBag.CityList as IEnumerable<SelectListItem>, "Şehir Seçin", new { @class = "form-control" })
+        @Html.DropDownListFor(p => p.tblAddress.tblCityId, ViewBag.CityList as IEnumerable<SelectListItem>, "Şehir Seçin", new { @class = "form-control" })
         <label>İlçe</label>
-        @Html.DropDownListFor(p => p.tblAddress.DistrictId, ViewBag.DistrictList as IEnumerable<SelectListItem>, "İlçe Seçin", new { @class = "form-control" })
+        @Html.DropDownListFor(p => p.tblAddress.tblDistrictId, ViewBag.DistrictList as IEnumerable<SelectListItem>, "İlçe Seçin", new { @class = "form-control" })
         <label>Mahalle/Köy</label>
         @Html.TextBoxFor(p => p.tblAddress.NeighborhoodName, new { @class = "form-control" })
         <label>Çiftçi Adres</label>

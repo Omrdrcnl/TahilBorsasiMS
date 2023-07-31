@@ -11,7 +11,9 @@ namespace TahilBorsaMS.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    [Table("tblDistrict")]
     public partial class tblDistrict
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,7 +24,7 @@ namespace TahilBorsaMS.Models.Entity
     
         public int Id { get; set; }
         public string Name { get; set; }
-        public int CityId { get; set; }
+        public int tblCityId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblAddress> tblAddress { get; set; }

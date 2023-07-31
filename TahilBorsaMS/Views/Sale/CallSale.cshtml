@@ -14,7 +14,7 @@
         @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
         <br />
         <label>Ürün Giriş Id</label>
-        @Html.TextBoxFor(x => x.EntryProductId, new { @class = "form-control", @readonly = "readonly" })
+        @Html.TextBoxFor(x => x.tblEntryProductId, new { @class = "form-control", @readonly = "readonly" })
         <br />
         <label>Ürün Başlangıç Fiyatı</label>
         @Html.TextBoxFor(x => x.BasePrice, new { @class = "form-control" })
@@ -23,7 +23,7 @@
         @Html.TextBoxFor(x => x.ActualPrice, new { @class = "form-control" })
         <br />
         <label>Satın Alan Esnaf Id</label>
-        @Html.TextBoxFor(x => x.TradesmanId, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.tblTradesmanId, new { @class = "form-control" })
         <br />
         <input name="Date" type="datetime" value="@DateTime.Now.ToShortDateString()" class="form-control" />
         <br />

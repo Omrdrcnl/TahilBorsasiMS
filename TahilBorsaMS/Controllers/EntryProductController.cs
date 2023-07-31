@@ -10,12 +10,12 @@ namespace TahilBorsaMS.Controllers
 {
     public class EntryProductController : Controller
     {
-        DbGrainExchangeEntities3 db = new DbGrainExchangeEntities3();
+        DbGrainExchangeEntities4 db = new DbGrainExchangeEntities4();
         // GET: EntryProduct
         public ActionResult Index()
         {
-            ViewBag.ProductList = new SelectList(db.tblProductName.ToList(),"Id","Name");
-            //List<SelectListItem> list = (from k in db.tblProductName.ToList() select new SelectListItem
+            ViewBag.ProductList = new SelectList(db.tblProduct.ToList(),"Id","Name");
+            //List<SelectListItem> list = (from k in db.tblProduct.ToList() select new SelectListItem
             //{
             //    Text = k.Name,
             //    Value = k.Id.ToString(),

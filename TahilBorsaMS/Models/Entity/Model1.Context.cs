@@ -13,10 +13,10 @@ namespace TahilBorsaMS.Models.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DbGrainExchangeEntities3 : DbContext
+    public partial class DbGrainExchangeEntities4 : DbContext
     {
-        public DbGrainExchangeEntities3()
-            : base("name=DbGrainExchangeEntities3")
+        public DbGrainExchangeEntities4()
+            : base("name=DbGrainExchangeEntities4")
         {
         }
     
@@ -32,7 +32,7 @@ namespace TahilBorsaMS.Models.Entity
         public virtual DbSet<tblEntryProduct> tblEntryProduct { get; set; }
         public virtual DbSet<tblFarmer> tblFarmer { get; set; }
         public virtual DbSet<tblLabData> tblLabData { get; set; }
-        public virtual DbSet<tblProductName> tblProductName { get; set; }
+        public virtual DbSet<tblProduct> tblProduct { get; set; }
         public virtual DbSet<tblSale> tblSale { get; set; }
         public virtual DbSet<tblTradesman> tblTradesman { get; set; }
     }

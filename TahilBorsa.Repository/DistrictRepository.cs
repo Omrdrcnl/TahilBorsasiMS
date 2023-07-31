@@ -8,7 +8,7 @@ using TahilBorsaMS.Models.Entity;
 
 namespace TahilBorsasi.Repository
 {
-    public class DistrictRepository : RepositoryBase<District>
+    public class DistrictRepository : RepositoryBase<tblDistrict>
     {
         public DistrictRepository(RepositoryContext context) : base(context) { }
     }

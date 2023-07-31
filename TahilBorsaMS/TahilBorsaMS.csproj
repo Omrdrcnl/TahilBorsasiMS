@@ -181,7 +181,7 @@
     <Compile Include="Models\Entity\tblLabData.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entity\tblProductName.cs">
+    <Compile Include="Models\Entity\tblProduct.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\tblSale.cs">
