@@ -10,6 +10,7 @@ namespace TahilBorsasi.Repository
     public class LabaratuarRepository : RepositoryBase<tblLabData>
     {
         public LabaratuarRepository(RepositoryContext context) : base(context) { }
+
     }
  
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,10 @@ namespace TahilBorsasi.Repository
     public class TradesmanRepository : RepositoryBase<tblTradesman>
     {
         public TradesmanRepository(RepositoryContext context) : base(context) { }
+
+        public void Delete(int tradesmanId)
+        {
+            RepositoryContext.Tradesmans.Where(x => x.Id == tradesmanId).ExecuteDelete();
+        }
     }
 }

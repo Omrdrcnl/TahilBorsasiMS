@@ -29,6 +29,18 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
+        [HttpGet("{farmerId}")]
+        public dynamic Get(int farmerId)
+        {
+            tblFarmer item = repo.FarmerRepository.FindByCondition(x => x.Id == farmerId).FirstOrDefault();
+
+            return new
+            {
+                success = true,
+                data = item
+            };
+        }
+
         [HttpPost("CiftciEkle")]
         public dynamic AddFarmer([FromBody] dynamic model)
         {
@@ -67,6 +79,14 @@ namespace TahilBorsa.Api.Controllers
                 success = true,
                 data = item
             };
+        }
+
+        [HttpDelete("{farmerId}")]
+        public dynamic Delete(int farmerId)
+        {
+            repo.ProductRepository.Delete(farmerId);
+            return new { success = true };
+
         }
     }
 }

@@ -5,33 +5,38 @@
     ViewBag.Title = "LabDataList";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
+<div class="container mt-5">
 
-@using (Html.BeginForm("LabDataList", "Labaratuar", FormMethod.Get))
-{<div class="form-control input-group">
-        @Html.TextBox("e", null, new { @class = "input-group-text", placeholder = "Çiftçi Ara" })
-        <button class="btn btn-outline-primary">Ara</button>
-    </div>
-}
 
-<table class="table table-bordered">
-    <tr>
-        <th>Giriş Id</th>
-        <th>Çiftçi Id</th>
-        <th>Çiftçi Kimlik no</th>
-        <th>Ürün Besin Değeri</th>
-        <th>Tarihi</th>
-    </tr>
-    @foreach (var k in Model)
-    {
-        <tr>
-            <td>@k.tblEntryProductId</td>
-            <td>@k.tblEntryProduct.tblFarmerId</td>
-            <td>@k.tblEntryProduct.tblFarmer.IdentityNo</td>
-            <td>@k.NutritionalValue</td>
-            <td>@k.tblEntryProduct.DateTime</td>
-        </tr>
+    @using (Html.BeginForm("LabDataList", "Labaratuar", FormMethod.Get))
+    {<div class="form-control input-group">
+            @Html.TextBox("e", null, new { @class = "form-control", placeholder = "Çiftçi Kimlik No Ara" })
+            <button class="btn btn-outline-primary">Ara</button>
+        </div>
     }
-</table>
-<div>
-    <a class="btn btn-info" href="/Labaratuar/Index">Geri</a>
+
+    <table class="table table-bordered table-striped">
+        <tr class="table-danger">
+            <th>Giriş Id</th>
+            <th>Çiftçi Id</th>
+            <th>Çiftçi Kimlik no</th>
+            <th>Ürün Besin Değeri</th>
+            <th>Tarihi</th>
+            <th class="text-center">Detay</th>
+        </tr>
+        @foreach (var k in Model)
+        {
+            <tr>
+                <td>@k.tblEntryProductId</td>
+                <td>@k.tblEntryProduct.tblFarmerId</td>
+                <td>@k.tblEntryProduct.tblFarmer.IdentityNo</td>
+                <td>@k.NutritionalValue</td>
+                <td>@k.tblEntryProduct.DateTime</td>
+                <td class="text-center"><a class="btn btn-info">Detay</a></td>
+            </tr>
+        }
+    </table>
+    <div>
+        <a class="btn btn-info" href="/Labaratuar/Index">Geri</a>
+    </div>
 </div>

@@ -7,18 +7,19 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
-<div class="container">
+<div class="container mt-5">
+
     <h2>Çiftçi Paneli</h2>
-    @*Arama işlem penceresi*@ 
+    @*Arama işlem penceresi*@
     @using (Html.BeginForm("Index", "Farmer", FormMethod.Get))
-    {<div class="form-control input-group">
-            @Html.TextBox("f",null, new {@class= "input-group-text",placeholder= "Çiftçi Ara" })
+    {<div class="form-control input-group mb-2">
+            @Html.TextBox("f", null, new { @class = "form-control", placeholder = "Çiftçi Ara" })
             <button class="btn btn-outline-primary">Ara</button>
         </div>
     }
 
-    <table class="table table-bordered">
-        <tr>
+    <table class="table table-bordered table-striped">
+        <tr class="table-info">
             <th>Id</th>
             <th>Adı</th>
             <th>Soyadı</th>
@@ -53,7 +54,9 @@
         }
     </table>
     <div class="d-flex justify-content-center pagination">
-        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions { LiElementClasses = new[] { "page-link btn " }, UlElementClasses = new[] { "page-item d-flex" } })
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), 
+       new PagedListRenderOptions { LiElementClasses = new[] { "page-link btn " },
+           UlElementClasses = new[] { "page-item d-flex" } })
     </div>
     <a href="~/Farmer/AddFarmer" class="btn btn-primary">Yeni Kayıt Ekle</a>
 </div>

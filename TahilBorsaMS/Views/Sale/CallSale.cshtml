@@ -7,27 +7,31 @@
 
 @using (Html.BeginForm("EnterSale", "Sale", FormMethod.Post))
 {
-    <div class="form-control">
-        <h1>Satış Gerçekleştir</h1>
-        <br />
-        <label>Satış Id</label>
-        @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
-        <br />
-        <label>Ürün Giriş Id</label>
-        @Html.TextBoxFor(x => x.tblEntryProductId, new { @class = "form-control", @readonly = "readonly" })
-        <br />
-        <label>Ürün Başlangıç Fiyatı</label>
-        @Html.TextBoxFor(x => x.BasePrice, new { @class = "form-control" })
-        <br />
-        <label>Ürün Satış Gerçekleşen Fiyatı</label>
-        @Html.TextBoxFor(x => x.ActualPrice, new { @class = "form-control" })
-        <br />
-        <label>Satın Alan Esnaf Id</label>
-        @Html.TextBoxFor(x => x.tblTradesmanId, new { @class = "form-control" })
-        <br />
-        <input name="Date" type="datetime" value="@DateTime.Now.ToShortDateString()" class="form-control" />
-        <br />
-        <input type="hidden" value="true" name="Process" />
-        <button type="submit" class="btn btn-primary btn-lg">Satışı Gerçekleştir</button>
+    <div class="container mt-5">
+
+        <div class="form-control">
+            <h1>Satış Gerçekleştir</h1>
+            <br />
+            <label>Satış Id</label>
+            @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
+            <br />
+            <label>Ürün Giriş Id</label>
+            @Html.TextBoxFor(x => x.tblEntryProductId, new { @class = "form-control", @readonly = "readonly" })
+            <br />
+            <label>Ürün Başlangıç Fiyatı</label>
+            @Html.TextBoxFor(x => x.BasePrice, new { @class = "form-control" })
+            <br />
+            <label>Ürün Satış Gerçekleşen Fiyatı</label>
+            @Html.TextBoxFor(x => x.ActualPrice, new { @class = "form-control" })
+            <br />
+            <label>Satın Alan Esnaf Id</label>
+            @Html.TextBoxFor(x => x.tblTradesmanId, new { @class = "form-control" })
+            <br />
+            <input name="Date" type="datetime" value="@DateTime.Now.ToShortDateString()" class="form-control" />
+            <br />
+            <input type="hidden" value="true" name="Process" />
+            <button type="submit" class="btn btn-primary btn-lg">Satışı Gerçekleştir</button>
+        </div>
+
     </div>
 }

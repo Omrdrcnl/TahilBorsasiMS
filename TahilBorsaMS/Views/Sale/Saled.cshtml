@@ -8,35 +8,39 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<h2>Satışa Hazır Ürünler</h2>
 @using (Html.BeginForm("Index", "Sale", FormMethod.Get))
 
 {
-    <table class="table table-bordered">
-        <tr>
-            <th>Giriş Id</th>
-            <th>Çiftçi Id</th>
-            <th>Çiftçi Kimlik no</th>
-            <th>Ürün Besin Değeri</th>
-            <th class="text-center">İşlem</th>
 
-        </tr>
-        @foreach (var k in Model)
-        {
-            <tr>
-                <td>@k.tblEntryProductId</td>
-                <td>@k.tblEntryProduct.tblFarmerId</td>
-                <td>@k.tblEntryProduct.tblFarmer.IdentityNo</td>
-                <td>@k.tblLabData.NutritionalValue</td>
-                <td class="text-center"><a class="btn btn-info">Detay</a></td>
+    <div class="container mt-5">
+        <h2 class="m-auto mb-3">Gerçekleşen Satışlar</h2>
+
+        <table class="table table-bordered table-hover table-success table-striped">
+            <tr class="table-warning">
+                <th>Giriş Id</th>
+                <th>Çiftçi Id</th>
+                <th>Çiftçi Kimlik no</th>
+                <th>Ürün Besin Değeri</th>
+                <th class="text-center">İşlem</th>
 
             </tr>
-        }
-    </table>
-    <div class="btn-group btn-group-lg d-flex justify-content-between">
-        <div>
-            <a href="/Sale/Index/" class="btn btn-primary btn-lg">Geri</a>
-        </div>
+            @foreach (var k in Model)
+            {
+                <tr>
+                    <td>@k.tblEntryProductId</td>
+                    <td>@k.tblEntryProduct.tblFarmerId</td>
+                    <td>@k.tblEntryProduct.tblFarmer.IdentityNo</td>
+                    <td>@k.tblLabData.NutritionalValue</td>
+                    <td class="text-center"><a class="btn btn-info">Detay</a></td>
 
+                </tr>
+            }
+        </table>
+        <div class="btn-group btn-group-lg d-flex justify-content-between">
+            <div>
+                <a href="/Sale/Index/" class="btn btn-primary btn-lg">Geri</a>
+            </div>
+
+        </div>
     </div>
 }

@@ -7,27 +7,30 @@
 
 @using (Html.BeginForm("AddEntryProduct", "EntryProduct", FormMethod.Post))
 {
-    <div class="form-control">
-        <h1>Yeni Ürün Veri girişi</h1>
-        <br />
-        @Html.TextBoxFor(x => x.Id, new { @type = "hidden" })
-        <label>Çiftçi Id</label>
-        <br />
-        @Html.TextBoxFor(x => x.tblFarmerId, new { @class = "form-control" })
-        <br />
-        <label>Ürün Çeşidi</label>
-        @Html.DropDownListFor(x => x.tblProductId, ViewBag.ProductList as IEnumerable<SelectListItem>, new { @class = "form-control" })
-        <br />
-        <label>Ürün Miktarı (kg)</label>
-        @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control" })
-        <br />
-        <label>Tarih</label>
-        <input type="datetime" name="DateTime" class="form-control" value="@DateTime.Now.ToShortDateString()" />
-        <br />
-        <input type="hidden" name="Process" value="false" />
-        <button type="submit" class="btn btn-warning">Ürünü Sisteme Gir</button>
-    </div>
-    <div class="mt-5 d-grid gap-2 d-md-flex justify-content-md-end">
-        <a class="btn btn-info" href="/EntryProduct/EntryProductList">Geçmiş Veriler</a>
+    <div class="container mt-5">
+
+        <div class="form-control">
+            <h1>Yeni Ürün Veri girişi</h1>
+            <br />
+            @Html.TextBoxFor(x => x.Id, new { @type = "hidden" })
+            <label>Çiftçi Id</label>
+            <br />
+            @Html.TextBoxFor(x => x.tblFarmerId, new { @class = "form-control" })
+            <br />
+            <label>Ürün Çeşidi</label>
+            @Html.DropDownListFor(x => x.tblProductId, ViewBag.ProductList as IEnumerable<SelectListItem>, new { @class = "form-control" })
+            <br />
+            <label>Ürün Miktarı (kg)</label>
+            @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control" })
+            <br />
+            <label>Tarih</label>
+            <input type="datetime" name="DateTime" class="form-control" value="@DateTime.Now.ToShortDateString()" />
+            <br />
+            <input type="hidden" name="Process" value="false" />
+            <button type="submit" class="btn btn-warning">Ürünü Sisteme Gir</button>
+        </div>
+        <div class="mt-5 d-grid gap-2 d-md-flex justify-content-md-end">
+            <a class="btn btn-info" href="/EntryProduct/EntryProductList">Geçmiş Veriler</a>
+        </div>
     </div>
 }

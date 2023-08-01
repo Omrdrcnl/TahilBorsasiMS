@@ -8,16 +8,18 @@
 
 @using (Html.BeginForm("AddLabData", "Labaratuar", FormMethod.Post))
 {
-    <div class="form-control">
-        <h1>Ürün Besin Değeri Girişi</h1>
-        <br />
-        <label>Ürün Giriş Id</label>
-        @Html.TextBoxFor(x => x.tblEntryProductId, new { @class = "form-control" })
-        <br />
-        <label>Ürün Besin Değerini Giriniz</label>
-        @Html.TextBoxFor(x => x.NutritionalValue, new { @class = "form-control" })
-        <br />
-        <input type="hidden" value="true" name="Process" />
-        <button class="btn btn-primary">Kaydet</button>
+    <div class="container mt-5">
+        <div class="form-control">
+            <h1>Ürün Besin Değeri Girişi</h1>
+            <br />
+            <label>Ürün Giriş Id</label>
+            @Html.TextBoxFor(x => x.tblEntryProductId, new { @class = "form-control" })
+            <br />
+            <label>Ürün Besin Değerini Giriniz</label>
+            @Html.TextBoxFor(x => x.NutritionalValue, new { @class = "form-control" })
+            <br />
+            <input type="hidden" value="true" name="Process" />
+            <button class="btn btn-primary">Kaydet</button>
+        </div>
     </div>
 }

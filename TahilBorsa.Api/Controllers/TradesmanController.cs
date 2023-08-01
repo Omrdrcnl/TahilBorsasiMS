@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json.Linq;
 using TahilBorsa.Repository;
@@ -25,6 +26,18 @@ namespace TahilBorsa.Api.Controllers
             {
                 success = true,
                 data = Tradesmans
+            };
+        }
+
+        [HttpGet("{tradesmanId}")]
+        public dynamic Get(int tradesmanId)
+        {
+            tblTradesman item = repo.TradesmanRepository.FindByCondition(x => x.Id == tradesmanId).FirstOrDefault();
+
+            return new
+            {
+                success = true,
+                data = item
             };
         }
 
@@ -66,6 +79,14 @@ namespace TahilBorsa.Api.Controllers
                 success = true,
                 data = item
             };
+        }
+
+        [HttpDelete("{tradesmanId}")]
+        public dynamic Delete(int tradesmanId)
+        {
+            repo.ProductRepository.Delete(tradesmanId);
+            return new { success = true };
+
         }
     }
 }
