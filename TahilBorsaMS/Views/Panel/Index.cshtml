@@ -1,0 +1,428 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-5 col-md-4">
+                            <div class="icon-big text-center icon-warning">
+                                <i class="nc-icon nc-globe text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-8">
+                            <div class="numbers">
+                                <p class="card-category">Toplam Miktar</p>
+                                <p class="card-title">@ViewBag.SaleQuantity Kg<p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer ">
+                    <hr>
+                    <div class="stats">
+                        <i class="fa fa-refresh"></i>
+                        Update Now
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-5 col-md-4">
+                            <div class="icon-big text-center icon-warning">
+                                <i class="nc-icon nc-money-coins text-success"></i>
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-8">
+                            <div class="numbers">
+                                <p class="card-category">Toplam Hacim</p>
+                                <p class="card-title">₺@ViewBag.SaleAmount<p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer ">
+                    <hr>
+                    <div class="stats">
+                        <i class="fa fa-calendar-o"></i>
+                        Last day
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-5 col-md-4">
+                            <div class="icon-big text-center icon-warning">
+                                <i class="nc-icon nc-vector text-danger"></i>
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-8">
+                            <div class="numbers">
+                                <p class="card-category">Gerçekleşen Satış Sayısı</p>
+                                <p class="card-title">@ViewBag.Sale<p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer ">
+                    <hr>
+                    <div class="stats">
+                        <i class="fa fa-clock-o"></i>
+                        In the last hour
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-5 col-md-4">
+                            <div class="icon-big text-center icon-warning">
+                                <i class="nc-icon nc-favourite-28 text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-8">
+                            <div class="numbers">
+                                <p class="card-category">Toplam Esnaf</p>
+                                <p class="card-title">@ViewBag.Tradesman<p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer ">
+                    <hr>
+                    <div class="stats">
+                        <i class="fa fa-refresh"></i>
+                        Update now
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        @*<h1>Sales By Month</h1>
+
+
+        <table>
+            <tr>
+                <th>Month</th>
+                <th>Quantity</th>
+            </tr>
+            @if (Model != null)
+            {
+                foreach (dynamic sale in Model)
+                {
+
+                    <tr>
+                        <td>Month: @sale.Key</td>
+                        <td>Amount: @sale.Value</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <p>No sales data available for this product.</p>
+            }
+        </table>*@
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card ">
+                <div class="card-header ">
+                    <h5 class="card-title">Ürün Fiyat Hacim Grafiği</h5>
+                    <p class="card-category">Milyon ₺</p>
+                </div>
+                <div class="card-body ">
+                    <canvas id=chartHours width="400" height="100"></canvas>
+                </div>
+                <div class="card-footer ">
+                    <div class="legend">
+                        <i class="fa fa-circle ms-2 text-info"></i> Buğday
+                        <i class="fa fa-circle ms-2 text-warning"></i> Arpa
+                        <i class="fa fa-circle ms-2 text-primary"></i> Mısır
+                        <i class="fa fa-circle ms-2 text-success"></i> Nohut
+                        <i class="fa fa-circle ms-2 text-dark"></i> Yulaf
+                        <i class="fa fa-circle ms-2 text-danger"></i> K.Mercimek
+                        <i class="fa fa-circle ms-2 text-secondary"></i> Ay Çiçeği
+                    </div>
+                    <hr>
+                    <div class="stats">
+                        <i class="fa fa-history"></i> 1 gün önce güncellendi
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card ">
+                <div class="card-header ">
+                    <h5 class="card-title">Senelik Ürün Miktar Grafiği</h5>
+                    <p class="card-category">Toplam Miktar Bin Ton</p>
+                </div>
+                <div class="card-body ">
+                    <canvas id="chartEmail"></canvas>
+                </div>
+                <div class="card-footer ">
+                    <div class="legend">
+                        <i class="fa fa-circle text-info"></i> Buğday
+                        <i class="fa fa-circle text-warning"></i> Arpa
+                        <i class="fa fa-circle text-primary"></i> Mısır
+                        <i class="fa fa-circle text-success"></i> Nohut
+                        <i class="fa fa-circle text-dark"></i> Yulaf
+                        <i class="fa fa-circle text-danger"></i> K.Mercimek
+                        <i class="fa fa-circle text-secondary ms-2"></i> Ay Çiçeği
+                    </div>
+                    <hr>
+                    <div class="stats">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card card-chart">
+                <div class="card-header">
+                    <h5 class="card-title">Ürün Fiyat Grafiği</h5>
+                    <p class="card-category">kg/₺</p>
+                </div>
+                <div class="card-body">
+                    <canvas id="speedChart" width="400" height="100"></canvas>
+                </div>
+                <div class="card-footer">
+                    <div class="chart-legend">
+                        <i class="fa fa-circle text-info"></i> Buğday
+                        <i class="fa fa-circle text-warning"></i> Arpa
+                        <i class="fa fa-circle text-primary"></i> Mısır
+                        <i class="fa fa-circle text-success"></i> Nohut
+                        <i class="fa fa-circle text-dark"></i> Yulaf
+                        <i class="fa fa-circle text-danger"></i> K.Mercimek
+                        <i class="fa fa-circle text-secondary"></i> Ay Çiçeği
+                    </div>
+                    <hr />
+                    <div class="card-stats">
+                        <i class="fa fa-check"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/chart.js"></script>
+<script src="~/Scripts/chart.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script>
+
+    function hacim() {
+        chartColor = "#FFFFFF";
+        //öncelikle vievbag daki degerleri json formatına ceviriyoruz. sonrasında içinde ki degerleri sayıya cevirip bir diziye atıyoruz.
+        ctx = document.getElementById('chartHours').getContext("2d");
+
+
+        var amounts = @Html.Raw(Json.Encode(ViewBag.Amounts));
+        console.log("amounts degeri", amounts.join(", "))
+
+        var convertedAmounts = [];
+
+        for (var i = 0; i < amounts.length; i++) {
+            convertedAmounts.push(parseInt(amounts[i]));
+        }
+
+        myChart = new Chart(ctx, {
+            type: 'line',
+
+            data: {
+                labels: ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Agu", "Eyl", "Eki", "Kas", "Ara"],
+                datasets: [{
+                    borderColor: "#6bd098",
+                    backgroundColor: "#6bd098",
+                    pointRadius: 0,
+                    pointHoverRadius: 0,
+                    borderWidth: 3,
+                    data: convertedAmounts
+                }
+                ]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+
+                tooltips: {
+                    enabled: false
+                },
+
+                scales: {
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: "#9f9f9f",
+                            beginAtZero: false,
+                            maxTicksLimit: 5,
+                            //padding: 20
+                        },
+                        gridLines: {
+                            drawBorder: false,
+                            zeroLineColor: "#ccc",
+                            color: 'rgba(255,255,255,0.05)'
+                        }
+
+                    }],
+
+                    xAxes: [{
+                        barPercentage: 1.6,
+                        gridLines: {
+                            drawBorder: false,
+                            color: 'rgba(255,255,255,0.1)',
+                            zeroLineColor: "transparent",
+                            display: false,
+                        },
+                        ticks: {
+                            padding: 20,
+                            fontColor: "#9f9f9f"
+                        }
+                    }]
+                },
+            }
+        });
+
+    }
+    function initChartsPages() {
+
+        ctx = document.getElementById('chartEmail').getContext("2d");
+
+        myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: [1, 2, 3],
+                datasets: [{
+                    label: "Emails",
+                    pointRadius: 0,
+                    pointHoverRadius: 0,
+                    backgroundColor: [
+                        '#e3e3e3',
+                        '#4acccd',
+                        '#fcc468',
+                        '#ef8157'
+                    ],
+                    borderWidth: 0,
+                    data: [342, 300, 530, 600]
+                }]
+            },
+
+            options: {
+
+                legend: {
+                    display: false
+                },
+
+                pieceLabel: {
+                    render: 'percentage',
+                    fontColor: ['white'],
+                    precision: 2
+                },
+
+                tooltips: {
+                    enabled: false
+                },
+
+                scales: {
+                    yAxes: [{
+
+                        ticks: {
+                            display: false
+                        },
+                        gridLines: {
+                            drawBorder: false,
+                            zeroLineColor: "transparent",
+                            color: 'rgba(255,255,255,0.05)'
+                        }
+
+                    }],
+
+                    xAxes: [{
+                        barPercentage: 1.6,
+                        gridLines: {
+                            drawBorder: false,
+                            color: 'rgba(255,255,255,0.1)',
+                            zeroLineColor: "transparent"
+                        },
+                        ticks: {
+                            display: false,
+                        }
+                    }]
+                },
+            }
+        });
+        //Chart verilerini buradan düzeltiriz
+        var speedCanvas = document.getElementById("speedChart");
+
+        var dataFirst = {
+            data: [0, 50, 15, 20, 30, 40, 40, 50, 25, 30, 50, 70],
+            fill: false,
+            borderColor: '#fbc658',
+            backgroundColor: 'transparent',
+            pointBorderColor: '#fbc658',
+            pointRadius: 4,
+            pointHoverRadius: 4,
+            pointBorderWidth: 8,
+        };
+
+        var dataSecond = {
+            data: [0, 50, 10, 12, 20, 27, 30, 34, 42, 45, 55, 63],
+            fill: false,
+            borderColor: '#51CACF',
+            backgroundColor: 'transparent',
+            pointBorderColor: '#51CACF',
+            pointRadius: 4,
+            pointHoverRadius: 4,
+            pointBorderWidth: 8
+        };
+
+        var speedData = {
+            labels: ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Agu", "Eyl", "Eki", "Kas", "Ara"],
+            datasets: [dataFirst, dataSecond]
+        };
+
+        var chartOptions = {
+            legend: {
+                display: false,
+                position: 'top'
+            }
+        };
+
+        var lineChart = new Chart(speedCanvas, {
+            type: 'line',
+            hover: false,
+            data: speedData,
+            options: chartOptions
+        });
+    }
+</script>
+<script>
+
+    $(document).ready(function () {
+        hacim();
+        initChartsPages();
+    });
+
+
+</script>

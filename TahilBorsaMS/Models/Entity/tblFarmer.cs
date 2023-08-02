@@ -14,7 +14,7 @@ namespace TahilBorsaMS.Models.Entity
     using System.ComponentModel.DataAnnotations.Schema;
 
     [Table("tblFarmer")]
-
+    
     public partial class tblFarmer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

@@ -13,28 +13,19 @@ namespace TahilBorsaMS.Models.Entity
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    [Table("tblAddress")]
-    
-    public partial class tblAddress
+    [Table("tblRol")]
+    public partial class tblRol
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblAddress()
+        public tblRol()
         {
-            this.tblFarmer = new HashSet<tblFarmer>();
-            this.tblTradesman = new HashSet<tblTradesman>();
+            this.tblUser = new HashSet<tblUser>();
         }
     
         public int Id { get; set; }
-        public Nullable<int> tblDistrictId { get; set; }
-        public Nullable<int> tblCityId { get; set; }
-        public string NeighborhoodName { get; set; }
-        public string FullAddress { get; set; }
+        public string Name { get; set; }
     
-        public virtual tblCity tblCity { get; set; }
-        public virtual tblDistrict tblDistrict { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblFarmer> tblFarmer { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblTradesman> tblTradesman { get; set; }
+        public virtual ICollection<tblUser> tblUser { get; set; }
     }
 }

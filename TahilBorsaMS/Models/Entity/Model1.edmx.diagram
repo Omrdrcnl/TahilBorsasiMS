@@ -26,6 +26,9 @@
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblSale_tblEntryProduct" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblSale_tblLabData" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblSale_tblTradesman" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblRol" Width="1.5" PointX="10.375" PointY="1.125" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblUser" Width="1.5" PointX="12.625" PointY="0.875" />
+        <AssociationConnector Association="DbGrainExchangeModel.FK_tblUser_tblRol" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

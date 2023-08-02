@@ -35,5 +35,7 @@ namespace TahilBorsaMS.Models.Entity
         public virtual DbSet<tblProduct> tblProduct { get; set; }
         public virtual DbSet<tblSale> tblSale { get; set; }
         public virtual DbSet<tblTradesman> tblTradesman { get; set; }
+        public virtual DbSet<tblRol> tblRol { get; set; }
+        public virtual DbSet<tblUser> tblUser { get; set; }
     }
 }
