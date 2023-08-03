@@ -32,6 +32,9 @@ namespace TahilBorsaMS.Controllers
         {
             db.tblLabData.Add(l);
             var pro = db.tblEntryProduct.Find(l.tblEntryProductId);
+            pro.Process = true;
+            
+
             if (pro != null)
             {
                 pro.Process = true;
@@ -39,7 +42,6 @@ namespace TahilBorsaMS.Controllers
                 tblSale data = new tblSale()
                 {
                     tblEntryProductId = (int)l.tblEntryProductId,
-                    Quantity =l.tblEntryProduct.Quantity,
                     tblLabDataId = l.Id,
                     Process=false
                     

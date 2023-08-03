@@ -1,16 +1,59 @@
-﻿
+﻿@using TahilBorsaMS.Models.Classes
+
+@model List<TahilBorsaMS.Controllers.GroupedSaleViewModel>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout1.cshtml";
 }
 
-<div class="row">
-    <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
-        <h1 class="text-white mb-4">Material Kit</h1>
-        <p class="text-white opacity-8 lead pe-5 me-5">The time is now for it be okay to be great. People in this world shun people for being nice. </p>
-        <div class="buttons">
-            <button type="button" class="btn btn-white mt-4">Get Started</button>
-            <button type="button" class="btn text-white shadow-none mt-4">Read more</button>
+
+<div class="col-lg-6 col-md-7 d-flex d-block justify-content-center flex-column m-auto mt-5">
+    <br />
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-danger">
+                <div class="panel-heading bg-gradient p-2 text-center">
+                    <h2 style="color:black"><i class="fa fa-calendar info"></i> Günlük Fiyat Bilgileri</h2>
+                    <form asp-controller="Home" asp-action="Index" method="get">
+                        <div class="form-group">
+                            <label style="color:white" for="selectedDate">Tarih Seçin:</label>
+                            <input style="color:black; background-color:antiquewhite" type="date" id="selectedDate" name="selectedDate" value="@((DateTime)ViewBag.SelectedDate).ToString("yyyy-MM-dd")" class="form-control" />
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-1 m-auto">Bülten Bilgilerini Getir</button>
+                    </form>
+                </div>
+                <br>
+            </div>
         </div>
     </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-4 g-3">
+    @foreach (var groupedSale in Model)
+    {
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="@groupedSale.Photo" height="200" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@groupedSale.ProductName</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">Toplam Miktar: @groupedSale.TotalQuantity kg</li>
+                    <li class="list-group-item">En Düşük Fiyat: ₺@groupedSale.TotalBasePrice</li>
+                    <li class="list-group-item">En Yüksek Fiyat: ₺@groupedSale.TotalActualPrice</li>
+                </ul>
+                <div class="card-body">
+                    <p>
+                        Tarih:  <b>@groupedSale.SaleDate.ToShortDateString()</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+
+
 </div>

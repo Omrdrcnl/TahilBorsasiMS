@@ -47,7 +47,6 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tblProductId" Type="tinyint" Nullable="false" />
           <Property Name="tblFarmerId" Type="int" Nullable="false" />
-          <Property Name="Quantity" Type="int" />
           <Property Name="DateTime" Type="smalldatetime" />
           <Property Name="Process" Type="bit" />
         </EntityType>
@@ -384,7 +383,6 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tblProductId" Type="Byte" Nullable="false" />
           <Property Name="tblFarmerId" Type="Int32" Nullable="false" />
-          <Property Name="Quantity" Type="Int32" />
           <Property Name="DateTime" Type="DateTime" Precision="0" />
           <Property Name="Process" Type="Boolean" />
           <NavigationProperty Name="tblFarmer" Relationship="Self.FK_tblEntryProduct_tblFarmer" FromRole="tblEntryProduct" ToRole="tblFarmer" />
@@ -734,7 +732,6 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="tblProductId" ColumnName="tblProductId" />
                 <ScalarProperty Name="tblFarmerId" ColumnName="tblFarmerId" />
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="DateTime" ColumnName="DateTime" />
                 <ScalarProperty Name="Process" ColumnName="Process" />
               </MappingFragment>

@@ -37,7 +37,6 @@ namespace TahilBorsa.Api.Controllers
                 Id = json.Id,
                 tblProductId = json.ProductId,
                 tblFarmerId = json.FarmerId,
-                Quantity = json.Quantity,
                 DateTime = DateTime.Now,
                 Process = false
             };

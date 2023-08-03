@@ -27,7 +27,7 @@
                     <hr>
                     <div class="stats">
                         <i class="fa fa-refresh"></i>
-                        Update Now
+                        Güncel
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <hr>
                     <div class="stats">
                         <i class="fa fa-calendar-o"></i>
-                        Last day
+                        Mevcut Yıl
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                     <hr>
                     <div class="stats">
                         <i class="fa fa-clock-o"></i>
-                        In the last hour
+                        Mevcut Yıl
                     </div>
                 </div>
             </div>
@@ -105,38 +105,59 @@
                     <hr>
                     <div class="stats">
                         <i class="fa fa-refresh"></i>
-                        Update now
+                        Güncel
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
+        @*//Ürüne Göre Toplam İşlem Gören Miktarları yazdırma*@
+        <h1>Ürün Ceşidine Göre Toplam Satışlar</h1>
 
-        @*<h1>Sales By Month</h1>
+        @{
+            var sq = ViewBag.Qp;
+        }
 
 
-        <table>
-            <tr>
-                <th>Month</th>
-                <th>Quantity</th>
-            </tr>
-            @if (Model != null)
+        @if (sq != null)
+        {
+            foreach (dynamic sale in sq)
             {
-                foreach (dynamic sale in Model)
-                {
 
-                    <tr>
-                        <td>Month: @sale.Key</td>
-                        <td>Amount: @sale.Value</td>
-                    </tr>
-                }
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-body ">
+                            <div class="row">
+                                <div class="col-5 col-md-4">
+                                    <div class="icon-big text-center icon-warning">
+                                        <i class="nc-icon nc-globe text-warning"></i>
+                                    </div>
+                                </div>
+                                <div class="col-7 col-md-8">
+                                    <div class="numbers">
+                                        <p class="card-category">@sale.Value Miktar</p>
+                                        <p class="card-title">@sale.Key Kg<p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer ">
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-refresh"></i>
+                                Güncel
+                            </div>
+                        </div>
+                    </div>
+                </div>
             }
-            else
-            {
-                <p>No sales data available for this product.</p>
-            }
-        </table>*@
+        }
+        else
+        {
+            <p>No sales data available for this product.</p>
+        }
+
 
 
     </div>
@@ -144,7 +165,7 @@
         <div class="col-md-12">
             <div class="card ">
                 <div class="card-header ">
-                    <h5 class="card-title">Ürün Fiyat Hacim Grafiği</h5>
+                    <h5 class="card-title">Borsa İşlem Hacim Grafiği</h5>
                     <p class="card-category">Milyon ₺</p>
                 </div>
                 <div class="card-body ">
@@ -309,6 +330,16 @@
 
         ctx = document.getElementById('chartEmail').getContext("2d");
 
+        // diziyi jsona cevirip dataya koyduk
+        var quantity = @Html.Raw(Json.Encode(ViewBag.Q));
+        console.log("Quantity degeri", quantity.join(", "))
+
+        var convertedQuantity = [];
+
+        for (var i = 0; i < quantity.length; i++) {
+            convertedQuantity.push(parseInt(quantity[i]));
+        }
+
         myChart = new Chart(ctx, {
             type: 'pie',
             data: {
@@ -321,10 +352,13 @@
                         '#e3e3e3',
                         '#4acccd',
                         '#fcc468',
-                        '#ef8157'
+                        '#ef8157',
+                        '#343a40',
+                        '#007bff',
+                        '#28a745'
                     ],
                     borderWidth: 0,
-                    data: [342, 300, 530, 600]
+                    data: convertedQuantity
                 }]
             },
 

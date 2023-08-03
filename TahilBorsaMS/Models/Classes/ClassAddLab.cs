@@ -12,6 +12,9 @@ namespace TahilBorsaMS.Models.Classes
         //şimdilik ihtiyac kalmadı sonra degerlendirebilriz.
         //public IEnumerable<tblLabData> labData { get; set; }
 
-        //public IEnumerable<tblEntryProduct> entryProduct { get; set; }
+        //public tblEntryProduct entryProducts { get; set; }
+
+        //public tblLabData tblLabDatas { get; set; }
+
     }
 }

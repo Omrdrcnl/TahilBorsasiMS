@@ -40,6 +40,8 @@ namespace TahilBorsaMS.Controllers
             value.tblEntryProductId = s.tblEntryProductId;
             value.BasePrice = s.BasePrice;
             value.ActualPrice = s.ActualPrice;
+            value.Quantity = s.Quantity;
+            value.Amount = s.ActualPrice * s.Quantity;
             value.tblTradesmanId = s.tblTradesmanId;
             value.Date = s.Date;
             value.Process = true;

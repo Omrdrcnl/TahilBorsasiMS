@@ -21,7 +21,6 @@
             <th>Çiftçi Adı</th>
             <th>Çiftçi Kimlik no</th>
             <th>Ürün Çeşidi</th>
-            <th>Ürün Miktarı</th>
             <th>Tarihi</th>
         </tr>
         @foreach (var k in Model)
@@ -31,7 +30,6 @@
                 <td>@k.tblFarmer.FirstName&nbsp;@k.tblFarmer.LastName</td>
                 <td>@k.tblFarmer.IdentityNo</td>
                 <td>@k.tblProduct.Name</td>
-                <td>@k.Quantity</td>
                 <td>@k.DateTime</td>
             </tr>
         }

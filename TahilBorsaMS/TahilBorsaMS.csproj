@@ -164,6 +164,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EntryProductController.cs" />
     <Compile Include="Controllers\FarmerController.cs" />
+    <Compile Include="Models\Classes\GroupedSaleViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LabaratuarController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -305,6 +306,9 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\headers.css" />
+    <Content Include="Content\Layout1\basic.css" />
+    <Content Include="Content\Layout1\custom.css" />
+    <Content Include="Content\Layout1\Pricing.css" />
     <Content Include="Content\LayoutAssets\assets\css\bootstrap.min.css" />
     <Content Include="Content\LayoutAssets\assets\css\paper-dashboard.css" />
     <Content Include="Content\LayoutAssets\assets\css\paper-dashboard.min.css" />

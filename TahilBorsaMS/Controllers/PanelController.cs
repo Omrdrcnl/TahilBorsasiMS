@@ -29,8 +29,27 @@ namespace TahilBorsaMS.Controllers
             var saleQuantity = db.tblSale.Sum(x => x.Quantity);
             ViewBag.SaleQuantity = saleQuantity;
 
-            //Aylara göre satışların gruplandırılması
+            //Ürüne Göre Toplam İşlem Gören Miktarlar
+            ArrayList quantityLis = new ArrayList();
 
+            var saleByPro = db.tblSale.GroupBy(x=>x.tblEntryProduct.tblProduct.Name)
+                .Select( group => new
+                {
+                    Product = group.Key,
+                    Quantity = group.Sum(s => s.Amount)
+                }).ToDictionary(x => x.Quantity, x =>x.Product);
+            //arraya veri at
+            var saleByProId = db.tblSale.GroupBy(x => x.tblEntryProduct.tblProductId)
+             .Select(group => new
+             {
+                 Product = group.Key,
+                 Quantity = group.Sum(s => s.Amount)
+             }).ToDictionary(x => quantityLis.Add(x.Quantity), x => x.Product);
+
+            ViewBag.Qp = saleByPro;
+            ViewBag.Q = quantityLis;
+
+            //Aylara göre satışların gruplandırılması
 
             ArrayList amounts = new ArrayList();
             var salesByMonth = db.tblSale.GroupBy(s => s.Date.Value.Month)
@@ -42,6 +61,8 @@ namespace TahilBorsaMS.Controllers
              .ToDictionary(x => x.Month, x => amounts.Add(x.Amount));
 
             ViewBag.Amounts =amounts;
+
+            //Aylık Fiyat Değişim tablosu
 
 
             //Aylara göre Fiyat Grafiği
