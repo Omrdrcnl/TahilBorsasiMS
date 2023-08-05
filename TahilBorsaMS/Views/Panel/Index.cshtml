@@ -151,6 +151,7 @@
                         </div>
                     </div>
                 </div>
+
             }
         }
         else
@@ -158,11 +159,11 @@
             <p>No sales data available for this product.</p>
         }
 
-
+        
 
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <div class="card ">
                 <div class="card-header ">
                     <h5 class="card-title">Borsa İşlem Hacim Grafiği</h5>
@@ -188,8 +189,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-md-4">
             <div class="card ">
                 <div class="card-header ">
@@ -216,6 +215,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row">
+       
         <div class="col-md-8">
             <div class="card card-chart">
                 <div class="card-header">
@@ -408,6 +410,15 @@
         });
         //Chart verilerini buradan düzeltiriz
         var speedCanvas = document.getElementById("speedChart");
+
+          @*var price = @Html.Raw(Json.Encode(ViewBag.Price));
+        console.log("Quantity degeri", price.join(", "))
+
+        var convertedPrice = [];*@
+
+        //for (var i = 0; i < price.length; i++) {
+        //    convertedPrice.push(parseInt(price[i]))
+        //}
 
         var dataFirst = {
             data: [0, 50, 15, 20, 30, 40, 40, 50, 25, 30, 50, 70],

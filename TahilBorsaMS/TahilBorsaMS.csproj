@@ -164,6 +164,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EntryProductController.cs" />
     <Compile Include="Controllers\FarmerController.cs" />
+    <Compile Include="Models\Classes\Enums.cs" />
     <Compile Include="Models\Classes\GroupedSaleViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LabaratuarController.cs" />

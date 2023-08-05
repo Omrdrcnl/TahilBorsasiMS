@@ -36,7 +36,7 @@ namespace TahilBorsaMS.Controllers
                 .Select( group => new
                 {
                     Product = group.Key,
-                    Quantity = group.Sum(s => s.Amount)
+                    Quantity = group.Sum(s => s.Quantity)
                 }).ToDictionary(x => x.Quantity, x =>x.Product);
             //arraya veri at
             var saleByProId = db.tblSale.GroupBy(x => x.tblEntryProduct.tblProductId)
@@ -62,8 +62,19 @@ namespace TahilBorsaMS.Controllers
 
             ViewBag.Amounts =amounts;
 
-            //Aylık Fiyat Değişim tablosu
+            //Aylık ürünlere göre Fiyat Değişim tablosu/Grafiği
 
+   
+            var priceByMonth = db.tblSale.GroupBy(s => new { s.Date.Value.Month, s.tblEntryProduct.tblProduct.Name })
+             .Select(group => new
+             {
+                 Product = group.Key.Name,
+                 Month = group.Key,
+                 Price = group.Max(s => s.ActualPrice)
+             })
+             .ToDictionary(x => new { x.Month, x.Product }, x => x.Price);
+
+            ViewBag.Price = priceByMonth;
 
             //Aylara göre Fiyat Grafiği
 

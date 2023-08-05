@@ -20,6 +20,8 @@ namespace TahilBorsa.Repository
         private ProductRepository? productRepository;
         private SaleRepository? saleRepository;
         private TradesmanRepository? tradesmanRepository;
+        private UserRepository userRepository;
+        private RolRepository rolRepository;
 
         public RepositoryWrapper(RepositoryContext context)
         {
@@ -34,7 +36,8 @@ namespace TahilBorsa.Repository
                     addressRepository = new AddressRepository(context);
                 return addressRepository;
             }
-        }
+        }  
+       
 
         public CityRepository CityRepository
         {
@@ -106,6 +109,7 @@ namespace TahilBorsa.Repository
             }
         }
 
+
         public TradesmanRepository TradesmanRepository
         {
             get
@@ -113,6 +117,26 @@ namespace TahilBorsa.Repository
                 if (tradesmanRepository == null)
                     tradesmanRepository = new TradesmanRepository(context);
                 return tradesmanRepository;
+            }
+        }
+
+        public UserRepository UserRepository
+        {
+            get
+            {
+                if (userRepository == null)
+                    userRepository = new UserRepository(context);
+                return userRepository;
+            }
+        }
+
+        public RolRepository RolRepository
+        {
+            get
+            {
+                if (rolRepository == null)
+                    rolRepository = new RolRepository(context);
+                return rolRepository;
             }
         }
 

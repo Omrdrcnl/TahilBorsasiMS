@@ -27,6 +27,8 @@ namespace TahilBorsasi.Repository
         public DbSet<tblLabData> LabDatas { get; set; }
         public DbSet<tblTradesman> Tradesmans { get; set; }
         public DbSet<tblSale> Sales { get; set; }
+        public DbSet<tblUser> Users { get; set; }
+        public DbSet<tblRol> Rols { get; set; }
 
     }
 }
