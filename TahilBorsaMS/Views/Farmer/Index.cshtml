@@ -12,7 +12,7 @@
     <h2>Çiftçi Paneli</h2>
     @*Arama işlem penceresi*@
     @using (Html.BeginForm("Index", "Farmer", FormMethod.Get))
-    {<div class="form-control input-group mb-2">
+    {<div class="form-control input-group-sm mb-2">
             @Html.TextBox("f", null, new { @class = "form-control", placeholder = "Çiftçi Ara" })
             <button class="btn btn-outline-primary">Ara</button>
         </div>
@@ -54,7 +54,7 @@
         }
     </table>
     <div class="d-flex justify-content-center pagination">
-        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), 
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),
        new PagedListRenderOptions { LiElementClasses = new[] { "page-link btn " },
            UlElementClasses = new[] { "page-item d-flex" } })
     </div>

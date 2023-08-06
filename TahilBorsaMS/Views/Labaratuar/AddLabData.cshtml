@@ -13,14 +13,44 @@
         <div class="form-control">
             <h1>Ürün Besin Değeri Girişi</h1>
             <br />
-            <label>Ürün Giriş Id</label>
-            @Html.TextBoxFor(x => x.tblEntryProductId, new { @class = "form-control" })
-            <br />
-            <label>Ürün Besin Değerini Giriniz</label>
-            @Html.TextBoxFor(x => x.NutritionalValue, new { @class = "form-control" })
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Ürün Giriş Id</label>
+                    @Html.TextBoxFor(x => x.tblEntryProductId, new { @class = "form-control" })
+                </div>
+                <br />
+                <div class="col-md-6">
+                    <label>Ürün Besin Değerini Giriniz</label>
+                    @Html.TextBoxFor(x => x.NutritionalValue, new { @class = "form-control" })
+                </div>
+            </div>
             <br />
             <input type="hidden" value="true" name="Process" />
-            <button class="btn btn-primary">Kaydet</button>
+            <div id="liveAlertPlaceholder"></div>
+            <button type="submit" class="btn btn-primary" id="liveAlertBtn">Kaydet</button>
         </div>
     </div>
 }
+
+<script>
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+    const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+    }
+
+    const alertTrigger = document.getElementById('liveAlertBtn')
+    if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+            appendAlert('Ürün Besin Değeri Başarıyla Kaydedildi!', 'success')
+        })
+    }
+</script>

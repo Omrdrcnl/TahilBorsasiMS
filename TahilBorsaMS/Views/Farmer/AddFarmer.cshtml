@@ -5,30 +5,83 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 <form class="form-control container" method="post">
+    <div class="col-md-12">
+        <div class="card card-user">
+            <div class="card-header">
+                <h5 class="card-title">Edit Profile</h5>
+            </div>
+            <div class="card-body">
 
-    <label>Adı</label>
-    @Html.TextBoxFor(p => p.FirstName, new { @class = "form-control" })
-    <label>Soyadı</label>
-    @Html.TextBoxFor(p => p.LastName, new { @class = "form-control" })
-    <label>Kimlik No</label>
-    @Html.TextBoxFor(p => p.IdentityNo, new { @class = "form-control" })
-    <label>Şehir</label>
-    @Html.DropDownListFor(P => P.tblAddress.tblDistrict.tblCity.Id, (List<SelectListItem>)ViewBag.CityList, new { @class = "form-control" })
-    <label>İlçe</label>
-    @Html.DropDownListFor(P => P.tblAddress.tblDistrict.Id, (List<SelectListItem>)ViewBag.District, new { @class = "form-control" })
-    <label>Mahalle/Köy</label>
-    @Html.TextBoxFor(p => p.tblAddress.NeighborhoodName, new { @class = "form-control" })
-    <label>Adres</label>
-    @Html.TextBoxFor(p => p.tblAddress.FullAddress, new { @class = "form-control" })
-    <label>İletişim</label>
-    @Html.TextBoxFor(p => p.Contact, new { @class = "form-control" })
-    <label>Doğum Tarihi</label>
-    @Html.TextBoxFor(p => p.BirthDate, new { @class = "form-control", placeholder = "gg/aa/yyyy" })
+                <div class="row">
+                    <div class="col-md-5 pr-1">
+                        <div class="form-group">
+                            <label>TC Kimlik No</label>
+                            @Html.TextBoxFor(p => p.IdentityNo, new { @class = "form-control", @placeholder = "Kimlik Numarası" })
 
+                        </div>
+                    </div>
+                    <div class="col-md-3 px-1">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="date" class="form-control" name="BirthDate">
+                        </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                        <div class="form-group">
+                            <label for="Tel">Telefon</label>
+                            @Html.TextBoxFor(p => p.Contact, new { @class = "form-control", @placeholder = "Telefon" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 pr-1">
+                        <div class="form-group">
+                            <label>Adı</label>
+                            @Html.TextBoxFor(p => p.FirstName, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-6 pl-1">
+                        <div class="form-group">
+                            <label>Soyadı</label>
+                            @Html.TextBoxFor(p => p.LastName, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Adres</label>
+                            @Html.TextBoxFor(p => p.tblAddress.FullAddress, new { @class = "form-control", @placeholder = "Adres" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 pr-1">
+                        <div class="form-group">
+                            <label>Şehir</label>
+                            @Html.DropDownListFor(P => P.tblAddress.tblDistrict.tblCity.Id, (List<SelectListItem>)ViewBag.CityList, new { @class = "form-control", @placeholder = "Şehir" })
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-1">
+                        <div class="form-group">
+                            <label>İlçe</label>
+                            @Html.DropDownListFor(P => P.tblAddress.tblDistrict.Id, (List<SelectListItem>)ViewBag.District, new { @class = "form-control", @placeholder = "İlçe" })
+                        </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                        <div class="form-group">
+                            <label>Mahalle/Köy</label>
+                            @Html.TextBoxFor(p => p.tblAddress.NeighborhoodName, new { @class = "form-control", @placeholder = "Mahalle/Köy" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="update ml-auto mr-auto">
+                        <button type="submit" class="btn btn-primary btn-round">Çiftçi Bilgilerini Ekle</button>
+                    </div>
+                </div>
 
-
-
-    <button type="submit" class="btn my-3 btn-warning">Çiftçi Bilgilerini Ekle</button>
+            </div>
+        </div>
+    </div>
 </form>
-
-

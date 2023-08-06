@@ -14,26 +14,61 @@
 
         <h1>Çiftçi Bilgilerini Güncelle</h1>
         <br />
-        <label>Id</label>
-        @Html.TextBoxFor(p => p.Id, new { @class = "form-control" })
-        <label>Adı</label>
-        @Html.TextBoxFor(p => p.FirstName, new { @class = "form-control" })
-        <label>Soyadı</label>
-        @Html.TextAreaFor(p => p.LastName, new { @class = "form-control" })
-        <label>Kimlik No</label>
-        @Html.TextBoxFor(p => p.IdentityNo, new { @class = "form-control" })
-        <label>Şehir</label>
-        @Html.DropDownListFor(p => p.tblAddress.tblCityId, ViewBag.CityList as IEnumerable<SelectListItem>, "Şehir Seçin", new { @class = "form-control" })
-        <label>İlçe</label>
-        @Html.DropDownListFor(p => p.tblAddress.tblDistrictId, ViewBag.DistrictList as IEnumerable<SelectListItem>, "İlçe Seçin", new { @class = "form-control" })
-        <label>Mahalle/Köy</label>
-        @Html.TextBoxFor(p => p.tblAddress.NeighborhoodName, new { @class = "form-control" })
-        <label>Çiftçi Adres</label>
-        @Html.TextBoxFor(p => p.tblAddress.FullAddress, new { @class = "form-control" })
-        <label>İletişim</label>
-        @Html.TextBoxFor(p => p.Contact, new { @class = "form-control" })
-        <label>Doğum Tarihi</label>
-        @Html.TextBoxFor(p => p.BirthDate, new { @class = "form-control" })
+        <div class="row">
+            <div class="row">
+                <div class="col-6">
+                    <label>Esnaf Kayıt Nu</label>
+                    @Html.TextBoxFor(p => p.Id, new { @class = "form-control" })
+                </div>
+                <div class="col-6">
+                    <label>Doğum Tarihi</label>
+                    <input type="date" name="Birthdate" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label>Adı</label>
+                    @Html.TextBoxFor(p => p.FirstName, new { @class = "form-control" })
+                </div>
+                <div class="col-6">
+                    <label>Soyadı</label>
+                    @Html.TextBoxFor(p => p.LastName, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label>Kimlik No</label>
+                    @Html.TextBoxFor(p => p.IdentityNo, new { @class = "form-control" })
+                </div>
+                <div class="col-6">
+                    <label>İletişim</label>
+                    @Html.TextBoxFor(p => p.Contact, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label>Şehir</label>
+                    @Html.DropDownListFor(p => p.tblAddress.tblCityId, ViewBag.CityList as IEnumerable<SelectListItem>, "Şehir Seçin", new { @class = "form-control" })
+                </div>
+                <div class="col-4">
+                    <label>İlçe</label>
+                    @Html.DropDownListFor(p => p.tblAddress.tblDistrictId, ViewBag.DistrictList as IEnumerable<SelectListItem>, "İlçe Seçin", new { @class = "form-control" })
+                </div>
+                <div class="col-4">
+                    <label>Mahalle/Köy</label>
+                    @Html.TextBoxFor(p => p.tblAddress.NeighborhoodName, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Çiftçi Adres</label>
+                        @Html.TextBoxFor(p => p.tblAddress.FullAddress, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <button class="btn my-3 btn-warning">Çiftçi Bilgilerini Güncelle</button>
     </div>
 }

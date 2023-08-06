@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "Index";
-    Layout =null;
+    Layout = null;
 }
 
 <head>
@@ -33,7 +33,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-absolute bg-transparent shadow-none">
         <div class="container">
-            <a class="navbar-brand text-white" href="/Home/Index" style="font-size:24px" >Anasayfa</a>
+            <a class="navbar-brand text-white" href="/Home/Index" style="font-size:24px">Anasayfa</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header-2" aria-controls="navbar-header-2" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -65,7 +65,13 @@
     </nav>
     <div class="page-header min-vh-100" style="background-image: url(&#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&#39;);" loading="lazy">
         <span class="mask bg-gradient-dark opacity-5"></span>
-        <div class="container mt-5">
+     
+        <div class="container">
+            <a class="weatherwidget-io mb-5" href="https://forecast7.com/tr/38d9635d24/turkey/" data-label_1="Çorum" data-label_2="WEATHER" data-theme="weather_one">Çorum WEATHER</a>
+            <script>
+                !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+
             @RenderBody()
 
         </div>

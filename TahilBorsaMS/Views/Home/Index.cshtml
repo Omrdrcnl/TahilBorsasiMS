@@ -9,9 +9,7 @@
 
 
 <div class="col-lg-6 col-md-7 d-flex d-block justify-content-center flex-column m-auto mt-5">
-    <br />
-    <br />
-    <br />
+
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-danger">
@@ -19,8 +17,9 @@
                     <h2 style="color:black"><i class="fa fa-calendar info"></i> Günlük Fiyat Bilgileri</h2>
                     <form asp-controller="Home" asp-action="Index" method="get">
                         <div class="form-group">
+
                             <label style="color:white" for="selectedDate">Tarih Seçin:</label>
-                            <input style="color:black; background-color:antiquewhite" type="date" id="selectedDate" name="selectedDate" value="@((DateTime)ViewBag.SelectedDate).ToString("yyyy-MM-dd")" class="form-control" />
+                            <input style="color:black; background-color:antiquewhite" type="date" id="selectedDate" name="selectedDate" value="@DateTime.Now.ToShortDateString()" class="form-control" />
                         </div>
                         <button type="submit" class="btn btn-primary mt-1 m-auto">Bülten Bilgilerini Getir</button>
                     </form>
@@ -30,6 +29,7 @@
         </div>
     </div>
 </div>
+
 
 <div class="row row-cols-1 row-cols-md-4 g-3">
     @foreach (var groupedSale in Model)
@@ -57,3 +57,11 @@
 
 
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('#selectedDate').datetimepicker({
+            pickTime: false
+        });
+
+</script>
