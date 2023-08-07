@@ -7,56 +7,80 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
-<div class="container mt-5">
+<div class="container mt-5 justify-content-center align-items-center">
 
     <h2>Çiftçi Paneli</h2>
-    @*Arama işlem penceresi*@
-    @using (Html.BeginForm("Index", "Farmer", FormMethod.Get))
-    {<div class="form-control input-group-sm mb-2">
-            @Html.TextBox("f", null, new { @class = "form-control", placeholder = "Çiftçi Ara" })
-            <button class="btn btn-outline-primary">Ara</button>
-        </div>
-    }
 
-    <table class="table table-bordered table-striped">
-        <tr class="table-info">
-            <th>Id</th>
-            <th>Adı</th>
-            <th>Soyadı</th>
-            <th>Kimlik No</th>
-            <th>Doğum Tarihi</th>
-            <th>İletişim</th>
-            <th>Şehir</th>
-            <th>İlçe</th>
-            <th>Mahalle/Köy</th>
-            <th>Adres</th>
-            <th>Sil</th>
-            <th>Güncelle</th>
-
-        </tr>
-        @foreach (var f in Model)
-        {
-            <tr>
-                <td>@f.Id</td>
-                <td>@f.FirstName</td>
-                <td>@f.LastName</td>
-                <td>@f.IdentityNo</td>
-                <td>@(f.BirthDate.HasValue ? f.BirthDate.Value.ToString("dd/MM/yyyy") : "")</td>
-                <td>@f.Contact</td>
-                <td>@f.tblAddress.tblCity.Name</td>
-                <td>@f.tblAddress.tblDistrict.Name</td>
-                <td>@f.tblAddress.NeighborhoodName</td>
-                <td>@f.tblAddress.FullAddress</td>
-                <td><a class="btn btn-danger" href="~/Farmer/DeleteFarmer/@f.Id">Sil</a></td>
-                <td><a class="btn btn-success" href="~/Farmer/CallFarmer/@f.Id">Güncelle</a></td>
+    <div class="row">
+        @*Arama işlem penceresi*@
+        @using (Html.BeginForm("Index", "Farmer", FormMethod.Get))
+        {<div class="form-control input-group row align-items-center">
+                <div class="col-md-4">  @Html.TextBox("f", null, new { @class = "form-control", placeholder = "Çiftçi Ara" })</div>
+                <div class="col-md-2"><button class="btn btn-outline-primary">Ara</button></div>
+            </div>
+        }
+        <table class="table table-bordered table-striped">
+            <tr class="table-info">
+                <th>Kayıt No</th>
+                <th>Adı</th>
+                <th>Soyadı</th>
+                <th>Kimlik No</th>
+                <th>Doğum Tarihi</th>
+                <th>İletişim</th>
+                <th>Şehir</th>
+                <th>İlçe</th>
+                <th>Mahalle/Köy</th>
+                <th>Adres</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
 
             </tr>
-        }
-    </table>
+            @foreach (var f in Model)
+            {
+                <tr>
+                    <td>@f.Id</td>
+                    <td>@f.FirstName</td>
+                    <td>@f.LastName</td>
+                    <td>@f.IdentityNo</td>
+                    <td>@(f.BirthDate.HasValue ? f.BirthDate.Value.ToString("dd/MM/yyyy") : "")</td>
+                    <td>@f.Contact</td>
+                    <td>@f.tblAddress.tblCity.Name</td>
+                    <td>@f.tblAddress.tblDistrict.Name</td>
+                    <td>@f.tblAddress.NeighborhoodName</td>
+                    <td>@f.tblAddress.FullAddress</td>
+                    <td>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>
+                    </td>
+                    <td><a class="btn btn-success" href="~/Farmer/CallFarmer/@f.Id">Güncelle</a></td>
+
+                </tr>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Sil</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Çiftçi Kaydını Silmek İstiyor musunuz ?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                                <a class="btn btn-danger" href="~/Farmer/DeleteFarmer/@f.Id">Sil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </table>
+    </div>
     <div class="d-flex justify-content-center pagination">
         @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),
-       new PagedListRenderOptions { LiElementClasses = new[] { "page-link btn " },
-           UlElementClasses = new[] { "page-item d-flex" } })
+       new PagedListRenderOptions
+            {
+                LiElementClasses = new[] { "page-link btn " },
+           UlElementClasses = new[] { "page-item d-flex" }
+            })
     </div>
     <a href="~/Farmer/AddFarmer" class="btn btn-primary">Yeni Kayıt Ekle</a>
 </div>

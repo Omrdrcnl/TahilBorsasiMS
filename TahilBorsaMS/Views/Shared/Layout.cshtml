@@ -23,10 +23,10 @@ Coded by www.creative-tim.com
 <head>
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="~/Content/LayoutAssets/assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Paper Dashboard 2 by Creative Tim
+       Tahıl Borsası
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -92,14 +92,14 @@ Coded by www.creative-tim.com
                     <!-- <p>CT</p> -->
                 </a>
                 <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-                    Creative Tim
+                    İşlem Paneli
                     <!-- <div class="logo-image-big">
                       <img src="../assets/img/logo-big.png">
                     </div> -->
                 </a>
             </div>
             <div class="sidebar-wrapper">
-                <ul class="nav">
+                <ul class="nav" id="myUl">
                     <li>
                         <a href="~/Panel/Index" class="nav-link text-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bank mx-auto mb-1 d-block" viewBox="0 0 16 16">
@@ -183,29 +183,47 @@ Coded by www.creative-tim.com
     <script>
         $(document).ready(function () {
 
-            var liElements = $(".nav li");
 
-
-            var liElements = $(".nav li");
-
-            // Li etiketlerine tıklama olayını ele alın
-            liElements.on("click", function () {
-                // Tüm li etiketlerinden aktif sınıfı kaldırın
-                liElements.removeClass("active");
-
-                // Tıklanan li etiketine aktif sınıfı ekleyin
-                $(this).addClass("active");
-            });
-            // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
-            demo.initChartsPages();
 
         });
     </script>
     <!-- Code injected by live-server -->
     <script>
-                // <![CDATA[  <-- For SVG support
+
+        var btnContainer = document.getElementById("myUl");
+
+        // Get all buttons with class="btn" inside the container
+        var btns = $(".nav li")
+
+        // Loop through the buttons and add the active class to the current/clicked button
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+
+                // If there's no active class
+                if (current.length > 0) {
+                    current[0].className = current[0].className.replace(" active", "");
+                }
+
+                // Alttaki fonksiyonu çalıstıramadım
+                this.className += " active";
+            });
+        }
 
     </script>
+
+
+    <script>
+        //Modal js kodları
+        const myModal = document.getElementById('myModal')
+        const myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', () => {
+            myInput.focus()
+        })
+
+    </script>
+
 </body>
 
 </html>

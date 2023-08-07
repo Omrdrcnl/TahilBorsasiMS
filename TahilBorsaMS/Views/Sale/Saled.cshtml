@@ -7,40 +7,55 @@
     ViewBag.Title = "Saled";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
+<div class="container mt-5">
+    <h2 class="m-auto mb-3">Gerçekleşen Satışlar</h2>
+    @using (Html.BeginForm("Saled", "Sale", FormMethod.Get))
+    {<div class="form-control input-group row-cols-md-6 align-items-center">
+            <div class="col-md-4">   @Html.TextBox("e", null, new { @class = "form-control", placeholder = "Çiftçi Kimlik No Ara" })</div>
+            <div class="col-md-2">  <button class="btn btn-outline-primary">Ara</button></div>
+    </div>
+    }
+    @using (Html.BeginForm("Index", "Sale", FormMethod.Get))
 
-@using (Html.BeginForm("Index", "Sale", FormMethod.Get))
-
-{
-
-    <div class="container mt-5">
-        <h2 class="m-auto mb-3">Gerçekleşen Satışlar</h2>
-
-        <table class="table table-bordered table-hover table-success table-striped">
-            <tr class="table-warning">
-                <th>Giriş Id</th>
-                <th>Çiftçi Id</th>
-                <th>Çiftçi Kimlik no</th>
-                <th>Ürün Besin Değeri</th>
-                <th class="text-center">İşlem</th>
-
-            </tr>
-            @foreach (var k in Model)
-            {
-                <tr>
-                    <td>@k.tblEntryProductId</td>
-                    <td>@k.tblEntryProduct.tblFarmerId</td>
-                    <td>@k.tblEntryProduct.tblFarmer.IdentityNo</td>
-                    <td>@k.tblLabData.NutritionalValue</td>
-                    <td class="text-center"><a class="btn btn-info">Detay</a></td>
+    {
+        <div>
+            <table class="table table-bordered table-hover table-success table-striped">
+                <tr class="table-warning">
+                    <th>Satış No</th>
+                    <th>Giriş No</th>
+                    <th>Alıcı</th>
+                    <th>Satıcı</th>
+                    <th>Çiftçi Kimlik no</th>
+                    <th>Ürün</th>
+                    <th>Miktar Kg</th>
+                    <th>Besin Değeri</th>
+                    <th class="text-center">İşlem</th>
 
                 </tr>
-            }
-        </table>
+                @foreach (var k in Model)
+                {
+                    <tr>
+                        <td>@k.Id</td>
+                        <td>@k.tblEntryProductId</td>
+                        <td>@k.tblTradesman.FirstName @k.tblTradesman.LastName</td>
+                        <td>@k.tblEntryProduct.tblFarmer.FirstName @k.tblEntryProduct.tblFarmer.LastName</td>
+                        <td>@k.tblEntryProduct.tblFarmer.IdentityNo</td>
+                        <td>@k.tblEntryProduct.tblProduct.Name</td>
+                        <td>@k.Quantity</td>
+                        <td>@k.tblLabData.NutritionalValue</td>
+                        <td class="text-center"><a href="/Sale/CallSale/@k.Id" class="btn btn-info">GÜNCELLE</a></td>
+
+                    </tr>
+                }
+            </table>
+        </div>
         <div class="btn-group btn-group-lg d-flex justify-content-between">
             <div>
                 <a href="/Sale/Index/" class="btn btn-primary btn-lg">Geri</a>
             </div>
 
         </div>
-    </div>
-}
+
+    }
+
+</div>

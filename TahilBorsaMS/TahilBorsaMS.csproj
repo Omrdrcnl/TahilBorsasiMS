@@ -348,6 +348,51 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="hightech-html\about.html" />
+    <Content Include="hightech-html\contact.html" />
+    <Content Include="hightech-html\css\bootstrap.css" />
+    <Content Include="hightech-html\css\bootstrap.min.css" />
+    <Content Include="hightech-html\css\font-awesome.min.css" />
+    <Content Include="hightech-html\css\jquery.mCustomScrollbar.min.css" />
+    <Content Include="hightech-html\css\owl.carousel.css" />
+    <Content Include="hightech-html\css\owl.carousel.min.css" />
+    <Content Include="hightech-html\css\owl.theme.default.css" />
+    <Content Include="hightech-html\css\owl.theme.default.min.css" />
+    <Content Include="hightech-html\css\owl.theme.green.css" />
+    <Content Include="hightech-html\css\owl.theme.green.min.css" />
+    <Content Include="hightech-html\css\responsive.css" />
+    <Content Include="hightech-html\css\style.css" />
+    <Content Include="hightech-html\fonts\fontawesome-webfont.svg" />
+    <Content Include="hightech-html\images\about_bg.jpg" />
+    <Content Include="hightech-html\images\banner.jpg" />
+    <Content Include="hightech-html\images\chose1.png" />
+    <Content Include="hightech-html\images\chose2.png" />
+    <Content Include="hightech-html\images\chose3.png" />
+    <Content Include="hightech-html\images\clint.jpg" />
+    <Content Include="hightech-html\images\icon.png" />
+    <Content Include="hightech-html\images\loading.gif" />
+    <Content Include="hightech-html\images\logo.png" />
+    <Content Include="hightech-html\images\logo_footer.png" />
+    <Content Include="hightech-html\images\menu_btn.png" />
+    <Content Include="hightech-html\images\prot1.png" />
+    <Content Include="hightech-html\images\prot2.png" />
+    <Content Include="hightech-html\images\prot3.png" />
+    <Content Include="hightech-html\images\prot4.png" />
+    <Content Include="hightech-html\images\we1.png" />
+    <Content Include="hightech-html\images\we2.png" />
+    <Content Include="hightech-html\images\we3.png" />
+    <Content Include="hightech-html\index.html" />
+    <Content Include="hightech-html\js\bootstrap.bundle.min.js" />
+    <Content Include="hightech-html\js\bootstrap.js" />
+    <Content Include="hightech-html\js\bootstrap.min.js" />
+    <Content Include="hightech-html\js\custom.js" />
+    <Content Include="hightech-html\js\jquery-3.0.0.min.js" />
+    <Content Include="hightech-html\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="hightech-html\js\jquery.min.js" />
+    <Content Include="hightech-html\js\owl.carousel.js" />
+    <Content Include="hightech-html\js\owl.carousel.min.js" />
+    <Content Include="hightech-html\portfolio.html" />
+    <Content Include="hightech-html\we_do.html" />
     <Content Include="Models\Entity\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -597,6 +642,33 @@
     <Content Include="Content\LayoutAssets\assets\scss\paper-dashboard\_tables.scss" />
     <Content Include="Content\LayoutAssets\assets\scss\paper-dashboard\_typography.scss" />
     <Content Include="Content\LayoutAssets\assets\scss\paper-dashboard\_variables.scss" />
+    <Content Include="hightech-html\css\.DS_Store" />
+    <Content Include="hightech-html\fonts\fontawesome-webfont.eot" />
+    <Content Include="hightech-html\fonts\fontawesome-webfont.ttf" />
+    <Content Include="hightech-html\fonts\fontawesome-webfont.woff" />
+    <Content Include="hightech-html\fonts\fontawesome-webfont.woff2" />
+    <Content Include="hightech-html\fonts\FontAwesome.otf" />
+    <Content Include="hightech-html\fonts\IcoMoon-Free.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-Black.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-BlackItalic.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-Bold.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-BoldItalic.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-ExtraBold.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-ExtraLight.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-Italic.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-Light.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-LightItalic.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-Medium.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-MediumItalic.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-Regular.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-SemiBold.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-Thin.ttf" />
+    <Content Include="hightech-html\fonts\Poppins-ThinItalic.ttf" />
+    <Content Include="hightech-html\images\.DS_Store" />
+    <Content Include="hightech-html\js\.DS_Store" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\chart.js" />
     <Content Include="Scripts\chart.min.js" />
@@ -648,6 +720,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="hightech-html\icon\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

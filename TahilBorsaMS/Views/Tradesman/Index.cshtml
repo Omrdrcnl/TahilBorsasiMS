@@ -8,55 +8,79 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 <div class="container mt-5">
-    <h2>Esnaf Paneli</h2>
-    @*Arama işlem penceresi*@
-    @using (Html.BeginForm("Index", "Tradesman", FormMethod.Get))
-    {<div class="form-control input-group">
-            @Html.TextBox("f", null, new { @class = "form-control", placeholder = "Esnaf Ara" })
-            <button class="btn btn-outline-primary">Ara</button>
-        </div>
-    }
+    <div class="row">
+        <h2>Esnaf Paneli</h2>
+        @*Arama işlem penceresi*@
+        @using (Html.BeginForm("Index", "Tradesman", FormMethod.Get))
+        {<div class="form-control input-group row align-items-center">
+                <div class="col-md-4">  @Html.TextBox("f", null, new { @class = "form-control", placeholder = "Esnaf Ara" })</div>
+                <div class="col-md-2"><button class="btn btn-outline-primary">Ara</button></div>
+            </div>
+        }
 
-    <table class="table table-bordered">
-        <tr>
-            <th>Id</th>
-            <th>Adı</th>
-            <th>Soyadı</th>
-            <th>Kimlik No</th>
-            <th>İletişim</th>
-            <th>Şehir</th>
-            <th>İlçe</th>
-            <th>Mahalle/Köy</th>
-            <th>Adres</th>
-            <th>Sil</th>
-            <th>Güncelle</th>
-
-        </tr>
-        @foreach (var f in Model)
-        {
-            <tr>
-                <td>@f.Id</td>
-                <td>@f.FirstName</td>
-                <td>@f.LastName</td>
-                <td>@f.IdentityNo</td>
-                <td>@f.Contact</td>
-                <td>@f.tblAddress.tblCity.Name</td>
-                <td>@f.tblAddress.tblDistrict.Name</td>
-                <td>@f.tblAddress.NeighborhoodName</td>
-                <td>@f.tblAddress.FullAddress</td>
-                <td><a class="btn btn-danger" href="~/Tradesman/DeleteTradesman/@f.Id">Sil</a></td>
-                <td><a class="btn btn-success" href="~/Tradesman/CallTradesman/@f.Id">Güncelle</a></td>
+        <table class="table table-bordered table-striped">
+            <tr class="table-info">
+                <th>Kayıt No</th>
+                <th>Adı</th>
+                <th>Soyadı</th>
+                <th>Kimlik No</th>
+                <th>İletişim</th>
+                <th>Şehir</th>
+                <th>İlçe</th>
+                <th>Mahalle/Köy</th>
+                <th>Adres</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
 
             </tr>
-        }
-    </table>
-    <div class="d-flex justify-content-center pagination">
-        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), 
-       new PagedListRenderOptions { LiElementClasses = new[] { "page-link btn " }, 
-           UlElementClasses = new[] { "page-item d-flex" } })
-    </div>
-    <a href="~/Tradesman/AddTradesman" class="btn btn-primary">Yeni Esnaf Kaydı Oluştur</a>
-</div>
+            @foreach (var f in Model)
+            {
+                <tr>
+                    <td>@f.Id</td>
+                    <td>@f.FirstName</td>
+                    <td>@f.LastName</td>
+                    <td>@f.IdentityNo</td>
+                    <td>@f.Contact</td>
+                    <td>@f.tblAddress.tblCity.Name</td>
+                    <td>@f.tblAddress.tblDistrict.Name</td>
+                    <td>@f.tblAddress.NeighborhoodName</td>
+                    <td>@f.tblAddress.FullAddress</td>
+                    <td>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>
+                    </td>
+                    <td><a class="btn btn-success" href="~/Tradesman/CallTradesman/@f.Id">Güncelle</a></td>
 
+                </tr>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Sil</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Esnaf Kaydını Silmek İstiyor musunuz ?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                                <a class="btn btn-danger" href="~/Tradesman/DeleteTradesman/@f.Id">Sil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </table>
+        <div class="d-flex justify-content-center pagination">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),
+           new PagedListRenderOptions
+                {
+                    LiElementClasses = new[] { "page-link btn " },
+               UlElementClasses = new[] { "page-item d-flex" }
+                })
+        </div>
+        <a href="~/Tradesman/AddTradesman" class="btn btn-primary">Yeni Esnaf Kaydı Oluştur</a>
+    </div>
+</div>
 
 

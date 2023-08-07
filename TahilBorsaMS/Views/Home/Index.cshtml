@@ -8,8 +8,7 @@
 }
 
 
-<div class="col-lg-6 col-md-7 d-flex d-block justify-content-center flex-column m-auto mt-5">
-
+<div class="col-lg-6 col-md-7 d-flex d-block justify-content-center flex-column m-auto mt-5"
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-danger">
@@ -30,32 +29,31 @@
     </div>
 </div>
 
-
-<div class="row row-cols-1 row-cols-md-4 g-3">
-    @foreach (var groupedSale in Model)
-    {
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="@groupedSale.Photo" height="200" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">@groupedSale.ProductName</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"></li>
-                    <li class="list-group-item">Toplam Miktar: @groupedSale.TotalQuantity kg</li>
-                    <li class="list-group-item">En Düşük Fiyat: ₺@groupedSale.TotalBasePrice</li>
-                    <li class="list-group-item">En Yüksek Fiyat: ₺@groupedSale.TotalActualPrice</li>
-                </ul>
-                <div class="card-body">
-                    <p>
-                        Tarih:  <b>@groupedSale.SaleDate.ToShortDateString()</b>
-                    </p>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-3">
+        @foreach (var groupedSale in Model)
+        {
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="@groupedSale.Photo" height="200" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@groupedSale.ProductName</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"></li>
+                        <li class="list-group-item">Toplam Miktar: @groupedSale.TotalQuantity kg</li>
+                        <li class="list-group-item">En Düşük Fiyat: ₺@groupedSale.TotalBasePrice</li>
+                        <li class="list-group-item">En Yüksek Fiyat: ₺@groupedSale.TotalActualPrice</li>
+                    </ul>
+                    <div class="card-body">
+                        <p>
+                            Tarih:  <b>@groupedSale.SaleDate.ToShortDateString()</b>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    }
-
-
+        }
+    </div>
 </div>
 
 <script>

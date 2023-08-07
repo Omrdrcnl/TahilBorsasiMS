@@ -7,14 +7,14 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<div class="container">
+<div class="container mt-5">
     <h2>Borsamızda İşlem Gören Ürünler</h2>
     <br />
     <div class="row row-cols-1 row-cols-md-2 g-4">
         @foreach (var product in Model)
         {
 
-            <div class="card  mb-3">
+            <div class="card  mb-3 col-md-6 col-sm-12">
                 <img src="@product.Photo" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">@product.Name</h5>
@@ -23,8 +23,25 @@
                 </div>
                 <p class="card-text"><small class="text-muted">İşlem Numarası:"@product.Id"</small></p>
                 <div class="btn-group m-1">
-                    <a href="~/Product/DeleteProduct/@product.Id" class="btn btn-outline-danger">Sil</a>
-                    <a href="~/Product/CallProduct/@product.Id" class="btn btn-outline-success">Güncelle</a>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger btn-round">Sil</button>
+                    <a href="~/Product/CallProduct/@product.Id" class="btn btn-outline-success btn-round">Güncelle</a>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Sil</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Ürün Kaydını Silmek İstiyor musunuz ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                            <a href="~/Product/DeleteProduct/@product.Id" class="btn btn-outline-danger">Sil</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -33,3 +50,12 @@
     <a href="~/Product/AddProduct" class="btn btn-primary">Yeni Ürün Ekle</a>
 </div>
 
+<script>
+    const myModal = document.getElementById('myModal')
+    const myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', () => {
+        myInput.focus()
+    })
+
+</script>

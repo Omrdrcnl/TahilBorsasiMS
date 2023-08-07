@@ -4,11 +4,11 @@
     ViewBag.Title = "AddFarmer";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
-<form class="form-control container" method="post">
+<form class="form-control container mt-5" method="post">
     <div class="col-md-12">
         <div class="card card-user">
             <div class="card-header">
-                <h5 class="card-title">Edit Profile</h5>
+                <h5 class="card-title">Çiftçi Kaydet</h5>
             </div>
             <div class="card-body">
 
@@ -77,11 +77,40 @@
                 </div>
                 <div class="row">
                     <div class="update ml-auto mr-auto">
-                        <button type="submit" class="btn btn-primary btn-round">Çiftçi Bilgilerini Ekle</button>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary btn-round">Çiftçi Bilgilerini Ekle</button>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Kaydet</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Çiftçiyi Kaydetmek İstiyor musunuz ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </form>
+
+
+
+<script>
+    const myModal = document.getElementById('myModal')
+    const myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', () => {
+        myInput.focus()
+    })
+
+</script>

@@ -18,12 +18,12 @@ namespace TahilBorsaMS.Controllers
         // GET: Farmer
         public ActionResult Index(string f, int page=1)
         {
-            var value = db.tblFarmer.ToList().ToPagedList(page, 3);
+            var value = db.tblFarmer.ToList().ToPagedList(page, 10);
             //indexten gelen string f degeriyle harf duyarlılığını kaldırarak arama işlemi yapma
             if (!string.IsNullOrEmpty(f))
             {
                 f = f.ToLower();
-                value = value.Where(p => p.FirstName.ToLower().Contains(f) || p.LastName.ToLower().Contains(f)).ToList().ToPagedList(page, 3);
+                value = value.Where(p => p.FirstName.ToLower().Contains(f) || p.LastName.ToLower().Contains(f)).ToList().ToPagedList(page, 10);
             }
 
             return View(value);

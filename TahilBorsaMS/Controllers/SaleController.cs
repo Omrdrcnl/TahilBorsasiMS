@@ -19,11 +19,17 @@ namespace TahilBorsaMS.Controllers
 
             return View(lab);
         }
-        public ActionResult Saled()
+        public ActionResult Saled(string e)
         {
-            var lab = db.tblSale.Where(x => x.Process == true).ToList();
+            IQueryable<tblSale> lab = db.tblSale.Where(x => x.Process == true);
 
-            return View(lab);
+
+            if (!string.IsNullOrEmpty(e))
+            {
+                lab = lab.Where(x => x.tblLabData.tblEntryProduct.tblFarmer.IdentityNo.Contains(e));
+            }
+
+            return View(lab.ToList());
         }
 
        
@@ -33,7 +39,7 @@ namespace TahilBorsaMS.Controllers
             return View(k);
 
         }
-        public ActionResult EnterSale(tblSale s)
+        public ActionResult UpdateSale(tblSale s)
         {
             var value = db.tblSale.Find (s.Id);
 
