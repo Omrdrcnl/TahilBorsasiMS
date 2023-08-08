@@ -1,0 +1,102 @@
+2023-08-03 14:47:25.4200||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7234 
+2023-08-03 14:47:25.4842||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5107 
+2023-08-03 14:47:25.4901||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-08-03 14:47:25.4901||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-08-03 14:47:25.4901||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api\ 
+2023-08-03 14:47:26.4685||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - - 
+2023-08-03 14:47:26.9576||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - 
+2023-08-03 14:47:26.9576||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 504.3356ms 
+2023-08-03 14:47:26.9576||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 7.5645ms 
+2023-08-03 14:47:27.0687||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - - 
+2023-08-03 14:47:27.1408||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 72.1185ms 
+2023-08-03 14:47:27.3887||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - 
+2023-08-03 14:47:27.5729||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 184.1768ms 
+2023-08-03 14:48:54.7582||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Address/TumAdresler - - 
+2023-08-03 14:48:54.7846||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.AddressController.Get (TahilBorsa.Api)' 
+2023-08-03 14:48:54.8133||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Get", controller = "Address"}. Executing controller action with signature System.Object Get() on controller TahilBorsa.Api.Controllers.AddressController (TahilBorsa.Api). 
+2023-08-03 14:48:56.1932||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'ActualPrice' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-03 14:48:56.1932||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Amount' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-03 14:48:56.1932||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'BasePrice' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-03 14:48:57.5343||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (52ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[FullAddress], [t].[NeighborhoodName], [t].[tblCityId], [t].[tblDistrictId]
+FROM [tblAddress] AS [t] 
+2023-08-03 14:48:57.5973||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblAddress, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-03 14:48:57.6212||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.AddressController.Get (TahilBorsa.Api) in 2799.0969ms 
+2023-08-03 14:48:57.6212||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.AddressController.Get (TahilBorsa.Api)' 
+2023-08-03 14:48:57.6436||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Address/TumAdresler - - - 200 - application/json;+charset=utf-8 2885.3889ms 
+2023-08-03 14:49:11.4069||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/District/IllerinIlçeleri?ilPlaka=19 - - 
+2023-08-03 14:49:11.4069||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-03 14:49:11.4312||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DistrictsByCity", controller = "District"}. Executing controller action with signature System.Object DistrictsByCity(Int32) on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-03 14:49:11.8154||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (54ms) [Parameters=[@__ilPlaka_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t]
+INNER JOIN [tblCity] AS [t0] ON [t].[tblCityId] = [t0].[Id]
+WHERE [t].[tblCityId] = @__ilPlaka_0 
+2023-08-03 14:49:11.8154||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-03 14:49:11.8154||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api) in 388.1607ms 
+2023-08-03 14:49:11.8154||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-03 14:49:11.8154||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/District/IllerinIlçeleri?ilPlaka=19 - - - 200 - application/json;+charset=utf-8 413.3975ms 
+2023-08-03 14:49:24.6787||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/EntryProduct/GirisYapanUrunler - - 
+2023-08-03 14:49:24.6787||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.EntryProductController.AllEntryProduct (TahilBorsa.Api)' 
+2023-08-03 14:49:24.6787||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllEntryProduct", controller = "EntryProduct"}. Executing controller action with signature System.Object AllEntryProduct() on controller TahilBorsa.Api.Controllers.EntryProductController (TahilBorsa.Api). 
+2023-08-03 14:49:24.7393||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[DateTime], [t].[Process], [t].[tblFarmerId], [t].[tblProductId]
+FROM [tblEntryProduct] AS [t] 
+2023-08-03 14:49:24.7393||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblEntryProduct, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-03 14:49:24.7645||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.EntryProductController.AllEntryProduct (TahilBorsa.Api) in 81.968ms 
+2023-08-03 14:49:24.7645||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.EntryProductController.AllEntryProduct (TahilBorsa.Api)' 
+2023-08-03 14:49:24.7645||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/EntryProduct/GirisYapanUrunler - - - 200 - application/json;+charset=utf-8 86.1990ms 
+2023-08-03 14:49:38.0079||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Farmer/TumCiftciler - - 
+2023-08-03 14:49:38.0079||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api)' 
+2023-08-03 14:49:38.0079||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumCiftciler", controller = "Farmer"}. Executing controller action with signature System.Object TumCiftciler() on controller TahilBorsa.Api.Controllers.FarmerController (TahilBorsa.Api). 
+2023-08-03 14:49:38.0173||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[BirthDate], [t].[Contact], [t].[FirstName], [t].[IdentityNo], [t].[LastName], [t].[tblAddressId]
+FROM [tblFarmer] AS [t] 
+2023-08-03 14:49:38.0173||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblFarmer, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-03 14:49:38.0173||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api) in 10.6973ms 
+2023-08-03 14:49:38.0173||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api)' 
+2023-08-03 14:49:38.0173||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Farmer/TumCiftciler - - - 200 - application/json;+charset=utf-8 14.3134ms 
+2023-08-03 14:49:51.0103||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Farmer/1 - - 
+2023-08-03 14:49:51.0103||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.FarmerController.Get (TahilBorsa.Api)' 
+2023-08-03 14:49:51.0103||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Get", controller = "Farmer"}. Executing controller action with signature System.Object Get(Int32) on controller TahilBorsa.Api.Controllers.FarmerController (TahilBorsa.Api). 
+2023-08-03 14:49:51.0241||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__farmerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BirthDate], [t].[Contact], [t].[FirstName], [t].[IdentityNo], [t].[LastName], [t].[tblAddressId]
+FROM [tblFarmer] AS [t]
+WHERE [t].[Id] = @__farmerId_0 
+2023-08-03 14:49:51.0241||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[TahilBorsaMS.Models.Entity.tblFarmer, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-08-03 14:49:51.0241||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.FarmerController.Get (TahilBorsa.Api) in 11.7637ms 
+2023-08-03 14:49:51.0241||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.FarmerController.Get (TahilBorsa.Api)' 
+2023-08-03 14:49:51.0241||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Farmer/1 - - - 200 - application/json;+charset=utf-8 16.4541ms 
+2023-08-03 14:51:21.9128||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Sale/TariheGöreSatışlar/03.06.2023 - - 
+2023-08-03 14:51:21.9128||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.SaleController.SaleByDate (TahilBorsa.Api)' 
+2023-08-03 14:51:21.9288||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "SaleByDate", controller = "Sale"}. Executing controller action with signature System.Object SaleByDate(System.DateTime) on controller TahilBorsa.Api.Controllers.SaleController (TahilBorsa.Api). 
+2023-08-03 14:51:21.9584||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@__date_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[ActualPrice], [t].[Amount], [t].[BasePrice], [t].[Date], [t].[Process], [t].[Quantity], [t].[tblEntryProductId], [t].[tblLabDataId], [t].[tblTradesmanId]
+FROM [tblSale] AS [t]
+WHERE [t].[Date] = @__date_0 
+2023-08-03 14:51:21.9584||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblSale, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-03 14:51:21.9584||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.SaleController.SaleByDate (TahilBorsa.Api) in 30.882ms 
+2023-08-03 14:51:21.9584||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.SaleController.SaleByDate (TahilBorsa.Api)' 
+2023-08-03 14:51:21.9584||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Sale/TariheGöreSatışlar/03.06.2023 - - - 200 - application/json;+charset=utf-8 47.4897ms 
+2023-08-03 14:51:32.0726||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Sale/TariheGöreSatışlar/03.05.2023 - - 
+2023-08-03 14:51:32.0797||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.SaleController.SaleByDate (TahilBorsa.Api)' 
+2023-08-03 14:51:32.0797||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "SaleByDate", controller = "Sale"}. Executing controller action with signature System.Object SaleByDate(System.DateTime) on controller TahilBorsa.Api.Controllers.SaleController (TahilBorsa.Api). 
+2023-08-03 14:51:32.0797||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__date_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[ActualPrice], [t].[Amount], [t].[BasePrice], [t].[Date], [t].[Process], [t].[Quantity], [t].[tblEntryProductId], [t].[tblLabDataId], [t].[tblTradesmanId]
+FROM [tblSale] AS [t]
+WHERE [t].[Date] = @__date_0 
+2023-08-03 14:51:32.0797||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblSale, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-03 14:51:32.0797||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.SaleController.SaleByDate (TahilBorsa.Api) in 5.8024ms 
+2023-08-03 14:51:32.0797||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.SaleController.SaleByDate (TahilBorsa.Api)' 
+2023-08-03 14:51:32.0797||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Sale/TariheGöreSatışlar/03.05.2023 - - - 200 - application/json;+charset=utf-8 14.1321ms 
+2023-08-03 14:52:00.6197||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Sale/TariheGöreSatışlar/06.03.2023 - - 
+2023-08-03 14:52:00.6259||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.SaleController.SaleByDate (TahilBorsa.Api)' 
+2023-08-03 14:52:00.6259||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "SaleByDate", controller = "Sale"}. Executing controller action with signature System.Object SaleByDate(System.DateTime) on controller TahilBorsa.Api.Controllers.SaleController (TahilBorsa.Api). 
+2023-08-03 14:52:00.6259||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__date_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[ActualPrice], [t].[Amount], [t].[BasePrice], [t].[Date], [t].[Process], [t].[Quantity], [t].[tblEntryProductId], [t].[tblLabDataId], [t].[tblTradesmanId]
+FROM [tblSale] AS [t]
+WHERE [t].[Date] = @__date_0 
+2023-08-03 14:52:00.6259||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblSale, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-03 14:52:00.6517||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.SaleController.SaleByDate (TahilBorsa.Api) in 20.7259ms 
+2023-08-03 14:52:00.6517||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.SaleController.SaleByDate (TahilBorsa.Api)' 
+2023-08-03 14:52:00.6517||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Sale/TariheGöreSatışlar/06.03.2023 - - - 200 - application/json;+charset=utf-8 32.3863ms 

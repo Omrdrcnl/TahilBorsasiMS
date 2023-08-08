@@ -1,0 +1,12 @@
+2023-08-06 18:20:56.3668||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-08-06 18:20:56.8176||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7234 
+2023-08-06 18:20:56.8176||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5107 
+2023-08-06 18:20:56.8176||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-08-06 18:20:56.8176||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-08-06 18:20:56.8176||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api 
+2023-08-06 18:20:59.4839||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - - 
+2023-08-06 18:20:59.9217||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 439.5040ms 
+2023-08-06 18:20:59.9452||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - 
+2023-08-06 18:20:59.9452||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 8.6688ms 
+2023-08-06 18:21:00.0682||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - 
+2023-08-06 18:21:00.1838||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 115.6356ms 

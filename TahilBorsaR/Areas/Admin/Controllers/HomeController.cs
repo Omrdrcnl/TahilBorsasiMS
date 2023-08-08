@@ -10,6 +10,11 @@ namespace TahilBorsaR.Areas.Admin.Controllers
             return View();
         }
 
+        public IActionResult Farmers()
+        {
+            return View();
+        }
+
         public IActionResult Tumsehirler()
         {
             return View();

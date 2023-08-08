@@ -1,0 +1,298 @@
+2023-08-05 21:02:09.8420||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-08-05 21:02:10.1902||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7234 
+2023-08-05 21:02:10.1902||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5107 
+2023-08-05 21:02:10.1902||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-08-05 21:02:10.1902||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-08-05 21:02:10.1902||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api 
+2023-08-05 21:02:12.0288||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger - - 
+2023-08-05 21:02:12.2606||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger - - - 301 0 - 235.5955ms 
+2023-08-05 21:02:12.2694||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - - 
+2023-08-05 21:02:12.5589||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/swagger-ui-standalone-preset.js - - 
+2023-08-05 21:02:12.5589||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/swagger-ui-bundle.js - - 
+2023-08-05 21:02:12.5589||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/swagger-ui.css - - 
+2023-08-05 21:02:12.5589||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - 
+2023-08-05 21:02:12.5589||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - - 
+2023-08-05 21:02:12.5589||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 303.3558ms 
+2023-08-05 21:02:12.5969||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 32.3162ms 
+2023-08-05 21:02:12.6262||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2023-08-05 21:02:12.6262||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2023-08-05 21:02:12.6262||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 67.4852ms 
+2023-08-05 21:02:12.6262||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/swagger-ui.css - - - 200 144929 text/css 67.8676ms 
+2023-08-05 21:02:12.6549||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2023-08-05 21:02:12.6549||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 96.5182ms 
+2023-08-05 21:02:12.7076||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 140.9015ms 
+2023-08-05 21:02:12.8821||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - 
+2023-08-05 21:02:12.9033||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/favicon-32x32.png - - 
+2023-08-05 21:02:12.9033||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2023-08-05 21:02:12.9033||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/favicon-32x32.png - - - 200 628 image/png 1.2684ms 
+2023-08-05 21:02:12.9857||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 103.6101ms 
+2023-08-05 21:02:36.9928||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - - 
+2023-08-05 21:02:37.0222||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 29.3916ms 
+2023-08-05 21:02:37.0270||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - - 
+2023-08-05 21:02:37.0270||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - 
+2023-08-05 21:02:37.0270||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 1.7712ms 
+2023-08-05 21:02:37.0782||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.3843ms 
+2023-08-05 21:02:37.3121||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - 
+2023-08-05 21:02:37.3121||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.9775ms 
+2023-08-05 21:02:44.3397||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-08-05 21:02:44.6245||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7234 
+2023-08-05 21:02:44.6245||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5107 
+2023-08-05 21:02:44.6245||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-08-05 21:02:44.6245||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-08-05 21:02:44.6245||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api 
+2023-08-05 21:02:46.1241||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - - 
+2023-08-05 21:02:46.5011||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - 
+2023-08-05 21:02:46.5011||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 381.4524ms 
+2023-08-05 21:02:46.5011||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - - 
+2023-08-05 21:02:46.5329||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 31.5918ms 
+2023-08-05 21:02:46.5707||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 60.8233ms 
+2023-08-05 21:02:46.6592||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - 
+2023-08-05 21:02:46.7624||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 103.1479ms 
+2023-08-05 21:03:43.1561||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Auth/Login application/json 42 
+2023-08-05 21:03:43.1737||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:03:43.2079||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Object Login(System.Object) on controller TahilBorsa.Api.Controllers.AuthController (TahilBorsa.Api). 
+2023-08-05 21:03:44.4119||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'ActualPrice' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-05 21:03:44.4119||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Amount' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-05 21:03:44.4119||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'BasePrice' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-05 21:03:45.7986||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (46ms) [Parameters=[@__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Password], [t].[Username], [t].[tblRolId]
+FROM [tblUser] AS [t]
+WHERE ([t].[Username] IS NULL) AND [t].[Password] = @__password_1 
+2023-08-05 21:03:45.8173||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:03:45.8361||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api) in 2619.2301ms 
+2023-08-05 21:03:45.8361||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:03:45.8448||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Auth/Login application/json 42 - 200 - application/json;+charset=utf-8 2689.1447ms 
+2023-08-05 21:05:10.4750||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Auth/Login application/json 42 
+2023-08-05 21:05:10.4903||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:05:10.4903||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Object Login(System.Object) on controller TahilBorsa.Api.Controllers.AuthController (TahilBorsa.Api). 
+2023-08-05 21:05:29.5109||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Password], [t].[Username], [t].[tblRolId]
+FROM [tblUser] AS [t]
+WHERE ([t].[Username] IS NULL) AND [t].[Password] = @__password_1 
+2023-08-05 21:06:07.0589||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:06:07.0589||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api) in 56568.1745ms 
+2023-08-05 21:06:07.0589||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:06:07.0589||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Auth/Login application/json 42 - 200 - application/json;+charset=utf-8 56587.8674ms 
+2023-08-05 21:06:17.0251||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Auth/Login application/json 42 
+2023-08-05 21:06:17.0251||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:06:17.0275||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Object Login(System.Object) on controller TahilBorsa.Api.Controllers.AuthController (TahilBorsa.Api). 
+2023-08-05 21:06:17.0991||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Password], [t].[Username], [t].[tblRolId]
+FROM [tblUser] AS [t]
+WHERE ([t].[Username] IS NULL) AND [t].[Password] = @__password_1 
+2023-08-05 21:06:17.0991||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:06:17.0991||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api) in 72.278ms 
+2023-08-05 21:06:17.0991||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:06:17.0991||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Auth/Login application/json 42 - 200 - application/json;+charset=utf-8 75.5180ms 
+2023-08-05 21:06:27.0695||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Auth/Login application/json 42 
+2023-08-05 21:06:27.0695||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:06:27.0695||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Object Login(System.Object) on controller TahilBorsa.Api.Controllers.AuthController (TahilBorsa.Api). 
+2023-08-05 21:06:27.0695||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Password], [t].[Username], [t].[tblRolId]
+FROM [tblUser] AS [t]
+WHERE ([t].[Username] IS NULL) AND [t].[Password] = @__password_1 
+2023-08-05 21:06:27.0695||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:06:27.0695||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api) in 2.7714ms 
+2023-08-05 21:06:27.0740||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:06:27.0740||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Auth/Login application/json 42 - 200 - application/json;+charset=utf-8 4.7626ms 
+2023-08-05 21:06:38.3940||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Auth/Login application/json 42 
+2023-08-05 21:06:38.3940||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:06:38.3940||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Object Login(System.Object) on controller TahilBorsa.Api.Controllers.AuthController (TahilBorsa.Api). 
+2023-08-05 21:06:38.4025||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Password], [t].[Username], [t].[tblRolId]
+FROM [tblUser] AS [t]
+WHERE ([t].[Username] IS NULL) AND [t].[Password] = @__password_1 
+2023-08-05 21:06:38.4025||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:06:38.4025||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api) in 7.3822ms 
+2023-08-05 21:06:38.4025||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:06:38.4025||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Auth/Login application/json 42 - 200 - application/json;+charset=utf-8 10.6547ms 
+2023-08-05 21:06:59.8299||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-08-05 21:07:00.0588||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7234 
+2023-08-05 21:07:00.0588||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5107 
+2023-08-05 21:07:00.0588||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-08-05 21:07:00.0588||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-08-05 21:07:00.0588||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api 
+2023-08-05 21:07:01.6812||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - - 
+2023-08-05 21:07:02.0473||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - - 
+2023-08-05 21:07:02.0473||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - 
+2023-08-05 21:07:02.0473||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 371.2864ms 
+2023-08-05 21:07:02.0717||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 24.3590ms 
+2023-08-05 21:07:02.1076||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 60.2815ms 
+2023-08-05 21:07:02.1963||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - 
+2023-08-05 21:07:02.3160||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 119.4897ms 
+2023-08-05 21:07:15.2356||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Auth/Login application/json 42 
+2023-08-05 21:07:15.2356||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:07:15.2635||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Object Login(System.Object) on controller TahilBorsa.Api.Controllers.AuthController (TahilBorsa.Api). 
+2023-08-05 21:07:15.8693||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'ActualPrice' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-05 21:07:15.8693||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Amount' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-05 21:07:15.8693||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'BasePrice' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-05 21:07:26.6180||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (36ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Password], [t].[Username], [t].[tblRolId]
+FROM [tblUser] AS [t]
+WHERE [t].[Username] = @__username_0 AND [t].[Password] = @__password_1 
+2023-08-05 21:07:29.6930||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@__item_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[Name]
+FROM [tblRol] AS [t]
+WHERE [t].[Id] = @__item_Id_0 
+2023-08-05 21:07:47.0498||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:07:47.1412||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api) in 31874.1849ms 
+2023-08-05 21:07:47.1412||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:07:47.1412||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Auth/Login application/json 42 - 200 - application/json;+charset=utf-8 31914.0336ms 
+2023-08-05 21:11:08.8760||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7234/api/Auth/Login application/json 79 
+2023-08-05 21:11:08.8760||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-05 21:11:08.8760||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Object Login(System.Object) on controller TahilBorsa.Api.Controllers.AuthController (TahilBorsa.Api). 
+2023-08-05 21:13:15.0259||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-08-05 21:13:15.2726||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7234 
+2023-08-05 21:13:15.2726||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5107 
+2023-08-05 21:13:15.2726||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-08-05 21:13:15.2726||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-08-05 21:13:15.2726||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api 
+2023-08-05 21:13:16.9448||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - - 
+2023-08-05 21:13:17.3491||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - 
+2023-08-05 21:13:17.3491||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - - 
+2023-08-05 21:13:17.3592||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 412.1549ms 
+2023-08-05 21:13:17.3795||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 30.2538ms 
+2023-08-05 21:13:17.4134||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.2041ms 
+2023-08-05 21:13:17.5048||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - 
+2023-08-05 21:13:17.6412||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 136.4372ms 
+2023-08-05 21:15:51.4211||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/District/TumIlceler - - 
+2023-08-05 21:15:51.4361||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.TumIlceler (TahilBorsa.Api)' 
+2023-08-05 21:15:51.4493||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIlceler", controller = "District"}. Executing controller action with signature System.Object TumIlceler() on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-05 21:15:52.0875||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'ActualPrice' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-05 21:15:52.0875||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Amount' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-05 21:15:52.0875||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'BasePrice' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-05 21:15:52.7159||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t] 
+2023-08-05 21:15:52.7494||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:15:52.7765||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.TumIlceler (TahilBorsa.Api) in 1322.3388ms 
+2023-08-05 21:15:52.7773||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.TumIlceler (TahilBorsa.Api)' 
+2023-08-05 21:15:52.7773||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/District/TumIlceler - - - 200 - application/json;+charset=utf-8 1366.8752ms 
+2023-08-05 21:16:07.9783||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7234/api/District/TumIlceler application/json 23 
+2023-08-05 21:16:08.1417||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.TumIlceler (TahilBorsa.Api)' 
+2023-08-05 21:16:08.1417||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIlceler", controller = "District"}. Executing controller action with signature System.Object TumIlceler() on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-05 21:16:08.1589||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t] 
+2023-08-05 21:16:08.1589||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:16:08.1768||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.TumIlceler (TahilBorsa.Api) in 33.9808ms 
+2023-08-05 21:16:08.1768||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.TumIlceler (TahilBorsa.Api)' 
+2023-08-05 21:16:08.1768||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7234/api/District/TumIlceler application/json 23 - 200 - application/json;+charset=utf-8 199.6394ms 
+2023-08-05 21:17:05.1821||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller - - 
+2023-08-05 21:17:05.1879||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-05 21:17:05.1879||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-05 21:17:05.2857||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-05 21:17:05.2857||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:17:05.2857||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 94.703ms 
+2023-08-05 21:17:05.2935||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-05 21:17:05.2935||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller - - - 200 - application/json;+charset=utf-8 115.9883ms 
+2023-08-05 21:17:20.9908||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ application/json 23 
+2023-08-05 21:17:20.9908||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ application/json 23 - 404 0 - 4.7829ms 
+2023-08-05 21:17:32.1382||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ application/json 23 
+2023-08-05 21:17:32.1382||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ application/json 23 - 404 0 - 2.3429ms 
+2023-08-05 21:17:39.4523||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ application/json 23 
+2023-08-05 21:17:39.4523||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ application/json 23 - 404 0 - 2.0306ms 
+2023-08-05 21:18:06.0875||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/District/TumIlceler - - 
+2023-08-05 21:18:06.0934||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.TumIlceler (TahilBorsa.Api)' 
+2023-08-05 21:18:06.0934||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIlceler", controller = "District"}. Executing controller action with signature System.Object TumIlceler() on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-05 21:18:06.0934||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t] 
+2023-08-05 21:18:06.0934||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:18:06.1116||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.TumIlceler (TahilBorsa.Api) in 16.3725ms 
+2023-08-05 21:18:06.1116||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.TumIlceler (TahilBorsa.Api)' 
+2023-08-05 21:18:06.1116||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/District/TumIlceler - - - 200 - application/json;+charset=utf-8 24.6659ms 
+2023-08-05 21:18:12.7135||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller - - 
+2023-08-05 21:18:12.7135||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-05 21:18:12.7154||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-05 21:18:12.7154||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-05 21:18:12.7154||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:18:12.7154||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 11.3108ms 
+2023-08-05 21:18:12.7154||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-05 21:18:12.7154||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller - - - 200 - application/json;+charset=utf-8 14.2904ms 
+2023-08-05 21:18:32.1523||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ application/json 23 
+2023-08-05 21:18:32.1543||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ application/json 23 - 404 0 - 1.9424ms 
+2023-08-05 21:19:06.4725||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ application/json 23 
+2023-08-05 21:19:06.4818||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ application/json 23 - 404 0 - 9.1465ms 
+2023-08-05 21:19:20.1981||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/District/IllerinIlçeleri - - 
+2023-08-05 21:19:20.2050||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-05 21:19:20.2050||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DistrictsByCity", controller = "District"}. Executing controller action with signature System.Object DistrictsByCity(Int32) on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-05 21:19:20.3521||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (22ms) [Parameters=[@__ilPlaka_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t]
+INNER JOIN [tblCity] AS [t0] ON [t].[tblCityId] = [t0].[Id]
+WHERE [t].[tblCityId] = @__ilPlaka_0 
+2023-08-05 21:19:20.3521||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:19:20.3521||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api) in 139.3048ms 
+2023-08-05 21:19:20.3521||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-05 21:19:20.3521||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/District/IllerinIlçeleri - - - 200 - application/json;+charset=utf-8 155.8285ms 
+2023-08-05 21:19:34.5907||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7234/api/District/IllerinIlçeleri
+ application/json 23 
+2023-08-05 21:19:34.5907||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7234/api/District/IllerinIlçeleri
+ application/json 23 - 404 0 - 1.6512ms 
+2023-08-05 21:19:54.5771||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7234/api/District/IllerinIlçeleri
+?19 application/json 23 
+2023-08-05 21:19:54.5771||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7234/api/District/IllerinIlçeleri
+?19 application/json 23 - 404 0 - 1.1016ms 
+2023-08-05 21:20:12.3936||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7234/api/District/IllerinIlçeleri
+ application/json 23 
+2023-08-05 21:20:12.3936||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7234/api/District/IllerinIlçeleri
+ application/json 23 - 404 0 - 4.5674ms 
+2023-08-05 21:20:41.3954||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7234/api/District/IllerinIlçeleri
+ application/json 23 
+2023-08-05 21:20:41.3954||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7234/api/District/IllerinIlçeleri
+ application/json 23 - 404 0 - 0.5549ms 
+2023-08-05 21:21:22.6831||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7234/api/District/IllerinIlçeleri/19
+ application/json 23 
+2023-08-05 21:21:22.6831||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7234/api/District/IllerinIlçeleri/19
+ application/json 23 - 404 0 - 1.3458ms 
+2023-08-05 21:21:54.2664||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller - - 
+2023-08-05 21:21:54.2664||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-05 21:21:54.3059||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-05 21:21:54.3102||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-05 21:21:54.3102||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-05 21:21:54.3102||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 6.5446ms 
+2023-08-05 21:21:54.3102||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-05 21:21:54.3102||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller - - - 200 - application/json;+charset=utf-8 47.7929ms 
+2023-08-05 21:23:01.5644||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ - - 
+2023-08-05 21:23:01.5644||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ - - - 404 0 - 3.2774ms 
+2023-08-05 21:24:09.5321||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ - - 
+2023-08-05 21:24:09.5321||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ - - - 404 0 - 8.6514ms 
+2023-08-05 21:24:23.4612||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-08-05 21:24:23.7278||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7234 
+2023-08-05 21:24:23.7278||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5107 
+2023-08-05 21:24:23.7278||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-08-05 21:24:23.7312||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-08-05 21:24:23.7312||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api 
+2023-08-05 21:24:25.0189||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - - 
+2023-08-05 21:24:25.4139||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - - 
+2023-08-05 21:24:25.4139||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - 
+2023-08-05 21:24:25.4139||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 390.3026ms 
+2023-08-05 21:24:25.4430||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 28.7148ms 
+2023-08-05 21:24:25.4938||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 79.4948ms 
+2023-08-05 21:24:25.5937||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - 
+2023-08-05 21:24:25.7334||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 139.6925ms 
+2023-08-05 21:24:29.3796||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ - - 
+2023-08-05 21:24:29.5628||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7234/api/City/TumIller
+ - - - 404 0 - 183.1561ms 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json.Linq;
 using TahilBorsa.Repository;
@@ -20,14 +21,41 @@ namespace TahilBorsa.Api.Controllers
         [HttpGet("TumCiftciler")]
         public dynamic TumCiftciler()
         {
-            List<tblFarmer> items = repo.FarmerRepository.FindAll().ToList<tblFarmer>();
+            List<tblFarmer> items = repo.FarmerRepository
+                .FindAll()
+                .Include(farmer => farmer.tblAddress)
+                  .ThenInclude(address => address.tblDistrict)
+                .ThenInclude(district => district.tblCity)
+                .ToList();
+
+            var mappedItems = items.Select(farmer => new
+            {
+                Id = farmer.Id,
+                FirstName = farmer.FirstName,
+                LastName = farmer.LastName,
+                IdentityNo = farmer.IdentityNo,
+                BirthDate = farmer.BirthDate,
+                Contact = farmer.Contact,
+                tblAddress = new
+                {
+                    tblCityId = farmer.tblAddress.tblCityId,
+                    tblDistrictId = farmer.tblAddress.tblDistrictId,
+                    Neighborhood = farmer.tblAddress.NeighborhoodName,
+                    FullAddress = farmer.tblAddress.FullAddress,
+
+                    tblCityName = farmer.tblAddress.tblDistrict.tblCity.Name,
+                    tblDistrictName = farmer.tblAddress.tblDistrict.Name,
+
+                }
+            });
 
             return new
             {
                 success = true,
-                data = items
+                data = mappedItems
             };
         }
+
 
         [HttpGet("{farmerId}")]
         public dynamic Get(int farmerId)
@@ -54,9 +82,9 @@ namespace TahilBorsa.Api.Controllers
                 BirthDate = json.BirthDate,
                 tblAddress = new tblAddress()
                 {
-                    Id=json.tblAddresId,
-                    tblCityId = json.tblAddress.CityId,
-                    tblDistrictId = json.tblAddress.DistrictId,
+                    Id = json.tblAddresId,
+                    tblCityId = json.tblAddress.tblCityId,
+                    tblDistrictId = json.tblAddress.tblDistrictId,
                     NeighborhoodName = json.tblAddress.NeighborhoodName,
                     FullAddress = json.tblAddress.FullAddress,
                 },

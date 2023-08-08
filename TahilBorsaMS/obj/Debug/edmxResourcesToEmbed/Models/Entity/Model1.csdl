@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbGrainExchangeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblAddress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tblDistrictId" Type="Int32" />
+    <Property Name="tblCityId" Type="Int32" />
+    <Property Name="NeighborhoodName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FullAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblCity" Relationship="Self.FK_tblAddress_tblCity" FromRole="tblAddress" ToRole="tblCity" />
+    <NavigationProperty Name="tblDistrict" Relationship="Self.FK_tblAddress_tblDistrict1" FromRole="tblAddress" ToRole="tblDistrict" />
+    <NavigationProperty Name="tblFarmer" Relationship="Self.FK_tblFarmer_tblAddress" FromRole="tblAddress" ToRole="tblFarmer" />
+    <NavigationProperty Name="tblTradesman" Relationship="Self.FK_tblTradesman_tblAddress" FromRole="tblAddress" ToRole="tblTradesman" />
+  </EntityType>
+  <EntityType Name="tblCity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblAddress_tblCity" FromRole="tblCity" ToRole="tblAddress" />
+    <NavigationProperty Name="tblDistrict" Relationship="Self.FK_tblDistrict_tblCity1" FromRole="tblCity" ToRole="tblDistrict" />
+  </EntityType>
+  <EntityType Name="tblDistrict">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tblCityId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblAddress_tblDistrict1" FromRole="tblDistrict" ToRole="tblAddress" />
+    <NavigationProperty Name="tblCity" Relationship="Self.FK_tblDistrict_tblCity1" FromRole="tblDistrict" ToRole="tblCity" />
+  </EntityType>
+  <EntityType Name="tblEntryProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tblProductId" Type="Byte" Nullable="false" />
+    <Property Name="tblFarmerId" Type="Int32" Nullable="false" />
+    <Property Name="DateTime" Type="DateTime" Precision="0" />
+    <Property Name="Process" Type="Boolean" />
+    <NavigationProperty Name="tblFarmer" Relationship="Self.FK_tblEntryProduct_tblFarmer" FromRole="tblEntryProduct" ToRole="tblFarmer" />
+    <NavigationProperty Name="tblProduct" Relationship="Self.FK_tblEntryProduct_tblProduct" FromRole="tblEntryProduct" ToRole="tblProduct" />
+    <NavigationProperty Name="tblLabData" Relationship="Self.FK_tblLabData_tblEntryProduct" FromRole="tblEntryProduct" ToRole="tblLabData" />
+    <NavigationProperty Name="tblSale" Relationship="Self.FK_tblSale_tblEntryProduct" FromRole="tblEntryProduct" ToRole="tblSale" />
+  </EntityType>
+  <EntityType Name="tblFarmer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdentityNo" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tblAddressId" Type="Int32" />
+    <Property Name="BirthDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblFarmer_tblAddress" FromRole="tblFarmer" ToRole="tblAddress" />
+    <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblEntryProduct_tblFarmer" FromRole="tblFarmer" ToRole="tblEntryProduct" />
+  </EntityType>
+  <EntityType Name="tblLabData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tblEntryProductId" Type="Int32" />
+    <Property Name="NutritionalValue" Type="Int32" />
+    <Property Name="Process" Type="Boolean" />
+    <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblLabData_tblEntryProduct" FromRole="tblLabData" ToRole="tblEntryProduct" />
+    <NavigationProperty Name="tblSale" Relationship="Self.FK_tblSale_tblLabData" FromRole="tblLabData" ToRole="tblSale" />
+  </EntityType>
+  <EntityType Name="tblProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Information" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblEntryProduct_tblProduct" FromRole="tblProduct" ToRole="tblEntryProduct" />
+  </EntityType>
+  <EntityType Name="tblSale">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tblEntryProductId" Type="Int32" Nullable="false" />
+    <Property Name="tblLabDataId" Type="Int32" Nullable="false" />
+    <Property Name="BasePrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ActualPrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="tblTradesmanId" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Process" Type="Boolean" />
+    <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblSale_tblEntryProduct" FromRole="tblSale" ToRole="tblEntryProduct" />
+    <NavigationProperty Name="tblLabData" Relationship="Self.FK_tblSale_tblLabData" FromRole="tblSale" ToRole="tblLabData" />
+    <NavigationProperty Name="tblTradesman" Relationship="Self.FK_tblSale_tblTradesman" FromRole="tblSale" ToRole="tblTradesman" />
+  </EntityType>
+  <EntityType Name="tblTradesman">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdentityNo" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tblAddressId" Type="Int32" />
+    <Property Name="Birthdate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblTradesman_tblAddress" FromRole="tblTradesman" ToRole="tblAddress" />
+    <NavigationProperty Name="tblSale" Relationship="Self.FK_tblSale_tblTradesman" FromRole="tblTradesman" ToRole="tblSale" />
+  </EntityType>
+  <Association Name="FK_tblAddress_tblCity">
+    <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
+    <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblAddress">
+        <PropertyRef Name="tblCityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAddress_tblDistrict1">
+    <End Role="tblDistrict" Type="Self.tblDistrict" Multiplicity="0..1" />
+    <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDistrict">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblAddress">
+        <PropertyRef Name="tblDistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblFarmer_tblAddress">
+    <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="0..1" />
+    <End Role="tblFarmer" Type="Self.tblFarmer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblFarmer">
+        <PropertyRef Name="tblAddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTradesman_tblAddress">
+    <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="0..1" />
+    <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblTradesman">
+        <PropertyRef Name="tblAddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDistrict_tblCity1">
+    <End Role="tblCity" Type="Self.tblCity" Multiplicity="1" />
+    <End Role="tblDistrict" Type="Self.tblDistrict" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDistrict">
+        <PropertyRef Name="tblCityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblEntryProduct_tblFarmer">
+    <End Role="tblFarmer" Type="Self.tblFarmer" Multiplicity="1" />
+    <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFarmer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblEntryProduct">
+        <PropertyRef Name="tblFarmerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblEntryProduct_tblProduct">
+    <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="1" />
+    <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblEntryProduct">
+        <PropertyRef Name="tblProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblLabData_tblEntryProduct">
+    <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="0..1" />
+    <End Role="tblLabData" Type="Self.tblLabData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEntryProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblLabData">
+        <PropertyRef Name="tblEntryProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSale_tblEntryProduct">
+    <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="1" />
+    <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEntryProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSale">
+        <PropertyRef Name="tblEntryProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSale_tblLabData">
+    <End Role="tblLabData" Type="Self.tblLabData" Multiplicity="1" />
+    <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblLabData">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSale">
+        <PropertyRef Name="tblLabDataId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSale_tblTradesman">
+    <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="0..1" />
+    <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTradesman">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSale">
+        <PropertyRef Name="tblTradesmanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DbGrainExchangeEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="tblAddress" EntityType="Self.tblAddress" />
+    <EntitySet Name="tblCity" EntityType="Self.tblCity" />
+    <EntitySet Name="tblDistrict" EntityType="Self.tblDistrict" />
+    <EntitySet Name="tblEntryProduct" EntityType="Self.tblEntryProduct" />
+    <EntitySet Name="tblFarmer" EntityType="Self.tblFarmer" />
+    <EntitySet Name="tblLabData" EntityType="Self.tblLabData" />
+    <EntitySet Name="tblProduct" EntityType="Self.tblProduct" />
+    <EntitySet Name="tblSale" EntityType="Self.tblSale" />
+    <EntitySet Name="tblTradesman" EntityType="Self.tblTradesman" />
+    <AssociationSet Name="FK_tblAddress_tblCity" Association="Self.FK_tblAddress_tblCity">
+      <End Role="tblCity" EntitySet="tblCity" />
+      <End Role="tblAddress" EntitySet="tblAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAddress_tblDistrict1" Association="Self.FK_tblAddress_tblDistrict1">
+      <End Role="tblDistrict" EntitySet="tblDistrict" />
+      <End Role="tblAddress" EntitySet="tblAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblFarmer_tblAddress" Association="Self.FK_tblFarmer_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblFarmer" EntitySet="tblFarmer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTradesman_tblAddress" Association="Self.FK_tblTradesman_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblTradesman" EntitySet="tblTradesman" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDistrict_tblCity1" Association="Self.FK_tblDistrict_tblCity1">
+      <End Role="tblCity" EntitySet="tblCity" />
+      <End Role="tblDistrict" EntitySet="tblDistrict" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblEntryProduct_tblFarmer" Association="Self.FK_tblEntryProduct_tblFarmer">
+      <End Role="tblFarmer" EntitySet="tblFarmer" />
+      <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblEntryProduct_tblProduct" Association="Self.FK_tblEntryProduct_tblProduct">
+      <End Role="tblProduct" EntitySet="tblProduct" />
+      <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblLabData_tblEntryProduct" Association="Self.FK_tblLabData_tblEntryProduct">
+      <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
+      <End Role="tblLabData" EntitySet="tblLabData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSale_tblEntryProduct" Association="Self.FK_tblSale_tblEntryProduct">
+      <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
+      <End Role="tblSale" EntitySet="tblSale" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSale_tblLabData" Association="Self.FK_tblSale_tblLabData">
+      <End Role="tblLabData" EntitySet="tblLabData" />
+      <End Role="tblSale" EntitySet="tblSale" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSale_tblTradesman" Association="Self.FK_tblSale_tblTradesman">
+      <End Role="tblTradesman" EntitySet="tblTradesman" />
+      <End Role="tblSale" EntitySet="tblSale" />
+    </AssociationSet>
+    <EntitySet Name="tblRol" EntityType="DbGrainExchangeModel.tblRol" />
+    <EntitySet Name="tblUser" EntityType="DbGrainExchangeModel.tblUser" />
+    <AssociationSet Name="FK_tblUser_tblRol" Association="DbGrainExchangeModel.FK_tblUser_tblRol">
+      <End Role="tblRol" EntitySet="tblRol" />
+      <End Role="tblUser" EntitySet="tblUser" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tblRol">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblUser" Relationship="DbGrainExchangeModel.FK_tblUser_tblRol" FromRole="tblRol" ToRole="tblUser" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="tblRolId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblRol" Relationship="DbGrainExchangeModel.FK_tblUser_tblRol" FromRole="tblUser" ToRole="tblRol" />
+  </EntityType>
+  <Association Name="FK_tblUser_tblRol">
+    <End Type="DbGrainExchangeModel.tblRol" Role="tblRol" Multiplicity="1" />
+    <End Type="DbGrainExchangeModel.tblUser" Role="tblUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRol">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblUser">
+        <PropertyRef Name="tblRolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

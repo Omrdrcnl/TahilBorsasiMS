@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbGrainExchangeModelStoreContainer" CdmEntityContainer="DbGrainExchangeEntities4">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DbGrainExchangeModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAddress">
+      <EntityTypeMapping TypeName="DbGrainExchangeModel.tblAddress">
+        <MappingFragment StoreEntitySet="tblAddress">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="tblDistrictId" ColumnName="tblDistrictId" />
+          <ScalarProperty Name="tblCityId" ColumnName="tblCityId" />
+          <ScalarProperty Name="NeighborhoodName" ColumnName="NeighborhoodName" />
+          <ScalarProperty Name="FullAddress" ColumnName="FullAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCity">
+      <EntityTypeMapping TypeName="DbGrainExchangeModel.tblCity">
+        <MappingFragment StoreEntitySet="tblCity">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDistrict">
+      <EntityTypeMapping TypeName="DbGrainExchangeModel.tblDistrict">
+        <MappingFragment StoreEntitySet="tblDistrict">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="tblCityId" ColumnName="tblCityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEntryProduct">
+      <EntityTypeMapping TypeName="DbGrainExchangeModel.tblEntryProduct">
+        <MappingFragment StoreEntitySet="tblEntryProduct">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="tblProductId" ColumnName="tblProductId" />
+          <ScalarProperty Name="tblFarmerId" ColumnName="tblFarmerId" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFarmer">
+      <EntityTypeMapping TypeName="DbGrainExchangeModel.tblFarmer">
+        <MappingFragment StoreEntitySet="tblFarmer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="tblAddressId" ColumnName="tblAddressId" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLabData">
+      <EntityTypeMapping TypeName="DbGrainExchangeModel.tblLabData">
+        <MappingFragment StoreEntitySet="tblLabData">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="tblEntryProductId" ColumnName="tblEntryProductId" />
+          <ScalarProperty Name="NutritionalValue" ColumnName="NutritionalValue" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct">
+      <EntityTypeMapping TypeName="DbGrainExchangeModel.tblProduct">
+        <MappingFragment StoreEntitySet="tblProduct">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Information" ColumnName="Information" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSale">
+      <EntityTypeMapping TypeName="DbGrainExchangeModel.tblSale">
+        <MappingFragment StoreEntitySet="tblSale">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="tblEntryProductId" ColumnName="tblEntryProductId" />
+          <ScalarProperty Name="tblLabDataId" ColumnName="tblLabDataId" />
+          <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
+          <ScalarProperty Name="ActualPrice" ColumnName="ActualPrice" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="tblTradesmanId" ColumnName="tblTradesmanId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTradesman">
+      <EntityTypeMapping TypeName="DbGrainExchangeModel.tblTradesman">
+        <MappingFragment StoreEntitySet="tblTradesman">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="tblAddressId" ColumnName="tblAddressId" />
+          <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRol">
+      <EntityTypeMapping TypeName="DbGrainExchangeModel.tblRol">
+        <MappingFragment StoreEntitySet="tblRol">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUser">
+      <EntityTypeMapping TypeName="DbGrainExchangeModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="tblRolId" ColumnName="tblRolId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
