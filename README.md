@@ -1,1 +1,1 @@
-This is the source code from the [tutorial on the ReactJS.NET site](https://reactjs.net/getting-started/tutorial.html).
+C#, jQUERY, BOOTSTRAP, CHART.JS, AJAX, WEB APİ PROJECT 
