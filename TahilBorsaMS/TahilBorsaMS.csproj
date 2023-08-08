@@ -344,12 +344,18 @@
     <Content Include="Content\LayoutAssets\assets\js\plugins\bootstrap-notify.js" />
     <Content Include="Content\LayoutAssets\assets\js\plugins\chartjs.min.js" />
     <Content Include="Content\LayoutAssets\assets\js\plugins\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Content\Mylogo\png\logo-black.png" />
+    <Content Include="Content\Mylogo\png\logo-color.png" />
+    <Content Include="Content\Mylogo\png\logo-no-background.png" />
+    <Content Include="Content\Mylogo\png\logo-white.png" />
+    <Content Include="Content\Mylogo\svg\logo-black.svg" />
+    <Content Include="Content\Mylogo\svg\logo-color.svg" />
+    <Content Include="Content\Mylogo\svg\logo-no-background.svg" />
+    <Content Include="Content\Mylogo\svg\logo-white.svg" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="hightech-html\about.html" />
-    <Content Include="hightech-html\contact.html" />
     <Content Include="hightech-html\css\bootstrap.css" />
     <Content Include="hightech-html\css\bootstrap.min.css" />
     <Content Include="hightech-html\css\font-awesome.min.css" />
@@ -381,7 +387,6 @@
     <Content Include="hightech-html\images\we1.png" />
     <Content Include="hightech-html\images\we2.png" />
     <Content Include="hightech-html\images\we3.png" />
-    <Content Include="hightech-html\index.html" />
     <Content Include="hightech-html\js\bootstrap.bundle.min.js" />
     <Content Include="hightech-html\js\bootstrap.js" />
     <Content Include="hightech-html\js\bootstrap.min.js" />
@@ -391,8 +396,6 @@
     <Content Include="hightech-html\js\jquery.min.js" />
     <Content Include="hightech-html\js\owl.carousel.js" />
     <Content Include="hightech-html\js\owl.carousel.min.js" />
-    <Content Include="hightech-html\portfolio.html" />
-    <Content Include="hightech-html\we_do.html" />
     <Content Include="Models\Entity\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -669,6 +672,14 @@
     <Content Include="hightech-html\fonts\Poppins-ThinItalic.ttf" />
     <Content Include="hightech-html\images\.DS_Store" />
     <Content Include="hightech-html\js\.DS_Store" />
+    <Content Include="Content\Mylogo\eps\logo-black.eps" />
+    <Content Include="Content\Mylogo\eps\logo-color.eps" />
+    <Content Include="Content\Mylogo\eps\logo-no-background.eps" />
+    <Content Include="Content\Mylogo\eps\logo-white.eps" />
+    <Content Include="Content\Mylogo\pdf\logo-black.pdf" />
+    <Content Include="Content\Mylogo\pdf\logo-color.pdf" />
+    <Content Include="Content\Mylogo\pdf\logo-no-background.pdf" />
+    <Content Include="Content\Mylogo\pdf\logo-white.pdf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\chart.js" />
     <Content Include="Scripts\chart.min.js" />
