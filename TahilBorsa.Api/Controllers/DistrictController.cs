@@ -29,10 +29,10 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpGet("IllerinIlçeleri")]
-        public dynamic DistrictsByCity(int ilPlaka)
+        [HttpGet("{id}")]
+        public dynamic DistrictsByCity(int id)
         {
-            List<tblDistrict> items = repo.DistrictRepository.DistrictsByCity(ilPlaka).ToList();
+            List<tblDistrict> items = repo.DistrictRepository.DistrictsByCity(id).ToList();
 
             return new
             {

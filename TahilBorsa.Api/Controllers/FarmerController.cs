@@ -69,45 +69,101 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpPost("CiftciEkle")]
-        public dynamic AddFarmer([FromBody] dynamic model)
+        [HttpPost("EkleCiftci")]
+        public dynamic EkleCiftci([FromBody] CiftciEkleRequestModel request)
         {
-            dynamic json = JObject.Parse(model.GetRawText());
+            if (request == null)
+            {
+                return BadRequest("Istek verileri boş.");
+            }
+            // CiftciEkleRequestModel adında verileri alacagımız formatta bir model olustur
+            // Şehir ve ilçe bilgilerini kullanarak nesneleri al
+            var city = repo.CityRepository.GetById(request.tblCityId);
+            var district = repo.DistrictRepository.GetById(request.tblDistrictId);
 
-            tblFarmer item = new tblFarmer()
+
+
+            // Çiftçi nesnesini oluştur atamaları yap
+            var newFarmer = new tblFarmer
             {
-                Id = json.Id,
-                FirstName = json.FirstName,
-                LastName = json.LastName,
-                BirthDate = json.BirthDate,
-                tblAddress = new tblAddress()
+                Id = request.FarmerId,
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+                IdentityNo = request.IdentityNo,
+                BirthDate = request.BirthDate,
+                Contact = request.Contact,
+                tblAddress = new tblAddress
                 {
-                    Id = json.tblAddresId,
-                    tblCityId = json.tblAddress.tblCityId,
-                    tblDistrictId = json.tblAddress.tblDistrictId,
-                    NeighborhoodName = json.tblAddress.NeighborhoodName,
-                    FullAddress = json.tblAddress.FullAddress,
-                },
-                Contact = json.Contact,
-                IdentityNo = json.IdentityNo,
+                    Id= request.AddressId,
+                    tblCityId = city.Id,
+                    tblDistrictId = district.Id,
+                    NeighborhoodName = request.NeighborhoodName,
+                    FullAddress = request.FullAddress
+                }
             };
-            if (item.Id > 0)
+
+            // Veritabanına ekle
+            if (newFarmer.Id > 0 && newFarmer.tblAddress.Id > 0)
             {
-                repo.FarmerRepository.Update(item);
+                repo.FarmerRepository.Update(newFarmer);
+                repo.AddressRepository.Update(newFarmer.tblAddress);
             }
             else
             {
-                repo.FarmerRepository.Create(item);
+                repo.FarmerRepository.Create(newFarmer);
+                repo.AddressRepository.Create(newFarmer.tblAddress);
             }
 
             repo.SaveChanges();
 
-            return new
-            {
+            return     new        {
                 success = true,
-                data = item
+                data = newFarmer
             };
         }
+
+
+        //[HttpPost("CiftciEkle")]
+        //public dynamic AddFarmer([FromBody] dynamic model)
+        //{
+        //    dynamic json = JObject.Parse(model.GetRawText());
+
+        //    tblFarmer item = new tblFarmer()
+        //    {
+        //        Id = json.Id,
+        //        FirstName = json.FirstName,
+        //        LastName = json.LastName,
+        //        BirthDate = json.BirthDate,
+        //        tblAddress = new tblAddress()
+        //        {
+        //            Id = json.tblAddresId,
+        //            tblCityId = json.tblAddress.tblCityId,
+        //            tblDistrictId = json.tblAddress.tblDistrictId,
+        //            NeighborhoodName = json.tblAddress.NeighborhoodName,
+        //            FullAddress = json.tblAddress.FullAddress,
+        //        },
+        //        Contact = json.Contact,
+        //        IdentityNo = json.IdentityNo,
+        //    };
+        //    if (item.Id > 0 && item.tblAddress.Id >0)
+        //    {
+        //        repo.FarmerRepository.Update(item);
+        //        repo.AddressRepository.Update(item.tblAddress);
+        //    }
+        //    else
+        //    {
+        //        repo.FarmerRepository.Create(item);
+        //        repo.AddressRepository.Create(item.tblAddress);
+        //    }
+
+        //    repo.SaveChanges();
+
+        //    return new
+        //    {
+        //        success = true,
+        //        data = item
+        //    };
+        //}
 
         [HttpDelete("{farmerId}")]
         public dynamic Delete(int farmerId)

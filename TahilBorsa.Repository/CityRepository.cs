@@ -10,6 +10,13 @@ namespace TahilBorsasi.Repository
     public class CityRepository : RepositoryBase<tblCity>
     {
         public CityRepository(RepositoryContext context) : base(context) { }
+
+        public tblCity GetById(object cityId)
+        {
+            var item = RepositoryContext.Cities.Where(x=> x.Id == (int)cityId).FirstOrDefault();
+            return item;
+            throw new NotImplementedException();
+        }
     }
    
 }

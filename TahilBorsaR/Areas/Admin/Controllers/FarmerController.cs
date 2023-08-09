@@ -9,5 +9,10 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public IActionResult AddFarmer()
+        {
+            return View();
+        }
     }
 }

@@ -16,12 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaR
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Areas/Admin/Views/Farmer/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFybWVyXEluZGV4LmNzaHRtbA==
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Areas/Admin/Views/Farmer/AddFarmer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFybWVyXEFkZEZhcm1lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Areas/Admin/Views/Home/Farmers.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxGYXJtZXJzLmNzaHRtbA==
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Areas/Admin/Views/Farmer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFybWVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Areas/Admin/Views/Home/Index.cshtml]
