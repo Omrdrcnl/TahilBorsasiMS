@@ -33,6 +33,16 @@
     <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblAddress_tblCity" FromRole="tblCity" ToRole="tblAddress" />
     <NavigationProperty Name="tblDistrict" Relationship="Self.FK_tblDistrict_tblCity1" FromRole="tblCity" ToRole="tblDistrict" />
   </EntityType>
+  <EntityType Name="tblContact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
   <EntityType Name="tblDistrict">
     <Key>
       <PropertyRef Name="Id" />
@@ -53,7 +63,7 @@
     <Property Name="DateTime" Type="DateTime" Precision="0" />
     <Property Name="Process" Type="Boolean" />
     <NavigationProperty Name="tblFarmer" Relationship="Self.FK_tblEntryProduct_tblFarmer" FromRole="tblEntryProduct" ToRole="tblFarmer" />
-    <NavigationProperty Name="tblProduct" Relationship="Self.FK_tblEntryProduct_tblProduct" FromRole="tblEntryProduct" ToRole="tblProduct" />
+    <NavigationProperty Name="tblProduct" Relationship="Self.FK_tblEntryProduct_tblProductName" FromRole="tblEntryProduct" ToRole="tblProduct" />
     <NavigationProperty Name="tblLabData" Relationship="Self.FK_tblLabData_tblEntryProduct" FromRole="tblEntryProduct" ToRole="tblLabData" />
     <NavigationProperty Name="tblSale" Relationship="Self.FK_tblSale_tblEntryProduct" FromRole="tblEntryProduct" ToRole="tblSale" />
   </EntityType>
@@ -65,8 +75,8 @@
     <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IdentityNo" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="tblAddressId" Type="Int32" />
+    <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tblAddressId" Type="Int32" Nullable="false" />
     <Property Name="BirthDate" Type="DateTime" Precision="0" />
     <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblFarmer_tblAddress" FromRole="tblFarmer" ToRole="tblAddress" />
     <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblEntryProduct_tblFarmer" FromRole="tblFarmer" ToRole="tblEntryProduct" />
@@ -76,7 +86,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="tblEntryProductId" Type="Int32" />
+    <Property Name="tblEntryProductId" Type="Int32" Nullable="false" />
     <Property Name="NutritionalValue" Type="Int32" />
     <Property Name="Process" Type="Boolean" />
     <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblLabData_tblEntryProduct" FromRole="tblLabData" ToRole="tblEntryProduct" />
@@ -90,7 +100,15 @@
     <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Information" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="Photo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblEntryProduct_tblProduct" FromRole="tblProduct" ToRole="tblEntryProduct" />
+    <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblEntryProduct_tblProductName" FromRole="tblProduct" ToRole="tblEntryProduct" />
+  </EntityType>
+  <EntityType Name="tblRol">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tblUser" Relationship="Self.FK_tblUser_tblRol" FromRole="tblRol" ToRole="tblUser" />
   </EntityType>
   <EntityType Name="tblSale">
     <Key>
@@ -118,11 +136,23 @@
     <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IdentityNo" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="tblAddressId" Type="Int32" />
+    <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tblAddressId" Type="Int32" Nullable="false" />
     <Property Name="Birthdate" Type="DateTime" Precision="0" />
     <NavigationProperty Name="tblAddress" Relationship="Self.FK_tblTradesman_tblAddress" FromRole="tblTradesman" ToRole="tblAddress" />
     <NavigationProperty Name="tblSale" Relationship="Self.FK_tblSale_tblTradesman" FromRole="tblTradesman" ToRole="tblSale" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tblRolId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblRol" Relationship="Self.FK_tblUser_tblRol" FromRole="tblUser" ToRole="tblRol" />
   </EntityType>
   <Association Name="FK_tblAddress_tblCity">
     <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
@@ -149,7 +179,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tblFarmer_tblAddress">
-    <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="0..1" />
+    <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="1" />
     <End Role="tblFarmer" Type="Self.tblFarmer" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblAddress">
@@ -161,7 +191,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tblTradesman_tblAddress">
-    <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="0..1" />
+    <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="1" />
     <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblAddress">
@@ -196,7 +226,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tblEntryProduct_tblProduct">
+  <Association Name="FK_tblEntryProduct_tblProductName">
     <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="1" />
     <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="*" />
     <ReferentialConstraint>
@@ -209,7 +239,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tblLabData_tblEntryProduct">
-    <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="0..1" />
+    <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="1" />
     <End Role="tblLabData" Type="Self.tblLabData" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblEntryProduct">
@@ -244,6 +274,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_tblUser_tblRol">
+    <End Role="tblRol" Type="Self.tblRol" Multiplicity="1" />
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRol">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblUser">
+        <PropertyRef Name="tblRolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_tblSale_tblTradesman">
     <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="0..1" />
     <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
@@ -256,17 +298,20 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="DbGrainExchangeEntities4" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="DbGrainExchangeEntities5" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="tblAddress" EntityType="Self.tblAddress" />
     <EntitySet Name="tblCity" EntityType="Self.tblCity" />
+    <EntitySet Name="tblContact" EntityType="Self.tblContact" />
     <EntitySet Name="tblDistrict" EntityType="Self.tblDistrict" />
     <EntitySet Name="tblEntryProduct" EntityType="Self.tblEntryProduct" />
     <EntitySet Name="tblFarmer" EntityType="Self.tblFarmer" />
     <EntitySet Name="tblLabData" EntityType="Self.tblLabData" />
     <EntitySet Name="tblProduct" EntityType="Self.tblProduct" />
+    <EntitySet Name="tblRol" EntityType="Self.tblRol" />
     <EntitySet Name="tblSale" EntityType="Self.tblSale" />
     <EntitySet Name="tblTradesman" EntityType="Self.tblTradesman" />
+    <EntitySet Name="tblUser" EntityType="Self.tblUser" />
     <AssociationSet Name="FK_tblAddress_tblCity" Association="Self.FK_tblAddress_tblCity">
       <End Role="tblCity" EntitySet="tblCity" />
       <End Role="tblAddress" EntitySet="tblAddress" />
@@ -291,7 +336,7 @@
       <End Role="tblFarmer" EntitySet="tblFarmer" />
       <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
     </AssociationSet>
-    <AssociationSet Name="FK_tblEntryProduct_tblProduct" Association="Self.FK_tblEntryProduct_tblProduct">
+    <AssociationSet Name="FK_tblEntryProduct_tblProductName" Association="Self.FK_tblEntryProduct_tblProductName">
       <End Role="tblProduct" EntitySet="tblProduct" />
       <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
     </AssociationSet>
@@ -307,45 +352,13 @@
       <End Role="tblLabData" EntitySet="tblLabData" />
       <End Role="tblSale" EntitySet="tblSale" />
     </AssociationSet>
+    <AssociationSet Name="FK_tblUser_tblRol" Association="Self.FK_tblUser_tblRol">
+      <End Role="tblRol" EntitySet="tblRol" />
+      <End Role="tblUser" EntitySet="tblUser" />
+    </AssociationSet>
     <AssociationSet Name="FK_tblSale_tblTradesman" Association="Self.FK_tblSale_tblTradesman">
       <End Role="tblTradesman" EntitySet="tblTradesman" />
       <End Role="tblSale" EntitySet="tblSale" />
     </AssociationSet>
-    <EntitySet Name="tblRol" EntityType="DbGrainExchangeModel.tblRol" />
-    <EntitySet Name="tblUser" EntityType="DbGrainExchangeModel.tblUser" />
-    <AssociationSet Name="FK_tblUser_tblRol" Association="DbGrainExchangeModel.FK_tblUser_tblRol">
-      <End Role="tblRol" EntitySet="tblRol" />
-      <End Role="tblUser" EntitySet="tblUser" />
-    </AssociationSet>
   </EntityContainer>
-  <EntityType Name="tblRol">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="tblUser" Relationship="DbGrainExchangeModel.FK_tblUser_tblRol" FromRole="tblRol" ToRole="tblUser" />
-  </EntityType>
-  <EntityType Name="tblUser">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Username" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="Password" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
-    <Property Name="tblRolId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="tblRol" Relationship="DbGrainExchangeModel.FK_tblUser_tblRol" FromRole="tblUser" ToRole="tblRol" />
-  </EntityType>
-  <Association Name="FK_tblUser_tblRol">
-    <End Type="DbGrainExchangeModel.tblRol" Role="tblRol" Multiplicity="1" />
-    <End Type="DbGrainExchangeModel.tblUser" Role="tblUser" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblRol">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblUser">
-        <PropertyRef Name="tblRolId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
 </Schema>

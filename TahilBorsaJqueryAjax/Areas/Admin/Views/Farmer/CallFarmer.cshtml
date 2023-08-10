@@ -1,0 +1,285 @@
+﻿@{
+    ViewData["Title"] = "CallFarmer";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form id="farmerForm" class="form-control container mt-5" method="post">
+    <div class="col-md-12">
+        <div class="card card-user">
+            <div class="card-header">
+                <h5 class="card-title">Çiftçi Bilgilerini Güncelle</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 pr-1">
+                        <div class="form-group">
+                            <label>Çiftçi Kayıt No</label>
+                            <input type="text" id="FarmerId" class="form-control" name="FarmerId" placeholder="Çiftçi Kayıt No" readonly />
+                        </div>
+                    </div>
+                    <div class="col-md-6 pl-1">
+                        <div class="form-group">
+                            <label>Adres Kayıt No</label>
+                            <input type="text" id="AddressId" class="form-control" name="AddressId" placeholder="Adres Kayıt No" readonly />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 pr-1">
+                        <div class="form-group">
+                            <label>TC Kimlik No</label>
+                            <input type="text" id="IdentityNo" class="form-control" name="IdentityNo" placeholder="Kimlik Numarası" />
+                        </div>
+                    </div>
+                    <div class="col-md-3 px-1">
+                        <div class="form-group">
+                            <label>Doğum Tarihi</label>
+                            <input type="date" class="form-control" id="BirthDate">
+                        </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                        <div class="form-group">
+                            <label for="Tel">Telefon</label>
+                            <input type="text" id="Contact" class="form-control" name="Contact" placeholder="Telefon" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 pr-1">
+                        <div class="form-group">
+                            <label>Adı</label>
+                            <input type="text" id="FirstName" class="form-control" name="FirstName" placeholder="Ad" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 pl-1">
+                        <div class="form-group">
+                            <label>Soyadı</label>
+                            <input type="text" id="LastName" class="form-control" name="LastName" placeholder="Soyad" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Adres</label>
+                            <input type="text" id="FullAddress" class="form-control" name="FullAddress" placeholder="Adres" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 pr-1">
+                        <div class="form-group">
+                            <label for="cityDropdown">Şehir</label>
+                            <select class="form-control" id="cityDropdown">
+                                <option id="il" value="">İl Seçin</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-1">
+                        <div class="districtDropdown">
+                            <label for="districtDropdown">İlçe</label>
+                            <select class="form-control" id="districtDropdown">
+                                <option id="ilce" value="">İlçe Seçin</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                        <div class="form-group">
+                            <label>Mahalle/Köy</label>
+                            <input type="text" id="NeighborhoodName" class="form-control" name="NeighborhoodName" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="update ml-auto mr-auto">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary btn-round">
+                            Çiftçi Bilgilerini Güncelle
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Kaydet</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Çiftçi Bilgilerini Kaydetmek İstiyor musunuz ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                    <button type="submit" id="GuncelleButton" class="btn btn-primary">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+
+
+    //url'den Id değerini al
+    var url = window.location.href;
+    const farmerId = parseInt(url.substring(url.lastIndexOf('/') + 1));
+    console.log("farmerId", farmerId)
+    var adres = {};
+
+
+
+    $(document).ready(function () {
+
+        //İller listeleme
+        $.ajax({
+            url: "https://localhost:7234/api/City/TumIller",
+            type: "GET",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (response) {
+
+                if (response.success) {
+
+
+                    console.log("veri :", response.data)
+                    var cityDropdown = $("#cityDropdown");
+
+                    $.each(response.data, function (index, city) {
+                        cityDropdown.append($("<option>").val(city.id).text(city.name));
+                    });
+
+                } else {
+                    alert(response.message);
+                }
+
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log("Tüm iller Error:", XMLHttpRequest, textStatus, errorThrown);
+            }
+        });
+
+        //Seçilen ile göre ilçeleri listeleme
+        $("#cityDropdown").change(function () {
+            var selectedCityId = $(this).val();
+            $.ajax({
+                url: "https://localhost:7234/api/District/" + selectedCityId,
+                type: "GET",
+                dataType: "json",
+                success: function (response) {
+                    if (response.success) {
+                        console.log("İlçe data", response.data)
+                        var districtDropdown = $("#districtDropdown");
+                        districtDropdown.empty();
+                        districtDropdown.append($("<option>").val("").text("İlçe Seçiniz"));
+                        $.each(response.data, function (index, district) {
+                            districtDropdown.append($("<option>").val(district.id).text(district.name));
+                        });
+                    } else {
+                        alert(response.message)
+                    }
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("Error:", textStatus, errorThrown);
+                }
+            });
+        });
+
+
+        // Çiftçi bilgilerini getiren AJAX isteği
+        $.ajax({
+            url: "https://localhost:7234/api/Farmer/" + farmerId,
+            type: "GET",
+            dataType: "json",
+            success: function (response) {
+                if (response.success) {
+                    console.log("veri çekme basarılı", response.data)
+                    //moment.js kütüphanesi kullanıldı
+
+                    const formattedDate = moment(response.data.birthDate).format('YYYY-MM-DD');
+                    console.log("cekilen veri dogum tarıhı", formattedDate)
+                    adres.adresId = response.data.tblAddress.AddressId
+
+                    $("#IdentityNo").val(response.data.identityNo);
+                    $("#AddressId").val(response.data.tblAddress.addressId);
+                    $("#FarmerId").val(response.data.id);
+                    $("#BirthDate").val(formattedDate);
+
+                    $("#FirstName").val(response.data.firstName);
+                    $("#LastName").val(response.data.lastName);
+                    $("#Contact").val(response.data.contact);
+                    $("#FullAddress").val(response.data.tblAddress.fullAddress);
+
+                    $("#il").val(response.data.tblAddress.CityId);
+                    $("#ilce").val(response.data.tblAddress.DistrictId);
+
+                    $("#NeighborhoodName").val(response.data.tblAddress.neighborhoodName);
+                } else {
+                    alert(response.message);
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("Error:", textStatus, errorThrown);
+            }
+        });
+
+
+        //Update gönderme istegi
+
+        //$("#GuncelleButton").click(function () {
+        //    const IdentityNo = document.getElementById('IdentityNo').value;
+        //    const BirthDate = document.getElementById('BirthDate').value;
+        //    const Contact = document.getElementById('Contact').value;
+        //    const FirstName = document.getElementById('FirstName').value;
+        //    const LastName = document.getElementById('LastName').value;
+        //    const FullAddress = document.getElementById('FullAddress').value;
+        //    const tblCityId = document.getElementById('cityDropdown').value;
+        //    const tblDistrictId = document.getElementById('districtDropdown').value;
+        //    const NeighborhoodName = document.getElementById('NeighborhoodName').value;
+        //    const FarmerId = document.getElementById('FarmerId').value;
+        //    const AddressId = document.getElementById('AddressId').value;
+
+        //    const requestBody = {
+        //        farmerId: FarmerId,
+        //        birthDate: BirthDate,
+        //        contact: Contact,
+        //        firstName: FirstName,
+        //        identityNo: IdentityNo,
+        //        lastName: LastName,
+        //        addressId: AddressId,
+        //        fullAddress: FullAddress,
+        //        neighborhoodName: NeighborhoodName,
+        //        tblDistrictId: tblDistrictId,
+        //        tblCityId: tblCityId
+        //    };
+
+        //    // AJAX isteği gönderme
+        //    $.ajax({
+        //        url: 'https://localhost:7234/api/Farmer/EkleCiftci',
+        //        type: 'POST',
+        //        dataType: "json"
+        //        contentType: 'application/json; chartset=utf-8',
+        //        data: JSON.stringify(requestBody),
+        //        success: function (response) {
+        //            if (response.success) {
+        //                console.log('İşlem başarılı:', data);
+        //                alert('İşlem başarıyla gerçekleşti');
+        //            }else{
+        //                console.log(response.message)
+        //            }
+
+        //        },
+        //        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        //            alert(XMLHttpRequest + "-" + textStatus + "-" + errorThrown);
+        //        }
+        //    });
+        //});
+
+
+    })
+
+
+</script>

@@ -14,5 +14,11 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public ActionResult CallFarmer()
+        {
+            return View();
+        }
+
     }
 }

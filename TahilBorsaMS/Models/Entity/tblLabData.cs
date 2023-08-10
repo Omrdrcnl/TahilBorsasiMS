@@ -14,7 +14,6 @@ namespace TahilBorsaMS.Models.Entity
     using System.ComponentModel.DataAnnotations.Schema;
 
     [Table("tblLabData")]
-    
     public partial class tblLabData
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,7 +23,7 @@ namespace TahilBorsaMS.Models.Entity
         }
     
         public int Id { get; set; }
-        public Nullable<int> tblEntryProductId { get; set; }
+        public int tblEntryProductId { get; set; }
         public Nullable<int> NutritionalValue { get; set; }
         public Nullable<bool> Process { get; set; }
     

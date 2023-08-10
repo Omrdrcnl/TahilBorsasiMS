@@ -60,14 +60,48 @@ namespace TahilBorsa.Api.Controllers
         [HttpGet("{farmerId}")]
         public dynamic Get(int farmerId)
         {
-            tblFarmer item = repo.FarmerRepository.FindByCondition(x => x.Id == farmerId).FirstOrDefault();
 
-            return new
+            // Farmer verisini veritabanından çek
+            tblFarmer item = repo.FarmerRepository.FindByCondition
+                (x => x.Id == farmerId).Include(x => x.tblAddress)
+                .FirstOrDefault();
+
+            if (item != null)
             {
-                success = true,
-                data = item
-            };
+                return new
+                {
+                    success = true,
+                    data = new
+                    {
+                        id = item.Id,
+                        birthDate = item.BirthDate,
+                        firstName = item.FirstName,
+                        lastName = item.LastName,
+                        identityNo = item.IdentityNo,
+                        contact = item.Contact,
+                        tblAddress = new
+                        {
+                            AddressId = item.tblAddress.Id,
+                            CityId = item.tblAddress.tblCityId,
+                            DistrictId = item.tblAddress.tblDistrictId,
+                            neighborhoodName = item.tblAddress.NeighborhoodName,
+                            fullAddress = item.tblAddress.FullAddress
+                        }
+                    }
+                };
+            }
+            else
+            {
+                return new
+                {
+                    success = false,
+                    message = "Çiftçi bulunamadı"
+                };
+            }
+
+
         }
+
 
         [HttpPost("EkleCiftci")]
         public dynamic EkleCiftci([FromBody] CiftciEkleRequestModel request)
@@ -84,6 +118,7 @@ namespace TahilBorsa.Api.Controllers
 
 
             // Çiftçi nesnesini oluştur atamaları yap
+            
             var newFarmer = new tblFarmer
             {
                 Id = request.FarmerId,
@@ -94,7 +129,7 @@ namespace TahilBorsa.Api.Controllers
                 Contact = request.Contact,
                 tblAddress = new tblAddress
                 {
-                    Id= request.AddressId,
+                    Id = request.AddressId,
                     tblCityId = city.Id,
                     tblDistrictId = district.Id,
                     NeighborhoodName = request.NeighborhoodName,
@@ -103,7 +138,7 @@ namespace TahilBorsa.Api.Controllers
             };
 
             // Veritabanına ekle
-            if (newFarmer.Id > 0 && newFarmer.tblAddress.Id > 0)
+            if (newFarmer.Id > 0 && newFarmer.tblAddress.Id >0)
             {
                 repo.FarmerRepository.Update(newFarmer);
                 repo.AddressRepository.Update(newFarmer.tblAddress);
@@ -116,7 +151,8 @@ namespace TahilBorsa.Api.Controllers
 
             repo.SaveChanges();
 
-            return     new        {
+            return new
+            {
                 success = true,
                 data = newFarmer
             };
@@ -168,7 +204,7 @@ namespace TahilBorsa.Api.Controllers
         [HttpDelete("{farmerId}")]
         public dynamic Delete(int farmerId)
         {
-            repo.ProductRepository.Delete(farmerId);
+            repo.FarmerRepository.Delete(farmerId);
             return new { success = true };
 
         }

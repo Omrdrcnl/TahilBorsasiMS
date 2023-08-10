@@ -11,7 +11,7 @@ namespace TahilBorsaMS.Controllers
 {
     public class TradesmanController : Controller
     {
-        DbGrainExchangeEntities4 db = new DbGrainExchangeEntities4();
+        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
         // GET: Tradesman
         public ActionResult Index(string f, int page = 1)
         {

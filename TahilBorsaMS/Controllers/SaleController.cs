@@ -11,7 +11,7 @@ namespace TahilBorsaMS.Controllers
     public class SaleController : Controller
     {
         // GET: Sale
-        DbGrainExchangeEntities4 db = new DbGrainExchangeEntities4 ();
+        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5 ();
         public ActionResult Index()
         {
             var lab = db.tblSale.Where(x=> x.Process==false).ToList();

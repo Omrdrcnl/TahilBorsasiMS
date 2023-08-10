@@ -12,7 +12,7 @@ namespace TahilBorsaMS.Controllers
 {
     public class HomeController : Controller
     {
-        DbGrainExchangeEntities4 db = new DbGrainExchangeEntities4();
+        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
         public ActionResult Index(DateTime? selectedDate)
         {
             // Varsayılan olarak bugünkü tarihi kullanmak için:

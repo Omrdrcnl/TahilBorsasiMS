@@ -54,10 +54,10 @@ namespace TahilBorsa.Api.Controllers
                 tblAddress = new tblAddress()
                 {
                     Id = json.tblAddresId,
-                    tblCityId = json.tblAddress.CityId,
-                    tblDistrictId = json.tblAddress.DistrictId,
-                    NeighborhoodName = json.tblAddress.NeighborhoodName,
-                    FullAddress = json.tblAddress.FullAddress,
+                    tblCityId = json.CityId,
+                    tblDistrictId = json.DistrictId,
+                    NeighborhoodName = json.NeighborhoodName,
+                    FullAddress = json.FullAddress,
                 },
                 Contact = json.Contact,
                 IdentityNo = json.IdentityNo,

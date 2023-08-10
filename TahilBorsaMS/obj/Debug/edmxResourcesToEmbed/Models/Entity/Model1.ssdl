@@ -27,6 +27,16 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="255" />
   </EntityType>
+  <EntityType Name="tblContact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
   <EntityType Name="tblDistrict">
     <Key>
       <PropertyRef Name="Id" />
@@ -53,8 +63,8 @@
     <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="IdentityNo" Type="nchar" MaxLength="11" Nullable="false" />
-    <Property Name="Contact" Type="nvarchar" MaxLength="50" />
-    <Property Name="tblAddressId" Type="int" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="tblAddressId" Type="int" Nullable="false" />
     <Property Name="BirthDate" Type="date" />
   </EntityType>
   <EntityType Name="tblLabData">
@@ -62,7 +72,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="tblEntryProductId" Type="int" />
+    <Property Name="tblEntryProductId" Type="int" Nullable="false" />
     <Property Name="NutritionalValue" Type="int" />
     <Property Name="Process" Type="bit" />
   </EntityType>
@@ -105,8 +115,8 @@
     <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="IdentityNo" Type="nchar" MaxLength="11" Nullable="false" />
-    <Property Name="Contact" Type="nvarchar" MaxLength="50" />
-    <Property Name="tblAddressId" Type="int" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="tblAddressId" Type="int" Nullable="false" />
     <Property Name="Birthdate" Type="date" />
   </EntityType>
   <EntityType Name="tblUser">
@@ -114,6 +124,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Username" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="Password" Type="nvarchar" MaxLength="12" Nullable="false" />
     <Property Name="tblRolId" Type="int" Nullable="false" />
@@ -179,7 +191,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tblFarmer_tblAddress">
-    <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="0..1" />
+    <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="1" />
     <End Role="tblFarmer" Type="Self.tblFarmer" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblAddress">
@@ -191,7 +203,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tblLabData_tblEntryProduct">
-    <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="0..1" />
+    <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="1" />
     <End Role="tblLabData" Type="Self.tblLabData" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblEntryProduct">
@@ -239,7 +251,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tblTradesman_tblAddress">
-    <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="0..1" />
+    <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="1" />
     <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblAddress">
@@ -266,6 +278,7 @@
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblAddress" EntityType="Self.tblAddress" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblCity" EntityType="Self.tblCity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblContact" EntityType="Self.tblContact" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblDistrict" EntityType="Self.tblDistrict" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblEntryProduct" EntityType="Self.tblEntryProduct" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblFarmer" EntityType="Self.tblFarmer" Schema="dbo" store:Type="Tables" />

@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <h2>Esnaf Paneli</h2>
+        @*Arama işlem penceresi*@
+        @using (Html.BeginForm("Index", "Tradesman", FormMethod.Get))
+        {
+            <div class="form-control input-group row align-items-center">
+                <div class="col-md-4">  @Html.TextBox("f", null, new { @class = "form-control", placeholder = "Esnaf Ara" })</div>
+                <div class="col-md-2"><button class="btn btn-outline-primary">Ara</button></div>
+            </div>
+        }
+
+        <table class="table table-bordered table-striped">
+            <tr class="table-info">
+                <th>Kayıt No</th>
+                <th>Adı</th>
+                <th>Soyadı</th>
+                <th>Kimlik No</th>
+                <th>İletişim</th>
+                <th>Şehir</th>
+                <th>İlçe</th>
+                <th>Mahalle/Köy</th>
+                <th>Adres</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+
+            </tr>
+            <tbody>
+
+            </tbody>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Sil</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Esnaf Kaydını Silmek İstiyor musunuz ?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                                <a class="btn btn-danger" href="~/Tradesman/DeleteTradesman/Id">Sil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            
+        </table>
+        <div class="d-flex justify-content-center pagination">
+           Pagination
+        </div>
+        <a href="~/Tradesman/AddTradesman" class="btn btn-primary">Yeni Esnaf Kaydı Oluştur</a>
+    </div>
+</div>
+

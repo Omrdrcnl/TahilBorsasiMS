@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Index", "Sale", FormMethod.Get))
+
+{
+    <div class="container mt-5">
+        <h2>Satışa Hazır Ürünler</h2>
+        <table class="table table-bordered table-striped">
+            <tr class="table-info">
+                <th>Giriş Id</th>
+                <th>Çiftçi Id</th>
+                <th>Çiftçi Kimlik no</th>
+                <th>Ürün Besin Değeri</th>
+                <th class="text-center">İşlem</th>
+
+            </tr>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="btn-group btn-group-lg d-flex justify-content-between">
+            <div>
+                <a href="/Sale/Saled" class="btn btn-warning btn-lg">Geçmiş Satış Verileri</a>
+            </div>
+
+        </div>
+    </div>
+}

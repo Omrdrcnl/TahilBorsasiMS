@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+@using (Html.BeginForm("AddEntryProduct", "EntryProduct", FormMethod.Post))
+{
+    <div class="container mt-5">
+
+        <div class="form-control">
+            <h1>Yeni Ürün Veri girişi</h1>
+            <br />
+            <input type="hidden" id="entryProductId"/>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Çiftçi Kayıt no</label>
+                    <input type="text" id="tblFarmerId" class="form-control"/>
+                </div>
+                <div class="col-md-6">
+                    <label>Ürün Çeşidi</label>
+                    <select class="form-control" id="tblProductIdDropdown">
+                        <option value="">Ürün Seçin</option>
+                    </select>
+                </div>
+            </div>
+            <br />
+            <label>Tarih</label>
+            <input type="datetime" name="DateTime" class="form-control" value="@DateTime.Now.ToShortDateString()" />
+            <br />
+            <input type="hidden" name="Process" value="false" />
+            <div id="liveAlertPlaceholder"></div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ürünü Sisteme Gir</button>
+        </div>
+        <div class="mt-5 d-grid gap-2 d-md-flex justify-content-md-end">
+            <a class="btn btn-warning" href="/EntryProduct/EntryProductList">Geçmiş Veriler</a>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Kaydet</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Ürünü Sisteme Kaydetmek İstiyor musunuz ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

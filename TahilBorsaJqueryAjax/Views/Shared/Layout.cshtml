@@ -16,33 +16,17 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/LayoutAssets/assets/css/paper-dashboard.css" rel="stylesheet" />
-    <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+    <link href="~/Content/LayoutAssets/assets/css/paper-dashboard.min.css" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="~/Content/LayoutAssets/assets/demo/demo.css" rel="stylesheet" />
     <link href="~/Content/LayoutAssets/assets/css/paper-dashboard.min.css" rel="stylesheet" />
-    <link href="../assets/demo/demo.css" rel="stylesheet" />
-    <!--   Core JS Files   -->
-    <script src="~/Content/LayoutAssets/assets/js/core/jquery.min.js"></script>
-    <script src="~/Content/LayoutAssets/assets/js/core/popper.min.js"></script>
-    <script src="~/Content/LayoutAssets/assets/js/core/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js" integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="~/Content/LayoutAssets/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!--  Google Maps Plugin    -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-    <!-- Chart JS -->
-    <script src="~/Content/LayoutAssets/assets/js/plugins/chartjs.min.js"></script>
-    <!--  Notifications Plugin    -->
-    <script src="~/Content/LayoutAssets/assets/js/plugins/bootstrap-notify.js"></script>
-    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="~/Content/LayoutAssets/assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
-    <script src="~/Content/LayoutAssets/assets/demo/demo.js"></script>
-    <script src="~/js/site.js"></script>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+   @* JS DOSYALAR*@
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
 </head>
 
 <body class="">
@@ -85,7 +69,7 @@
         </symbol>
     </svg>
 
-    <div class="wrapper ">
+    <div class="wrapper">
         <div class="sidebar" data-color="white" data-active-color="danger">
             <div class="logo">
                 <a href="https://www.creative-tim.com" class="simple-text logo-mini">
@@ -167,9 +151,28 @@
             @RenderBody()
         </div>
     </div>
- 
+
+    <!--   Core JS Files   -->
+    <script src="~/Content/LayoutAssets/assets/js/core/popper.min.js"></script>
+    <script src="~/Content/LayoutAssets/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- Chart JS -->
+    <script src="~/Content/LayoutAssets/assets/js/plugins/chartjs.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="~/Content/LayoutAssets/assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="~/Content/LayoutAssets/assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+    <script src="~/content/layoutassets/assets/demo/demo.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    @await RenderSectionAsync("Scripts", required : false)
     <!-- Code injected by live-server -->
     <script>
+        $(document).ready(function(){
+            demo.initChartPages();
+        });
 
         var btnContainer = document.getElementById("myUl");
 

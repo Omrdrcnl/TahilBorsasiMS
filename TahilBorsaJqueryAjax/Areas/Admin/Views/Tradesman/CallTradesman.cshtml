@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewData["Title"] = "CallTradesman";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form class="form form-control container mt-5" method="post" action="@Url.Action("EditTradesman", "Tradesman")">
+    <h1>Esnaf Bilgilerini Güncelle</h1>
+    <br />
+    <div class="row">
+        <div class="col-6">
+            <label>Çiftçi Kayıt No</label>
+            <input type="text" name="Id" class="form-control" />
+        </div>
+        <div class="col-6">
+            <label>Doğum Tarihi</label>
+            <input type="date" name="Birthdate" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label>Adı</label>
+            <input type="text" name="FirstName" class="form-control" />
+        </div>
+        <div class="col-6">
+            <label>Soyadı</label>
+            <input type="text" name="LastName" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label>Kimlik No</label>
+            <input type="text" name="IdentityNo" class="form-control" />
+        </div>
+        <div class="col-6">
+            <label>İletişim</label>
+            <input type="text" name="Contact" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <label>Şehir</label>
+            <select name="tblAddress.tblCityId" class="form-control">
+                <option value="" disabled selected>Şehir Seçin</option>
+                <!-- Şehir seçeneklerini buraya ekleyin -->
+            </select>
+        </div>
+        <div class="col-4">
+            <label>İlçe</label>
+            <select name="tblAddress.tblDistrictId" class="form-control">
+                <option value="" disabled selected>İlçe Seçin</option>
+                <!-- İlçe seçeneklerini buraya ekleyin -->
+            </select>
+        </div>
+        <div class="col-4">
+            <label>Mahalle/Köy</label>
+            <input type="text" name="tblAddress.NeighborhoodName" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Çiftçi Adres</label>
+                <input type="text" name="tblAddress.FullAddress" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <button class="btn my-3 btn-warning" type="submit">Esnaf Bilgilerini Güncelle</button>
+</form>

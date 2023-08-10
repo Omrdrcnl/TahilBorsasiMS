@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form class="form-group container" method="post">
+
+
+    <div>
+        <label>Ürün Adı</label>
+        <input class="form-control" type="text" id="Name" name="Name" />
+    </div>
+    <div>
+        <label>Ürün Ait Bilgi</label>
+        <textarea class="form-control" type="text" id="Information" name="Information">
+        </textarea>
+    </div>
+    <div class="mt-1">
+        <button class="btn btn-outline-success" id="btn">Yeni Ürün Ekle</button>
+    </div>
+
+</form>

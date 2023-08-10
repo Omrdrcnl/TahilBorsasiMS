@@ -4,31 +4,32 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b7338ff5b4e8444eb8ba796a95df4261" Name="Diagram1">
-        <EntityTypeShape EntityType="DbGrainExchangeModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="7c834240794b434b993112244596eaf6" Name="Diagram1">
+        <EntityTypeShape EntityType="DbGrainExchangeModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblAddress" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblCity" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblContact" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblDistrict" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblEntryProduct" Width="1.5" PointX="9.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblEntryProduct" Width="1.5" PointX="9.75" PointY="6.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblFarmer" Width="1.5" PointX="7.5" PointY="6.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblLabData" Width="1.5" PointX="12" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblProduct" Width="1.5" PointX="7.5" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblSale" Width="1.5" PointX="14.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblRol" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblSale" Width="1.5" PointX="14.25" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="DbGrainExchangeModel.tblTradesman" Width="1.5" PointX="7.5" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbGrainExchangeModel.tblUser" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblAddress_tblCity" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblAddress_tblDistrict1" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblFarmer_tblAddress" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblTradesman_tblAddress" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblDistrict_tblCity1" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblEntryProduct_tblFarmer" ManuallyRouted="false" />
-        <AssociationConnector Association="DbGrainExchangeModel.FK_tblEntryProduct_tblProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="DbGrainExchangeModel.FK_tblEntryProduct_tblProductName" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblLabData_tblEntryProduct" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblSale_tblEntryProduct" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblSale_tblLabData" ManuallyRouted="false" />
+        <AssociationConnector Association="DbGrainExchangeModel.FK_tblUser_tblRol" ManuallyRouted="false" />
         <AssociationConnector Association="DbGrainExchangeModel.FK_tblSale_tblTradesman" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblRol" Width="1.5" PointX="10.375" PointY="1.125" />
-        <EntityTypeShape EntityType="DbGrainExchangeModel.tblUser" Width="1.5" PointX="12.625" PointY="0.875" />
-        <AssociationConnector Association="DbGrainExchangeModel.FK_tblUser_tblRol" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

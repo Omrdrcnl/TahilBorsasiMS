@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\TahilBorsaJqeryAjax.csproj": {}
+    "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\TahilBorsaJqeryAjax.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\TahilBorsaJqeryAjax.csproj": {
+    "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\TahilBorsaJqeryAjax.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\TahilBorsaJqeryAjax.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\TahilBorsaJqeryAjax.csproj",
         "projectName": "TahilBorsaJqeryAjax",
-        "projectPath": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\TahilBorsaJqeryAjax.csproj",
+        "projectPath": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\TahilBorsaJqeryAjax.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -48,7 +48,7 @@
           "dependencies": {
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.15, )"
+              "version": "[6.0.16, )"
             }
           },
           "imports": [

@@ -9,65 +9,133 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TahilBorsaJqeryAjax
 build_property.RootNamespace = TahilBorsaJqeryAjax
-build_property.ProjectDir = C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaR\
+build_property.ProjectDir = C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaR
+build_property.MSBuildProjectDirectory = C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Areas/Admin/Views/Farmer/AddFarmer.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/EntryProduct/EntryProductList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW50cnlQcm9kdWN0XEVudHJ5UHJvZHVjdExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/EntryProduct/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW50cnlQcm9kdWN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Farmer/AddFarmer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFybWVyXEFkZEZhcm1lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Areas/Admin/Views/Farmer/Index.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Farmer/CallFarmer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFybWVyXENhbGxGYXJtZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Farmer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFybWVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Areas/Admin/Views/Home/Index.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Areas/Admin/Views/Home/Tumsehirler.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Home/Tumsehirler.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxUdW1zZWhpcmxlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Views/Home/About.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Labaratuar/AddLabData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGFiYXJhdHVhclxBZGRMYWJEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Labaratuar/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGFiYXJhdHVhclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Labaratuar/LabDataList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGFiYXJhdHVhclxMYWJEYXRhTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Panel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFuZWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Product/AddProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxBZGRQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Product/CallProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxDYWxsUHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Sale/CallSale.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FsZVxDYWxsU2FsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Sale/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Sale/Saled.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FsZVxTYWxlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Tradesman/AddTradesman.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHJhZGVzbWFuXEFkZFRyYWRlc21hbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Tradesman/CallTradesman.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHJhZGVzbWFuXENhbGxUcmFkZXNtYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Tradesman/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHJhZGVzbWFuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Views/Home/Contact.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Views/Home/Index.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Views/Home/Login.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Views/Shared/Error.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Views/Shared/Layout.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Views/Shared/Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Views/_ViewImports.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Views/_ViewStart.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaR/Views/Shared/_Layout.cshtml]
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rt21twgu03

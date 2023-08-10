@@ -1,0 +1,63 @@
+﻿@using TahilBorsaMS.Models.Entity
+@model List<tblUser>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <h2>Kullanıcı Paneli</h2>
+
+        <table class="table table-bordered table-striped">
+            <tr class="table-info">
+                <th>Kayıt No</th>
+                <th>Adı</th>
+                <th>Soyadı</th>
+                <th>Kullanıcı Adı</th>
+                <th>Şifre</th>
+                <th>Rol</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+
+            </tr>
+            @foreach (var f in Model)
+            {
+                <tr>
+                    <td>@f.Id</td>
+                    <td>@f.FirstName</td>
+                    <td>@f.LastName</td>
+                    <td>@f.Username</td>
+                    <td>@f.Password</td>
+                    <td>@f.tblRol.Id</td>
+
+                    <td>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>
+                    </td>
+                    <td><a class="btn btn-success" href="~/User/CallUser/@f.Id">Güncelle</a></td>
+
+                </tr>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Sil</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Kullanıcı Kaydını Silmek İstiyor musunuz ?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                                <a class="btn btn-danger" href="~/User/DeleteUser/@f.Id">Sil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </table>
+
+        <a href="~/User/AddUser" class="btn btn-primary">Yeni Kullanıcı Kaydı Oluştur</a>
+    </div>
+</div>

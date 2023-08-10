@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "EntryProductList";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2>Geçmiş Ürün Girdileri</h2>
+
+    @using (Html.BeginForm("EntryProductList", "EntryProduct", FormMethod.Get))
+    {
+        <div class="form-control input-group mb-3">
+            @Html.TextBox("e", null, new { @class = "form-control", placeholder = "Çiftçi Kimlik No Ara" })
+            <button class="btn btn-outline-primary">Ara</button>
+        </div>
+    }
+
+    <table class="table table-bordered table-striped">
+        <tr class="table-danger">
+            <th>Id</th>
+            <th>Çiftçi Adı</th>
+            <th>Çiftçi Kimlik no</th>
+            <th>Ürün Çeşidi</th>
+            <th>Tarihi</th>
+        </tr>
+        <tbody>
+
+        </tbody>
+    </table>
+    <div>
+        <a class="btn btn-info" href="/EntryProduct/Index">Geri</a>
+    </div>
+</div>

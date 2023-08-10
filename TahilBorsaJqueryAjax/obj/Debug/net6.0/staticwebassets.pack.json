@@ -1,2007 +1,2007 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TahilBorsaJqeryAjax.bundle.scp.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TahilBorsaJqeryAjax.bundle.scp.css",
       "PackagePath": "staticwebassets\\TahilBorsaJqeryAjax.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Layout1\\Pricing.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Layout1\\Pricing.css",
       "PackagePath": "staticwebassets\\Content\\Layout1\\Pricing.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Layout1\\basic.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Layout1\\basic.css",
       "PackagePath": "staticwebassets\\Content\\Layout1\\basic.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Layout1\\custom.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Layout1\\custom.css",
       "PackagePath": "staticwebassets\\Content\\Layout1\\custom.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\css\\paper-dashboard.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\css\\paper-dashboard.css",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\css\\paper-dashboard.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\css\\paper-dashboard.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\css\\paper-dashboard.css.map",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\css\\paper-dashboard.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\css\\paper-dashboard.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\css\\paper-dashboard.min.css",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\css\\paper-dashboard.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\demo\\demo.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\demo\\demo.css",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\demo\\demo.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\demo\\demo.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\demo\\demo.js",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\demo\\demo.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.eot",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.eot",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.eot"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.ttf",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.woff",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.woff",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.woff"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.woff2",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.woff2",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.woff2"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\apple-icon.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\apple-icon.png",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\apple-icon.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\bg5.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\bg5.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\bg5.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\damir-bosnjak.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\damir-bosnjak.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\damir-bosnjak.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\default-avatar.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\default-avatar.png",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\default-avatar.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\ayo-ogunseinde-1.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\ayo-ogunseinde-1.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\ayo-ogunseinde-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\ayo-ogunseinde-2.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\ayo-ogunseinde-2.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\ayo-ogunseinde-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-1.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-1.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-2.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-2.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-3.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-3.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-4.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-4.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\erik-lucatero-1.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\erik-lucatero-1.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\erik-lucatero-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\erik-lucatero-2.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\erik-lucatero-2.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\erik-lucatero-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\joe-gardner-1.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\joe-gardner-1.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\joe-gardner-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\joe-gardner-2.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\joe-gardner-2.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\joe-gardner-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\kaci-baum-1.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\kaci-baum-1.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\kaci-baum-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\kaci-baum-2.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\kaci-baum-2.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\kaci-baum-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\favicon.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\favicon.png",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\header.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\header.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\header.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\jan-sendereks.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\jan-sendereks.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\jan-sendereks.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\logo-small.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\logo-small.png",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\logo-small.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\img\\mike.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\mike.jpg",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\mike.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\js\\core\\bootstrap.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\js\\core\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\js\\core\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\js\\core\\jquery.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\js\\core\\jquery.min.js",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\js\\core\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\js\\core\\popper.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\js\\core\\popper.min.js",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\js\\core\\popper.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\js\\paper-dashboard.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\js\\paper-dashboard.js",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\js\\paper-dashboard.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\js\\paper-dashboard.js.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\js\\paper-dashboard.js.map",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\js\\paper-dashboard.js.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\js\\paper-dashboard.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\js\\paper-dashboard.min.js",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\js\\paper-dashboard.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\js\\plugins\\bootstrap-notify.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\js\\plugins\\bootstrap-notify.js",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\js\\plugins\\bootstrap-notify.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\js\\plugins\\chartjs.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\js\\plugins\\chartjs.min.js",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\js\\plugins\\chartjs.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\js\\plugins\\perfect-scrollbar.jquery.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\js\\plugins\\perfect-scrollbar.jquery.min.js",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\js\\plugins\\perfect-scrollbar.jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_alerts.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_alerts.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_alerts.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_animated-buttons.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_animated-buttons.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_animated-buttons.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_buttons.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_buttons.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_buttons.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_cards.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_cards.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_cards.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_checkboxes-radio.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_checkboxes-radio.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_checkboxes-radio.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_dropdown.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_dropdown.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_dropdown.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_fixed-plugin.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_fixed-plugin.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_fixed-plugin.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_footers.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_footers.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_footers.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_images.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_images.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_images.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_inputs.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_inputs.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_inputs.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_misc.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_misc.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_misc.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_mixins.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_mixins.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_mixins.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_navbar.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_navbar.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_navbar.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_nucleo-outline.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_nucleo-outline.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_nucleo-outline.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_page-header.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_page-header.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_page-header.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_responsive.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_responsive.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_responsive.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_sidebar-and-main-panel.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_sidebar-and-main-panel.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_sidebar-and-main-panel.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_tables.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_tables.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_tables.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_typography.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_typography.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_typography.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_variables.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_variables.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\_variables.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-chart.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-chart.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-chart.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-map.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-map.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-map.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-plain.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-plain.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-plain.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-stats.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-stats.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-stats.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-user.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-user.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\cards\\_card-user.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_buttons.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_buttons.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_buttons.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_cards.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_cards.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_cards.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_dropdown.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_dropdown.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_dropdown.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_inputs.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_inputs.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_inputs.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_page-header.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_page-header.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_page-header.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_transparency.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_transparency.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_transparency.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_vendor-prefixes.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_vendor-prefixes.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\mixins\\_vendor-prefixes.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\plugins\\_plugin-animate-bootstrap-notify.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\plugins\\_plugin-animate-bootstrap-notify.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\plugins\\_plugin-animate-bootstrap-notify.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\plugins\\_plugin-perfect-scrollbar.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\plugins\\_plugin-perfect-scrollbar.scss",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\scss\\paper-dashboard\\plugins\\_plugin-perfect-scrollbar.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\eps\\logo-black.eps",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\eps\\logo-black.eps",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\eps\\logo-black.eps"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\eps\\logo-color.eps",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\eps\\logo-color.eps",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\eps\\logo-color.eps"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\eps\\logo-no-background.eps",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\eps\\logo-no-background.eps",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\eps\\logo-no-background.eps"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\eps\\logo-white.eps",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\eps\\logo-white.eps",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\eps\\logo-white.eps"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\pdf\\logo-black.pdf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\pdf\\logo-black.pdf",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\pdf\\logo-black.pdf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\pdf\\logo-color.pdf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\pdf\\logo-color.pdf",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\pdf\\logo-color.pdf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\pdf\\logo-no-background.pdf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\pdf\\logo-no-background.pdf",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\pdf\\logo-no-background.pdf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\pdf\\logo-white.pdf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\pdf\\logo-white.pdf",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\pdf\\logo-white.pdf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\png\\logo-black.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\png\\logo-black.png",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\png\\logo-black.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\png\\logo-color.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\png\\logo-color.png",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\png\\logo-color.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\png\\logo-no-background.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\png\\logo-no-background.png",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\png\\logo-no-background.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\png\\logo-white.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\png\\logo-white.png",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\png\\logo-white.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\svg\\logo-black.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\svg\\logo-black.svg",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\svg\\logo-black.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\svg\\logo-color.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\svg\\logo-color.svg",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\svg\\logo-color.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\svg\\logo-no-background.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\svg\\logo-no-background.svg",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\svg\\logo-no-background.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Mylogo\\svg\\logo-white.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Mylogo\\svg\\logo-white.svg",
       "PackagePath": "staticwebassets\\Content\\Mylogo\\svg\\logo-white.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\PagedList.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\PagedList.css",
       "PackagePath": "staticwebassets\\Content\\PagedList.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\Site.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\Site.css",
       "PackagePath": "staticwebassets\\Content\\Site.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\css\\material-kit.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\css\\material-kit.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\material-kit.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\css\\material-kit.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\css\\material-kit.css.map",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\material-kit.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\css\\material-kit.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\css\\material-kit.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\material-kit.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\css\\nucleo-icons.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\css\\nucleo-icons.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\nucleo-icons.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\css\\nucleo-svg.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\css\\nucleo-svg.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\nucleo-svg.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\fonts\\nucleo-icons.eot",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\fonts\\nucleo-icons.eot",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\nucleo-icons.eot"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\fonts\\nucleo-icons.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\fonts\\nucleo-icons.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\nucleo-icons.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\fonts\\nucleo-icons.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\fonts\\nucleo-icons.ttf",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\nucleo-icons.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\fonts\\nucleo-icons.woff",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\fonts\\nucleo-icons.woff",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\nucleo-icons.woff"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\fonts\\nucleo-icons.woff2",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\fonts\\nucleo-icons.woff2",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\nucleo-icons.woff2"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\fonts\\nucleo.eot",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\fonts\\nucleo.eot",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\nucleo.eot"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\fonts\\nucleo.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\fonts\\nucleo.ttf",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\nucleo.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\fonts\\nucleo.woff",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\fonts\\nucleo.woff",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\nucleo.woff"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\fonts\\nucleo.woff2",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\fonts\\nucleo.woff2",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\nucleo.woff2"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\apple-icon.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\apple-icon.png",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\apple-icon.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\bg.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\bg.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\bg.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\bg0.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\bg0.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\bg0.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\bg10.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\bg10.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\bg10.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\bg2.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\bg2.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\bg2.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\bg3.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\bg3.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\bg3.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\bg5.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\bg5.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\bg5.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\bg9.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\bg9.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\bg9.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\bruce-mars.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\bruce-mars.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\bruce-mars.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\city-profile.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\city-profile.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\city-profile.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\down-arrow-dark.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\down-arrow-dark.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\down-arrow-dark.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\down-arrow-white.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\down-arrow-white.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\down-arrow-white.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\down-arrow.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\down-arrow.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\down-arrow.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\examples\\blog-9-4.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\examples\\blog-9-4.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\examples\\blog-9-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\examples\\blog2.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\examples\\blog2.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\examples\\blog2.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\examples\\testimonial-6-2.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\examples\\testimonial-6-2.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\examples\\testimonial-6-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\examples\\testimonial-6-3.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\examples\\testimonial-6-3.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\examples\\testimonial-6-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\favicon.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\favicon.png",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\illustrations\\illustration-signin.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\illustrations\\illustration-signin.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\illustrations\\illustration-signin.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\ivana-square.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\ivana-square.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\ivana-square.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\ivana-squares.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\ivana-squares.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\ivana-squares.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\logo-ct-dark.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\logo-ct-dark.png",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\logo-ct-dark.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-apple.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-apple.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\logos\\gray-logos\\logo-apple.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-coinbase.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-coinbase.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\logos\\gray-logos\\logo-coinbase.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-digitalocean.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-digitalocean.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\logos\\gray-logos\\logo-digitalocean.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-facebook.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-facebook.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\logos\\gray-logos\\logo-facebook.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-nasa.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-nasa.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\logos\\gray-logos\\logo-nasa.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-netflix.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-netflix.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\logos\\gray-logos\\logo-netflix.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-pinterest.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-pinterest.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\logos\\gray-logos\\logo-pinterest.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-spotify.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-spotify.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\logos\\gray-logos\\logo-spotify.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-vodafone.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\logos\\gray-logos\\logo-vodafone.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\logos\\gray-logos\\logo-vodafone.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\macbook.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\macbook.png",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\macbook.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\shapes\\waves-white.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\shapes\\waves-white.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\shapes\\waves-white.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\team-1.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\team-1.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\team-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\team-2.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\team-2.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\team-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\team-3.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\team-3.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\team-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\team-4.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\team-4.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\team-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\img\\team-5.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\img\\team-5.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\img\\team-5.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\core\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\core\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\core\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\core\\bootstrap.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\core\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\core\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\core\\popper.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\core\\popper.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\core\\popper.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\material-kit.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\material-kit.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\material-kit.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\material-kit.js.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\material-kit.js.map",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\material-kit.js.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\material-kit.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\material-kit.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\material-kit.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\plugins\\choices.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\plugins\\choices.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\choices.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\plugins\\countup.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\plugins\\countup.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\countup.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\plugins\\flatpickr.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\plugins\\flatpickr.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\flatpickr.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\plugins\\highlight.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\plugins\\highlight.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\highlight.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\plugins\\moment.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\plugins\\moment.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\moment.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\plugins\\parallax.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\plugins\\parallax.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\parallax.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\plugins\\perfect-scrollbar.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\plugins\\perfect-scrollbar.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\perfect-scrollbar.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\plugins\\prism.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\plugins\\prism.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\prism.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\plugins\\rellax.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\plugins\\rellax.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\rellax.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\plugins\\tilt.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\plugins\\tilt.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\tilt.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\js\\plugins\\typedjs.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\js\\plugins\\typedjs.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\typedjs.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_alert.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_alert.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_alert.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_avatars.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_avatars.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_avatars.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_badge.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_badge.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_badge.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_breadcrumbs.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_breadcrumbs.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_breadcrumbs.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_buttons.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_buttons.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_buttons.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_cards.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_cards.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_cards.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_dark-version.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_dark-version.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_dark-version.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_dropdown.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_dropdown.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_dropdown.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_dropup.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_dropup.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_dropup.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_fixed-plugin.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_fixed-plugin.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_fixed-plugin.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_footer.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_footer.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_footer.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_forms.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_forms.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_forms.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_gradients.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_gradients.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_gradients.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_header.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_header.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_header.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_icons.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_icons.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_icons.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_info-areas.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_info-areas.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_info-areas.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_misc.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_misc.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_misc.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_nav.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_nav.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_nav.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_navbar-vertical.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_navbar-vertical.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_navbar-vertical.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_navbar.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_navbar.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_navbar.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_pagination.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_pagination.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_pagination.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_popovers.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_popovers.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_popovers.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_progress.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_progress.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_progress.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_ripple.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_ripple.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_ripple.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_rtl.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_rtl.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_rtl.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_social-buttons.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_social-buttons.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_social-buttons.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_tables.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_tables.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_tables.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_tilt.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_tilt.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_tilt.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_timeline.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_timeline.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_timeline.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_tooltips.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_tooltips.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_tooltips.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_typography.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_typography.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_typography.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_utilities-extend.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_utilities-extend.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_utilities-extend.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_utilities.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_utilities.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_utilities.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\_variables.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\_variables.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\_variables.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_accordion.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_accordion.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_accordion.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_alert.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_alert.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_alert.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_badge.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_badge.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_badge.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_breadcrumb.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_breadcrumb.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_breadcrumb.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_button-group.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_button-group.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_button-group.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_buttons.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_buttons.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_buttons.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_card.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_card.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_card.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_carousel.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_carousel.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_carousel.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_close.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_close.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_close.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_containers.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_containers.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_containers.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_dropdown.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_dropdown.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_dropdown.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_forms.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_forms.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_forms.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_functions.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_functions.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_functions.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_grid.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_grid.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_grid.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_helpers.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_helpers.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_helpers.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_images.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_images.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_images.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_list-group.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_list-group.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_list-group.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_maps.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_maps.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_maps.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_mixins.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_mixins.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_mixins.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_modal.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_modal.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_modal.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_nav.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_nav.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_nav.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_navbar.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_navbar.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_navbar.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_offcanvas.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_offcanvas.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_offcanvas.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_pagination.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_pagination.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_pagination.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_placeholders.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_placeholders.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_placeholders.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_popover.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_popover.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_popover.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_progress.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_progress.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_progress.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_reboot.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_reboot.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_reboot.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_root.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_root.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_root.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_spinners.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_spinners.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_spinners.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_tables.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_tables.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_tables.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_toasts.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_toasts.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_toasts.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_tooltip.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_tooltip.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_tooltip.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_transitions.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_transitions.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_transitions.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_type.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_type.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_type.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_utilities.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_utilities.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_utilities.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_variables.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\_variables.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\_variables.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\bootstrap-grid.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\bootstrap-grid.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\bootstrap-grid.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\bootstrap-reboot.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\bootstrap-reboot.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\bootstrap-reboot.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\bootstrap-utilities.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\bootstrap-utilities.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\bootstrap-utilities.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\bootstrap.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\bootstrap.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\bootstrap.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_floating-labels.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_floating-labels.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_floating-labels.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-check.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-check.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-check.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-control.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-control.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-control.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-range.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-range.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-range.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-select.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-select.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-select.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-text.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-text.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_form-text.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_input-group.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_input-group.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_input-group.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_labels.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_labels.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_labels.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_validation.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_validation.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\forms\\_validation.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_clearfix.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_clearfix.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_clearfix.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_color-bg.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_color-bg.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_color-bg.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_colored-links.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_colored-links.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_colored-links.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_position.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_position.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_position.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_ratio.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_ratio.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_ratio.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_stacks.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_stacks.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_stacks.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_stretched-link.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_stretched-link.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_stretched-link.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_text-truncation.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_text-truncation.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_text-truncation.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_visually-hidden.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_visually-hidden.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_visually-hidden.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_vr.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_vr.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\helpers\\_vr.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_alert.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_alert.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_alert.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_backdrop.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_backdrop.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_backdrop.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_banner.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_banner.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_banner.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_border-radius.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_border-radius.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_border-radius.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_box-shadow.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_box-shadow.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_box-shadow.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_breakpoints.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_breakpoints.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_breakpoints.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_buttons.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_buttons.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_buttons.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_caret.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_caret.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_caret.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_clearfix.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_clearfix.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_clearfix.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_color-scheme.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_color-scheme.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_color-scheme.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_container.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_container.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_container.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_deprecate.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_deprecate.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_deprecate.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_forms.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_forms.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_forms.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_gradients.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_gradients.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_gradients.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_grid.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_grid.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_grid.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_image.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_image.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_image.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_list-group.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_list-group.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_list-group.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_lists.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_lists.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_lists.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_pagination.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_pagination.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_pagination.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_reset-text.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_reset-text.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_reset-text.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_resize.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_resize.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_resize.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_table-variants.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_table-variants.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_table-variants.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_text-truncate.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_text-truncate.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_text-truncate.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_transition.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_transition.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_transition.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_utilities.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_utilities.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_utilities.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_visually-hidden.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_visually-hidden.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\mixins\\_visually-hidden.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\utilities\\_api.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\utilities\\_api.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\utilities\\_api.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\vendor\\_rfs.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\bootstrap\\vendor\\_rfs.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\bootstrap\\vendor\\_rfs.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\cards\\card-background.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\cards\\card-background.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\cards\\card-background.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\cards\\card-rotate.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\cards\\card-rotate.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\cards\\card-rotate.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\custom\\_styles.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\custom\\_styles.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\custom\\_styles.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\custom\\_variables.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\custom\\_variables.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\custom\\_variables.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_form-check.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_form-check.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\forms\\_form-check.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_form-select.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_form-select.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\forms\\_form-select.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_form-switch.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_form-switch.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\forms\\_form-switch.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_forms.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_forms.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\forms\\_forms.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_input-group.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_input-group.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\forms\\_input-group.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_inputs.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_inputs.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\forms\\_inputs.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_labels.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\forms\\_labels.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\forms\\_labels.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\_badge.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\_badge.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\mixins\\_badge.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\_buttons.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\_buttons.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\mixins\\_buttons.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\_colored-shadows.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\_colored-shadows.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\mixins\\_colored-shadows.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\_hover.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\_hover.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\mixins\\_hover.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\_social-buttons.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\_social-buttons.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\mixins\\_social-buttons.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\_vendor.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\_vendor.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\mixins\\_vendor.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\mixins.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\mixins\\mixins.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\mixins\\mixins.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\plugins\\free\\_flatpickr.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\plugins\\free\\_flatpickr.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\plugins\\free\\_flatpickr.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\plugins\\free\\_nouislider.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\plugins\\free\\_nouislider.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\plugins\\free\\_nouislider.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\plugins\\free\\_perfect-scrollbar.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\plugins\\free\\_perfect-scrollbar.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\plugins\\free\\_perfect-scrollbar.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\plugins\\free\\_prism.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\plugins\\free\\_prism.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\plugins\\free\\_prism.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\plugins\\free\\plugins.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\plugins\\free\\plugins.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\plugins\\free\\plugins.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\theme.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\theme.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\theme.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_animations.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_animations.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_animations.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_avatars.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_avatars.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_avatars.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_badge.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_badge.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_badge.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_breadcrumb.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_breadcrumb.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_breadcrumb.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_cards-extend.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_cards-extend.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_cards-extend.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_cards.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_cards.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_cards.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_choices.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_choices.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_choices.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_dark-version.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_dark-version.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_dark-version.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_dropdowns.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_dropdowns.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_dropdowns.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_fixed-plugin.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_fixed-plugin.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_fixed-plugin.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_form-switch.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_form-switch.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_form-switch.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_full-calendar.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_full-calendar.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_full-calendar.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_header.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_header.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_header.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_info-areas.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_info-areas.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_info-areas.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_misc-extend.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_misc-extend.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_misc-extend.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_misc.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_misc.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_misc.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_navbar-vertical.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_navbar-vertical.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_navbar-vertical.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_navbar.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_navbar.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_navbar.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_pagination.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_pagination.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_pagination.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_ripple.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_ripple.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_ripple.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_rtl.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_rtl.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_rtl.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_social-buttons.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_social-buttons.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_social-buttons.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_table.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_table.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_table.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_timeline.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_timeline.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_timeline.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_utilities-extend.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_utilities-extend.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_utilities-extend.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_utilities.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_utilities.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_utilities.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_virtual-reality.scss",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\assets\\scss\\material-kit\\variables\\_virtual-reality.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\material-kit\\variables\\_virtual-reality.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-grid.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\Content\\headers.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\headers.css",
       "PackagePath": "staticwebassets\\Content\\headers.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\.DS_Store",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\.DS_Store",
       "PackagePath": "staticwebassets\\hightech-html\\css\\.DS_Store"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\bootstrap.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\hightech-html\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\hightech-html\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\font-awesome.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\hightech-html\\css\\font-awesome.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\jquery.mCustomScrollbar.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\jquery.mCustomScrollbar.min.css",
       "PackagePath": "staticwebassets\\hightech-html\\css\\jquery.mCustomScrollbar.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\owl.carousel.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\owl.carousel.css",
       "PackagePath": "staticwebassets\\hightech-html\\css\\owl.carousel.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\owl.carousel.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\owl.carousel.min.css",
       "PackagePath": "staticwebassets\\hightech-html\\css\\owl.carousel.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\owl.theme.default.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\owl.theme.default.css",
       "PackagePath": "staticwebassets\\hightech-html\\css\\owl.theme.default.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\owl.theme.default.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\owl.theme.default.min.css",
       "PackagePath": "staticwebassets\\hightech-html\\css\\owl.theme.default.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\owl.theme.green.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\owl.theme.green.css",
       "PackagePath": "staticwebassets\\hightech-html\\css\\owl.theme.green.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\owl.theme.green.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\owl.theme.green.min.css",
       "PackagePath": "staticwebassets\\hightech-html\\css\\owl.theme.green.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\responsive.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\responsive.css",
       "PackagePath": "staticwebassets\\hightech-html\\css\\responsive.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\css\\style.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\css\\style.css",
       "PackagePath": "staticwebassets\\hightech-html\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\FontAwesome.otf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\FontAwesome.otf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\IcoMoon-Free.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\IcoMoon-Free.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\IcoMoon-Free.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-Black.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-Black.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-Black.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-BlackItalic.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-BlackItalic.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-BlackItalic.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-Bold.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-Bold.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-Bold.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-BoldItalic.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-BoldItalic.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-BoldItalic.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-ExtraBold.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-ExtraBold.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-ExtraBold.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-ExtraBoldItalic.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-ExtraBoldItalic.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-ExtraBoldItalic.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-ExtraLight.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-ExtraLight.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-ExtraLight.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-ExtraLightItalic.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-ExtraLightItalic.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-ExtraLightItalic.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-Italic.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-Italic.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-Italic.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-Light.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-Light.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-Light.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-LightItalic.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-LightItalic.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-LightItalic.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-Medium.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-Medium.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-Medium.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-MediumItalic.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-MediumItalic.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-MediumItalic.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-Regular.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-Regular.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-Regular.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-SemiBold.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-SemiBold.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-SemiBold.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-SemiBoldItalic.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-SemiBoldItalic.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-SemiBoldItalic.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-Thin.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-Thin.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-Thin.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\Poppins-ThinItalic.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\Poppins-ThinItalic.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\Poppins-ThinItalic.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\fontawesome-webfont.eot",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\fontawesome-webfont.eot",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\fontawesome-webfont.svg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\fontawesome-webfont.svg",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\fontawesome-webfont.ttf",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\fontawesome-webfont.ttf",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\fontawesome-webfont.woff",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\fontawesome-webfont.woff",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\fonts\\fontawesome-webfont.woff2",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\fonts\\fontawesome-webfont.woff2",
       "PackagePath": "staticwebassets\\hightech-html\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\.DS_Store",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\.DS_Store",
       "PackagePath": "staticwebassets\\hightech-html\\images\\.DS_Store"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\about_bg.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\about_bg.jpg",
       "PackagePath": "staticwebassets\\hightech-html\\images\\about_bg.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\banner.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\banner.jpg",
       "PackagePath": "staticwebassets\\hightech-html\\images\\banner.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\chose1.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\chose1.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\chose1.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\chose2.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\chose2.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\chose2.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\chose3.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\chose3.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\chose3.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\clint.jpg",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\clint.jpg",
       "PackagePath": "staticwebassets\\hightech-html\\images\\clint.jpg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\icon.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\icon.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\icon.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\loading.gif",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\loading.gif",
       "PackagePath": "staticwebassets\\hightech-html\\images\\loading.gif"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\logo.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\logo.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\logo.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\logo_footer.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\logo_footer.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\logo_footer.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\menu_btn.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\menu_btn.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\menu_btn.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\prot1.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\prot1.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\prot1.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\prot2.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\prot2.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\prot2.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\prot3.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\prot3.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\prot3.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\prot4.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\prot4.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\prot4.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\we1.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\we1.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\we1.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\we2.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\we2.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\we2.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\images\\we3.png",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\images\\we3.png",
       "PackagePath": "staticwebassets\\hightech-html\\images\\we3.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\js\\.DS_Store",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\js\\.DS_Store",
       "PackagePath": "staticwebassets\\hightech-html\\js\\.DS_Store"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\hightech-html\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\js\\bootstrap.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\hightech-html\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\hightech-html\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\js\\custom.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\js\\custom.js",
       "PackagePath": "staticwebassets\\hightech-html\\js\\custom.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\js\\jquery-3.0.0.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\js\\jquery-3.0.0.min.js",
       "PackagePath": "staticwebassets\\hightech-html\\js\\jquery-3.0.0.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\js\\jquery.mCustomScrollbar.concat.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\js\\jquery.mCustomScrollbar.concat.min.js",
       "PackagePath": "staticwebassets\\hightech-html\\js\\jquery.mCustomScrollbar.concat.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\js\\jquery.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\js\\jquery.min.js",
       "PackagePath": "staticwebassets\\hightech-html\\js\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\js\\owl.carousel.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\js\\owl.carousel.js",
       "PackagePath": "staticwebassets\\hightech-html\\js\\owl.carousel.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\hightech-html\\js\\owl.carousel.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\js\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\hightech-html\\js\\owl.carousel.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaR\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
