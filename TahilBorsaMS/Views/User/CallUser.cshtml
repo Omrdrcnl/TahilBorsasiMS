@@ -1,0 +1,49 @@
+﻿@model TahilBorsaMS.Models.Entity.tblUser
+
+@{
+    ViewBag.Title = "CallUser";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("EditUser", "User", FormMethod.Post))
+{
+    <div class="form form-control container mt-5">
+
+        <h1>Kullanıcı Bilgilerini Güncelle</h1>
+        <br />
+        <div class="row">
+            <div class="row">
+                <div class="col-6">
+                    <label>Kullanıcı Kayıt Nu</label>
+                    @Html.TextBoxFor(p => p.Id, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label>Adı</label>
+                    @Html.TextBoxFor(p => p.FirstName, new { @class = "form-control" })
+                </div>
+                <div class="col-6">
+                    <label>Soyadı</label>
+                    @Html.TextBoxFor(p => p.LastName, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label>Rol Adı</label>
+                    @Html.DropDownListFor(p => p.tblRolId, ViewBag.Rols as IEnumerable<SelectListItem>, "Rol Seçin", new { @class = "form-control" })
+                </div>
+                <div class="col-4">
+                    <label>Kullanıcı Adı</label>
+                    @Html.TextBoxFor(p => p.Username, new { @class = "form-control" })
+                </div>
+                <div class="col-4">
+                    <label>Şifre</label>
+                    @Html.TextBoxFor(p => p.Password, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        <button class="btn my-3 btn-warning">Kullanıcı Bilgilerini Güncelle</button>
+    </div>
+}

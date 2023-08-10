@@ -734,6 +734,7 @@
     <Content Include="Views\Panel\Index.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\AddUser.cshtml" />
+    <Content Include="Views\User\CallUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

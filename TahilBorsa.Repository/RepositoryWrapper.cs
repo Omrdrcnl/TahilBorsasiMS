@@ -22,6 +22,7 @@ namespace TahilBorsa.Repository
         private TradesmanRepository? tradesmanRepository;
         private UserRepository userRepository;
         private RolRepository rolRepository;
+        private ContactRepository contactRepository;
 
         public RepositoryWrapper(RepositoryContext context)
         {
@@ -36,8 +37,17 @@ namespace TahilBorsa.Repository
                     addressRepository = new AddressRepository(context);
                 return addressRepository;
             }
-        }  
-       
+        }
+        public ContactRepository ContactRepository
+        {
+            get
+            {
+                if (contactRepository == null)
+                    contactRepository = new ContactRepository(context);
+                return contactRepository;
+            }
+        }
+
 
         public CityRepository CityRepository
         {

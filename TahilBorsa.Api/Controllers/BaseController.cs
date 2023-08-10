@@ -10,7 +10,7 @@ namespace TahilBorsa.Api.Controllers
     public class BaseController : ControllerBase
     {
         protected RepositoryWrapper repo;
-        //cache dahil et
+        //cache dahil etme
         protected IMemoryCache cache;
         public BaseController(RepositoryWrapper repo, IMemoryCache cache)
         {

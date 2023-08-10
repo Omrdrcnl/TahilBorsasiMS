@@ -40,8 +40,8 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpPost("VeriGir/{deger}")]
-        public dynamic AddSale([FromBody] dynamic model, int deger)
+        [HttpPost("VeriGir")]
+        public dynamic AddSale([FromBody] dynamic model)
         {
             dynamic json = JObject.Parse(model.GetRawText());
 
@@ -49,26 +49,39 @@ namespace TahilBorsa.Api.Controllers
             tblLabData item = new tblLabData()
             {
                 Process = true,
-                NutritionalValue = deger
+                NutritionalValue = json.NutritionalValue,
 
             };
 
-            if(deger > 0) {
-                tblSale tblSale = new tblSale()
+            if(item != null) {
+
+                repo.LabDataRepository.Update(item);
+
+                tblSale sale = new tblSale()
                 {
                     Process = false,
                     tblEntryProductId = (int)json.tblEntryProductId,
-                    Quantity = json.tblEntryProduct.Quantity,
                     tblLabDataId = json.Id,
                 };
-                repo.SaveChanges();
+                if(sale != null)
+                {
+                    repo.SaleRepository.Create(sale);
+                    repo.SaveChanges();
+                    return new
+                    {
+                        success = true,
+                        data = sale
+                    };
+                }
+
             }
 
             repo.SaveChanges();
 
             return new
             {
-                success = true
+                success = true,
+                data = item
             };
                 
         }

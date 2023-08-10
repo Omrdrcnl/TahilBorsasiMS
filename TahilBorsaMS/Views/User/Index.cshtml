@@ -32,12 +32,12 @@
                     <td>@f.tblRol.Id</td>
 
                     <td>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-@f.Id" class="btn btn-danger">Sil</button>
                     </td>
                     <td><a class="btn btn-success" href="~/User/CallUser/@f.Id">Güncelle</a></td>
 
                 </tr>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal-@f.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">

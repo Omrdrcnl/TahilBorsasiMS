@@ -51,8 +51,9 @@ namespace TahilBorsaMS.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Contact(tblContact c)
         {
+            
             ViewBag.Message = "Your contact page.";
 
             return View();

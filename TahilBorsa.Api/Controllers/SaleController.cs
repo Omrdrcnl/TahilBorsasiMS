@@ -91,7 +91,14 @@ namespace TahilBorsa.Api.Controllers
         [HttpGet("TariheGöreSatışlar/{date}")]
         public dynamic SaleByDate(DateTime date)
         {
-            List<tblSale> items = repo.SaleRepository.FindByCondition(z => z.Date == date).ToList<tblSale>();
+            List<tblSale> items;
+
+            if(!cache.TryGetValue("TariheGöreSatışlar/{date}",out items))
+            {
+                items  = repo.SaleRepository.FindByCondition(z => z.Date == date).ToList<tblSale>();
+
+                cache.Set("TariheGöreSatışlar/{date}", items, DateTimeOffset.UtcNow.AddDays(1));
+            }
 
             return new
             {
@@ -116,6 +123,7 @@ namespace TahilBorsa.Api.Controllers
                 Process = true,
                 
             };
+            repo.SaleRepository.Update(item);
 
             repo.SaveChanges();
             return new

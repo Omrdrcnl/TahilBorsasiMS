@@ -104,7 +104,7 @@ namespace TahilBorsaMS.Controllers
 
 
         public ActionResult EditFarmer(tblFarmer f)
-        {
+            {
             if (ModelState.IsValid)
             {
                 var farmer = db.tblFarmer.Find(f.Id);

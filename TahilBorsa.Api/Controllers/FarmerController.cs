@@ -21,12 +21,19 @@ namespace TahilBorsa.Api.Controllers
         [HttpGet("TumCiftciler")]
         public dynamic TumCiftciler()
         {
-            List<tblFarmer> items = repo.FarmerRepository
+            List<tblFarmer> items;
+
+            if (!cache.TryGetValue("TumCiftciler", out items))
+            {
+                items = repo.FarmerRepository
                 .FindAll()
                 .Include(farmer => farmer.tblAddress)
                   .ThenInclude(address => address.tblDistrict)
                 .ThenInclude(district => district.tblCity)
                 .ToList();
+
+                cache.Set("TumCiftciler", items, DateTimeOffset.UtcNow.AddMinutes(100));
+            }
 
             var mappedItems = items.Select(farmer => new
             {
@@ -42,10 +49,8 @@ namespace TahilBorsa.Api.Controllers
                     tblDistrictId = farmer.tblAddress.tblDistrictId,
                     Neighborhood = farmer.tblAddress.NeighborhoodName,
                     FullAddress = farmer.tblAddress.FullAddress,
-
                     tblCityName = farmer.tblAddress.tblDistrict.tblCity.Name,
                     tblDistrictName = farmer.tblAddress.tblDistrict.Name,
-
                 }
             });
 
@@ -138,18 +143,21 @@ namespace TahilBorsa.Api.Controllers
             };
 
             // Veritabanına ekle
-            if (newFarmer.Id > 0 && newFarmer.tblAddress.Id >0)
+            if (newFarmer.Id  >0)
             {
                 repo.FarmerRepository.Update(newFarmer);
-                repo.AddressRepository.Update(newFarmer.tblAddress);
+                
             }
             else
             {
                 repo.FarmerRepository.Create(newFarmer);
-                repo.AddressRepository.Create(newFarmer.tblAddress);
+                
             }
 
             repo.SaveChanges();
+
+            //CACHEDEN SİL
+            cache.Remove("TumCiftciler");
 
             return new
             {

@@ -42,20 +42,49 @@ namespace TahilBorsaMS.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult CallUser()
-        {
-            var list = db.tblUser.ToList();
 
-            return View(list);
-        }
-        public ActionResult DeleteUser()
+        public ActionResult DeleteUser(int id)
         {
-            return View();
-        }
+            var f = db.tblUser.Find(id);
+            db.tblUser.Remove(f);
+            db.SaveChanges();
+            return RedirectToAction("Index");
 
-        public ActionResult EditUser()
+        }
+        public ActionResult CallUser(int id)
         {
-            return View();
+            var f = db.tblUser.Find(id);
+
+            //Rolleri taşı
+
+            ViewBag.Rols = new SelectList(db.tblRol.ToList(), "Id", "Name");
+
+            return View(f);
+
+            
+        }
+        public ActionResult EditUser(tblUser f)
+        {
+           
+            if (ModelState.IsValid)
+            {
+                var user = db.tblUser.Find(f.Id);
+
+                if (user != null)
+                {
+                    user.FirstName = f.FirstName;
+                    user.LastName = f.LastName;
+                    user.Username = f.Username;
+                    user.Password = f.Password;
+                    user.tblRolId = f.tblRolId;
+
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+
+
+                }
+            }
+            return RedirectToAction("Index");
         }
     }
 }

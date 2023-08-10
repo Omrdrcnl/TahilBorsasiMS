@@ -23,11 +23,11 @@
                 </div>
                 <p class="card-text"><small class="text-muted">İşlem Numarası:"@product.Id"</small></p>
                 <div class="btn-group m-1">
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger btn-round">Sil</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-@f.Id" class="btn btn-danger btn-round">Sil</button>
                     <a href="~/Product/CallProduct/@product.Id" class="btn btn-outline-success btn-round">Güncelle</a>
                 </div>
             </div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal-@f.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">

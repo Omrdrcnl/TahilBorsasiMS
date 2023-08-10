@@ -12,7 +12,7 @@ namespace TahilBorsa.Api.Controllers
     [ApiController]
     public class TradesmanController : BaseController
     {
-       
+
         public TradesmanController(RepositoryWrapper repo, IMemoryCache cache) : base(repo, cache)
         {
             this.repo = repo;
@@ -21,7 +21,17 @@ namespace TahilBorsa.Api.Controllers
         [HttpGet("Esnaflar")]
         public dynamic AllTradesman()
         {
-            List<tblTradesman> Tradesmans = repo.TradesmanRepository.FindAll().ToList();
+            List<tblTradesman> Tradesmans;
+
+            if (!cache.TryGetValue("Esnaflar", out items))
+            {
+                Tradesmans = repo.TradesmanRepository.FindAll().Include(
+                    t => t.tblAddress).ThenInclude(
+                    c => c.tblCity).ThenInclude(d => d.tblDistrict).ToList();
+
+                cache.Set("Esnaflar", Tradesmans, DateTimeOffset.UtcNow.AddMinutes(100));
+            }
+
             return new
             {
                 success = true,
@@ -74,6 +84,7 @@ namespace TahilBorsa.Api.Controllers
 
             repo.SaveChanges();
 
+            cache.Remove("Esnaflar");
             return new
             {
                 success = true,

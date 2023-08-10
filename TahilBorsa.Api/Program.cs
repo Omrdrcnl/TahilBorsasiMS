@@ -67,6 +67,7 @@ builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializ
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
 // hata control mekanýzmasý dahil edildi.
 if (app.Environment.IsDevelopment())
 {
