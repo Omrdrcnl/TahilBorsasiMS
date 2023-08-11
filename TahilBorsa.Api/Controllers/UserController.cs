@@ -73,11 +73,20 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpDelete("{userId}")]
-        public dynamic Delete(int userId)
+        [HttpDelete("{Id}")]
+        public dynamic Delete(int id)
         {
-            repo.UserRepository.Delete(userId);
-            return new { success = true };
+            if (id < 0)
+            {
+                return new
+                {
+                    success = false,
+                    message = "Geçersiz Id"
+                };
+            }
+            repo.UserRepository.Sil(id);
+            return new
+            { success = true };
         }
     }
 }

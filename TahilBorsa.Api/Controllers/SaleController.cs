@@ -98,7 +98,7 @@ namespace TahilBorsa.Api.Controllers
                 items  = repo.SaleRepository.FindByCondition(z => z.Date == date).ToList<tblSale>();
 
                 cache.Set("TariheGöreSatışlar/{date}", items, DateTimeOffset.UtcNow.AddDays(1));
-            }
+            }  
 
             return new
             {

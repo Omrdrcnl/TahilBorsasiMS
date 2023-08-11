@@ -7,8 +7,10 @@ using TahilBorsaMS.Controllers;
 using TahilBorsaMS.Models.Entity;
 using TahilBorsaMS.Models.Classes;
 
+
 namespace TahilBorsaMS.Controllers
 {
+    [Authorize(Roles = "lab,admin")]
     public class LabaratuarController : Controller
     {
         DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();

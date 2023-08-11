@@ -23,7 +23,7 @@ namespace TahilBorsa.Api.Controllers
         {
             List<tblTradesman> Tradesmans;
 
-            if (!cache.TryGetValue("Esnaflar", out items))
+            if (!cache.TryGetValue("Esnaflar", out Tradesmans))
             {
                 Tradesmans = repo.TradesmanRepository.FindAll().Include(
                     t => t.tblAddress).ThenInclude(

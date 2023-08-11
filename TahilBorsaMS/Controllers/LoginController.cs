@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using TahilBorsaMS.Models.Entity;
 using TahilBorsaMS.Controllers;
 using System.Web.Security;
+using System.Web.ModelBinding;
 
 namespace TahilBorsaMS.Controllers
 {
@@ -28,6 +29,7 @@ namespace TahilBorsaMS.Controllers
             if (k != null)
             {
                 FormsAuthentication.SetAuthCookie(k.Username, false);
+                Session["Username"] = k.Username.ToString();
                 return RedirectToAction("Index", "Panel");
             }
             else
