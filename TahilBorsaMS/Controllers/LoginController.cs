@@ -7,6 +7,7 @@ using TahilBorsaMS.Models.Entity;
 using TahilBorsaMS.Controllers;
 using System.Web.Security;
 using System.Web.ModelBinding;
+using TahilBorsa.Api.Code.Validation;
 
 namespace TahilBorsaMS.Controllers
 {
@@ -24,6 +25,19 @@ namespace TahilBorsaMS.Controllers
         [HttpPost]
         public ActionResult Index(tblUser u)
         {
+            var validator = new UserValidator();
+            var validationResult = validator.Validate(u);
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var error in validationResult.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
+
+                return View(u);
+            }
+
             var k = db.tblUser.FirstOrDefault(x => x.Username == u.Username && x.Password == u.Password);
 
             if (k != null)

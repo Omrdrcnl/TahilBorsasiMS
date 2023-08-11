@@ -1,9 +1,12 @@
-﻿using PagedList;
+﻿using Antlr.Runtime;
+using FluentValidation;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TahilBorsa.Api.Code.Validation;
 using TahilBorsaMS.Controllers;
 using TahilBorsaMS.Models.Entity;
 
@@ -51,6 +54,35 @@ namespace TahilBorsaMS.Controllers
         [HttpPost]
         public ActionResult AddTradesman(tblTradesman tradesman)
         {
+
+            var validator = new TradesmanValidator();
+            var validationResult = validator.Validate(tradesman);
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var error in validationResult.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
+                List<SelectListItem> list = (from f in db.tblCity.ToList()
+                                             select new SelectListItem
+                                             {
+                                                 Text = f.Name,
+                                                 Value = f.Id.ToString(),
+                                             }).ToList();
+                ViewBag.CityList = list;
+
+                List<SelectListItem> listD = (from f in db.tblDistrict.ToList()
+                                              select new SelectListItem
+                                              {
+                                                  Text = f.Name,
+                                                  Value = f.Id.ToString(),
+
+                                              }).ToList();
+                ViewBag.District = listD;
+                return View(tradesman);
+            }
+
             if (ModelState.IsValid)
             {
 

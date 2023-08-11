@@ -29,20 +29,28 @@
                 <div class="col-6">
                     <label>Adı</label>
                     @Html.TextBoxFor(p => p.FirstName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+
                 </div>
                 <div class="col-6">
                     <label>Soyadı</label>
                     @Html.TextBoxFor(p => p.LastName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
                     <label>Kimlik No</label>
                     @Html.TextBoxFor(p => p.IdentityNo, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.IdentityNo, "", new { @class = "text-danger" })
+
                 </div>
                 <div class="col-6">
                     <label>İletişim</label>
                     @Html.TextBoxFor(p => p.Contact, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Contact, "", new { @class = "text-danger" })
+
                 </div>
             </div>
             <div class="row">

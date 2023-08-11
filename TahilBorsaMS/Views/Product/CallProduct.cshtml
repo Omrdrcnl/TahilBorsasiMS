@@ -8,15 +8,21 @@
 @using (Html.BeginForm("EditProduct", "Product", FormMethod.Post))
 {
     <div class="form form-control container">
-        
+
         <h1>Ürün Güncelle</h1>
         <br />
         <label>Ürün Id</label>
         @Html.TextBoxFor(p => p.Id, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+
         <label>Ürün Adı</label>
         @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+
         <label>Ürün Bilgisi</label>
         @Html.TextAreaFor(p => p.Information, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Information, "", new { @class = "text-danger" })
+
         <button class="btn my-3 btn-warning">Ürünü Güncelle</button>
     </div>
 }

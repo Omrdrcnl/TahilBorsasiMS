@@ -103,3 +103,5 @@ C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaMS\bin\System.Text.Encodings.W
 C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaMS\bin\System.Text.Json.xml
 C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaMS\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaMS\bin\System.ValueTuple.xml
+C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaMS\bin\FluentValidation.dll
+C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaMS\bin\FluentValidation.xml

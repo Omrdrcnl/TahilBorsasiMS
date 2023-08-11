@@ -15,8 +15,9 @@
             @Html.TextBoxFor(x => x.Id, new { @type = "hidden" })
         <div class="row">
             <div class="col-md-6">
-                <label>Çiftçi Kayıt no</label>    
+                <label>Çiftçi Kayıt no</label>
                 @Html.TextBoxFor(x => x.tblFarmerId, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x=> x.tblFarmerId,"", new {@class="text-danger"})
             </div>
             <div class="col-md-6">
                 <label>Ürün Çeşidi</label>

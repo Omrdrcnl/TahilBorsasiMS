@@ -9,6 +9,8 @@ using System.Data.Entity.Validation;
 using Antlr.Runtime;
 using PagedList;
 using PagedList.Mvc;
+using System.Web.UI.WebControls;
+using TahilBorsa.Api.Code.Validation;
 
 namespace TahilBorsaMS.Controllers
 {
@@ -16,7 +18,7 @@ namespace TahilBorsaMS.Controllers
     {
         DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
         // GET: Farmer
-        public ActionResult Index(string f, int page=1)
+        public ActionResult Index(string f, int page = 1)
         {
             var value = db.tblFarmer.ToList().ToPagedList(page, 10);
             //indexten gelen string f degeriyle harf duyarlılığını kaldırarak arama işlemi yapma
@@ -54,6 +56,33 @@ namespace TahilBorsaMS.Controllers
         [HttpPost]
         public ActionResult AddFarmer(tblFarmer farmer)
         {
+            var validator = new FarmerValidator();
+            var validationResult = validator.Validate(farmer);
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var error in validationResult.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
+                List<SelectListItem> list = (from f in db.tblCity.ToList()
+                                             select new SelectListItem
+                                             {
+                                                 Text = f.Name,
+                                                 Value = f.Id.ToString(),
+                                             }).ToList();
+                ViewBag.CityList = list;
+
+                List<SelectListItem> listD = (from f in db.tblDistrict.ToList()
+                                              select new SelectListItem
+                                              {
+                                                  Text = f.Name,
+                                                  Value = f.Id.ToString(),
+
+                                              }).ToList();
+                ViewBag.District = listD;
+                return View(farmer);
+            }
             if (ModelState.IsValid)
             {
 
@@ -68,11 +97,10 @@ namespace TahilBorsaMS.Controllers
 
                 farmer.tblAddress = address;
 
-
                 db.tblFarmer.Add(farmer);
                 db.SaveChanges();
 
-                return RedirectToAction("Index",farmer);
+                return RedirectToAction("Index", farmer);
             }
 
 
@@ -104,7 +132,7 @@ namespace TahilBorsaMS.Controllers
 
 
         public ActionResult EditFarmer(tblFarmer f)
-            {
+        {
             if (ModelState.IsValid)
             {
                 var farmer = db.tblFarmer.Find(f.Id);

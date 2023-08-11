@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TahilBorsa.Api.Code.Validation;
 using TahilBorsaMS.Controllers;
 using TahilBorsaMS.Models.Entity;
 
@@ -41,6 +42,19 @@ namespace TahilBorsaMS.Controllers
         }
         public ActionResult UpdateSale(tblSale s)
         {
+            var validator = new SaleValidator();
+            var validationResult = validator.Validate(s);
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var error in validationResult.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
+
+                return View("CallSale",s);
+            }
+
             var value = db.tblSale.Find (s.Id);
 
             value.tblEntryProductId = s.tblEntryProductId;

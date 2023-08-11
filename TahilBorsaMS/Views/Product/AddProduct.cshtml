@@ -14,10 +14,19 @@
     <div>
         <label>Ürün Adı</label>
         <input class="form-control" type="text" name="Name" />
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+
     </div>
     <div>
         <label>Ürün Ait Bilgi</label>
-        <textarea class="form-control" type="text" name="Information" >
+        <textarea class="form-control" type="text" name="Information">
+        </textarea>
+    </div>
+    @Html.ValidationMessageFor(model => model.Information, "", new { @class = "text-danger" })
+
+    <div>
+        <label>Ürüne Ait Fotoğraf Url Adresi</label>
+        <textarea class="form-control" type="text" name="Photo">
         </textarea>
     </div>
     <div class="mt-1">

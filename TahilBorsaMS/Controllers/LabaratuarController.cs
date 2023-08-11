@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using TahilBorsaMS.Controllers;
 using TahilBorsaMS.Models.Entity;
 using TahilBorsaMS.Models.Classes;
-
+using TahilBorsa.Api.Code.Validation;
 
 namespace TahilBorsaMS.Controllers
 {
@@ -32,6 +32,19 @@ namespace TahilBorsaMS.Controllers
         [HttpPost]
         public ActionResult AddLaBData(tblLabData l)
         {
+            var validator = new LabValidator();
+            var validationResult = validator.Validate(l);
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var error in validationResult.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
+
+                return View(l);
+            }
+
             db.tblLabData.Add(l);
             var pro = db.tblEntryProduct.Find(l.tblEntryProductId);
             pro.Process = true;

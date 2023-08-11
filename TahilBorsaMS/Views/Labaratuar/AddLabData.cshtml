@@ -18,11 +18,15 @@
                 <div class="col-md-6">
                     <label>Ürün Giriş Id</label>
                     @Html.TextBoxFor(x => x.tblEntryProductId, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.tblEntryProductId, "", new { @class = "text-danger" })
+
                 </div>
                 <br />
                 <div class="col-md-6">
                     <label>Ürün Besin Değerini Giriniz</label>
                     @Html.TextBoxFor(x => x.NutritionalValue, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.NutritionalValue, "", new { @class = "text-danger" })
+
                 </div>
             </div>
             <br />
@@ -35,7 +39,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Sil</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Kaydet</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">

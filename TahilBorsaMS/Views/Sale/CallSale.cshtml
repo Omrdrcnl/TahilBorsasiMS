@@ -29,11 +29,13 @@
                     <div class="col-md-6">
                         <label>Ürün Başlangıç Fiyatı</label>
                         @Html.TextBoxFor(x => x.BasePrice, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.BasePrice, "", new { @class = "text-danger" })
                         <br />
                     </div>
                     <div class="col-md-6">
                         <label>Ürün Satış Gerçekleşen Fiyatı</label>
                         @Html.TextBoxFor(x => x.ActualPrice, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ActualPrice, "", new { @class = "text-danger" })
                         <br />
                     </div>
                 </div>
@@ -46,6 +48,7 @@
                     <div class="col-md-6">
                         <label>Satın Alan Esnaf Numarası</label>
                         @Html.TextBoxFor(x => x.tblTradesmanId, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.tblTradesmanId, "", new { @class = "text-danger" })
                         <br />
                     </div>
                 </div>
