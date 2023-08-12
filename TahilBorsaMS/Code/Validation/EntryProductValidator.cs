@@ -5,7 +5,7 @@ namespace TahilBorsa.Api.Code.Validation
 {
     public class EntryProductValidator : AbstractValidator<tblEntryProduct>
     {
-        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
+        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
         public EntryProductValidator()
         {
             RuleFor(k => k.tblFarmerId).NotEmpty().WithMessage("Çiftçi Id Boş Geçilemez").

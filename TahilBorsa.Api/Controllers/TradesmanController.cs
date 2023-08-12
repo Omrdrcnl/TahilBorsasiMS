@@ -21,21 +21,28 @@ namespace TahilBorsa.Api.Controllers
         [HttpGet("Esnaflar")]
         public dynamic AllTradesman()
         {
-            List<tblTradesman> Tradesmans;
+            List<tblTradesman> items;
 
-            if (!cache.TryGetValue("Esnaflar", out Tradesmans))
+            if (!cache.TryGetValue("Esnaflar", out items))
             {
-                Tradesmans = repo.TradesmanRepository.FindAll().Include(
-                    t => t.tblAddress).ThenInclude(
-                    c => c.tblCity).ThenInclude(d => d.tblDistrict).ToList();
+                items = repo.TradesmanRepository
+                .FindAll()
+                .Include(t => t.tblAddress)
+                .ThenInclude(c => c.tblDistrict)
+                    .ThenInclude(d => d.tblCity)
+                    .ToList();
+                //sacma bir şekide tblCity Tablosuna erişemiyorum
 
-                cache.Set("Esnaflar", Tradesmans, DateTimeOffset.UtcNow.AddMinutes(100));
+
+                cache.Set("Esnaflar", items, DateTimeOffset.UtcNow.AddMinutes(100));
             }
+
+
 
             return new
             {
                 success = true,
-                data = Tradesmans
+                data = items
             };
         }
 
@@ -68,6 +75,7 @@ namespace TahilBorsa.Api.Controllers
                     tblDistrictId = json.DistrictId,
                     NeighborhoodName = json.NeighborhoodName,
                     FullAddress = json.FullAddress,
+
                 },
                 Contact = json.Contact,
                 IdentityNo = json.IdentityNo,

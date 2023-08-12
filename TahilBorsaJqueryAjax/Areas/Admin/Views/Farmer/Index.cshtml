@@ -93,6 +93,8 @@
             success: function (response) {
                 if (response.success) {
                     var tbody = $("#FarmerTable tbody");
+                    console.log("ciftci  data", response);
+
 
                     $.each(response.data, function (index, farmer) {
                         var row = $("<tr>");

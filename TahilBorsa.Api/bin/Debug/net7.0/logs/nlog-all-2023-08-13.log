@@ -1,0 +1,741 @@
+2023-08-13 00:02:00.7883||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/json 347 
+2023-08-13 00:02:00.8685||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:02:00.8685||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:02:00.8685||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:02:50.2052||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-08-13 00:02:50.6430||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7234 
+2023-08-13 00:02:50.6430||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5107 
+2023-08-13 00:02:50.6455||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-08-13 00:02:50.6455||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-08-13 00:02:50.6455||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api 
+2023-08-13 00:02:53.5537||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - - 
+2023-08-13 00:02:54.4421||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 896.3777ms 
+2023-08-13 00:02:54.4421||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - 
+2023-08-13 00:02:54.4421||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - - 
+2023-08-13 00:02:54.4651||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 20.6427ms 
+2023-08-13 00:02:54.5156||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 71.2891ms 
+2023-08-13 00:02:54.6052||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - 
+2023-08-13 00:02:54.7534||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 148.2127ms 
+2023-08-13 00:03:08.4784||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/json 347 
+2023-08-13 00:03:08.4784||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:03:08.4961||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:03:08.5246||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:03:09.4743||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'ActualPrice' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-13 00:03:09.4743||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Amount' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-13 00:03:09.4743||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'BasePrice' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-13 00:06:14.2896||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api) in 185759.5546ms 
+2023-08-13 00:06:14.2896||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:06:14.3247||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot convert null to 'int' because it is a non-nullable value type
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at TahilBorsa.Api.Controllers.TradesmanController.AddTradesman(Object model) in C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api\Controllers\TradesmanController.cs:line 66
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-08-13 00:06:14.4157||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:06:14.4157||ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot convert null to 'int' because it is a non-nullable value type
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at TahilBorsa.Api.Controllers.TradesmanController.AddTradesman(Object model) in C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api\Controllers\TradesmanController.cs:line 66
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-08-13 00:06:14.4349||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/json 347 - 500 - text/plain;+charset=utf-8 185956.4752ms 
+2023-08-13 00:06:49.0522||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/json 303 
+2023-08-13 00:06:49.0522||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:06:49.0522||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:06:49.0522||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:06:49.9335||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (75ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [tblAddress] ([FullAddress], [NeighborhoodName], [tblCityId], [tblDistrictId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3); 
+2023-08-13 00:06:49.9746||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (12ms) [Parameters=[@p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [tblTradesman] ([Birthdate], [Contact], [FirstName], [IdentityNo], [LastName], [tblAddressId])
+OUTPUT INSERTED.[Id]
+VALUES (@p4, @p5, @p6, @p7, @p8, @p9); 
+2023-08-13 00:06:50.0031||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-08-13 00:06:50.0514||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api) in 986.1005ms 
+2023-08-13 00:06:50.0514||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:06:50.0514||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/json 303 - 200 - application/json;+charset=utf-8 1005.1988ms 
+2023-08-13 00:09:03.4942||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7234/api/Auth/Login application/json;+charset=utf-8 37 
+2023-08-13 00:09:03.4942||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-13 00:09:03.5049||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Object Login(System.Object) on controller TahilBorsa.Api.Controllers.AuthController (TahilBorsa.Api). 
+2023-08-13 00:09:03.8999||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (15ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[FirstName], [t].[LastName], [t].[Password], [t].[Username], [t].[tblRolId]
+FROM [tblUser] AS [t]
+WHERE [t].[Username] = @__username_0 AND [t].[Password] = @__password_1 
+2023-08-13 00:09:03.9173||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@__item_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[Name]
+FROM [tblRol] AS [t]
+WHERE [t].[Id] = @__item_Id_0 
+2023-08-13 00:09:04.0820||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:09:04.0887||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api) in 583.5312ms 
+2023-08-13 00:09:04.0887||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.AuthController.Login (TahilBorsa.Api)' 
+2023-08-13 00:09:04.0887||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7234/api/Auth/Login application/json;+charset=utf-8 37 - 200 - application/json;+charset=utf-8 595.6826ms 
+2023-08-13 00:09:20.4419||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:09:20.4419||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:09:20.4419||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 3.9803ms 
+2023-08-13 00:09:20.4419||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:09:20.4419||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:09:20.4419||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:09:20.4419||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:09:20.5940||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Birthdate], [t].[Contact], [t].[FirstName], [t].[IdentityNo], [t].[LastName], [t].[tblAddressId], [t0].[Id], [t0].[FullAddress], [t0].[NeighborhoodName], [t0].[tblCityId], [t0].[tblDistrictId], [t1].[Id], [t1].[Name], [t1].[tblCityId], [t2].[Id], [t2].[Name]
+FROM [tblTradesman] AS [t]
+INNER JOIN [tblAddress] AS [t0] ON [t].[tblAddressId] = [t0].[Id]
+LEFT JOIN [tblDistrict] AS [t1] ON [t0].[tblDistrictId] = [t1].[Id]
+LEFT JOIN [tblCity] AS [t2] ON [t1].[tblCityId] = [t2].[Id] 
+2023-08-13 00:09:20.6019||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:09:20.6019||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 157.5258ms 
+2023-08-13 00:09:20.6019||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:09:20.6019||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 160.9844ms 
+2023-08-13 00:09:31.6122||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - 
+2023-08-13 00:09:31.6168||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:09:31.6168||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - - 204 - - 5.3653ms 
+2023-08-13 00:09:31.6168||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - 
+2023-08-13 00:09:31.6168||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:09:31.6168||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:09:31.6168||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-13 00:09:31.6329||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-13 00:09:31.6329||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:09:31.6329||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 15.4849ms 
+2023-08-13 00:09:31.6329||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:09:31.6329||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 18.8638ms 
+2023-08-13 00:09:37.8033||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/District/5 - - 
+2023-08-13 00:09:37.8033||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:09:37.8033||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/District/5 - - - 204 - - 2.1107ms 
+2023-08-13 00:09:37.8033||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/District/5 application/json;+chartset=utf-8 - 
+2023-08-13 00:09:37.8033||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:09:37.8033||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:09:37.8178||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DistrictsByCity", controller = "District"}. Executing controller action with signature System.Object DistrictsByCity(Int32) on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-13 00:09:37.8455||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t]
+INNER JOIN [tblCity] AS [t0] ON [t].[tblCityId] = [t0].[Id]
+WHERE [t].[tblCityId] = @__id_0 
+2023-08-13 00:09:37.8455||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:09:37.8494||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api) in 31.2555ms 
+2023-08-13 00:09:37.8494||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:09:37.8494||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/District/5 application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 41.8741ms 
+2023-08-13 00:09:44.3710||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 177 
+2023-08-13 00:09:44.3710||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:09:44.3710||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:09:44.3710||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:09:44.4229||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2023-08-13 00:09:44.4229||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api) in 51.7258ms 
+2023-08-13 00:09:44.4229||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:09:44.4229||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 177 - 415 - application/problem+json;+charset=utf-8 54.3784ms 
+2023-08-13 00:09:57.2019||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:09:57.2071||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:09:57.2071||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 7.7844ms 
+2023-08-13 00:09:57.2071||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:09:57.2071||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:09:57.2228||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:09:57.2228||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:09:57.2228||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:09:57.2228||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 2.3166ms 
+2023-08-13 00:09:57.2228||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:09:57.2228||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 7.2204ms 
+2023-08-13 00:10:02.2896||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - 
+2023-08-13 00:10:02.2896||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:10:02.2896||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - - 204 - - 1.3083ms 
+2023-08-13 00:10:02.2896||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - 
+2023-08-13 00:10:02.2896||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:10:02.2896||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:10:02.2896||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-13 00:10:02.2896||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-13 00:10:02.2896||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:10:02.3037||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 9.5183ms 
+2023-08-13 00:10:02.3037||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:10:02.3037||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 14.6877ms 
+2023-08-13 00:10:21.4720||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/District/5 - - 
+2023-08-13 00:10:21.4739||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:10:21.4739||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/District/5 - - - 204 - - 2.2071ms 
+2023-08-13 00:10:21.4739||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/District/5 application/json;+chartset=utf-8 - 
+2023-08-13 00:10:21.4739||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:10:21.4739||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:10:21.4739||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DistrictsByCity", controller = "District"}. Executing controller action with signature System.Object DistrictsByCity(Int32) on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-13 00:10:21.5101||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (21ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t]
+INNER JOIN [tblCity] AS [t0] ON [t].[tblCityId] = [t0].[Id]
+WHERE [t].[tblCityId] = @__id_0 
+2023-08-13 00:10:21.5101||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:10:21.5101||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api) in 31.8622ms 
+2023-08-13 00:10:21.5101||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:10:21.5101||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/District/5 application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 34.4589ms 
+2023-08-13 00:10:26.1406||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 193 
+2023-08-13 00:10:26.1406||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:10:26.1406||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:10:26.1406||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:10:26.1472||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2023-08-13 00:10:26.1472||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api) in 4.1657ms 
+2023-08-13 00:10:26.1472||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:10:26.1472||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 193 - 415 - application/problem+json;+charset=utf-8 7.8397ms 
+2023-08-13 00:10:27.8979||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 193 
+2023-08-13 00:10:27.8979||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:10:27.8979||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:10:27.8979||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:10:27.8979||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2023-08-13 00:10:27.8979||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api) in 1.0488ms 
+2023-08-13 00:10:27.8979||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:10:27.8979||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 193 - 415 - application/problem+json;+charset=utf-8 3.1354ms 
+2023-08-13 00:12:35.4470||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - 
+2023-08-13 00:12:35.4470||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:12:35.4470||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - - 204 - - 3.4914ms 
+2023-08-13 00:12:35.4470||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - 
+2023-08-13 00:12:35.4470||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:12:35.4470||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:12:35.4470||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-13 00:12:35.4790||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-13 00:12:35.4790||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:12:35.4790||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 24.2218ms 
+2023-08-13 00:12:35.4790||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:12:35.4790||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 29.4148ms 
+2023-08-13 00:12:46.8397||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - 
+2023-08-13 00:12:46.8397||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:12:46.8397||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - - 204 - - 5.0133ms 
+2023-08-13 00:12:46.8496||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - 
+2023-08-13 00:12:46.8496||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:12:46.8496||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:12:46.8496||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-13 00:12:46.8496||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-13 00:12:46.8496||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:12:46.8496||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 11.5067ms 
+2023-08-13 00:12:46.8653||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:12:46.8653||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 17.9338ms 
+2023-08-13 00:12:48.4807||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:12:48.4807||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:12:48.4807||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 4.6244ms 
+2023-08-13 00:12:48.4925||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:12:48.4925||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:12:48.4925||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:12:48.4925||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:12:48.4925||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:12:48.4925||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 2.249ms 
+2023-08-13 00:12:48.4925||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:12:48.4925||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 5.5322ms 
+2023-08-13 00:12:54.8579||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - 
+2023-08-13 00:12:54.8579||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:12:54.8579||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - - 204 - - 2.0421ms 
+2023-08-13 00:12:54.8643||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - 
+2023-08-13 00:12:54.8643||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:12:54.8643||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:12:54.8643||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-13 00:12:54.9117||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-13 00:12:54.9117||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:12:54.9117||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 38.396ms 
+2023-08-13 00:12:54.9117||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:12:54.9117||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 60.9290ms 
+2023-08-13 00:12:58.0952||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/District/5 - - 
+2023-08-13 00:12:58.0981||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:12:58.0981||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/District/5 - - - 204 - - 6.2756ms 
+2023-08-13 00:12:58.0981||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/District/5 application/json;+chartset=utf-8 - 
+2023-08-13 00:12:58.0981||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:12:58.0981||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:12:58.0981||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DistrictsByCity", controller = "District"}. Executing controller action with signature System.Object DistrictsByCity(Int32) on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-13 00:12:58.1217||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t]
+INNER JOIN [tblCity] AS [t0] ON [t].[tblCityId] = [t0].[Id]
+WHERE [t].[tblCityId] = @__id_0 
+2023-08-13 00:12:58.1217||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:12:58.1217||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api) in 17.0137ms 
+2023-08-13 00:12:58.1217||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:12:58.1217||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/District/5 application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 18.8850ms 
+2023-08-13 00:13:08.1134||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 206 
+2023-08-13 00:13:08.1134||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:13:08.1134||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:13:08.1134||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:13:08.1134||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2023-08-13 00:13:08.1134||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api) in 1.2738ms 
+2023-08-13 00:13:08.1134||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:13:08.1134||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 206 - 415 - application/problem+json;+charset=utf-8 5.1834ms 
+2023-08-13 00:13:48.5110||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 206 
+2023-08-13 00:13:48.5265||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:13:48.5265||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:13:48.5265||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:13:48.5265||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2023-08-13 00:13:48.5265||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api) in 1.7375ms 
+2023-08-13 00:13:48.5265||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:13:48.5265||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 206 - 415 - application/problem+json;+charset=utf-8 18.6811ms 
+2023-08-13 00:14:01.0028||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - 
+2023-08-13 00:14:01.0045||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:14:01.0045||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - - 204 - - 2.8301ms 
+2023-08-13 00:14:01.0045||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - 
+2023-08-13 00:14:01.0045||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:14:01.0045||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:14:01.0200||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-13 00:14:01.0200||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-13 00:14:01.0200||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:14:01.0363||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 16.082ms 
+2023-08-13 00:14:01.0363||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:14:01.0363||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 25.8768ms 
+2023-08-13 00:14:02.9537||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/District/2 - - 
+2023-08-13 00:14:02.9537||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/District/2 - - 
+2023-08-13 00:14:02.9537||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:14:02.9537||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:14:02.9537||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/District/2 - - - 204 - - 0.7114ms 
+2023-08-13 00:14:02.9537||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/District/2 - - - 204 - - 1.9148ms 
+2023-08-13 00:14:02.9655||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/District/2 application/json;+chartset=utf-8 - 
+2023-08-13 00:14:02.9655||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:14:02.9655||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:14:02.9655||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DistrictsByCity", controller = "District"}. Executing controller action with signature System.Object DistrictsByCity(Int32) on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-13 00:14:02.9780||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t]
+INNER JOIN [tblCity] AS [t0] ON [t].[tblCityId] = [t0].[Id]
+WHERE [t].[tblCityId] = @__id_0 
+2023-08-13 00:14:02.9780||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:14:02.9780||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api) in 12.4929ms 
+2023-08-13 00:14:02.9780||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:14:02.9780||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/District/2 application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 14.0579ms 
+2023-08-13 00:14:02.9780||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/District/2 application/json;+chartset=utf-8 - 
+2023-08-13 00:14:02.9780||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:14:02.9780||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:14:02.9780||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DistrictsByCity", controller = "District"}. Executing controller action with signature System.Object DistrictsByCity(Int32) on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-13 00:14:02.9780||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t]
+INNER JOIN [tblCity] AS [t0] ON [t].[tblCityId] = [t0].[Id]
+WHERE [t].[tblCityId] = @__id_0 
+2023-08-13 00:14:02.9780||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:14:02.9780||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api) in 4.2793ms 
+2023-08-13 00:14:02.9780||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:14:02.9780||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/District/2 application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 6.2980ms 
+2023-08-13 00:14:06.4456||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 177 
+2023-08-13 00:14:06.4456||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:14:06.4456||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:14:06.4456||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:14:06.4456||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2023-08-13 00:14:06.4456||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api) in 0.8322ms 
+2023-08-13 00:14:06.4456||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:14:06.4456||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 177 - 415 - application/problem+json;+charset=utf-8 2.4757ms 
+2023-08-13 00:17:08.2906||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:17:08.3013||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:17:08.3013||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 15.1154ms 
+2023-08-13 00:17:08.3013||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:17:08.3013||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:17:08.3013||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:17:08.3013||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:17:08.3013||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:17:08.3158||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 2.6208ms 
+2023-08-13 00:17:08.3158||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:17:08.3158||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 4.5652ms 
+2023-08-13 00:17:37.3670||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - 
+2023-08-13 00:17:37.3670||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:17:37.3670||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - - 204 - - 8.5609ms 
+2023-08-13 00:17:37.3670||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - 
+2023-08-13 00:17:37.3787||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:17:37.3787||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:17:37.3787||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-13 00:17:37.3787||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-13 00:17:37.3787||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:17:37.4042||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 24.6742ms 
+2023-08-13 00:17:37.4042||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:17:37.4042||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 27.7319ms 
+2023-08-13 00:17:40.9463||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/District/3 - - 
+2023-08-13 00:17:40.9463||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:17:40.9463||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/District/3 - - - 204 - - 2.9306ms 
+2023-08-13 00:17:40.9463||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/District/3 application/json;+chartset=utf-8 - 
+2023-08-13 00:17:40.9463||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:17:40.9583||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:17:40.9583||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DistrictsByCity", controller = "District"}. Executing controller action with signature System.Object DistrictsByCity(Int32) on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-13 00:17:40.9808||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (20ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t]
+INNER JOIN [tblCity] AS [t0] ON [t].[tblCityId] = [t0].[Id]
+WHERE [t].[tblCityId] = @__id_0 
+2023-08-13 00:17:40.9808||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:17:40.9808||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api) in 22.6843ms 
+2023-08-13 00:17:40.9808||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:17:40.9808||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/District/3 application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 27.4374ms 
+2023-08-13 00:17:48.0298||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 208 
+2023-08-13 00:17:48.0298||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:17:48.0298||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:17:48.0298||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:17:48.0298||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2023-08-13 00:17:48.0298||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api) in 1.1298ms 
+2023-08-13 00:17:48.0298||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:17:48.0298||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 208 - 415 - application/problem+json;+charset=utf-8 3.8018ms 
+2023-08-13 00:18:34.8756||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Farmer/TumCiftciler - - 
+2023-08-13 00:18:34.8803||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:18:34.8803||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api)' 
+2023-08-13 00:18:34.8948||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumCiftciler", controller = "Farmer"}. Executing controller action with signature System.Object TumCiftciler() on controller TahilBorsa.Api.Controllers.FarmerController (TahilBorsa.Api). 
+2023-08-13 00:18:34.9308||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[BirthDate], [t].[Contact], [t].[FirstName], [t].[IdentityNo], [t].[LastName], [t].[tblAddressId], [t0].[Id], [t0].[FullAddress], [t0].[NeighborhoodName], [t0].[tblCityId], [t0].[tblDistrictId], [t1].[Id], [t1].[Name], [t1].[tblCityId], [t2].[Id], [t2].[Name]
+FROM [tblFarmer] AS [t]
+INNER JOIN [tblAddress] AS [t0] ON [t].[tblAddressId] = [t0].[Id]
+LEFT JOIN [tblDistrict] AS [t1] ON [t0].[tblDistrictId] = [t1].[Id]
+LEFT JOIN [tblCity] AS [t2] ON [t1].[tblCityId] = [t2].[Id] 
+2023-08-13 00:18:34.9308||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[<>f__AnonymousType3`7[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType4`6[[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], TahilBorsa.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TahilBorsa.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:18:34.9438||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api) in 48.7652ms 
+2023-08-13 00:18:34.9438||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api)' 
+2023-08-13 00:18:34.9438||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Farmer/TumCiftciler - - - 200 - application/json;+charset=utf-8 70.7345ms 
+2023-08-13 00:18:37.3920||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:18:37.3953||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:18:37.3953||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 6.7372ms 
+2023-08-13 00:18:37.3953||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:18:37.3953||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:18:37.3953||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:18:37.3953||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:18:37.3953||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:18:37.3953||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 4.287ms 
+2023-08-13 00:18:37.3953||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:18:37.3953||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 7.2461ms 
+2023-08-13 00:18:41.3457||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - 
+2023-08-13 00:18:41.3457||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:18:41.3469||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - - 204 - - 1.2552ms 
+2023-08-13 00:18:41.3469||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - 
+2023-08-13 00:18:41.3469||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:18:41.3469||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:18:41.3469||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-13 00:18:41.3469||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-13 00:18:41.3469||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:18:41.3469||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 5.3621ms 
+2023-08-13 00:18:41.3469||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:18:41.3469||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 7.4705ms 
+2023-08-13 00:18:44.2231||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/District/4 - - 
+2023-08-13 00:18:44.2231||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:18:44.2231||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/District/4 - - - 204 - - 1.7832ms 
+2023-08-13 00:18:44.2231||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/District/4 application/json;+chartset=utf-8 - 
+2023-08-13 00:18:44.2231||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:18:44.2231||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:18:44.2231||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DistrictsByCity", controller = "District"}. Executing controller action with signature System.Object DistrictsByCity(Int32) on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-13 00:18:44.2460||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t]
+INNER JOIN [tblCity] AS [t0] ON [t].[tblCityId] = [t0].[Id]
+WHERE [t].[tblCityId] = @__id_0 
+2023-08-13 00:18:44.2460||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:18:44.2460||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api) in 11.6828ms 
+2023-08-13 00:18:44.2460||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:18:44.2460||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/District/4 application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 13.9627ms 
+2023-08-13 00:18:51.2449||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 208 
+2023-08-13 00:18:51.2449||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:18:51.2449||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:18:51.2449||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:18:51.2449||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2023-08-13 00:18:51.2449||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api) in 1.3883ms 
+2023-08-13 00:18:51.2449||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:18:51.2449||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/x-www-form-urlencoded;+charset=UTF-8 208 - 415 - application/problem+json;+charset=utf-8 3.7772ms 
+2023-08-13 00:20:33.5893||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:20:33.5893||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:20:33.5893||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 3.3683ms 
+2023-08-13 00:20:33.5893||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:20:33.5985||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:20:33.5985||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:20:33.5985||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:20:33.5985||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:20:33.5985||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 2.041ms 
+2023-08-13 00:20:33.5985||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:20:33.5985||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 13.0752ms 
+2023-08-13 00:23:23.2346||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:23:23.2346||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:23:23.2421||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 7.6171ms 
+2023-08-13 00:23:23.2421||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:23:23.2421||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:23:23.2421||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:23:23.2421||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:23:23.2421||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:23:23.2421||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 1.4308ms 
+2023-08-13 00:23:23.2421||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:23:23.2421||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 2.9642ms 
+2023-08-13 00:24:03.3195||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:24:03.3195||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:24:03.3195||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 2.9357ms 
+2023-08-13 00:24:03.3195||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:24:03.3195||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:24:03.3195||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:24:03.3195||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:24:03.3195||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:24:03.3195||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 1.6201ms 
+2023-08-13 00:24:03.3319||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:24:03.3319||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 7.3750ms 
+2023-08-13 00:24:26.6060||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:24:26.6060||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:24:26.6060||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 2.3026ms 
+2023-08-13 00:24:26.6168||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:24:26.6168||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:24:26.6168||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:24:26.6168||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:24:26.6168||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:24:26.6168||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 1.6912ms 
+2023-08-13 00:24:26.6168||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:24:26.6168||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 7.0235ms 
+2023-08-13 00:24:31.5436||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - 
+2023-08-13 00:24:31.5436||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:24:31.5436||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - - 204 - - 4.1792ms 
+2023-08-13 00:24:31.5436||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - 
+2023-08-13 00:24:31.5504||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:24:31.5504||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:24:31.5504||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-13 00:24:31.5823||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-13 00:24:31.5823||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:24:31.5823||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 34.2574ms 
+2023-08-13 00:24:31.5823||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:24:31.5823||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 37.6259ms 
+2023-08-13 00:24:33.0790||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/District/1 - - 
+2023-08-13 00:24:33.0828||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:24:33.0828||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/District/1 - - - 204 - - 6.5702ms 
+2023-08-13 00:24:33.0828||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/District/1 application/json;+chartset=utf-8 - 
+2023-08-13 00:24:33.0828||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:24:33.0828||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:24:33.0828||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DistrictsByCity", controller = "District"}. Executing controller action with signature System.Object DistrictsByCity(Int32) on controller TahilBorsa.Api.Controllers.DistrictController (TahilBorsa.Api). 
+2023-08-13 00:24:33.1067||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[tblCityId]
+FROM [tblDistrict] AS [t]
+INNER JOIN [tblCity] AS [t0] ON [t].[tblCityId] = [t0].[Id]
+WHERE [t].[tblCityId] = @__id_0 
+2023-08-13 00:24:33.1067||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblDistrict, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:24:33.1067||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api) in 20.1114ms 
+2023-08-13 00:24:33.1067||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.DistrictController.DistrictsByCity (TahilBorsa.Api)' 
+2023-08-13 00:24:33.1067||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/District/1 application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 22.5505ms 
+2023-08-13 00:24:35.3408||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/EsnafEkle - - 
+2023-08-13 00:24:35.3408||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:24:35.3408||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/EsnafEkle - - - 204 - - 1.9935ms 
+2023-08-13 00:24:35.3408||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/json;+charset=UTF-8 218 
+2023-08-13 00:24:35.3408||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:24:35.3408||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:24:35.3408||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:26:11.0644||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api) in 95718.3955ms 
+2023-08-13 00:26:11.0677||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:26:11.0677||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot convert null to 'int' because it is a non-nullable value type
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure, CallSite, Object)
+   at TahilBorsa.Api.Controllers.TradesmanController.AddTradesman(Object model) in C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api\Controllers\TradesmanController.cs:line 66
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2023-08-13 00:26:11.0677||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:26:11.0821||ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot convert null to 'int' because it is a non-nullable value type
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure, CallSite, Object)
+   at TahilBorsa.Api.Controllers.TradesmanController.AddTradesman(Object model) in C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api\Controllers\TradesmanController.cs:line 66
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-08-13 00:26:11.0821||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/json;+charset=UTF-8 218 - 500 - text/plain;+charset=utf-8 95747.4230ms 
+2023-08-13 00:36:43.3704||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Farmer/TumCiftciler - - 
+2023-08-13 00:36:43.3826||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:36:43.3826||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api)' 
+2023-08-13 00:36:43.3826||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumCiftciler", controller = "Farmer"}. Executing controller action with signature System.Object TumCiftciler() on controller TahilBorsa.Api.Controllers.FarmerController (TahilBorsa.Api). 
+2023-08-13 00:36:43.3826||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[<>f__AnonymousType3`7[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType4`6[[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], TahilBorsa.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TahilBorsa.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:36:43.3989||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api) in 12.8492ms 
+2023-08-13 00:36:43.3989||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api)' 
+2023-08-13 00:36:43.3989||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Farmer/TumCiftciler - - - 200 - application/json;+charset=utf-8 31.6110ms 
+2023-08-13 00:36:45.5681||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Farmer/TumCiftciler - - 
+2023-08-13 00:36:45.5681||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:36:45.5681||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api)' 
+2023-08-13 00:36:45.5681||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumCiftciler", controller = "Farmer"}. Executing controller action with signature System.Object TumCiftciler() on controller TahilBorsa.Api.Controllers.FarmerController (TahilBorsa.Api). 
+2023-08-13 00:36:45.5681||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[<>f__AnonymousType3`7[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType4`6[[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], TahilBorsa.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TahilBorsa.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:36:45.5681||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api) in 3.0917ms 
+2023-08-13 00:36:45.5681||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api)' 
+2023-08-13 00:36:45.5681||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Farmer/TumCiftciler - - - 200 - application/json;+charset=utf-8 12.6978ms 
+2023-08-13 00:36:53.8678||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:36:53.8678||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:36:53.8678||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 2.5452ms 
+2023-08-13 00:36:53.8678||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:36:53.8813||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:36:53.8813||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:36:53.8813||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:36:53.8813||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:36:53.9114||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 26.9634ms 
+2023-08-13 00:36:53.9114||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:36:53.9114||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 37.0651ms 
+2023-08-13 00:37:39.9224||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:37:39.9224||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:37:39.9261||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 3.6431ms 
+2023-08-13 00:37:39.9463||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:37:39.9463||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:37:39.9463||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:37:39.9463||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:37:39.9564||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:37:39.9564||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 4.8383ms 
+2023-08-13 00:37:39.9564||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:37:39.9564||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 15.7982ms 
+2023-08-13 00:38:31.6188||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Farmer/TumCiftciler - - 
+2023-08-13 00:38:31.6188||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:38:31.6188||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api)' 
+2023-08-13 00:38:31.6188||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumCiftciler", controller = "Farmer"}. Executing controller action with signature System.Object TumCiftciler() on controller TahilBorsa.Api.Controllers.FarmerController (TahilBorsa.Api). 
+2023-08-13 00:38:31.6188||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[<>f__AnonymousType3`7[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType4`6[[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], TahilBorsa.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TahilBorsa.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:38:31.6313||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api) in 9.419ms 
+2023-08-13 00:38:31.6313||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api)' 
+2023-08-13 00:38:31.6313||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Farmer/TumCiftciler - - - 200 - application/json;+charset=utf-8 14.1830ms 
+2023-08-13 00:38:36.2776||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Farmer/TumCiftciler - - 
+2023-08-13 00:38:36.2776||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:38:36.2776||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api)' 
+2023-08-13 00:38:36.2776||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumCiftciler", controller = "Farmer"}. Executing controller action with signature System.Object TumCiftciler() on controller TahilBorsa.Api.Controllers.FarmerController (TahilBorsa.Api). 
+2023-08-13 00:38:36.2776||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[<>f__AnonymousType3`7[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType4`6[[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], TahilBorsa.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TahilBorsa.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:38:36.2776||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api) in 3.8179ms 
+2023-08-13 00:38:36.2854||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.FarmerController.TumCiftciler (TahilBorsa.Api)' 
+2023-08-13 00:38:36.2854||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Farmer/TumCiftciler - - - 200 - application/json;+charset=utf-8 8.7782ms 
+2023-08-13 00:38:38.9566||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - 
+2023-08-13 00:38:38.9610||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Farmer/41 - - 
+2023-08-13 00:38:38.9610||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:38:38.9610||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:38:38.9610||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - - 204 - - 4.8359ms 
+2023-08-13 00:38:38.9610||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.FarmerController.Get (TahilBorsa.Api)' 
+2023-08-13 00:38:38.9610||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Get", controller = "Farmer"}. Executing controller action with signature System.Object Get(Int32) on controller TahilBorsa.Api.Controllers.FarmerController (TahilBorsa.Api). 
+2023-08-13 00:38:38.9610||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+charset=utf-8 - 
+2023-08-13 00:38:38.9610||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:38:38.9610||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:38:38.9610||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-13 00:38:39.0022||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-13 00:38:39.0022||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:38:39.0043||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (12ms) [Parameters=[@__farmerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BirthDate], [t].[Contact], [t].[FirstName], [t].[IdentityNo], [t].[LastName], [t].[tblAddressId], [t0].[Id], [t0].[FullAddress], [t0].[NeighborhoodName], [t0].[tblCityId], [t0].[tblDistrictId]
+FROM [tblFarmer] AS [t]
+INNER JOIN [tblAddress] AS [t0] ON [t].[tblAddressId] = [t0].[Id]
+WHERE [t].[Id] = @__farmerId_0 
+2023-08-13 00:38:39.0043||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`7[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`5[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], TahilBorsa.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TahilBorsa.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-08-13 00:38:39.0043||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 38.8197ms 
+2023-08-13 00:38:39.0043||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:38:39.0043||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+charset=utf-8 - - 200 - application/json;+charset=utf-8 43.2247ms 
+2023-08-13 00:38:39.0043||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.FarmerController.Get (TahilBorsa.Api) in 50.4132ms 
+2023-08-13 00:38:39.0043||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.FarmerController.Get (TahilBorsa.Api)' 
+2023-08-13 00:38:39.0043||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Farmer/41 - - - 200 - application/json;+charset=utf-8 57.8137ms 
+2023-08-13 00:38:42.1277||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:38:42.1311||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:38:42.1311||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 3.9459ms 
+2023-08-13 00:38:42.1311||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:38:42.1311||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:38:42.1311||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:38:42.1311||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:38:42.1311||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:38:42.1311||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 1.2038ms 
+2023-08-13 00:38:42.1311||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:38:42.1311||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 3.2882ms 
+2023-08-13 00:40:29.9831||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:40:29.9881||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:40:29.9881||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 11.8035ms 
+2023-08-13 00:40:29.9881||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:40:29.9881||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:40:29.9881||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:40:29.9881||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:40:29.9881||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:40:29.9881||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 1.1714ms 
+2023-08-13 00:40:29.9881||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:40:29.9881||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 2.9981ms 
+2023-08-13 00:41:21.3996||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - 
+2023-08-13 00:41:21.3996||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:41:21.3996||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/Esnaflar - - - 204 - - 8.7825ms 
+2023-08-13 00:41:21.4205||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - 
+2023-08-13 00:41:21.4205||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:41:21.4260||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:41:21.4260||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AllTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AllTradesman() on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 
+2023-08-13 00:41:21.4260||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblTradesman, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:41:21.4431||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api) in 14.5681ms 
+2023-08-13 00:41:21.4431||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AllTradesman (TahilBorsa.Api)' 
+2023-08-13 00:41:21.4431||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Tradesman/Esnaflar application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 23.5160ms 
+2023-08-13 00:41:22.7822||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - 
+2023-08-13 00:41:22.7853||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:41:22.7853||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/City/TumIller - - - 204 - - 3.2957ms 
+2023-08-13 00:41:22.7853||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - 
+2023-08-13 00:41:22.7853||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:41:22.7853||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:41:22.7853||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TumIller", controller = "City"}. Executing controller action with signature System.Object TumIller() on controller TahilBorsa.Api.Controllers.CityController (TahilBorsa.Api). 
+2023-08-13 00:41:22.8096||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tblCity] AS [t] 
+2023-08-13 00:41:22.8096||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Entity.tblCity, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-13 00:41:22.8096||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api) in 22.0882ms 
+2023-08-13 00:41:22.8096||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.CityController.TumIller (TahilBorsa.Api)' 
+2023-08-13 00:41:22.8096||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/City/TumIller application/json;+chartset=utf-8 - - 200 - application/json;+charset=utf-8 26.0693ms 
+2023-08-13 00:41:31.6841||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/EsnafEkle - - 
+2023-08-13 00:41:31.6841||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:41:31.6841||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Tradesman/EsnafEkle - - - 204 - - 2.0837ms 
+2023-08-13 00:41:31.6841||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7234/api/Tradesman/EsnafEkle application/json;+charset=UTF-8 250 
+2023-08-13 00:41:31.6841||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-13 00:41:31.6925||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.TradesmanController.AddTradesman (TahilBorsa.Api)' 
+2023-08-13 00:41:31.6925||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddTradesman", controller = "Tradesman"}. Executing controller action with signature System.Object AddTradesman(System.Object) on controller TahilBorsa.Api.Controllers.TradesmanController (TahilBorsa.Api). 

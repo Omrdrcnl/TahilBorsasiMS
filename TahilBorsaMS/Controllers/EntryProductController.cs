@@ -12,7 +12,7 @@ namespace TahilBorsaMS.Controllers
 {
     public class EntryProductController : Controller
     {
-        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
+        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
         // GET: EntryProduct
         public ActionResult Index(tblEntryProduct p)
         {

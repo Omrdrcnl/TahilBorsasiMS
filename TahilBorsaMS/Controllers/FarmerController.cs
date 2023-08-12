@@ -16,7 +16,7 @@ namespace TahilBorsaMS.Controllers
 {
     public class FarmerController : Controller
     {
-        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
+        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
         // GET: Farmer
         public ActionResult Index(string f, int page = 1)
         {

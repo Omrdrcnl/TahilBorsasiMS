@@ -50,7 +50,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="tblProductId" Type="tinyint" Nullable="false" />
+    <Property Name="tblProductId" Type="int" Nullable="false" />
     <Property Name="tblFarmerId" Type="int" Nullable="false" />
     <Property Name="DateTime" Type="smalldatetime" />
     <Property Name="Process" Type="bit" />
@@ -80,7 +80,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="Information" Type="nvarchar" MaxLength="1000" />
     <Property Name="Photo" Type="nvarchar" MaxLength="500" />

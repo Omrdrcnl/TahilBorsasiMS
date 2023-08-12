@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\js\JavaScript.js" />
+    <Content Remove="wwwroot\js\CityAndDist.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -387,10 +387,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\js\JavaScript.js" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Areas\Admin\Model\" />
     <Folder Include="Areas\General\Controllers\" />
     <Folder Include="Areas\General\Model\" />
@@ -399,16 +395,18 @@
     <Folder Include="Areas\Labaratuar\Model\" />
     <Folder Include="Areas\Labaratuar\Views\" />
     <Folder Include="Areas\Labaratuar\" />
-    <Folder Include="Code\" />
     <Folder Include="wwwroot\hightech-html\icon\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\js\JavaScript.js" />
+    <None Include="wwwroot\js\CityAndDist.js" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="Moment.js" Version="2.29.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
   </ItemGroup>
 
 </Project>

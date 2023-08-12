@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
@@ -7,40 +6,113 @@
 <div class="container mt-5">
     <h2>Borsamızda İşlem Gören Ürünler</h2>
     <br />
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-       
-            <div class="card  mb-3 col-md-6 col-sm-12">
-                <img src="" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Name</h5>
-                    <p class="card-text">Information</p>
+    <div class="row row-cols-1 row-cols-md-2 g-4" id="productList">
 
-                </div>
-                <p class="card-text"><small class="text-muted">İşlem Numarası:"Id"</small></p>
-                <div class="btn-group m-1">
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger btn-round">Sil</button>
-                    <a href="~/Product/CallProduct/Id" class="btn btn-outline-success btn-round">Güncelle</a>
-                </div>
+        <div class="card  mb-3 col-md-6 col-sm-12">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 id="productName" class="card-title">Name</h5>
+                <p id="productInformation" class="card-text">Information</p>
+
             </div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Sil</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            Ürün Kaydını Silmek İstiyor musunuz ?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
-                            <a href="~/Product/DeleteProduct/Id" class="btn btn-outline-danger">Sil</a>
-                        </div>
+            <p class="card-text"><small class="text-muted">İşlem Numarası:"Id"</small></p>
+            <div class="btn-group m-1">
+                <button type="button" data-bs-toggle="modal" data-bs-target="exampleModal" class="btn btn-danger btn-round">Sil</button>
+                <a href="~/Product/CallProduct/Id" class="btn btn-outline-success btn-round">Güncelle</a>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Sil</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Ürün Kaydını Silmek İstiyor musunuz ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                        <a href="~/Product/DeleteProduct/Id" class="btn btn-outline-danger">Sil</a>
                     </div>
                 </div>
             </div>
+        </div>
 
-        
+
     </div>
-    <a href="~/Product/AddProduct" class="btn btn-primary">Yeni Ürün Ekle</a>
+    <div class="modal" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="~/Admin/Product/AddProduct" class="btn btn-primary">Yeni Ürün Ekle</a>
 </div>
+
+
+<script>
+    function getProduct() {
+
+        var productList = $("#productList");
+
+        fetchData("Product/TumUrunler", function (response) {
+
+            console.log("ürünler res", response)
+            const products = response.data;
+            productList.empty();
+
+
+            if (response.success) {
+                $.each(products, function (index, product) {
+                    var card = `
+                                    <div class="card mb-3 col-md-6 col-sm-12">
+                                        <img src="${product.photo}" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${product.name}</h5>
+                                            <p class="card-text">${product.information}</p>
+                                        </div>
+                                        <p class="card-text"><small class="text-muted">İşlem Numarası: ${product.id}</small></p>
+                                        <div class="btn-group m-1">
+                                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-${product.id}" class="btn btn-danger btn-round">Sil</button>
+                                            <a href="~/Product/CallProduct/${product.id}" class="btn btn-outline-success btn-round">Güncelle</a>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="exampleModal-${product.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Sil</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Ürün Kaydını Silmek İstiyor musunuz ?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                                                    <a href="~/Product/DeleteProduct/${product.id}" class="btn btn-outline-danger">Sil</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                    productList.append(card);
+                });
+            } else {
+                console.log("hata var", products);
+            }
+
+
+        });
+    }
+
+    $(document).ready(function () {
+        getProduct();
+    });
+
+</script>

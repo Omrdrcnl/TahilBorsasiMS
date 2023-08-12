@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
@@ -16,14 +15,14 @@
             </div>
         }
 
-        <table class="table table-bordered table-striped">
+        <table id="tradesmanTable" class="table table-bordered table-striped">
             <tr class="table-info">
                 <th>Kayıt No</th>
                 <th>Adı</th>
                 <th>Soyadı</th>
                 <th>Kimlik No</th>
                 <th>İletişim</th>
-                <th>Şehir</th>
+                @*<th>Şehir</th>*@
                 <th>İlçe</th>
                 <th>Mahalle/Köy</th>
                 <th>Adres</th>
@@ -32,32 +31,263 @@
 
             </tr>
             <tbody>
-
             </tbody>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Sil</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Esnaf Kaydını Silmek İstiyor musunuz ?
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
-                                <a class="btn btn-danger" href="~/Tradesman/DeleteTradesman/Id">Sil</a>
-                            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Sil</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Esnaf Kaydını Silmek İstiyor musunuz ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                            <a class="btn btn-danger" href="~/Tradesman/DeleteTradesman/Id">Sil</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="modal fade" id="rolModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Rol Bilgileri</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
 
-            
+                            <form class="form form-control container mt-5">
+                                <h1>Esnaf Bilgilerini Güncelle</h1>
+                                <br />
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Esnaf Kayıt No</label>
+                                        <input type="text" readonly id="Id" name="Id" class="form-control" />
+                                    </div>
+                                    <div class="col-6">
+                                        <label>Doğum Tarihi</label>
+                                        <input type="date" id="BirthDate" name="Birthdate" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Adı</label>
+                                        <input type="text" id="FirstName" name="FirstName" class="form-control" />
+                                    </div>
+                                    <div class="col-6">
+                                        <label>Soyadı</label>
+                                        <input type="text" id="LastName" name="LastName" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Kimlik No</label>
+                                        <input type="text" id="IdentityNo" name="IdentityNo" class="form-control" />
+                                    </div>
+                                    <div class="col-6">
+                                        <label>İletişim</label>
+                                        <input type="text" id="Contact" name="Contact" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label>Şehir</label>
+                                        <select id="cityDropdown" class="form-control">
+                                            <option value="">Şehir Seçin</option>
+                                            <!-- Şehir seçeneklerini buraya ekleyin -->
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <label>İlçe</label>
+                                        <select id="districtDropdown" class="form-control">
+                                            <option value="">İlçe Seçin</option>
+                                            <!-- İlçe seçeneklerini buraya ekleyin -->
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <label>Mahalle/Köy</label>
+                                        <input type="text" id="neighborhoodName" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Çiftçi Adres</label>
+                                            <input type="text" id="FullAddress" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                            <button type="button" class="btn btn-primary" onclick="AddTradesman()">Kaydet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </table>
-        <div class="d-flex justify-content-center pagination">
-           Pagination
+        <div class="modal" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <a href="~/Tradesman/AddTradesman" class="btn btn-primary">Yeni Esnaf Kaydı Oluştur</a>
+        <div class="d-flex justify-content-center pagination">
+            Pagination
+        </div>
+        <button onclick="NewTradesman()" class="btn btn-primary">Yeni Esnaf Kaydı Oluştur</button>
     </div>
 </div>
 
+<script>
+
+    let SelectedTradesmanId = 0;
+    let SelectedAddressId =0;
+
+    function getTradesman() {
+        fetchData("Tradesman/Esnaflar", function (response) {
+            const tradesman = response.data;
+
+            console.log("esanflar data", response);
+
+            if (response.success) {
+                var tbody = $("#tradesmanTable tbody");
+
+                $.each(tradesman, function (index, t) {
+                    var row = $("<tr>");
+                    row.append($("<td>").text(t.id));
+                    row.append($("<td>").text(t.firstName));
+                    row.append($("<td>").text(t.lastName));
+                    row.append($("<td>").text(t.identityNo));
+                    row.append($("<td>").text(t.contact));
+                    //row.append($("<td>").text(t.tblAddress.tblCityName));
+                    row.append($("<td>").text(t.tblAddress.tblDistrict.name));
+                    row.append($("<td>").text(t.tblAddress.neighborhoodName));
+                    row.append($("<td>").text(t.tblAddress.fullAddress));
+                    row.append($("<td>").html(`<button type="button" data-tradesman-id="${t.id}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>`));
+                    row.append($("<td>").html(`<button onClick="EditTradesman(
+                    '${t.id}',
+                    '${t.identityNo}',
+                    '${t.birthDate}',
+                    '${t.contact}',
+                    '${t.firstName}',
+                    '${t.lastName}',
+                    '${t.tblAddress.fullAddress}',
+                    '${t.tblAddress.tblCityId}',
+                    '${t.tblAddress.tblDistrictId}',
+                    '${t.tblAddress.neighborhoodName}',
+                    '${t.tblAddressId}'
+                )" class="btn btn-success">Güncelle</button>
+                `));
+
+                    tbody.append(row);
+                });
+            } else {
+                console.log("hatavar", response);
+            }
+
+
+        });
+    }
+
+    function NewTradesman() {
+        SelectedTradesmanId = 0;
+        SelectedAddressId = 0;
+        $('#IdentityNo').val("");
+        $("#BirthDate").val("");
+        $('#Contact').val("");
+        $('#FirstName').val("");
+        $('#LastName').val("");
+        $('#FullAddress').val("");
+        $('#cityDropdown').val("");
+        $('#districtDropdown').val("");
+        $('#neighborhoodName').val("")
+        $("#rolModal").modal("show");
+    }
+
+    function AddTradesman() {
+        var tr = {
+            Id: SelectedTradesmanId,
+            AddressId :SelectedAddressId,
+            IdentityNo: $('#IdentityNo').val(),
+            BirthDate: $("#BirthDate").val(),
+            Contact: $('#Contact').val(),
+            FirstName: $('#FirstName').val(),
+            LastName: $('#LastName').val(),
+            FullAddress: $('#FullAddress').val(),
+            tblCityId: $('#cityDropdown').val(),
+            tblDistrictId: $('#districtDropdown').val(),
+            NeighborhoodName: $('#neighborhoodName').val()
+        };
+        postData("Tradesman/EsnafEkle", tr, (data) => {
+            getTradesman();
+            $("#rolModal").modal("hide");
+
+        });
+
+    }
+
+
+    $("#rolModal").on("show.bs.modal", function () {
+        fetchData("City/TumIller", (response) => {
+            if (response.success) {
+                populateCities(response.data);
+            } else {
+                alert(response.message);
+            }
+        });
+
+        $("#cityDropdown").change(function () {
+            var selectedCityId = $(this).val();
+
+            fetchData(`District/${selectedCityId}`, (response) => {
+                if (response.success) {
+                    populateDistricts(response.data);
+                } else {
+                    alert(response.message);
+                }
+            })
+        });
+
+    });
+
+    // TODO -- TBLaDRESıd KISMINI KONTROL ET DEGERLER NULL GİDİYOR ?
+    function EditTradesman(id, identityNo, birthDate, contact, firstName, lastName, fullAddress, tblCityId, tblDistrictId, neighborhoodName, tblAddressId) {
+        SelectedTradesmanId = id;
+        SelectedAddressId = tblAddressId;
+        const formattedDate = moment(birthDate).format('YYYY-MM-DD');
+
+        console.log("selectekıd", SelectedAddressId);
+        $('#IdentityNo').val(identityNo);
+        $('#Id').val(id);
+        $("#BirthDate").val(formattedDate);
+        $('#Contact').val(contact);
+        $('#FirstName').val(firstName);
+        $('#LastName').val(lastName);
+        $('#FullAddress').val(fullAddress);
+        $('#cityDropdown').val(tblCityId);
+        $('#districtDropdown').val(tblDistrictId);
+        $('#neighborhoodName').val(neighborhoodName);
+        $("#rolModal").modal("show");
+    }
+
+
+
+
+
+    $(document).ready(function () {
+        getTradesman();
+
+
+    })
+
+</script>

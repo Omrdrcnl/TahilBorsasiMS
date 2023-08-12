@@ -55,7 +55,8 @@ namespace TahilBorsa.Api.Controllers
                 return new
                 {
                     success = true,
-                    data = tokenHandler.WriteToken(token)
+                    data = tokenHandler.WriteToken(token),
+                    rol = rol?.Name
                 };
 
             }

@@ -58,7 +58,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="tblProductId" Type="Byte" Nullable="false" />
+    <Property Name="tblProductId" Type="Int32" Nullable="false" />
     <Property Name="tblFarmerId" Type="Int32" Nullable="false" />
     <Property Name="DateTime" Type="DateTime" Precision="0" />
     <Property Name="Process" Type="Boolean" />
@@ -96,7 +96,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Information" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="Photo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
@@ -298,7 +298,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="DbGrainExchangeEntities5" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="DbGrainExchangeEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="tblAddress" EntityType="Self.tblAddress" />
     <EntitySet Name="tblCity" EntityType="Self.tblCity" />

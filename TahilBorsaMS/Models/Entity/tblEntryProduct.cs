@@ -24,7 +24,7 @@ namespace TahilBorsaMS.Models.Entity
         }
     
         public int Id { get; set; }
-        public byte tblProductId { get; set; }
+        public int tblProductId { get; set; }
         public int tblFarmerId { get; set; }
         public Nullable<System.DateTime> DateTime { get; set; }
         public Nullable<bool> Process { get; set; }

@@ -12,7 +12,7 @@ namespace TahilBorsaMS.Controllers
     public class ProductController : Controller
     {
         // GET: Product
-        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5(); //Entity framework kullanarak değişkene atama yapma
+        DbGrainExchangeEntities db = new DbGrainExchangeEntities(); //Entity framework kullanarak değişkene atama yapma
         public ActionResult Index()
         {
             var values = db.tblProduct.ToList();

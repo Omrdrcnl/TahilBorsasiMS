@@ -13,10 +13,10 @@ namespace TahilBorsaMS.Models.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DbGrainExchangeEntities5 : DbContext
+    public partial class DbGrainExchangeEntities : DbContext
     {
-        public DbGrainExchangeEntities5()
-            : base("name=DbGrainExchangeEntities5")
+        public DbGrainExchangeEntities()
+            : base("name=DbGrainExchangeEntities")
         {
         }
     

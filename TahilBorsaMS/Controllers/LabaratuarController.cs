@@ -13,7 +13,7 @@ namespace TahilBorsaMS.Controllers
     [Authorize(Roles = "lab,admin")]
     public class LabaratuarController : Controller
     {
-        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
+        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
 
         public ActionResult Index()
         {

@@ -448,3 +448,7 @@ C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\obj\Debug\net6.0\re
 C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\obj\Debug\net6.0\TahilBorsaJqeryAjax.pdb
 C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\obj\Debug\net6.0\TahilBorsaJqeryAjax.genruntimeconfig.cache
 C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\obj\Debug\net6.0\ref\TahilBorsaJqeryAjax.dll
+C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\RestSharp.dll
+C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

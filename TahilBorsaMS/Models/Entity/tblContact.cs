@@ -12,7 +12,7 @@ namespace TahilBorsaMS.Models.Entity
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations.Schema;
-
+    
     [Table("tblContact")]
     public partial class tblContact
     {

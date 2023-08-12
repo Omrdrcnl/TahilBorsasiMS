@@ -11,7 +11,7 @@ namespace TahilBorsaMS.Controllers
 {
     public class PanelController : Controller
     {
-        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
+        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
         // GET: Panel
 
         [Authorize]

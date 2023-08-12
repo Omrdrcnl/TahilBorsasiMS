@@ -7,7 +7,7 @@ namespace TahilBorsa.Api.Code.Validation
 
     public class FarmerValidator : AbstractValidator<tblFarmer>
     {
-        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
+        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
 
         public FarmerValidator()
         {

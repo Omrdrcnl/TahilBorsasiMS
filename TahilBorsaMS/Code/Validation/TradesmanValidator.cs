@@ -6,7 +6,7 @@ namespace TahilBorsa.Api.Code.Validation
 {
     public class TradesmanValidator: AbstractValidator<tblTradesman>
     {
-        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
+        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
        
             public TradesmanValidator()
             {

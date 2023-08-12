@@ -49,6 +49,18 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "Moment.js": {
+              "target": "Package",
+              "version": "[2.29.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[110.2.0, )"
             }
           },
           "imports": [

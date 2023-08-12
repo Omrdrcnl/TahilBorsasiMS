@@ -6,7 +6,7 @@ namespace TahilBorsa.Api.Code.Validation
 
     public class LabValidator : AbstractValidator<tblLabData>
     {
-        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
+        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
         public LabValidator()
         {
             RuleFor(k => k.tblEntryProductId).NotEmpty().WithMessage("Ürün Giriş Numarası Boş Geçilemez")

@@ -14,7 +14,7 @@ namespace TahilBorsaMS.Models.Entity
     using System.ComponentModel.DataAnnotations.Schema;
 
     [Table("tblDistrict")]
-
+    
     public partial class tblDistrict
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

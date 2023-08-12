@@ -1,4 +1,5 @@
-﻿@RenderSection("scripts", required: false)
+﻿@using TahilBorsaJqeryAjax.Code;
+@RenderSection("scripts", required: false)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +23,7 @@
     <link href="~/Content/LayoutAssets/assets/demo/demo.css" rel="stylesheet" />
     <link href="~/Content/LayoutAssets/assets/css/paper-dashboard.min.css" rel="stylesheet" />
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-   @* JS DOSYALAR*@
+    @* JS DOSYALAR*@
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -78,12 +79,19 @@
                     </div>
                     <!-- <p>CT</p> -->
                 </a>
-                <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-                    İşlem Paneli
-                    <!-- <div class="logo-image-big">
-                      <img src="../assets/img/logo-big.png">
-                    </div> -->
-                </a>
+                @if (string.IsNullOrEmpty(Repo.Session.UserName))
+                {
+                    <a class="simple-text logo-normal" asp-area="" asp-controller="Account" asp-action="Login">İşlem Paneli</a>
+                }
+                else
+                {
+                    <a class="simple-text logo-normal">@Repo.Session.UserName</a>
+                }
+
+                <!-- <div class="logo-image-big">
+                  <img src="../assets/img/logo-big.png">
+                </div> -->
+
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav" id="myUl">
@@ -165,12 +173,13 @@
     <script src="~/Content/LayoutAssets/assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
     <script src="~/content/layoutassets/assets/demo/demo.js"></script>
     <script src="~/js/site.js"></script>
+    <script src="~/js/cityanddist.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     @await RenderSectionAsync("Scripts", required : false)
     <!-- Code injected by live-server -->
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             demo.initChartPages();
         });
 

@@ -28,7 +28,7 @@ namespace TahilBorsa.Api.Controllers
                 items = repo.FarmerRepository
                 .FindAll()
                 .Include(farmer => farmer.tblAddress)
-                  .ThenInclude(address => address.tblDistrict)
+                .ThenInclude(address => address.tblDistrict)
                 .ThenInclude(district => district.tblCity)
                 .ToList();
 
@@ -51,7 +51,7 @@ namespace TahilBorsa.Api.Controllers
                     FullAddress = farmer.tblAddress.FullAddress,
                     tblCityName = farmer.tblAddress.tblDistrict.tblCity.Name,
                     tblDistrictName = farmer.tblAddress.tblDistrict.Name,
-                }
+                } 
             });
 
             return new

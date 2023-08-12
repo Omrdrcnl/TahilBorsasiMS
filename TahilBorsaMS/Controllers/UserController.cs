@@ -14,7 +14,7 @@ namespace TahilBorsaMS.Controllers
     [Table("tblUser")]
     public class UserController : Controller
     {
-        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
+        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
         // GET: User
         public ActionResult Index()
         {

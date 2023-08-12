@@ -13,7 +13,7 @@ namespace TahilBorsaMS.Controllers
 {
     public class LoginController : Controller
     {
-        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
+        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
         // GET: Login
         [HttpGet]
         public ActionResult Index()

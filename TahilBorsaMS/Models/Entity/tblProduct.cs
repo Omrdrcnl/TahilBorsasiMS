@@ -22,7 +22,7 @@ namespace TahilBorsaMS.Models.Entity
             this.tblEntryProduct = new HashSet<tblEntryProduct>();
         }
     
-        public byte Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Information { get; set; }
         public string Photo { get; set; }

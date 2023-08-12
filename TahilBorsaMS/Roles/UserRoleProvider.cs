@@ -43,7 +43,7 @@ namespace TahilBorsaMS.Roles
         //Burada kullanıcı tablosundan kallanıcı adlarını çekip  yetkili rol adlarıyla eşleştiriyoruz
         public override string[] GetRolesForUser(string username)
         {
-        DbGrainExchangeEntities5 db = new DbGrainExchangeEntities5();
+        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
             var value = db.tblUser.FirstOrDefault(x=> x.Username == username);
             return new string[] { value.tblRol.Name };
         }

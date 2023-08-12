@@ -81,10 +81,11 @@ else
 }
 //--
 app.UseHttpsRedirection();
+//Gelen baglantýlara izin ver
+app.UseCors(options => { options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); });
 
 app.UseAuthorization();
 
-app.UseCors(options => { options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); });
 
 app.MapControllers();
 
