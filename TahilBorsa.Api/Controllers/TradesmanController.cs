@@ -70,9 +70,9 @@ namespace TahilBorsa.Api.Controllers
                 LastName = json.LastName,
                 tblAddress = new tblAddress()
                 {
-                    Id = json.tblAddresId,
-                    tblCityId = json.CityId,
-                    tblDistrictId = json.DistrictId,
+                    Id = json.AddressId,
+                    tblCityId = json.tblCityId,
+                    tblDistrictId = json.tblDistrictId,
                     NeighborhoodName = json.NeighborhoodName,
                     FullAddress = json.FullAddress,
 
@@ -100,10 +100,12 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpDelete("{tradesmanId}")]
+        [HttpDelete("Delete/{tradesmanId}")]
         public dynamic Delete(int tradesmanId)
         {
-            repo.ProductRepository.Delete(tradesmanId);
+            repo.TradesmanRepository.Delete(tradesmanId);
+
+            cache.Remove("Esnaflar");
             return new { success = true };
 
         }

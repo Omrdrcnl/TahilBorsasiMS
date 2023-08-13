@@ -73,11 +73,8 @@
 
 
 <script>
-    $(document).ready(function () {
 
-        // işlem yapacağımız ıd degerini tutmak için olusturduk
-        var id = {};
-
+    function getFarmer() {
         $.ajax({
             url: "https://localhost:7234/api/Farmer/TumCiftciler",
             type: "GET",
@@ -122,6 +119,15 @@
                 console.log("Error:", textStatus, errorThrown);
             }
         });
+    }
+
+    $(document).ready(function () {
+
+        // işlem yapacağımız ıd degerini tutmak için olusturduk
+        var id = {};
+        getFarmer();
+
+
 
 
         $("#FarmerTable").on("click", ".btn-danger", function () {

@@ -14,7 +14,7 @@
                 }
                 set
                 {
-                    new HttpContextAccessor().HttpContext.Session.SetString("UserName", value);
+                    new HttpContextAccessor().HttpContext.Session.SetString("UserName", value ?? "");
                 }
             }
             public static string? Token
@@ -26,7 +26,7 @@
                 }
                 set
                 {
-                    new HttpContextAccessor().HttpContext.Session.SetString("Token", value);
+                    new HttpContextAccessor().HttpContext.Session.SetString("Token", value ?? "");
                 }
             }
             public static string? Rol
@@ -38,7 +38,7 @@
                 }
                 set
                 {
-                    new HttpContextAccessor().HttpContext.Session.SetString("Rol", value);
+                    new HttpContextAccessor().HttpContext.Session.SetString("Rol", value ?? "");
                 }
             }
         }

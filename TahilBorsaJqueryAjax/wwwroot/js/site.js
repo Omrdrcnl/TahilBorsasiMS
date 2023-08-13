@@ -2,15 +2,25 @@
 
 
 // Veriyi çekmek için genel bir fonksiyon oluşturduk örne// fetchData("Farmer/TumCiftciler", handleSuccess);
-function fetchData(endpoint, successCallback) {
+function fetchData(endpoint, success) {
     $.ajax({
         url: baseUrl + endpoint,
         type: "GET",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', `Bearer ${TOKEN}`);
+        },
         dataType: "json",
         contentType: "application/json; chartset=utf-8",
-        success: successCallback,
-         error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest + "-" + textStatus + "-" + errorThrown);
+        success: function (response) {
+            f (response.success) {
+                success(response.data);
+            }
+            else {
+                alert(response.message);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Get Hatası", XMLHttpRequest + "-" + textStatus + "-" + errorThrown);
         }
     });
 }
@@ -20,6 +30,9 @@ function postData(endpoint, data, success) {
     $.ajax({
         url: baseUrl + endpoint,
         type: "POST",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', `Bearer ${TOKEN}`);
+        },
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(data),
@@ -32,7 +45,7 @@ function postData(endpoint, data, success) {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            console.log(XMLHttpRequest + "-" + textStatus, errorThrown);
+            console.log("Post hatası", XMLHttpRequest + "-" + textStatus, errorThrown);
         }
     });
 }
@@ -46,111 +59,61 @@ function deleteData(endpoint, success) {
         contentType: "application/json; charset=utf-8",
         success: function (response) {
             if (response.success) {
-                success(response.data);
+                success(response);
+                console.log("Silme İşlemi başarılı",response)
             }
             else {
                 alert(response.message);
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            console.log("Hata:", textStatus, errorThrown);
+            console.log("Silme Hata:", textStatus, errorThrown);
         }
     });
 }
 
-//İller ve ilçeler base func
 
-function CityAndDistrict() {
-    $.ajax({
-        url: "https://localhost:7234/api/City/TumIller",
-        type: "GET",
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        success: function (response) {
+ //İller ve ilçeler base func
 
-            if (response.success) {
+//function CityAndDistrict() {
+//    $("#rolModal").on("show.bs.modal", function () {
+
+//        fetchData("City/TumIller", (response) => {
+
+//            console.log("veri :", response)
+//            var cityDropdown = $("#cityDropdown");
+
+//            $.each(response, function (index, city) {
+//                cityDropdown.append($("<option>").val(city.id).text(city.name));
+//            });
+//        });
+
+//        //Seçilen ile göre ilçeleri listeleme
+//        $("#cityDropdown").change(function () {
+
+//            var selectedCityId = $(this).val();
+//            fetchData(`District/${selectedCityId}`, (data) => {
+
+//                console.log("İlçe data", data)
+//                var districtDropdown = $("#districtDropdown");
+//                districtDropdown.empty();
+//                districtDropdown.append($("<option>").val("").text("İlçe Seçiniz"));
+
+//                $.each(data, function (index, district) {
+//                    districtDropdown.append($("<option>").val(district.id).text(district.name));
+//                });
+//            });
+
+//        });
+//    });
+//}
 
 
-                console.log("veri :", response.data)
-                var cityDropdown = $("#cityDropdown");
-
-                $.each(response.data, function (index, city) {
-                    cityDropdown.append($("<option>").val(city.id).text(city.name));
-                });
-
-            } else {
-                alert(response.message);
-            }
-
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-            console.log("Tüm iller Error:", XMLHttpRequest, textStatus, errorThrown);
-        }
-    });
-
-    //Seçilen ile göre ilçeleri listeleme
-    $("#cityDropdown").change(function () {
-        var selectedCityId = $(this).val();
-        $.ajax({
-            url: "https://localhost:7234/api/District/" + selectedCityId,
-            type: "GET",
-            dataType: "json",
-            success: function (response) {
-                if (response.success) {
-                    console.log("İlçe data", response.data)
-                    var districtDropdown = $("#districtDropdown");
-                    districtDropdown.empty();
-                    districtDropdown.append($("<option>").val("").text("İlçe Seçiniz"));
-                    $.each(response.data, function (index, district) {
-                        districtDropdown.append($("<option>").val(district.id).text(district.name));
-                    });
-                } else {
-                    alert(response.message)
-                }
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("Error:", textStatus, errorThrown);
-            }
-        });
-    });
-}
 
 $(document).ready(function () {
-    //$("#loginForm").submit(function (event) {
-    //    event.preventDefault(); // Formun varsayılan submit işlemini engelle
-
-    //    var username = $("#username").val();
-    //    var password = $("#password").val();
-
-    //    $.ajax({
-    //        url: "https://localhost:7234/api/Auth/Login", // Hedef URL
-    //        type: "POST", // HTTP method
-    //        data: {
-    //            Username: username,
-    //            Password: password
-    //        }, // Gönderilecek veri
-    //        dataType: "json", // Veri tipi
-    //        contentType: "application/json; chartset=utf-8",
-    //        success: function (data) {
-    //            // Giriş işlemi başarılı olduğunda çalışacak fonksiyon
-    //            if (data.success) {
-    //                console.log("Veri gönderme başarılı");
-
-    //                console.log("Giriş datası", data.data)
-    //            } else (data.message)
-    //            {
-    //                console.log(this.message)
-    //            }
-                
-    //            $("#loginMessage").html("<p>Login successful!</p>");
-    //        },
-    //        error: function (jqXHR, textStatus, errorThrown) {
-    //            // Giriş işlemi hata verdiğinde çalışacak fonksiyon
-    //            $("#loginMessage").html("<p>Login failed. Please check your credentials.</p>");
-    //        }
-    //    });
-    //});
+   
+  
+    
 });
 
 //Loading Componenet fonksiyonları

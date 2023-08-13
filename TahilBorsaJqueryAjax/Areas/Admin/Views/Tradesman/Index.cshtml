@@ -44,7 +44,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
-                            <a class="btn btn-danger" href="~/Tradesman/DeleteTradesman/Id">Sil</a>
+                            <button class="btn btn-danger" onclick="DeleteTradesman()">Sil</button>
                         </div>
                     </div>
                 </div>
@@ -151,50 +151,45 @@
 <script>
 
     let SelectedTradesmanId = 0;
-    let SelectedAddressId =0;
+    let SelectedAddressId = 0;
 
     function getTradesman() {
         fetchData("Tradesman/Esnaflar", function (response) {
-            const tradesman = response.data;
 
             console.log("esanflar data", response);
 
-            if (response.success) {
-                var tbody = $("#tradesmanTable tbody");
 
-                $.each(tradesman, function (index, t) {
-                    var row = $("<tr>");
-                    row.append($("<td>").text(t.id));
-                    row.append($("<td>").text(t.firstName));
-                    row.append($("<td>").text(t.lastName));
-                    row.append($("<td>").text(t.identityNo));
-                    row.append($("<td>").text(t.contact));
-                    //row.append($("<td>").text(t.tblAddress.tblCityName));
-                    row.append($("<td>").text(t.tblAddress.tblDistrict.name));
-                    row.append($("<td>").text(t.tblAddress.neighborhoodName));
-                    row.append($("<td>").text(t.tblAddress.fullAddress));
-                    row.append($("<td>").html(`<button type="button" data-tradesman-id="${t.id}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>`));
-                    row.append($("<td>").html(`<button onClick="EditTradesman(
-                    '${t.id}',
-                    '${t.identityNo}',
-                    '${t.birthDate}',
-                    '${t.contact}',
-                    '${t.firstName}',
-                    '${t.lastName}',
-                    '${t.tblAddress.fullAddress}',
-                    '${t.tblAddress.tblCityId}',
-                    '${t.tblAddress.tblDistrictId}',
-                    '${t.tblAddress.neighborhoodName}',
-                    '${t.tblAddressId}'
-                )" class="btn btn-success">Güncelle</button>
-                `));
+            var tbody = $("#tradesmanTable tbody");
 
-                    tbody.append(row);
-                });
-            } else {
-                console.log("hatavar", response);
-            }
+            $.each(response, function (index, t) {
+                var row = $("<tr>");
+                row.append($("<td>").text(t.id));
+                row.append($("<td>").text(t.firstName));
+                row.append($("<td>").text(t.lastName));
+                row.append($("<td>").text(t.identityNo));
+                row.append($("<td>").text(t.contact));
+                //row.append($("<td>").text(t.tblAddress.tblCityName));
+                row.append($("<td>").text(t.tblAddress.tblDistrict.name));
+                row.append($("<td>").text(t.tblAddress.neighborhoodName));
+                row.append($("<td>").text(t.tblAddress.fullAddress));
+                row.append($("<td>").html(`<button type="button" data-tradesman-id="${t.id}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>`));
+                row.append($("<td>").html(`<button onClick="EditTradesman(
+                                '${t.id}',
+                                '${t.identityNo}',
+                                '${t.birthDate}',
+                                '${t.contact}',
+                                '${t.firstName}',
+                                '${t.lastName}',
+                                '${t.tblAddress.fullAddress}',
+                                '${t.tblAddress.tblCityId}',
+                                '${t.tblAddress.tblDistrictId}',
+                                '${t.tblAddress.neighborhoodName}',
+                                '${t.tblAddressId}'
+                            )" class="btn btn-success">Güncelle</button>
+                            `));
 
+                tbody.append(row);
+            });
 
         });
     }
@@ -217,7 +212,7 @@
     function AddTradesman() {
         var tr = {
             Id: SelectedTradesmanId,
-            AddressId :SelectedAddressId,
+            AddressId: SelectedAddressId,
             IdentityNo: $('#IdentityNo').val(),
             BirthDate: $("#BirthDate").val(),
             Contact: $('#Contact').val(),
@@ -237,31 +232,68 @@
     }
 
 
-    $("#rolModal").on("show.bs.modal", function () {
-        fetchData("City/TumIller", (response) => {
-            if (response.success) {
-                populateCities(response.data);
-            } else {
-                alert(response.message);
-            }
+    //Delete İşlemi
+    $("#exampleModal").on("show.bs.modal", function (event) {
+        var button = $(event.relatedTarget); // Tetikleyici düğme
+        var tradesmanId = button.data("tradesman-id"); // data-tradesman-id değeri
+
+        // Sil butonuna tıklama işlemini ayarla
+        var deleteButton = $("#exampleModal").find(".btn-danger"); // Sil butonunu seç
+        deleteButton.off("click").on("click", function () {
+            DeleteTradesman(tradesmanId);
         });
-
-        $("#cityDropdown").change(function () {
-            var selectedCityId = $(this).val();
-
-            fetchData(`District/${selectedCityId}`, (response) => {
-                if (response.success) {
-                    populateDistricts(response.data);
-                } else {
-                    alert(response.message);
-                }
-            })
-        });
-
     });
 
-    // TODO -- TBLaDRESıd KISMINI KONTROL ET DEGERLER NULL GİDİYOR ?
-    function EditTradesman(id, identityNo, birthDate, contact, firstName, lastName, fullAddress, tblCityId, tblDistrictId, neighborhoodName, tblAddressId) {
+    function DeleteTradesman(id) {
+
+        deleteData(`Tradesman/Delete/${id}`, (model) => {
+
+            $("#exampleModal").modal("hide");
+            $(".modal-backdrop").remove();
+            getTradesman();
+        });
+
+    }
+
+    //Model açılınca il ve ilçelerin listelenmesi
+
+    //İller ve ilçeler base func
+    $("#rolModal").on("show.bs.modal", function () {
+
+        fetchData("City/TumIller", (response) => {
+
+            console.log("veri :", response)
+            var cityDropdown = $("#cityDropdown");
+
+            $.each(response, function (index, city) {
+                cityDropdown.append($("<option>").val(city.id).text(city.name));
+            });
+        });
+
+        //Seçilen ile göre ilçeleri listeleme
+        $("#cityDropdown").change(function () {
+
+            var selectedCityId = $(this).val();
+            fetchData(`District/${selectedCityId}`, (data) => {
+
+                console.log("İlçe data", data)
+                var districtDropdown = $("#districtDropdown");
+                districtDropdown.empty();
+                districtDropdown.append($("<option>").val("").text("İlçe Seçiniz"));
+
+                $.each(data, function (index, district) {
+                    districtDropdown.append($("<option>").val(district.id).text(district.name));
+                });
+            });
+
+        });
+    });
+
+
+    //Edit kısmı
+    function EditTradesman(id, identityNo, birthDate, contact, firstName, lastName,
+        fullAddress, tblCityId, tblDistrictId, neighborhoodName, tblAddressId) {
+
         SelectedTradesmanId = id;
         SelectedAddressId = tblAddressId;
         const formattedDate = moment(birthDate).format('YYYY-MM-DD');

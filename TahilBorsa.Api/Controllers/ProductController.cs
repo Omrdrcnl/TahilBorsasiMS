@@ -81,6 +81,8 @@ namespace TahilBorsa.Api.Controllers
         public dynamic Delete(int id)
         {
             repo.ProductRepository.Delete(id);
+            cache.Remove("TumUrunler");
+
             return new { success = true };
         }
     }

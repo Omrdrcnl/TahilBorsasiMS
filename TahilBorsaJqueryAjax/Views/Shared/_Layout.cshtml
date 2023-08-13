@@ -1,6 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using TahilBorsaJqeryAjax.Code;
+<!DOCTYPE html>
 <html lang="en">
 <head>
+
+    
     <!-- basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,6 +48,10 @@
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    <script>
+        let TOKEN = "@Repo.Session.Token"
+    </script>
 </head>
 <!-- body -->
 <body class="main-layout">
@@ -85,7 +92,7 @@
                                         <a class="nav-link" href="/Home/About/">Hakkımızda</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/Admin/Farmer/Index">Neler Yapıyoruz</a>
+                                        <a class="nav-link" href="/Admin/Tradesman/Index">Neler Yapıyoruz</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="/Home/Contact">İletişim</a>

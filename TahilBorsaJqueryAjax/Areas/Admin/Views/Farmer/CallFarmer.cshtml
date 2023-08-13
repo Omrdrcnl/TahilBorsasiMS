@@ -113,7 +113,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
-                    <button type="submit" id="GuncelleButton" class="btn btn-primary">Kaydet</button>
+                    <button type="submit" id="GuncelleButton" onclick="AddTradesman()" class="btn btn-primary">Kaydet</button>
                 </div>
             </div>
         </div>
@@ -129,65 +129,61 @@
     console.log("farmerId", farmerId)
     var adres = {};
 
+    function AddTradesman() {
+        var tr = {
+            FarmerId: farmerId,
+            AddressId: $('#AddressId').val(),
+            IdentityNo: $('#IdentityNo').val(),
+            BirthDate: $("#BirthDate").val(),
+            Contact: $('#Contact').val(),
+            FirstName: $('#FirstName').val(),
+            LastName: $('#LastName').val(),
+            FullAddress: $('#FullAddress').val(),
+            tblCityId: $('#cityDropdown').val(),
+            tblDistrictId: $('#districtDropdown').val(),
+            NeighborhoodName: $('#NeighborhoodName').val()
+        };
+        postData("Farmer/EkleCiftci", tr, (data) => {
+            console.log("Güncelleme işlemi başarılı", data);
 
+
+        });
+
+    };
+  
 
     $(document).ready(function () {
 
-        //İller listeleme
-        $.ajax({
-            url: "https://localhost:7234/api/City/TumIller",
-            type: "GET",
-            dataType: "json",
-            contentType: "application/json; charset=utf-8",
-            success: function (response) {
 
-                if (response.success) {
+        //İl ve İlçeler
+        fetchData("City/TumIller", (response) => {
 
+            console.log("veri :", response)
+            var cityDropdown = $("#cityDropdown");
 
-                    console.log("veri :", response.data)
-                    var cityDropdown = $("#cityDropdown");
-
-                    $.each(response.data, function (index, city) {
-                        cityDropdown.append($("<option>").val(city.id).text(city.name));
-                    });
-
-                } else {
-                    alert(response.message);
-                }
-
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                console.log("Tüm iller Error:", XMLHttpRequest, textStatus, errorThrown);
-            }
+            $.each(response, function (index, city) {
+                cityDropdown.append($("<option>").val(city.id).text(city.name));
+            });
         });
 
         //Seçilen ile göre ilçeleri listeleme
         $("#cityDropdown").change(function () {
+
             var selectedCityId = $(this).val();
-            $.ajax({
-                url: "https://localhost:7234/api/District/" + selectedCityId,
-                type: "GET",
-                dataType: "json",
-                success: function (response) {
-                    if (response.success) {
-                        console.log("İlçe data", response.data)
-                        var districtDropdown = $("#districtDropdown");
-                        districtDropdown.empty();
-                        districtDropdown.append($("<option>").val("").text("İlçe Seçiniz"));
-                        $.each(response.data, function (index, district) {
-                            districtDropdown.append($("<option>").val(district.id).text(district.name));
-                        });
-                    } else {
-                        alert(response.message)
-                    }
+            fetchData(`District/${selectedCityId}`, (data) => {
 
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    console.log("Error:", textStatus, errorThrown);
-                }
+                console.log("İlçe data", data)
+                var districtDropdown = $("#districtDropdown");
+                districtDropdown.empty();
+                districtDropdown.append($("<option>").val("").text("İlçe Seçiniz"));
+
+                $.each(data, function (index, district) {
+                    districtDropdown.append($("<option>").val(district.id).text(district.name));
+                });
             });
-        });
 
+        });
+     
 
         // Çiftçi bilgilerini getiren AJAX isteği
         $.ajax({
@@ -227,59 +223,11 @@
         });
 
 
-        //Update gönderme istegi
-
-        //$("#GuncelleButton").click(function () {
-        //    const IdentityNo = document.getElementById('IdentityNo').value;
-        //    const BirthDate = document.getElementById('BirthDate').value;
-        //    const Contact = document.getElementById('Contact').value;
-        //    const FirstName = document.getElementById('FirstName').value;
-        //    const LastName = document.getElementById('LastName').value;
-        //    const FullAddress = document.getElementById('FullAddress').value;
-        //    const tblCityId = document.getElementById('cityDropdown').value;
-        //    const tblDistrictId = document.getElementById('districtDropdown').value;
-        //    const NeighborhoodName = document.getElementById('NeighborhoodName').value;
-        //    const FarmerId = document.getElementById('FarmerId').value;
-        //    const AddressId = document.getElementById('AddressId').value;
-
-        //    const requestBody = {
-        //        farmerId: FarmerId,
-        //        birthDate: BirthDate,
-        //        contact: Contact,
-        //        firstName: FirstName,
-        //        identityNo: IdentityNo,
-        //        lastName: LastName,
-        //        addressId: AddressId,
-        //        fullAddress: FullAddress,
-        //        neighborhoodName: NeighborhoodName,
-        //        tblDistrictId: tblDistrictId,
-        //        tblCityId: tblCityId
-        //    };
-
-        //    // AJAX isteği gönderme
-        //    $.ajax({
-        //        url: 'https://localhost:7234/api/Farmer/EkleCiftci',
-        //        type: 'POST',
-        //        dataType: "json"
-        //        contentType: 'application/json; chartset=utf-8',
-        //        data: JSON.stringify(requestBody),
-        //        success: function (response) {
-        //            if (response.success) {
-        //                console.log('İşlem başarılı:', data);
-        //                alert('İşlem başarıyla gerçekleşti');
-        //            }else{
-        //                console.log(response.message)
-        //            }
-
-        //        },
-        //        error: function (XMLHttpRequest, textStatus, errorThrown) {
-        //            alert(XMLHttpRequest + "-" + textStatus + "-" + errorThrown);
-        //        }
-        //    });
-        //});
 
 
-    })
+
+
+    });
 
 
 </script>
