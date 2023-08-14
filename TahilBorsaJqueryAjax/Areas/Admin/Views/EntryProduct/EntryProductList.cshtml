@@ -14,14 +14,17 @@
             <button class="btn btn-outline-primary">Ara</button>
         </div>
     }
-
-    <table class="table table-bordered table-striped">
+    <div class="alert alert-success" id="successAlert" role="alert" style="display: none;">
+        Ürün başarıyla Güncellendi.
+    </div>
+    <table id="EntryProduct" class="table table-bordered table-striped">
         <tr class="table-danger">
-            <th>Id</th>
+            <th>Giriş Sıra No</th>
             <th>Çiftçi Adı</th>
             <th>Çiftçi Kimlik no</th>
             <th>Ürün Çeşidi</th>
             <th>Tarihi</th>
+            <th>İşlem</th>
         </tr>
         <tbody>
 
@@ -30,4 +33,155 @@
     <div>
         <a class="btn btn-info" href="/EntryProduct/Index">Geri</a>
     </div>
+    <div class="modal fade" id="rolModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Ürün Girişi Güncelle</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form class="form form-control container mt-5">
+                        <h1>Ürün Bilgilerini Güncelle</h1>
+                        <br />
+                        <div class="row">
+                            <div class="col-6">
+                                <label>Ürün Giriş Kayıt No</label>
+                                <input type="text" readonly id="EntryProductId"  name="Id" class="form-control" />
+                            </div>
+                            <div class="col-6">
+                                <label>Çiftçi Kayıt No</label>
+                                <input type="text" id="FarmerId" name="Name" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <label>Ürün Çeşidi</label>
+                                <select class="form-control" id="ProductId">
+                             
+                                </select>
+                           </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Tarih</label>
+                                    <input type="date" id="DateTime" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                    <button type="button" class="btn btn-primary" onclick="AddEntryProduct()">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+
+<script>
+
+    function getEntryProduct() {
+
+        fetchData("EntryProduct/GirisYapanUrunler", function (response) {
+
+            console.log("EntryProduct data", response);
+
+
+            var tbody = $("#EntryProduct tbody");
+
+            $.each(response, function (index, t) {
+                var row = $("<tr>");
+                row.append($("<td>").text(t.entryProductId));
+                row.append($("<td>").text(`${t.farmerName} ${t.farmerLastName}`));
+                row.append($("<td>").text(t.identityNo));
+                row.append($("<td>").text(t.name));
+                row.append($("<td>").text(t.dateTime));
+                row.append($("<td>").html(`<button onClick="EditEntryProduct(
+                                    '${t.entryProductId}',
+                                    '${t.farmerId}',
+                                    '${t.dateTime}',
+                                    '${t.productId}'
+                                )" class="btn btn-success">Güncelle</button>
+                                `));
+
+                tbody.append(row);
+            });
+
+        });
+    }
+
+    let selectedEntryProductId = 0;
+    
+    function AddEntryProduct() {
+        var p = {
+            Id: selectedEntryProductId,
+            tblProductId: $('#ProductId').val(),
+            tblFarmerId: $("#FarmerId").val(),
+            DateTime: $('#DateTime').val(),
+            Process : true
+        };
+
+        postData("EntryProduct/UrunGirisYap", p, (data) => {
+            getEntryProduct();
+            $("#rolModal").modal("hide");
+
+            $("#successAlert").fadeIn();
+
+            $(".modal-backdrop").remove();
+
+            setTimeout(function () {
+                $("#successAlert").fadeOut();
+            }, 3000);
+            setTimeout(function () {
+                location.reload();
+            }, 3500);
+
+        });
+
+    }
+    
+       function EditEntryProduct(entryProductId, farmerId, dateTime, productId) {
+        $("#rolModal").modal("show");
+
+        selectedEntryProductId = entryProductId;
+        console.log("Edit Kısmı Entryproduct Id", selectedEntryProductId);
+
+          //moment.js kütüphanesi kullanıldı
+
+          const formattedDate = moment(dateTime).format('YYYY-MM-DD');
+          console.log("cekilen veri dogum tarıhı", formattedDate)
+
+        $('#FarmerId').val(farmerId);
+        $('#EntryProductId').val(selectedEntryProductId);
+        $("#ProductId").val(productId);
+        $('#DateTime').val(formattedDate);
+
+    }
+
+    //Model açılınca ürünler gelsin
+    $("#rolModal").on("show.bs.modal", function(){
+        
+        fetchData("Product/TumUrunler", function (response) {
+
+            console.log("veri :", response)
+            var tblProductIdDropdown = $("#ProductId");
+
+            $.each(response, function (index, product) {
+                tblProductIdDropdown.append($("<option>").val(product.id).text(product.name));
+            });
+        });
+    });
+
+
+
+    $(document).ready(function(){
+        getEntryProduct();
+    })
+
+</script>

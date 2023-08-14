@@ -47,7 +47,7 @@ namespace TahilBorsaMS.Controllers
 
             db.tblLabData.Add(l);
             var pro = db.tblEntryProduct.Find(l.tblEntryProductId);
-            pro.Process = true;
+            
             
 
             if (pro != null)

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json.Linq;
 using TahilBorsa.Repository;
 using TahilBorsaMS.Models.Entity;
+using TahilBorsaMS.Models.Views;
 
 namespace TahilBorsa.Api.Controllers
 {
@@ -19,7 +20,7 @@ namespace TahilBorsa.Api.Controllers
         [HttpGet("GirisYapanUrunler")]
         public dynamic AllEntryProduct()
         {
-            List<tblEntryProduct> tblEntryProducts = repo.EntryProductRepository.FindAll().ToList();
+            List<V_EntryProductList> tblEntryProducts = repo.EntryProductRepository.GetEntryProductList();
             return new
             {
                 success = true,
@@ -35,10 +36,10 @@ namespace TahilBorsa.Api.Controllers
             tblEntryProduct item = new tblEntryProduct()
             {
                 Id = json.Id,
-                tblProductId = json.ProductId,
-                tblFarmerId = json.FarmerId,
-                DateTime = DateTime.Now,
-                Process = false
+                tblProductId = json.tblProductId,
+                tblFarmerId = json.tblFarmerId,
+                DateTime = json.DateTime,
+                Process = json.Process
             };
             if (item.Id > 0)
             {

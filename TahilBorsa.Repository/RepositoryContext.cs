@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using TahilBorsaMS.Models.Entity;
-
+using TahilBorsaMS.Models.Views;
 
 namespace TahilBorsasi.Repository
 {
@@ -17,6 +17,15 @@ namespace TahilBorsasi.Repository
             this.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
 
+        //Viev olusturdugumuzda privatekey olmadıgında asagadaki methodu override edip keyi olmadığını belirtiyoryz
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<V_EntryProductList>().HasNoKey();
+            modelBuilder.Entity<V_LabList>().HasNoKey();
+            //date null hatasını giderdik asagıda da
+            modelBuilder.Entity<tblEntryProduct>().Property(d => d.DateTime).HasDefaultValue();
+
+        }
 
         public DbSet<tblProduct> Products { get; set; }
         public DbSet<tblFarmer> Farmers { get; set; }
@@ -30,6 +39,9 @@ namespace TahilBorsasi.Repository
         public DbSet<tblUser> Users { get; set; }
         public DbSet<tblRol> Rols { get; set; }
         public DbSet<tblContact> Contacts { get; set; }
+        public DbSet<V_EntryProductList> EntryProductList { get; set; }
+        public DbSet<V_LabList> LabListS { get; set; }
+
 
     }
 }

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json.Linq;
 using TahilBorsa.Repository;
 using TahilBorsaMS.Models.Entity;
+using TahilBorsaMS.Models.Views;
 
 namespace TahilBorsa.Api.Controllers
 {
@@ -29,10 +30,23 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpGet("VeriGirişineHazırUrunler")]
-        public dynamic ReadySale()
+        [HttpGet("Readylab")]
+        public dynamic ReadyLab()
         {
-            List<tblEntryProduct> items = repo.EntryProductRepository.FindByCondition(x => x.Process == false).ToList<tblEntryProduct>();
+            List<V_EntryProductList> items = repo.LabDataRepository.GetReadyLabList();
+
+            return new
+            {
+                success = true,
+                data = items
+            };
+        }
+
+        [HttpGet("LabList")]
+        public dynamic LabList()
+        {
+            List<V_LabList> items = repo.LabDataRepository.GetLabList();
+
             return new
             {
                 success = true,
@@ -45,45 +59,54 @@ namespace TahilBorsa.Api.Controllers
         {
             dynamic json = JObject.Parse(model.GetRawText());
 
+            //Lab işlem sırasından kaldırmak için processi 1'e çek
+            int entryProductId = json.EntryProductId;
+
+            var entryProduct = repo.EntryProductRepository.FindByCondition(e => e.Id == entryProductId).FirstOrDefault();
+            if (entryProduct != null)
+            {
+                entryProduct.Process = true;
+
+                repo.EntryProductRepository.Update(entryProduct);
+                repo.SaveChanges();
+            }
 
             tblLabData item = new tblLabData()
             {
-                Process = true,
+                Id = json.Id,
+                tblEntryProductId = json.EntryProductId,
+                Process = json.Process,
                 NutritionalValue = json.NutritionalValue,
 
             };
 
-            if(item != null) {
 
-                repo.LabDataRepository.Update(item);
+            repo.LabDataRepository.Create(item);
+            repo.SaveChanges();
 
-                tblSale sale = new tblSale()
-                {
-                    Process = false,
-                    tblEntryProductId = (int)json.tblEntryProductId,
-                    tblLabDataId = json.Id,
-                };
-                if(sale != null)
-                {
-                    repo.SaleRepository.Create(sale);
-                    repo.SaveChanges();
-                    return new
-                    {
-                        success = true,
-                        data = sale
-                    };
-                }
+            //Satışta sıraya koymak içinde satış verisi olustur processi 0'a çek
 
+            tblSale sale = new tblSale()
+            {
+                Process = false,
+                tblEntryProductId = (int)json.EntryProductId,
+                tblLabDataId = item.Id  // Önce oluşturulan tblLabData'nın Id'sini kullanın
+            };
+
+            if (sale.tblLabDataId > 0)
+            {
+                repo.SaleRepository.Create(sale);
+                repo.SaveChanges();
             }
 
-            repo.SaveChanges();
+
 
             return new
             {
                 success = true,
                 data = item
             };
-                
+
         }
 
 

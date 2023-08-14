@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
@@ -8,18 +7,21 @@
 
 
     <h2>İşlem Bekleyen Liste</h2>
-    <table class="table table-bordered table-striped">
+    <div class="alert alert-success" id="successAlert" role="alert" style="display: none;">
+        Ürün Besin Değeri Başarıyla eklendi.
+    </div>
+    <table class="table table-bordered table-striped" id="Lab">
         <tr class="table-info">
-            <th>Giriş Id</th>
-            <th>Çiftçi Id</th>
+            <th>Ürün Giriş No</th>
+            <th>Çiftçi Kayıt no</th>
+            <th>Çiftçi Adı Soyadı</th>
             <th>Ürün Adı</th>
             <th>Ürün Giriş Tarihi</th>
             <th>Besin Değerini Gir</th>
         </tr>
 
-      <tbody>
-
-      </tbody>
+        <tbody>
+        </tbody>
 
     </table>
 
@@ -27,5 +29,147 @@
     <div class="mt-5 d-grid gap-2 d-md-flex justify-content-md-end">
         <a class="btn btn-primary" href="~/Labaratuar/LabDataList/">Geçmiş Veriler</a>
     </div>
+    <div class="modal fade" id="rolModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Besin Değeri</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
 
+                    <form class="form form-control container mt-5">
+                        <h1>Ürün Besin Değeri Girişi</h1>
+                        <br />
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label>Ürün Giriş Kayıt No</label>
+                                <input type="text" readonly id="EntryProductId" name="Id" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>Ürün Adı</label>
+                                <input type="text" id="ProductName" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label>Ürün Besin Değeri</label>
+                                <input type="text" id="NutritionalValue" name="Name" class="form-control" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                    <button type="button" class="btn btn-primary" onclick="AddLabData()">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script>
+
+    function getEntryProduct() {
+
+        fetchData("Labaratuar/ReadyLab", function (response) {
+
+            console.log("ReadyLab data", response);
+
+
+            var tbody = $("#Lab tbody");
+
+            $.each(response, function (index, t) {
+                var row = $("<tr>");
+                row.append($("<td>").text(t.entryProductId));
+                row.append($("<td>").text(t.farmerId));
+                row.append($("<td>").text(`${t.farmerName} ${t.farmerLastName}`));
+                row.append($("<td>").text(t.name));
+                row.append($("<td>").text(t.dateTime));
+                row.append($("<td>").html(`<button data-bs-toggle="modal" data-bs-target="#rolModal" onClick="OpenLab(
+                                                '${t.entryProductId}',
+                                                '${t.name}'
+                                            )" class="btn btn-success">Değer Gir</button>
+                                            `));
+
+                tbody.append(row);
+            });
+
+        });
+    }
+
+    let selectedEntryProductId = 0;
+
+    function AddLabData() {
+        var p = {
+            Id: 0,
+            EntryProductId: $('#EntryProductId').val(),
+            NutritionalValue: $("#NutritionalValue").val(),
+            Process: true
+        };
+
+        postData("Labaratuar/VeriGir", p, (data) => {
+            getEntryProduct();
+            $("#rolModal").modal("hide");
+
+            $("#successAlert").fadeIn();
+
+            $(".modal-backdrop").remove();
+
+            setTimeout(function () {
+                $("#successAlert").fadeOut();
+            }, 3000);
+            setTimeout(function () {
+                location.reload();
+            }, 3500);
+
+        });
+
+    }
+
+    function OpenLab(entryProductId, name) {
+        selectedEntryProductId = entryProductId;
+
+        $('#EntryProductId').val(selectedEntryProductId);
+        $("#ProductName").val(name);
+    }
+
+    function EditEntryProduct(entryProductId, farmerId, dateTime, productId) {
+        $("#rolModal").modal("show");
+
+        selectedEntryProductId = entryProductId;
+        console.log("Edit Kısmı Entryproduct Id", selectedEntryProductId);
+
+        //moment.js kütüphanesi kullanıldı
+
+        const formattedDate = moment(dateTime).format('YYYY-MM-DD');
+        console.log("cekilen veri dogum tarıhı", formattedDate)
+
+        $('#FarmerId').val(farmerId);
+        $('#EntryProductId').val(selectedEntryProductId);
+        $("#ProductId").val(productId);
+        $('#DateTime').val(formattedDate);
+
+    }
+
+    //Model açılınca ürünler gelsin
+    $("#rolModal").on("show.bs.modal", function () {
+
+        fetchData("Product/TumUrunler", function (response) {
+
+            console.log("veri :", response)
+            var tblProductIdDropdown = $("#ProductId");
+
+            $.each(response, function (index, product) {
+                tblProductIdDropdown.append($("<option>").val(product.id).text(product.name));
+            });
+        });
+    });
+
+
+
+    $(document).ready(function () {
+        getEntryProduct();
+    })
+
+</script>
