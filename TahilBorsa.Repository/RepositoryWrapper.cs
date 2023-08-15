@@ -20,9 +20,9 @@ namespace TahilBorsa.Repository
         private ProductRepository? productRepository;
         private SaleRepository? saleRepository;
         private TradesmanRepository? tradesmanRepository;
-        private UserRepository userRepository;
-        private RolRepository rolRepository;
-        private ContactRepository contactRepository;
+        private UserRepository? userRepository;
+        private RolRepository? rolRepository;
+        private ContactRepository? contactRepository;
 
         public RepositoryWrapper(RepositoryContext context)
         {

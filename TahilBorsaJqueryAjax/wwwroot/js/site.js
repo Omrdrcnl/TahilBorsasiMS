@@ -11,6 +11,14 @@ function fetchData(action, success) {
         },
         dataType: "json",
         contentType: "application/json; charset=utf-8",
+        beforeSend: function () {
+            // Ajax isteği başlamadan önce yüklenme göstergesini görünür yap
+            $("#loading-indicator").show();
+        },
+        complete: function () {
+            // Ajax isteği tamamlandığında yüklenme göstergesini gizle
+            $("#loading-indicator").hide();
+        },
         success: function (response) {
             if (response.success) {
                 success(response.data)

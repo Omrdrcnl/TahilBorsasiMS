@@ -21,6 +21,7 @@ namespace TahilBorsaMS.Controllers
         public ActionResult Index(string f, int page = 1)
         {
             var value = db.tblFarmer.ToList().ToPagedList(page, 10);
+
             //indexten gelen string f degeriyle harf duyarlılığını kaldırarak arama işlemi yapma
             if (!string.IsNullOrEmpty(f))
             {
@@ -30,6 +31,8 @@ namespace TahilBorsaMS.Controllers
 
             return View(value);
         }
+
+
         [HttpGet]
         public ActionResult AddFarmer()
         {

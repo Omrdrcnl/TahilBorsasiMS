@@ -8,13 +8,12 @@
 
     <div class="row">
         @*Arama işlem penceresi*@
-        @using (Html.BeginForm("Index", "Farmer", FormMethod.Get))
-        {
+     
             <div class="form-control input-group row align-items-center">
-                <div class="col-md-4">  @Html.TextBox("f", null, new { @class = "form-control", placeholder = "Çiftçi Ara" })</div>
-                <div class="col-md-2"><button class="btn btn-outline-primary">Ara</button></div>
+                <div class="col-md-4">  <input id="searchBox" class="form-control" placeholder="Çiftçi Ara" /></div>
+            <div class="col-md-2"><button id="searchButton" class="btn btn-outline-primary">Ara</button></div>
             </div>
-        }
+       
         <table id="FarmerTable" class="table table-bordered table-striped">
             <tr class="table-info">
                 <th>Kayıt No</th>
@@ -32,7 +31,7 @@
 
             </tr>
 
-            <tbody>
+            <tbody id="tableBody">
             </tbody>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -60,73 +59,117 @@
             </div>
         </div>
     </div>
-    <div class="d-flex justify-content-center pagination">
-        @*  @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),
-        new PagedListRenderOptions
-        {
-        LiElementClasses = new[] { "page-link btn " },
-        UlElementClasses = new[] { "page-item d-flex" }
-        })*@
-    </div>
+
     <a href="~/Admin/Farmer/AddFarmer" class="btn btn-primary">Yeni Kayıt Ekle</a>
+    <div class="d-flex justify-content-center pagination" id="paginationContainer">
+        <!-- Sayfalama bağlantıları buraya eklenecek -->
+    </div>
 </div>
 
 
 <script>
 
+    let currentPage = 1;
+    const itemsPerPage = 10;
+    var searchBox = $("#searchBox");
+    var searchButton = $("#searchButton");
+
+    //Paginatiobn işlemiyle veri getirme
+
     function getFarmer() {
-        $.ajax({
-            url: "https://localhost:7234/api/Farmer/TumCiftciler",
-            type: "GET",
-            dataType: "json",
-            beforeSend: function () {
-                // Ajax isteği başlamadan önce yüklenme göstergesini görünür yap
-                $("#loading-indicator").show();
-            },
-            complete: function () {
-                // Ajax isteği tamamlandığında yüklenme göstergesini gizle
-                $("#loading-indicator").hide();
-            },
-            success: function (response) {
-                if (response.success) {
-                    var tbody = $("#FarmerTable tbody");
-                    console.log("ciftci  data", response);
+        fetchData("Farmer/TumCiftciler", function (response) {
+            const totalPages = Math.ceil(response.length / itemsPerPage);
 
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentPageData = response.slice(startIndex, endIndex);
 
-                    $.each(response.data, function (index, farmer) {
-                        var row = $("<tr>");
-                        row.append($("<td>").text(farmer.id));
-                        row.append($("<td>").text(farmer.firstName));
-                        row.append($("<td>").text(farmer.lastName));
-                        row.append($("<td>").text(farmer.identityNo));
-                        row.append($("<td>").text(farmer.birthDate ? new Date(farmer.birthDate).toLocaleDateString() : ""));
-                        row.append($("<td>").text(farmer.contact));
-                        row.append($("<td>").text(farmer.tblAddress.tblCityName));
-                        row.append($("<td>").text(farmer.tblAddress.tblDistrictName));
-                        row.append($("<td>").text(farmer.tblAddress.neighborhood));
-                        row.append($("<td>").text(farmer.tblAddress.fullAddress));
-                        row.append($("<td>").html(`<button type="button" data-farmer-id="${farmer.id}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>`));
-                        row.append($("<td>").html(`<a class="btn btn-success" href="CallFarmer/${farmer.id}">Güncelle</a>`));
+            updateTable(currentPageData);
 
-                        tbody.append(row);
-                    });
-                } else {
-                    alert(response.message)
-                }
+            uptadePagination(totalPages);
 
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("Error:", textStatus, errorThrown);
-            }
         });
     }
+
+    function updateTable(data) {
+        const tbody = $("#tableBody");
+        tbody.empty();
+
+        $.each(data, function (index, farmer) {
+            var row = $("<tr>");
+            row.append($("<td>").text(farmer.id));
+            row.append($("<td>").text(farmer.firstName));
+            row.append($("<td>").text(farmer.lastName));
+            row.append($("<td>").text(farmer.identityNo));
+            row.append($("<td>").text(farmer.birthDate ? new Date(farmer.birthDate).toLocaleDateString() : ""));
+            row.append($("<td>").text(farmer.contact));
+            row.append($("<td>").text(farmer.tblAddress.tblCityName));
+            row.append($("<td>").text(farmer.tblAddress.tblDistrictName));
+            row.append($("<td>").text(farmer.tblAddress.neighborhood));
+            row.append($("<td>").text(farmer.tblAddress.fullAddress));
+            row.append($("<td>").html(`<button type="button" data-farmer-id="${farmer.id}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>`));
+            row.append($("<td>").html(`<a class="btn btn-success" href="CallFarmer/${farmer.id}">Güncelle</a>`));
+
+            tbody.append(row);
+        });
+    }
+    // TODO sayfada kaç veri olsun seçeneğini değişkene bağlayıp sayda seçtir
+    function uptadePagination(totalPages) {
+        const paginationContainer = $("#paginationContainer");
+        paginationContainer.empty();
+
+        //sayfalama bağlantıları
+
+        for (let i = 1; i <= totalPages; i++) {
+            const link = $("<button>").text(i).addClass("page-link");
+            if (i === currentPage) {
+                link.addClass("active");
+            } else {
+                link.click(() => {
+                    currentPage = i;
+                    getFarmer();
+                });
+            }
+            paginationContainer.append($("<li>").addClass("page-item").append(link));
+        }
+    }
+
+    function performSearch() {
+        fetchData("Farmer/TumCiftciler", function (response) {
+            const searchTerm = searchBox.val().toLowerCase();
+            const filteredData = response.filter(function (farmer) {
+                return (
+                    farmer.firstName.toLowerCase().includes(searchTerm) ||
+                    farmer.lastName.toLowerCase().includes(searchTerm)
+                );
+            });
+            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentPageData = filteredData.slice(startIndex, endIndex);
+
+            updateTable(currentPageData);
+            updatePagination(totalPages);
+        });
+    }
+    //entera basınca ara
+    searchBox.keypress(function (event) {
+        if (event.which === 13) {
+            performSearch();
+        }
+    })
+    //ara buttonuna basınca ara
+    searchButton.click(function () {
+        performSearch();
+    });
+
 
     $(document).ready(function () {
 
         // işlem yapacağımız ıd degerini tutmak için olusturduk
         var id = {};
         getFarmer();
-
 
 
 

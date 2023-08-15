@@ -244,6 +244,8 @@
     </Compile>
     <Compile Include="Models\Views\V_EntryProductList.cs" />
     <Compile Include="Models\Views\V_LabList.cs" />
+    <Compile Include="Models\Views\V_ReadySale.cs" />
+    <Compile Include="Models\Views\V_SaledList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roles\UserRoleProvider.cs" />
   </ItemGroup>

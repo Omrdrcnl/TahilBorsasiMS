@@ -4,6 +4,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json.Linq;
 using TahilBorsa.Repository;
 using TahilBorsaMS.Models.Entity;
+using TahilBorsaMS.Models.Views;
 
 namespace TahilBorsa.Api.Controllers
 {
@@ -17,10 +18,10 @@ namespace TahilBorsa.Api.Controllers
             this.repo = repo;
         }
 
-        [HttpGet("TümSatışlar")]
-        public dynamic TumSatislar()
+        [HttpGet("SaledList")]
+        public dynamic SaledList()
         {
-            List<tblSale> Sales = repo.SaleRepository.FindAll().ToList();
+            List<V_SaledList> Sales = repo.SaleRepository.GetSaledList();
 
             return new
             {
@@ -29,10 +30,10 @@ namespace TahilBorsa.Api.Controllers
             };  
         }
 
-        [HttpGet("SatısaHazırUrunler")]
+        [HttpGet("ReadySales")]
         public dynamic ReadySale()
         {
-            List<tblSale> items = repo.SaleRepository.FindByCondition(z => z.Process == false).ToList<tblSale>();
+            List<V_ReadySale> items = repo.SaleRepository.GetReadySales();
 
             return new
             {
@@ -40,30 +41,10 @@ namespace TahilBorsa.Api.Controllers
                 data = items
             };
         }
-        //[HttpGet("SatısaHazırUrunler")]
-        //public dynamic ReadySale()
-        //{
-        //    List<tblSale> items = repo.SaleRepository.OfTheShelf().ToList();
-        //    return new
-        //    {
-        //        success = true,
-        //        data = items
-        //    };
-        //}
+    
+     
 
-        [HttpGet("GerçekleşenSatışlar")]
-        public dynamic Saled()
-        {
-            List<tblSale> items = repo.SaleRepository.FindByCondition(z => z.Process == true).ToList<tblSale>();
-
-            return new
-            {
-                success = true,
-                data = items
-            };
-        }
-
-        [HttpGet("EsnafaGöreSatışlar/{tblTradesmanId}")]
+        [HttpGet("SalesByTradesman/{tblTradesmanId}")]
         public dynamic SaleTradesman(int tradesmanId)
         {
             List<tblSale> items = repo.SaleRepository.FindByCondition(z => z.tblTradesmanId == tradesmanId).ToList<tblSale>();
@@ -76,7 +57,7 @@ namespace TahilBorsa.Api.Controllers
         }
 
 
-        [HttpGet("ÇiftiçiyeGöreSatışlar/{tblFarmerId}")]
+        [HttpGet("SalesByFarmer/{tblFarmerId}")]
         public dynamic Get(int farmerId)
         {
             List<tblSale> items = repo.SaleRepository.FindByCondition(z => z.tblEntryProduct.tblFarmerId == farmerId).ToList<tblSale>();
@@ -88,7 +69,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpGet("TariheGöreSatışlar/{date}")]
+        [HttpGet("SalesByDate/{date}")]
         public dynamic SaleByDate(DateTime date)
         {
             List<tblSale> items;
@@ -107,25 +88,37 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpPost("SatışGir")]
+        [HttpPost("EnterSale")]
         public dynamic EnterSale([FromBody] dynamic model)
         {
             dynamic json = JObject.Parse(model.GetRawText());
 
+            decimal actualPrice = Convert.ToDecimal(json.ActualPrice);
+            int quantity = Convert.ToInt32(json.Quantity);
+
+            decimal amount = actualPrice * quantity;
+
             tblSale item = new tblSale()
             {
                 Id = json.Id,
+                tblLabDataId = json.LabDataId,
+                tblEntryProductId = json.EntryId,
                 ActualPrice = json.ActualPrice,
-                Amount = json.Amount,
                 Quantity = json.Quantity,
                 BasePrice = json.BasePrice,
-                Date = DateTime.Now,
-                Process = true,
+                Amount = amount,
+                Date = json.Date,
+                Process = json.Process,
+                tblTradesmanId= json.TradesmanId,
                 
             };
-            repo.SaleRepository.Update(item);
 
-            repo.SaveChanges();
+            if(item != null )
+            {
+                repo.SaleRepository.Update(item);
+                repo.SaveChanges();
+            }
+           
             return new
             {
                 success = true,

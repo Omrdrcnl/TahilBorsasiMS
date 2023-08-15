@@ -7,13 +7,10 @@
     <div class="row">
         <h2>Esnaf Paneli</h2>
         @*Arama işlem penceresi*@
-        @using (Html.BeginForm("Index", "Tradesman", FormMethod.Get))
-        {
-            <div class="form-control input-group row align-items-center">
-                <div class="col-md-4">  @Html.TextBox("f", null, new { @class = "form-control", placeholder = "Esnaf Ara" })</div>
-                <div class="col-md-2"><button class="btn btn-outline-primary">Ara</button></div>
-            </div>
-        }
+        <div class="form-control input-group row align-items-center">
+            <div class="col-md-4">  <input id="searchBox" class="form-control" placeholder="Çiftçi Ara" /></div>
+            <div class="col-md-2"><button id="searchButton" class="btn btn-outline-primary">Ara</button></div>
+        </div>
 
         <table id="tradesmanTable" class="table table-bordered table-striped">
             <tr class="table-info">
@@ -30,7 +27,7 @@
                 <th>Güncelle</th>
 
             </tr>
-            <tbody>
+            <tbody id="tableBody">
             </tbody>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -95,15 +92,12 @@
                                     <div class="col-4">
                                         <label>Şehir</label>
                                         <select id="cityDropdown" class="form-control">
-                                            <option value="">Şehir Seçin</option>
-                                            <!-- Şehir seçeneklerini buraya ekleyin -->
+                                      
                                         </select>
                                     </div>
                                     <div class="col-4">
                                         <label>İlçe</label>
                                         <select id="districtDropdown" class="form-control">
-                                            <option value="">İlçe Seçin</option>
-                                            <!-- İlçe seçeneklerini buraya ekleyin -->
                                         </select>
                                     </div>
                                     <div class="col-4">
@@ -141,11 +135,14 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-center pagination">
-            Pagination
+        <div class="d-flex justify-content-center pagination" id="paginationContainer">
+            <!-- Sayfalama bağlantıları buraya eklenecek -->
         </div>
-        <button onclick="NewTradesman()" class="btn btn-primary">Yeni Esnaf Kaydı Oluştur</button>
+
+
+
     </div>
+    <button onclick="NewTradesman()" class="btn btn-primary">Yeni Esnaf Kaydı Oluştur</button>
 </div>
 
 <script>
@@ -153,46 +150,115 @@
     let SelectedTradesmanId = 0;
     let SelectedAddressId = 0;
 
+    let currentPage = 1;
+    const itemsPerPage = 10;
+
+    var searchBox = $("#searchBox");
+    var searchButton = $("#searchButton");
+
     function getTradesman() {
         fetchData("Tradesman/Esnaflar", function (response) {
+            const totalPages = Math.ceil(response.length / itemsPerPage);
 
-            console.log("esanflar data", response);
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentPageData = response.slice(startIndex, endIndex);
 
+            updateTable(currentPageData);
 
-            var tbody = $("#tradesmanTable tbody");
-
-            $.each(response, function (index, t) {
-                var row = $("<tr>");
-                row.append($("<td>").text(t.id));
-                row.append($("<td>").text(t.firstName));
-                row.append($("<td>").text(t.lastName));
-                row.append($("<td>").text(t.identityNo));
-                row.append($("<td>").text(t.contact));
-                //row.append($("<td>").text(t.tblAddress.tblCityName));
-                row.append($("<td>").text(t.tblAddress.tblDistrict.name));
-                row.append($("<td>").text(t.tblAddress.neighborhoodName));
-                row.append($("<td>").text(t.tblAddress.fullAddress));
-                row.append($("<td>").html(`<button type="button" data-tradesman-id="${t.id}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>`));
-                row.append($("<td>").html(`<button onClick="EditTradesman(
-                                '${t.id}',
-                                '${t.identityNo}',
-                                '${t.birthDate}',
-                                '${t.contact}',
-                                '${t.firstName}',
-                                '${t.lastName}',
-                                '${t.tblAddress.fullAddress}',
-                                '${t.tblAddress.tblCityId}',
-                                '${t.tblAddress.tblDistrictId}',
-                                '${t.tblAddress.neighborhoodName}',
-                                '${t.tblAddressId}'
-                            )" class="btn btn-success">Güncelle</button>
-                            `));
-
-                tbody.append(row);
-            });
+            uptadePagination(totalPages);
 
         });
     }
+
+    function updateTable(data) {
+        const tbody = $("#tableBody");
+        tbody.empty();
+
+        $.each(data, function (index, t) {
+
+            var row = $("<tr>");
+            row.append($("<td>").text(t.id));
+            row.append($("<td>").text(t.firstName));
+            row.append($("<td>").text(t.lastName));
+            row.append($("<td>").text(t.identityNo));
+            row.append($("<td>").text(t.contact));
+            //row.append($("<td>").text(t.tblAddress.tblCityName));
+            row.append($("<td>").text(t.tblAddress.tblDistrict.name));
+            row.append($("<td>").text(t.tblAddress.neighborhoodName));
+            row.append($("<td>").text(t.tblAddress.fullAddress));
+            row.append($("<td>").html(`<button type="button" data-tradesman-id="${t.id}"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>`));
+            row.append($("<td>").html(`<button onClick="EditTradesman(
+                                            '${t.id}',
+                                            '${t.identityNo}',
+                                            '${t.birthDate}',
+                                            '${t.contact}',
+                                            '${t.firstName}',
+                                            '${t.lastName}',
+                                            '${t.tblAddress.fullAddress}',
+                                            '${t.tblAddress.tblCityId}',
+                                            '${t.tblAddress.tblDistrictId}',
+                                            '${t.tblAddress.neighborhoodName}',
+                                            '${t.tblAddressId}'
+                                        )" class="btn btn-success">Güncelle</button>
+                                        `));
+
+            tbody.append(row);
+        });
+    }
+    // TODO sayfada kaç veri olsun seçeneğini değişkene bağlayıp sayda seçtir
+    function uptadePagination(totalPages) {
+        const paginationContainer = $("#paginationContainer");
+        paginationContainer.empty();
+
+        //sayfalama bağlantıları
+
+        for (let i = 1; i <= totalPages; i++) {
+            const link = $("<button>").text(i).addClass("page-link");
+            if (i === currentPage) {
+                link.addClass("active");
+            } else {
+                link.click(() => {
+                    currentPage = i;
+                    getTradesman();
+                });
+            }
+            paginationContainer.append($("<li>").addClass("page-item").append(link));
+        }
+    }
+
+    function performSearch() {
+        fetchData("Tradesman/Esnaflar", function (response) {
+            const searchTerm = searchBox.val().toLowerCase();
+            const filteredData = response.filter(function (t) {
+                return (
+                    t.firstName.toLowerCase().includes(searchTerm) ||
+                    t.lastName.toLowerCase().includes(searchTerm)
+                );
+            });
+            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentPageData = filteredData.slice(startIndex, endIndex);
+
+            updateTable(currentPageData);
+            updatePagination(totalPages);
+        });
+    }
+    //entera basınca ara
+    searchBox.keypress(function (event) {
+        if (event.which === 13) {
+            performSearch();
+        }
+    })
+    //ara buttonuna basınca ara
+    searchButton.click(function () {
+        performSearch();
+    });
+
+
 
     function NewTradesman() {
         SelectedTradesmanId = 0;

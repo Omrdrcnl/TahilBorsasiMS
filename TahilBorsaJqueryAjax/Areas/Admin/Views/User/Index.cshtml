@@ -1,0 +1,257 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <h2>Kullanıcı Paneli</h2>
+        <div class="alert alert-success" id="successAlert" role="alert" style="display: none;">
+            Kullanıcı başarıyla eklendi.
+        </div>
+        <div class="alert alert-danger" id="deleteAlert" role="alert" style="display: none;">
+            Kullanıcı başarıyla silindi.
+        </div>
+        <table id="User" class="table table-bordered table-striped">
+            <tr class="table-info">
+                <th>Adı Soyadı</th>
+                <th>Kullanıcı Adı</th>
+                <th>Şifre</th>
+                <th>Rol Id</th>
+                <th>Rol Adı</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+
+            </tr>
+
+            <tbody>
+            </tbody>
+        </table>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Sil</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Kullanıcı Kaydını Silmek İstiyor musunuz ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                        <button class="btn btn-danger" onclick="DeleteUser()">Sil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button onclick="NewUser()" class="btn btn-primary">Yeni Kullanıcı Kaydı Oluştur</button>
+    </div>
+</div>
+
+<div class="modal fade" id="rolModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Besin Değeri</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form class="form form-control container mt-5">
+                    <h1>Kullanıcı Kaydet</h1>
+                    <br />
+                    <div class="row form-group">
+                        <div class="col-md-4 ">
+                            <label>Kullanıcı Kayıt No</label>
+                            <input type="text" id="UserId" readonly name="Name" class="form-control" />
+                        </div>
+                        <div class="col-md-4">
+                            <label>Adı</label>
+                            <input type="text" id="FirstName" class="form-control" />
+                        </div>
+                        <div class="col-md-4">
+                            <label>Soyadı</label>
+                            <input type="text" id="LastName" name="Name" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row form-group">
+
+                        <div class="col-md-6">
+                            <label>Kullanıcı Adı</label>
+                            <input type="text" id="Username" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                            <label>Şifre</label>
+                            <input type="text" id="Password" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <label>Rol</label>
+                            <select class="form-control" id="Rol">
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                <button type="button" class="btn btn-primary" onclick="AddUser()">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    function getAllUsers() {
+
+        fetchData("User/AllUsers", function (response) {
+
+            console.log("User data", response);
+
+
+            var tbody = $("#User tbody");
+
+            $.each(response, function (index, t) {
+                var row = $("<tr>");
+
+                row.append($("<td>").text(`${t.firstName} ${t.lastName}`));
+                row.append($("<td>").text(t.username));
+                var maskedPassword = '*'.repeat(t.password.length); // Şifre uzunluğu kadar * karakteri oluşturur
+                row.append($("<td>").text(maskedPassword));
+                row.append($("<td>").text(t.tblRolId));
+                row.append($("<td>").text(t.tblRol.name));
+                row.append($("<td>").html(`<button type="button" data-user-id="${t.id}"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>
+
+                                                                                            `));
+                row.append($("<td>").html(`<button data-bs-toggle="modal" data-bs-target="#rolModal" onClick="CallUser(
+                                                                                                  '${t.id}',
+                                                                                                  '${t.firstName}',
+                                                                                                  '${t.lastName}',
+                                                                                                  '${t.username}',
+                                                                                                  '${t.password}',
+                                                                                                  '${t.tblRolId}'
+                                                                                            )" class="btn btn-success">Güncelle</button>
+                                                                                            `));
+
+
+                tbody.append(row);
+            });
+
+        });
+    }
+
+
+
+    let selectedUserId = 0;
+
+    function NewUser() {
+
+        $("#FirstName").val("");
+        $('#LastName').val("");
+        $('#Username').val("");
+        $('#Password').val("");
+        $('#Rol').val("");
+
+        $("#rolModal").modal("show");
+    }
+
+
+
+    function AddUser() {
+        var p = {
+            Id: selectedUserId,
+            FirstName: $('#FirstName').val(),
+            LastName: $("#LastName").val(),
+            Username: $("#Username").val(),
+            Password: $("#Password").val(),
+            RolId: $("#Rol").val(),
+        };
+
+        postData("User/AddUser", p, (data) => {
+            GetAllUsers();
+
+        });
+
+
+        $("#rolModal").modal("hide");
+
+        $("#successAlert").fadeIn();
+
+        $(".modal-backdrop").remove();
+
+        setTimeout(function () {
+            $("#successAlert").fadeOut();
+        }, 3000);
+        setTimeout(function () {
+            location.reload();
+        }, 3500);
+
+    }
+
+    function CallUser(id, firstName, lastName, username, password, rolId) {
+
+        selectedUserId = id;
+        $('#Rol').val(rolId);
+
+        $("#UserId").val(selectedUserId);
+        $("#FirstName").val(firstName);
+        $("#LastName").val(lastName);
+        $("#Username").val(username);
+        $("#Password").val(password);
+
+    }
+
+    //Model açılınca ürünler gelsin
+    $("#rolModal").on("show.bs.modal", function () {
+
+        fetchData("Rol/AllRoles", function (response) {
+
+            console.log("rol veri :", response)
+            var rolId = $("#Rol");
+
+            $.each(response, function (index, r) {
+                rolId.append($("<option>").val(r.id).text(r.name));
+            });
+        });
+    });
+
+
+    //Delete İşlemi
+    $("#exampleModal").on("show.bs.modal", function (event) {
+        var button = $(event.relatedTarget); // Tetikleyici düğme
+        var userId = button.data("user-id"); // data-tradesman-id değeri
+
+        // Sil butonuna tıklama işlemini ayarla
+        var deleteButton = $("#exampleModal").find(".btn-danger"); // Sil butonunu seç
+        deleteButton.off("click").on("click", function () {
+            DeleteUser(userId);
+        });
+    });
+
+    function DeleteUser(userId) {
+
+        deleteData(`User/${userId}`, (model) => {
+
+            $("#exampleModal").modal("hide");
+            $(".modal-backdrop").remove();
+            getAllUsers();
+            setTimeout(function () {
+                $("#deleteAlert").fadeOut();
+            }, 3000);
+            setTimeout(function () {
+                location.reload();
+            }, 3500);
+        });
+
+    }
+
+
+    $(document).ready(function () {
+        getAllUsers();
+    })
+
+</script>

@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Saled";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
@@ -17,7 +16,7 @@
 
     {
         <div>
-            <table class="table table-bordered table-hover table-success table-striped">
+            <table id="Saled" class="table table-bordered table-hover table-success table-striped">
                 <tr class="table-warning">
                     <th>Satış No</th>
                     <th>Giriş No</th>
@@ -31,7 +30,6 @@
 
                 </tr>
                 <tbody>
-
                 </tbody>
             </table>
         </div>
@@ -45,3 +43,46 @@
     }
 
 </div>
+
+
+<script>
+    function getSaledList() {
+
+        fetchData("Sale/SaledList", function (response) {
+
+            console.log("SaledList data", response);
+
+
+            var tbody = $("#Saled tbody");
+
+            $.each(response, function (index, t) {
+                var row = $("<tr>");
+                row.append($("<td>").text(t.saleId));
+                row.append($("<td>").text(t.entryId));
+                row.append($("<td>").text(`${t.farmerFirstName} ${t.farmerLastName}`));
+                row.append($("<td>").text(`${t.trFirstName} ${t.trLastName}`));
+                row.append($("<td>").text(t.farmerIdentityNo));
+                row.append($("<td>").text(t.productName));
+                row.append($("<td>").text(t.quantity));
+                row.append($("<td>").text(t.nutritionalValue));
+                row.append($("<td>").html(`<button data-bs-toggle="modal" data-bs-target="#rolModal" onClick="EnterSale(
+
+                                                                         '${t.entryId}',
+                                                                         '${t.productName}',
+                                                                         '${t.nutritionalValue}',
+                                                                             '${t.saleId}',
+                                                                             '${t.labId}'
+                                                                    )" class="btn btn-success">Detay</button>
+                                                                    `));
+
+                tbody.append(row);
+            });
+
+        });
+    }
+
+    $(document).ready(function () {
+        getSaledList();
+    })
+
+</script>

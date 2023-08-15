@@ -15,8 +15,8 @@ namespace TahilBorsa.Api.Controllers
         }
 
 
-        [HttpGet("TumRoller")]
-        public dynamic TumRoller()
+        [HttpGet("AllRoles")]
+        public dynamic AllRoles()
         {
             List<tblRol> item = repo.RolRepository.FindAll().ToList<tblRol>();
             return new

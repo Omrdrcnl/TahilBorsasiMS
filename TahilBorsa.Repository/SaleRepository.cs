@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TahilBorsaMS.Models.Entity;
+using TahilBorsaMS.Models.Views;
 
 namespace TahilBorsasi.Repository
 {
@@ -11,14 +12,17 @@ namespace TahilBorsasi.Repository
     {
         public SaleRepository(RepositoryContext context) : base(context) { }
 
-        //public dynamic OfTheShelf()
-        //{
-        //    List<tblSale> list =(from k in RepositoryContext.Sales join u in RepositoryContext.EntryProducts
-        //                         on k.tblEntryProductId equals u.Id
-        //                         where u.Process==false 
-        //                         select k).ToList<tblSale>();
-        //    return list;
-        //}
+        public List<V_ReadySale> GetReadySales()
+        {
+            return RepositoryContext.ReadySales.ToList<V_ReadySale>();
+        }
+
+        public List<V_SaledList> GetSaledList()
+        {
+            return RepositoryContext.SaledLists.ToList<V_SaledList>();
+        }
+
+     
 
 
 

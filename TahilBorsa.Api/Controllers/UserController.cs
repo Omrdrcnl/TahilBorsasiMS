@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json.Linq;
 using System.Linq;
@@ -18,10 +19,10 @@ namespace TahilBorsa.Api.Controllers
         }
 
 
-        [HttpGet("TumKullanicilar")]
+        [HttpGet("AllUsers")]
         public dynamic TumKullanicilar()
         {
-            List<tblUser> item = repo.UserRepository.FindAll().ToList<tblUser>();
+            List<tblUser> item = repo.UserRepository.FindAll().Include(x => x.tblRol).ToList();
             return new
             {
                 success = true,
@@ -40,7 +41,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpPost("KullaniciEkle")]
+        [HttpPost("AddUser")]
         public dynamic AddUser([FromBody] dynamic model)
         {
             dynamic json = JObject.Parse(model.GetRawText());
@@ -52,7 +53,7 @@ namespace TahilBorsa.Api.Controllers
                 Password = json.Password,
                 FirstName = json.FirstName,
                 LastName = json.LastName,
-                tblRolId = json.tblRolId,
+                tblRolId = json.RolId,
             };
 
             if (item.Id > 0)

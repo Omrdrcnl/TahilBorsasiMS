@@ -1,33 +1,195 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
 
-@using (Html.BeginForm("Index", "Sale", FormMethod.Get))
 
-{
-    <div class="container mt-5">
-        <h2>Satışa Hazır Ürünler</h2>
-        <table class="table table-bordered table-striped">
-            <tr class="table-info">
-                <th>Giriş Id</th>
-                <th>Çiftçi Id</th>
-                <th>Çiftçi Kimlik no</th>
-                <th>Ürün Besin Değeri</th>
-                <th class="text-center">İşlem</th>
+<div class="container mt-5">
+    <h2>Satışa Hazır Ürünler</h2>
+    <table id="Sale" class="table table-bordered table-striped">
+        <tr class="table-info">
+            <th>Giriş No</th>
+            <th>Çiftçi Kayıt No</th>
+            <th>Çiftçi Ad Soyad</th>
+            <th>Çiftçi Kimlik no</th>
+            <th>Ürün</th>
+            <th>Besin Değeri</th>
+            <th class="text-center">İşlem</th>
 
-            </tr>
-            <tbody>
-
-            </tbody>
-        </table>
-        <div class="btn-group btn-group-lg d-flex justify-content-between">
-            <div>
-                <a href="/Sale/Saled" class="btn btn-warning btn-lg">Geçmiş Satış Verileri</a>
-            </div>
-
+        </tr>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="alert alert-success" id="successAlert" role="alert" style="display: none;">
+        Ürün Satışı Başarıyla Gerçekleşti.
+    </div>
+    <div class="btn-group btn-group-lg d-flex justify-content-between">
+        <div>
+            <a href="/Admin/Sale/Saled" class="btn btn-warning btn-lg">Geçmiş Satış Verileri</a>
         </div>
     </div>
-}
+    <div class="modal fade" id="rolModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Besin Değeri</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form class="form form-control container mt-5">
+                        <h1>Ürün Besin Değeri Girişi</h1>
+                        <br />
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label>Ürün Giriş Kayıt No</label>
+                                <input type="text" readonly id="EntryId" class="form-control" />
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Ürün Besin Değeri</label>
+                                <input type="text" id="NutritionalValue" readonly name="Name" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Ürün Adı</label>
+                                <input type="text" id="ProductName" readonly class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Miktar Kg</label>
+                                <input type="text" id="Quantity" name="Name" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <label>Açılış Fiyat</label>
+                                <input type="text" id="BasePrice" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Satış Fiyatı</label>
+                                <input type="text" id="ActualPrice" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Alıcı Esnaf No</label>
+                                <input type="text" id="TradesmanId" name="Name" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Tarih</label>
+                                <input type="date" id="Date" class="form-control" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                    <button type="button" class="btn btn-primary" onclick="AddSale()">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+
+    function getReadySale() {
+
+        fetchData("Sale/ReadySales", function (response) {
+
+            console.log("ReadySale data", response);
+
+
+            var tbody = $("#Sale tbody");
+
+            $.each(response, function (index, t) {
+                var row = $("<tr>");
+                row.append($("<td>").text(t.entryId));
+                row.append($("<td>").text(t.farmerId));
+                row.append($("<td>").text(`${t.farmerFirstName} ${t.farmerLastName}`));
+                row.append($("<td>").text(t.farmerIdentityNo));
+                row.append($("<td>").text(t.productName));
+                row.append($("<td>").text(t.nutritionalValue));
+                row.append($("<td>").html(`<button data-bs-toggle="modal" data-bs-target="#rolModal" onClick="EnterSale(
+
+                                                                 '${t.entryId}',
+                                                                 '${t.productName}',
+                                                                 '${t.nutritionalValue}',
+                                                                     '${t.saleId}',
+                                                                     '${t.labId}'
+                                                            )" class="btn btn-success">Değer Gir</button>
+                                                            `));
+
+                tbody.append(row);
+            });
+
+        });
+    }
+
+    let selectedSaleId = 0;
+    let selectedLabId = 0;
+    let selectedEntryId = 0;
+
+    function AddSale() {
+        var p = {
+            Id: selectedSaleId,
+            EntryId: selectedEntryId,
+            LabDataId: selectedLabId,
+            BasePrice: $('#BasePrice').val(),
+            ActualPrice: $("#ActualPrice").val(),
+            Quantity: $("#Quantity").val(),
+            TradesmanId: $("#TradesmanId").val(),
+            Date: $("#Date").val(),
+            Process: true
+        };
+
+        postData("Sale/EnterSale", p, (data) => {
+          
+
+        });
+        getReadySale();
+
+        $("#rolModal").modal("hide");
+
+        $("#successAlert").fadeIn();
+
+        $(".modal-backdrop").remove();
+
+        setTimeout(function () {
+            $("#successAlert").fadeOut();
+        }, 3000);
+        setTimeout(function () {
+            location.reload();
+        }, 3500);
+
+    }
+
+    function EnterSale(entryId, ProductName, nutritionalValue, saleId, labId) {
+
+        selectedEntryId = entryId;
+
+        $("#ProductName").val(ProductName);
+        $("#NutritionalValue").val(nutritionalValue);
+        $('#EntryId').val(selectedEntryId);
+        selectedSaleId = saleId;
+        selectedLabId = labId;
+    }
+
+
+
+
+
+
+    $(document).ready(function () {
+        getReadySale();
+
+        var currentDate = new Date().toISOString().split('T')[0]; // Bugünkü tarihi alıyoruz
+        $("#Date").val(currentDate); // Input alanına değeri atıyoruz
+    })
+
+</script>
