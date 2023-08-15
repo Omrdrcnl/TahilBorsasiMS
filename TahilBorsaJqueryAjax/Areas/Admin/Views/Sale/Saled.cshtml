@@ -5,17 +5,12 @@
 
 <div class="container mt-5">
     <h2 class="m-auto mb-3">Gerçekleşen Satışlar</h2>
-    @using (Html.BeginForm("Saled", "Sale", FormMethod.Get))
-    {
-        <div class="form-control input-group row-cols-md-6 align-items-center">
-            <div class="col-md-4">   @Html.TextBox("e", null, new { @class = "form-control", placeholder = "Çiftçi Kimlik No Ara" })</div>
-            <div class="col-md-2">  <button class="btn btn-outline-primary">Ara</button></div>
-        </div>
-    }
-    @using (Html.BeginForm("Index", "Sale", FormMethod.Get))
+    <div class="form-control input-group row align-items-center">
+        <div class="col-md-4">  <input id="searchBox" class="form-control" placeholder="Çiftçi Ara" /></div>
+        <div class="col-md-2"><button id="searchButton" class="btn btn-outline-primary">Ara</button></div>
+    </div>
 
-    {
-        <div>
+    <div>
             <table id="Saled" class="table table-bordered table-hover table-success table-striped">
                 <tr class="table-warning">
                     <th>Satış No</th>
@@ -29,57 +24,125 @@
                     <th class="text-center">İşlem</th>
 
                 </tr>
-                <tbody>
+            <tbody id="tableBody">
                 </tbody>
             </table>
         </div>
+        <div class="d-flex justify-content-center pagination" id="paginationContainer">
+            <!-- Sayfalama bağlantıları buraya eklenecek -->
+        </div>
         <div class="btn-group btn-group-lg d-flex justify-content-between">
             <div>
-                <a href="/Sale/Index/" class="btn btn-primary btn-lg">Geri</a>
+                <a href="/Admin/Sale/Index/" class="btn btn-primary btn-lg">Geri</a>
             </div>
 
         </div>
-
-    }
 
 </div>
 
 
 <script>
+    let currentPage = 1;
+    const itemsPerPage = 10;
+    var searchBox = $("#searchBox");
+    var searchButton = $("#searchButton");
+
     function getSaledList() {
 
         fetchData("Sale/SaledList", function (response) {
 
-            console.log("SaledList data", response);
+            const totalPages = Math.ceil(response.length / itemsPerPage);
 
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentPageData = response.slice(startIndex, endIndex);
 
-            var tbody = $("#Saled tbody");
+            updateTable(currentPageData);
 
-            $.each(response, function (index, t) {
-                var row = $("<tr>");
-                row.append($("<td>").text(t.saleId));
-                row.append($("<td>").text(t.entryId));
-                row.append($("<td>").text(`${t.farmerFirstName} ${t.farmerLastName}`));
-                row.append($("<td>").text(`${t.trFirstName} ${t.trLastName}`));
-                row.append($("<td>").text(t.farmerIdentityNo));
-                row.append($("<td>").text(t.productName));
-                row.append($("<td>").text(t.quantity));
-                row.append($("<td>").text(t.nutritionalValue));
-                row.append($("<td>").html(`<button data-bs-toggle="modal" data-bs-target="#rolModal" onClick="EnterSale(
+            uptadePagination(totalPages);
 
-                                                                         '${t.entryId}',
-                                                                         '${t.productName}',
-                                                                         '${t.nutritionalValue}',
-                                                                             '${t.saleId}',
-                                                                             '${t.labId}'
-                                                                    )" class="btn btn-success">Detay</button>
-                                                                    `));
-
-                tbody.append(row);
-            });
 
         });
     }
+
+    function updateTable(data) {
+        const tbody = $("#tableBody");
+        tbody.empty();
+
+        $.each(data, function (index, t) {
+            var row = $("<tr>");
+            row.append($("<td>").text(t.saleId));
+            row.append($("<td>").text(t.entryId));
+            row.append($("<td>").text(`${t.farmerFirstName} ${t.farmerLastName}`));
+            row.append($("<td>").text(`${t.trFirstName} ${t.trLastName}`));
+            row.append($("<td>").text(t.farmerIdentityNo));
+            row.append($("<td>").text(t.productName));
+            row.append($("<td>").text(t.quantity));
+            row.append($("<td>").text(t.nutritionalValue));
+            row.append($("<td>").html(`<button data-bs-toggle="modal" data-bs-target="#rolModal" onClick="EnterSale(
+
+                                                                             '${t.entryId}',
+                                                                             '${t.productName}',
+                                                                             '${t.nutritionalValue}',
+                                                                                 '${t.saleId}',
+                                                                                 '${t.labId}'
+                                                                        )" class="btn btn-success">Detay</button>
+                                                                        `));
+
+            tbody.append(row);
+        });
+
+    }
+    // TODO sayfada kaç veri olsun seçeneğini değişkene bağlayıp sayda seçtir
+    function uptadePagination(totalPages) {
+        const paginationContainer = $("#paginationContainer");
+        paginationContainer.empty();
+
+        //sayfalama bağlantıları
+
+        for (let i = 1; i <= totalPages; i++) {
+            const link = $("<button>").text(i).addClass("page-link");
+            if (i === currentPage) {
+                link.addClass("active");
+            } else {
+                link.click(() => {
+                    currentPage = i;
+                    getSaledList();
+                });
+            }
+            paginationContainer.append($("<li>").addClass("page-item").append(link));
+        }
+    }
+
+    function performSearch() {
+        fetchData("Sale/SaledList", function (response) {
+            const searchTerm = searchBox.val().toLowerCase();
+            const filteredData = response.filter(function (farmer) {
+                return (
+                    farmer.farmerIdentityNo.toLowerCase().includes(searchTerm) 
+                );
+            });
+            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentPageData = filteredData.slice(startIndex, endIndex);
+
+            updateTable(currentPageData);
+            updatePagination(totalPages);
+        });
+    }
+    //entera basınca ara
+    searchBox.keypress(function (event) {
+        if (event.which === 13) {
+            performSearch();
+        }
+    })
+    //ara buttonuna basınca ara
+    searchButton.click(function () {
+        performSearch();
+    });
+
 
     $(document).ready(function () {
         getSaledList();

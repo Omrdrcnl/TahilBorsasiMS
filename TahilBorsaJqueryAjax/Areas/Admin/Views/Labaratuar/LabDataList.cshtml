@@ -7,28 +7,148 @@
 <div class="container mt-5">
 
 
-    @using (Html.BeginForm("LabDataList", "Labaratuar", FormMethod.Get))
-    {
-        <div class="form-control input-group">
-            @Html.TextBox("e", null, new { @class = "form-control", placeholder = "Çiftçi Kimlik No Ara" })
-            <button class="btn btn-outline-primary">Ara</button>
-        </div>
-    }
+    <div class="form-control input-group row align-items-center">
+        <div class="col-md-4">  <input id="searchBox" class="form-control" placeholder="Çiftçi Ara" /></div>
+        <div class="col-md-2"><button id="searchButton" class="btn btn-outline-primary">Ara</button></div>
+    </div>
 
     <table class="table table-bordered table-striped">
         <tr class="table-danger">
-            <th>Giriş Id</th>
-            <th>Çiftçi Id</th>
+            <th>Giriş Numarası</th>
+            <th>Çiftçi Kayıt No</th>
+            <th>Ad Soyad</th>
             <th>Çiftçi Kimlik no</th>
-            <th>Ürün Besin Değeri</th>
-            <th>Tarihi</th>
+            <th>Ürün</th>
+            <th>Besin Değeri</th>
+            <th>Tarih</th>
             <th class="text-center">Detay</th>
         </tr>
-        <tbody>
+        <tbody id="tableBody">
 
         </tbody>
     </table>
+    <div class="d-flex justify-content-center pagination" id="paginationContainer">
+        <!-- Sayfalama bağlantıları buraya eklenecek -->
+    </div>
     <div>
-        <a class="btn btn-info" href="/Labaratuar/Index">Geri</a>
+        <a class="btn btn-info" href="/Admin/Labaratuar/Index">Geri</a>
     </div>
 </div>
+
+
+<script>
+    let currentPage = 1;
+    const itemsPerPage = 10;
+    var searchBox = $("#searchBox");
+    var searchButton = $("#searchButton");
+
+
+    function getLabDataList(){
+        fetchData("Labaratuar/LabList", function (response) {
+
+            console.log("PastLab data", response);
+
+            const totalPages = Math.ceil(response.length / itemsPerPage);
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentPageData = response.slice(startIndex, endIndex);
+
+            updateTable(currentPageData);
+
+            uptadePagination(totalPages);
+
+
+
+        });
+
+    }
+
+    function updateTable(data) {
+        const tbody = $("#tableBody");
+        tbody.empty();
+
+        $.each(data, function (index, t) {
+            var row = $("<tr>");
+            row.append($("<td>").text(t.entryProductId));
+            row.append($("<td>").text(t.farmerId));
+            row.append($("<td>").text(`${t.farmerFirstName} ${t.farmerLastName}`));
+            row.append($("<td>").text(t.identityNo));
+            row.append($("<td>").text(t.productName));
+            row.append($("<td>").text(t.nutritionalValue));
+            row.append($("<td>").text(t.dateTime));
+            row.append($("<td>").html(`<button data-bs-toggle="modal" data-bs-target="#rolModal" onClick="Details(
+
+                                                                         '${t.entryId}',
+                                                                         '${t.productName}',
+                                                                         '${t.nutritionalValue}'
+
+                                                                    )" class="btn btn-success">Değer Gir</button>
+                                                                    `));
+
+            tbody.append(row);
+        });
+
+
+    }
+    // TODO sayfada kaç veri olsun seçeneğini değişkene bağlayıp sayda seçtir
+    function uptadePagination(totalPages) {
+        const paginationContainer = $("#paginationContainer");
+        paginationContainer.empty();
+
+        //sayfalama bağlantıları
+
+        for (let i = 1; i <= totalPages; i++) {
+            const link = $("<button>").text(i).addClass("page-link");
+            if (i === currentPage) {
+                link.addClass("active");
+            } else {
+                link.click(() => {
+                    currentPage = i;
+                    getLabDataList();
+                });
+            }
+            paginationContainer.append($("<li>").addClass("page-item").append(link));
+        }
+    }
+
+
+    function performSearch() {
+        fetchData("Labaratuar/LabList", function (response) {
+            const searchTerm = searchBox.val().toLowerCase();
+            const filteredData = response.filter(function (farmer) {
+                return (
+                    farmer.identityNo.toLowerCase().includes(searchTerm)
+                );
+            });
+            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentPageData = filteredData.slice(startIndex, endIndex);
+
+            updateTable(currentPageData);
+            updatePagination(totalPages);
+        });
+    }
+    //entera basınca ara
+    searchBox.keypress(function (event) {
+        if (event.which === 13) {
+            performSearch();
+        }
+    })
+    //ara buttonuna basınca ara
+    searchButton.click(function () {
+        performSearch();
+    });
+
+
+    $(document).ready(function(){
+        getLabDataList();
+
+    })
+
+    $(document).ready(function(){
+        getLabDataList();
+    })
+</script>

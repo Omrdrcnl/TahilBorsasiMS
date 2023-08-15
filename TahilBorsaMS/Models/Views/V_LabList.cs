@@ -12,9 +12,12 @@ namespace TahilBorsaMS.Models.Views
     {
         public int? EntryProductId { get; set; }
         public int? FarmerId { get; set; }
+        public int NutritionalValue { get; set; }
+        public string IdentityNo { get; set; }
         public string ProductName { get; set; }
         public DateTime DateTime { get; set; }
         public string FarmerFirstName { get; set; }
         public string FarmerLastName { get; set; }
+
     }
 }

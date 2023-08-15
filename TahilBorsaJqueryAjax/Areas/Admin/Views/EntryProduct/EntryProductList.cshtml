@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "EntryProductList";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
@@ -7,13 +6,10 @@
 <div class="container mt-5">
     <h2>Geçmiş Ürün Girdileri</h2>
 
-    @using (Html.BeginForm("EntryProductList", "EntryProduct", FormMethod.Get))
-    {
-        <div class="form-control input-group mb-3">
-            @Html.TextBox("e", null, new { @class = "form-control", placeholder = "Çiftçi Kimlik No Ara" })
-            <button class="btn btn-outline-primary">Ara</button>
-        </div>
-    }
+    <div class="form-control input-group row align-items-center">
+        <div class="col-md-4">  <input id="searchBox" class="form-control" placeholder="Çiftçi Ara" /></div>
+        <div class="col-md-2"><button id="searchButton" class="btn btn-outline-primary">Ara</button></div>
+    </div>
     <div class="alert alert-success" id="successAlert" role="alert" style="display: none;">
         Ürün başarıyla Güncellendi.
     </div>
@@ -26,12 +22,14 @@
             <th>Tarihi</th>
             <th>İşlem</th>
         </tr>
-        <tbody>
-
+        <tbody id="tableBody">
         </tbody>
     </table>
+    <div class="d-flex justify-content-center pagination" id="paginationContainer">
+        <!-- Sayfalama bağlantıları buraya eklenecek -->
+    </div>
     <div>
-        <a class="btn btn-info" href="/EntryProduct/Index">Geri</a>
+        <a class="btn btn-info" href="/Admin/EntryProduct/Index">Geri</a>
     </div>
     <div class="modal fade" id="rolModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -48,7 +46,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <label>Ürün Giriş Kayıt No</label>
-                                <input type="text" readonly id="EntryProductId"  name="Id" class="form-control" />
+                                <input type="text" readonly id="EntryProductId" name="Id" class="form-control" />
                             </div>
                             <div class="col-6">
                                 <label>Çiftçi Kayıt No</label>
@@ -56,12 +54,11 @@
                             </div>
                         </div>
                         <div class="row">
-                          <div class="col-md-12">
-                            <label>Ürün Çeşidi</label>
+                            <div class="col-md-12">
+                                <label>Ürün Çeşidi</label>
                                 <select class="form-control" id="ProductId">
-                             
                                 </select>
-                           </div>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
@@ -86,45 +83,117 @@
 
 <script>
 
+
+    let currentPage = 1;
+    const itemsPerPage = 10;
+    var searchBox = $("#searchBox");
+    var searchButton = $("#searchButton");
+
     function getEntryProduct() {
 
         fetchData("EntryProduct/GirisYapanUrunler", function (response) {
 
             console.log("EntryProduct data", response);
 
+            const totalPages = Math.ceil(response.length / itemsPerPage);
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentPageData = response.slice(startIndex, endIndex);
+
+            updateTable(currentPageData);
+
+            uptadePagination(totalPages);
 
             var tbody = $("#EntryProduct tbody");
 
-            $.each(response, function (index, t) {
-                var row = $("<tr>");
-                row.append($("<td>").text(t.entryProductId));
-                row.append($("<td>").text(`${t.farmerName} ${t.farmerLastName}`));
-                row.append($("<td>").text(t.identityNo));
-                row.append($("<td>").text(t.name));
-                row.append($("<td>").text(t.dateTime));
-                row.append($("<td>").html(`<button onClick="EditEntryProduct(
-                                    '${t.entryProductId}',
-                                    '${t.farmerId}',
-                                    '${t.dateTime}',
-                                    '${t.productId}'
-                                )" class="btn btn-success">Güncelle</button>
-                                `));
-
-                tbody.append(row);
-            });
 
         });
     }
 
+    function updateTable(data) {
+        const tbody = $("#tableBody");
+        tbody.empty();
+
+        $.each(data, function (index, t) {
+            var row = $("<tr>");
+            row.append($("<td>").text(t.entryProductId));
+            row.append($("<td>").text(`${t.farmerName} ${t.farmerLastName}`));
+            row.append($("<td>").text(t.identityNo));
+            row.append($("<td>").text(t.name));
+            row.append($("<td>").text(t.dateTime));
+            row.append($("<td>").html(`<button onClick="EditEntryProduct(
+                                                '${t.entryProductId}',
+                                                '${t.farmerId}',
+                                                '${t.dateTime}',
+                                                '${t.productId}'
+                                            )" class="btn btn-success">Güncelle</button>
+                                            `));
+
+            tbody.append(row);
+        });
+
+    }
+    // TODO sayfada kaç veri olsun seçeneğini değişkene bağlayıp sayda seçtir
+    function uptadePagination(totalPages) {
+        const paginationContainer = $("#paginationContainer");
+        paginationContainer.empty();
+
+        //sayfalama bağlantıları
+
+        for (let i = 1; i <= totalPages; i++) {
+            const link = $("<button>").text(i).addClass("page-link");
+            if (i === currentPage) {
+                link.addClass("active");
+            } else {
+                link.click(() => {
+                    currentPage = i;
+                    getEntryProduct();
+                });
+            }
+            paginationContainer.append($("<li>").addClass("page-item").append(link));
+        }
+    }
+
+
+    function performSearch() {
+        fetchData("EntryProduct/GirisYapanUrunler", function (response) {
+            const searchTerm = searchBox.val().toLowerCase();
+            const filteredData = response.filter(function (farmer) {
+                return (
+                    farmer.identityNo.toLowerCase().includes(searchTerm)
+                );
+            });
+            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentPageData = filteredData.slice(startIndex, endIndex);
+
+            updateTable(currentPageData);
+            updatePagination(totalPages);
+        });
+    }
+    //entera basınca ara
+    searchBox.keypress(function (event) {
+        if (event.which === 13) {
+            performSearch();
+        }
+    })
+    //ara buttonuna basınca ara
+    searchButton.click(function () {
+        performSearch();
+    });
+
     let selectedEntryProductId = 0;
-    
+
     function AddEntryProduct() {
         var p = {
             Id: selectedEntryProductId,
             tblProductId: $('#ProductId').val(),
             tblFarmerId: $("#FarmerId").val(),
             DateTime: $('#DateTime').val(),
-            Process : true
+            Process: true
         };
 
         postData("EntryProduct/UrunGirisYap", p, (data) => {
@@ -145,17 +214,17 @@
         });
 
     }
-    
-       function EditEntryProduct(entryProductId, farmerId, dateTime, productId) {
+
+    function EditEntryProduct(entryProductId, farmerId, dateTime, productId) {
         $("#rolModal").modal("show");
 
         selectedEntryProductId = entryProductId;
         console.log("Edit Kısmı Entryproduct Id", selectedEntryProductId);
 
-          //moment.js kütüphanesi kullanıldı
+        //moment.js kütüphanesi kullanıldı
 
-          const formattedDate = moment(dateTime).format('YYYY-MM-DD');
-          console.log("cekilen veri dogum tarıhı", formattedDate)
+        const formattedDate = moment(dateTime).format('YYYY-MM-DD');
+        console.log("cekilen veri dogum tarıhı", formattedDate)
 
         $('#FarmerId').val(farmerId);
         $('#EntryProductId').val(selectedEntryProductId);
@@ -165,8 +234,8 @@
     }
 
     //Model açılınca ürünler gelsin
-    $("#rolModal").on("show.bs.modal", function(){
-        
+    $("#rolModal").on("show.bs.modal", function () {
+
         fetchData("Product/TumUrunler", function (response) {
 
             console.log("veri :", response)
@@ -180,7 +249,7 @@
 
 
 
-    $(document).ready(function(){
+    $(document).ready(function () {
         getEntryProduct();
     })
 
