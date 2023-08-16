@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 using TahilBorsa.Repository;
 using TahilBorsaMS.Models.Entity;
 using TahilBorsaMS.Models.Views;
@@ -27,7 +28,7 @@ namespace TahilBorsa.Api.Controllers
             {
                 success = true,
                 data = Sales
-            };  
+            };
         }
 
         [HttpGet("ReadySales")]
@@ -41,8 +42,8 @@ namespace TahilBorsa.Api.Controllers
                 data = items
             };
         }
-    
-     
+
+
 
         [HttpGet("SalesByTradesman/{tblTradesmanId}")]
         public dynamic SaleTradesman(int tradesmanId)
@@ -74,12 +75,14 @@ namespace TahilBorsa.Api.Controllers
         {
             List<tblSale> items;
 
-            if(!cache.TryGetValue("TariheGöreSatışlar/{date}",out items))
+            if (!cache.TryGetValue("TariheGöreSatışlar/{date}", out items))
             {
-                items  = repo.SaleRepository.FindByCondition(z => z.Date == date).ToList<tblSale>();
+                items = repo.SaleRepository.FindByCondition(z => z.Date == date).ToList<tblSale>();
+
+
 
                 cache.Set("TariheGöreSatışlar/{date}", items, DateTimeOffset.UtcNow.AddDays(1));
-            }  
+            }
 
             return new
             {
@@ -87,6 +90,99 @@ namespace TahilBorsa.Api.Controllers
                 data = items
             };
         }
+
+        //Toplam degerleri panele aktarma
+        [HttpGet("Total")]
+        public dynamic TotalQuantity()
+        {
+            var sales = repo.SaleRepository.FindAll().ToList<tblSale>();
+
+            decimal? totalQuantity = sales.Sum(x => x.Quantity);
+            var saleLength = sales.Count();
+            decimal? totalAmount = sales.Sum(x => x.Amount);
+
+            var tradesman = repo.TradesmanRepository.FindAll().ToList<tblTradesman>();
+
+            int trLength = tradesman.Count();
+
+            var farmer = repo.FarmerRepository.FindAll().ToList<tblFarmer>();
+
+            var fLength = farmer.Count();
+
+            var item = new
+            {
+                totalQuantity = totalQuantity,
+                totalAmount = totalAmount,
+                totalTradesman = trLength,
+                totalSale = saleLength,
+                totalFarmer = fLength,
+            };
+
+            return new
+            {
+                success = true,
+                data = item
+            };
+        }
+
+        //Toplam Miktarı panele aktar
+        [HttpGet("ProTotal")]
+        public dynamic ProTotal()
+        {
+            var Sales = repo.SaleRepository.GetSaledList();
+
+            var pro = Sales.GroupBy(x => x.ProductName).Select(group => new
+            {
+                Product = group.Key,
+                Quantity = group.Sum(x => x.Quantity),
+            }).ToList();
+
+            return new
+            {
+                success = true,
+                data = pro
+            };
+        }
+        //Toplam hacimi hesapla aktar
+        [HttpGet("AmountChart")]
+        public dynamic AmountChart()
+        {
+            var sales = repo.SaleRepository.GetChartsData();
+
+            var salesByMonth = sales.GroupBy(s => s.Date.Month)
+            .Select(group => new
+            {
+                Month = group.Key,
+                Amount = group.Sum(s => s.Amount)
+            }).ToDictionary(x => x.Month, x => x.Amount);
+
+            return new
+            {
+                success = true,
+                data = salesByMonth
+            };
+        }
+        //ay ve ürün bazında gruplandır panele aktar
+        [HttpGet("PriceChart")]
+        public dynamic PriceChart()
+        {
+            var sales = repo.SaleRepository.GetChartsData();
+
+            var salesByMonthAndProduct = sales.GroupBy(s => new { s.Date.Month, s.ProductName })
+                .Select(group => new
+                {
+                    Month = group.Key.Month,
+                    ProductName = group.Key.ProductName,
+                    ActualPrice = group.Max(s => s.ActualPrice)
+                }).ToList();
+
+            return new
+            {
+                success = true,
+                data = salesByMonthAndProduct
+            };
+        }
+
 
         [HttpPost("EnterSale")]
         public dynamic EnterSale([FromBody] dynamic model)
@@ -109,16 +205,16 @@ namespace TahilBorsa.Api.Controllers
                 Amount = amount,
                 Date = json.Date,
                 Process = json.Process,
-                tblTradesmanId= json.TradesmanId,
-                
+                tblTradesmanId = json.TradesmanId,
+
             };
 
-            if(item != null )
+            if (item != null)
             {
                 repo.SaleRepository.Update(item);
                 repo.SaveChanges();
             }
-           
+
             return new
             {
                 success = true,
@@ -126,6 +222,6 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        
+
     }
 }

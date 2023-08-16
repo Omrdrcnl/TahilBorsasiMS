@@ -5,7 +5,7 @@
 
 
 <div class="content container-fluid">
-    <div class="row">
+    <div id="row" class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <div class="card-body ">
@@ -18,7 +18,7 @@
                         <div class="col-7 col-md-8">
                             <div class="numbers">
                                 <p class="card-category">Toplam Miktar</p>
-                                <p class="card-title"> Kg<p>
+                                <p id="totalQuantity" class="card-title"><p>
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                 <div class="card-footer ">
                     <hr>
                     <div class="stats">
-                        <i class="fa fa-refresh"></i>
+                        <i onclick="getTotalAction()" class="fa fa-refresh"></i>
                         Güncel
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         <div class="col-7 col-md-8">
                             <div class="numbers">
                                 <p class="card-category">Toplam Hacim</p>
-                                <p class="card-title">₺<p>
+                                <p id="totalAmount" class="card-title"><p>
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                 <div class="card-footer ">
                     <hr>
                     <div class="stats">
-                        <i class="fa fa-calendar-o"></i>
+                        <i onclick="getTotalAction()" class="fa fa-calendar-o"></i>
                         Mevcut Yıl
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                         <div class="col-7 col-md-8">
                             <div class="numbers">
                                 <p class="card-category">Gerçekleşen Satış Sayısı</p>
-                                <p class="card-title"><p>
+                                <p id="totalSale" class="card-title"><p>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                 <div class="card-footer ">
                     <hr>
                     <div class="stats">
-                        <i class="fa fa-clock-o"></i>
+                        <i onclick="getTotalAction()" class="fa fa-clock-o"></i>
                         Mevcut Yıl
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                         <div class="col-7 col-md-8">
                             <div class="numbers">
                                 <p class="card-category">Toplam Esnaf</p>
-                                <p class="card-title"><p>
+                                <p id="totalTradesman" class="card-title"><p>
                             </div>
                         </div>
                     </div>
@@ -110,6 +110,33 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-5 col-md-4">
+                            <div class="icon-big text-center icon-warning">
+                                <i class="nc-icon nc-favourite-28 text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-8">
+                            <div class="numbers">
+                                <p class="card-category">Toplam Çiftçi</p>
+                                <p id="totalFarmer" class="card-title"><p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer ">
+                    <hr>
+                    <div class="stats">
+                        <i onclick="getTotalAction()" class="fa fa-refresh"></i>
+                        Güncel
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -123,17 +150,12 @@
                 </div>
                 <div class="card-footer ">
                     <div class="legend">
-                        <i class="fa fa-circle ms-2 text-info"></i> Buğday
-                        <i class="fa fa-circle ms-2 text-warning"></i> Arpa
-                        <i class="fa fa-circle ms-2 text-primary"></i> Mısır
-                        <i class="fa fa-circle ms-2 text-success"></i> Nohut
-                        <i class="fa fa-circle ms-2 text-dark"></i> Yulaf
-                        <i class="fa fa-circle ms-2 text-danger"></i> K.Mercimek
-                        <i class="fa fa-circle ms-2 text-secondary"></i> Ay Çiçeği
+                        <i class="fa fa-circle ms-2 text-success"></i> Tüm Ürünler
+
                     </div>
                     <hr>
                     <div class="stats">
-                        <i class="fa fa-history"></i> 1 gün önce güncellendi
+                        <i onclick="getAmountChart()" class="fa fa-history"></i> Güncelle
                     </div>
                 </div>
             </div>
@@ -143,7 +165,7 @@
         <div class="col-md-4">
             <div class="card ">
                 <div class="card-header ">
-                    <h5 class="card-title">Senelik Ürün Miktar Grafiği</h5>
+                    <h5 class="card-title">İşlem Gören Ürün Miktar Grafiği</h5>
                     <p class="card-category">Toplam Miktar Bin Ton</p>
                 </div>
                 <div class="card-body ">
@@ -151,13 +173,13 @@
                 </div>
                 <div class="card-footer ">
                     <div class="legend">
-                        <i class="fa fa-circle text-info"></i> Buğday
+                        <i class="fa fa-circle text-info"></i> Nohut
                         <i class="fa fa-circle text-warning"></i> Arpa
-                        <i class="fa fa-circle text-primary"></i> Mısır
-                        <i class="fa fa-circle text-success"></i> Nohut
-                        <i class="fa fa-circle text-dark"></i> Yulaf
-                        <i class="fa fa-circle text-danger"></i> K.Mercimek
-                        <i class="fa fa-circle text-secondary ms-2"></i> Ay Çiçeği
+                        <i class="fa fa-circle text-primary"></i> Ay Çiçeği
+                        <i class="fa fa-circle text-success"></i> Buğday
+                        <i class="fa fa-circle text-dark"></i> K.Mercimek
+                        <i class="fa fa-circle text-danger"></i>Yulaf
+                        <i class="fa fa-circle text-secondary ms-2"></i>Mısır
                     </div>
                     <hr>
                     <div class="stats">
@@ -173,17 +195,11 @@
                     <p class="card-category">kg/₺</p>
                 </div>
                 <div class="card-body">
-                    <canvas id="speedChart" width="400" height="100"></canvas>
+                  @*  <canvas id="speedChart" ></canvas>*@
+                  <canvas id="priceChart" width="400" height="250"></canvas>
                 </div>
                 <div class="card-footer">
                     <div class="chart-legend">
-                        <i class="fa fa-circle text-info"></i> Buğday
-                        <i class="fa fa-circle text-warning"></i> Arpa
-                        <i class="fa fa-circle text-primary"></i> Mısır
-                        <i class="fa fa-circle text-success"></i> Nohut
-                        <i class="fa fa-circle text-dark"></i> Yulaf
-                        <i class="fa fa-circle text-danger"></i> K.Mercimek
-                        <i class="fa fa-circle text-secondary"></i> Ay Çiçeği
                     </div>
                     <hr />
                     <div class="card-stats">
@@ -196,11 +212,174 @@
 </div>
 
 <script>
-    $(document).ready(function () {
+    //Toplam Satış, esnaf vb. yapıları tuttuk.
+    function getTotalAction() {
 
+        fetchData("Sale/Total", function (response) {
+
+        console.log("panel sale", response )
+
+        var  totalQuantity = response.totalQuantity;
+        var  totalAmount = response.totalAmount;
+        var  totalTradesman = response.totalTradesman;
+        var  totalSale = response.totalSale;
+        var  totalFarmer = response.totalFarmer;
+
+
+
+        $("#totalSale").text(totalSale);
+        $("#totalQuantity").text(totalQuantity + "Kg");
+        $("#totalAmount").text("₺"+ totalAmount);
+        $("#totalTradesman").text(totalTradesman);
+        $("#totalSale").text(totalSale);
+        $("#totalFarmer").text(totalFarmer);
+
+        });
+    }
+
+    //Ürüne göre grupladıgımız toplam değerleri tuttuk.
+    function getQuantityByProduct(){
+         var products = [];
+        var quantities = [];
+        
+        console.log("pie", quantities)
+        const tbody = $("#row")
+        fetchData("Sale/ProTotal", function (response) {
+
+            console.log("prototal", response)
+        
+            $.each(response, function (index, t) {
+                    products.push(t.product);
+                    quantities.push(t.quantity);
+            var row = `
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-body ">
+                            <div class="row">
+                                <div class="col-5 col-md-4">
+                                    <div class="icon-big text-center icon-warning">
+                                        <i class="nc-icon nc-globe text-warning"></i>
+                                    </div>
+                                </div>
+                                <div class="col-7 col-md-8">
+                                    <div class="numbers">
+                                        <p class="card-category">${t.product} Miktarı</p>
+                                        <p id="totalQuantity" class="card-title">${t.quantity} Kg<p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer ">
+                            <hr>
+                            <div class="stats">
+                                <i onclick="getTotalAction()" class="fa fa-refresh"></i>
+                                Güncel
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            `
+
+            tbody.append(row);
+            });
+
+              createPieChart(products, quantities);
+
+        });
+    }
+    
+    //Aylara göre grupladıgımız toplam hacim miktarınını tuttuk
+    function getAmountChart(){
+
+        var labels = [];
+        var chartData = [];
+        console.log("data", chartData)
+        //asenkron işlem oldugu için callback fonksiyon kullanarak önce chart verileri dolduk sonra Createchart js 'i cagırdık
+        fetchData("Sale/AmountChart", function (response){
+             
+                console.log("amountchart",response)
+
+                for (var key in response) 
+                {
+                    labels.push("Month " + key);
+                    chartData.push(parseInt(response[key]));
+                }
+        createAmountChart(chartData);
+
+        });
+        
+
+      
+    }
+    //Fiyatları aylara ve ürünlere göre gruplayıp fiyat grafiği tasarladık
+    function getPriceChart(){
+
+            fetchData("Sale/PriceChart", function (response){
+             
+            console.log("Price",response)
+
+
+
+            const products = [...new Set(response.map(item => item.productName))];
+
+                const datasets = products.map(product => {
+                    const productData = response.filter(item => item.productName === product);
+                    const data = Array.from({ length: 12 }, (_, monthIndex) => {
+                        const matchingEntry = productData.find(item => item.month === monthIndex + 1);
+                        return matchingEntry ? matchingEntry.actualPrice : 0;
+                    });
+                    return {
+                        label: product,
+                        data: data,
+                        borderColor: getRandomColor(),
+                        fill: false
+                    };
+                });
+
+                const ctx = document.getElementById('priceChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Agu", "Eyl", "Eki", "Kas", "Ara"],
+                        datasets: datasets
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+
+
+            });
+
+
+    }
+
+    //fiyat grafiğine rastgele renk atama
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    //İşlemler asenkron oldugundan callback fonksiyon kullanarak aşagıda ki  fonksiyonları kullandık
+    function createAmountChart(chartData){
+                
         chartColor = "#FFFFFF";
 
         ctx = document.getElementById('chartHours').getContext("2d");
+
 
         myChart = new Chart(ctx, {
             type: 'line',
@@ -213,23 +392,7 @@
                     pointRadius: 0,
                     pointHoverRadius: 0,
                     borderWidth: 3,
-                    data: [300, 310, 316, 322, 330, 326, 333, 345, 338, 354]
-                },
-                {
-                    borderColor: "#f17e5d",
-                    backgroundColor: "#f17e5d",
-                    pointRadius: 0,
-                    pointHoverRadius: 0,
-                    borderWidth: 3,
-                    data: [320, 340, 365, 360, 370, 385, 390, 384, 408, 420]
-                },
-                {
-                    borderColor: "#fcc468",
-                    backgroundColor: "#fcc468",
-                    pointRadius: 0,
-                    pointHoverRadius: 0,
-                    borderWidth: 3,
-                    data: [370, 394, 415, 409, 425, 445, 460, 450, 478, 484]
+                    data:chartData
                 }
                 ]
             },
@@ -275,14 +438,15 @@
                 },
             }
         });
+    }
 
+    function createPieChart(product, quantities){
+         ctx = document.getElementById('chartEmail').getContext("2d");
 
-        ctx = document.getElementById('chartEmail').getContext("2d");
-
-        myChart = new Chart(ctx, {
+        myChart2 = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: [1, 2, 3],
+                labels: product,
                 datasets: [{
                     label: "Emails",
                     pointRadius: 0,
@@ -291,10 +455,13 @@
                         '#e3e3e3',
                         '#4acccd',
                         '#fcc468',
-                        '#ef8157'
+                        '#ef8157',
+                        '#343a40',
+                        '#007bff',
+                        '#28a745'
                     ],
                     borderWidth: 0,
-                    data: [342, 480, 530, 120]
+                    data: quantities
                 }]
             },
 
@@ -342,8 +509,11 @@
                 },
             }
         });
+    }
+    
+    function createPriceChart(){
 
-        var speedCanvas = document.getElementById("speedChart");
+          var speedCanvas = document.getElementById("speedChart");
 
         var dataFirst = {
             data: [0, 19, 15, 20, 30, 40, 40, 50, 25, 30, 50, 70],
@@ -385,7 +555,18 @@
             data: speedData,
             options: chartOptions
         });
+    }
 
+   
+
+
+
+    $(document).ready(function () {
+
+        getTotalAction();
+        getQuantityByProduct();
+        getAmountChart();
+        getPriceChart();
 
 
     })

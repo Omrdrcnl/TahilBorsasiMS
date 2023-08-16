@@ -19,12 +19,12 @@ namespace TahilBorsaMS.Models.Entity
         public int Id { get; set; }
         public int tblEntryProductId { get; set; }
         public int tblLabDataId { get; set; }
-        public Nullable<decimal> BasePrice { get; set; }
-        public Nullable<decimal> ActualPrice { get; set; }
-        public Nullable<int> Quantity { get; set; }
-        public Nullable<decimal> Amount { get; set; }
+        public decimal BasePrice { get; set; }
+        public decimal ActualPrice { get; set; }
+        public int Quantity { get; set; }
+        public decimal Amount { get; set; }
         public Nullable<int> tblTradesmanId { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
+        public DateTime Date { get; set; }
         public Nullable<bool> Process { get; set; }
     
         public virtual tblEntryProduct tblEntryProduct { get; set; }

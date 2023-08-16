@@ -12,6 +12,11 @@ namespace TahilBorsasi.Repository
     {
         public SaleRepository(RepositoryContext context) : base(context) { }
 
+        public List<V_Chart> GetChartsData()
+        {
+            return RepositoryContext.Charts.ToList<V_Chart>();
+        }
+
         public List<V_ReadySale> GetReadySales()
         {
             return RepositoryContext.ReadySales.ToList<V_ReadySale>();

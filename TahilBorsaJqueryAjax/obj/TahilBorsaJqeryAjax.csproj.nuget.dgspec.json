@@ -33,7 +33,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaMS\\TahilBorsaMS.csproj": {
+                "projectPath": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaMS\\TahilBorsaMS.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -46,6 +50,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
@@ -84,6 +92,21 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaMS\\TahilBorsaMS.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaMS\\TahilBorsaMS.csproj",
+        "projectName": "TahilBorsaMS",
+        "projectPath": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaMS\\TahilBorsaMS.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }

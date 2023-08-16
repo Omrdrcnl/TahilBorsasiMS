@@ -52,7 +52,7 @@ namespace TahilBorsaMS.Controllers
             //Aylara göre satışların gruplandırılması
 
             ArrayList amounts = new ArrayList();
-            var salesByMonth = db.tblSale.GroupBy(s => s.Date.Value.Month)
+            var salesByMonth = db.tblSale.GroupBy(s => s.Date.Month)
              .Select(group => new
              {
                  Month = group.Key,
@@ -65,7 +65,7 @@ namespace TahilBorsaMS.Controllers
             //Aylık ürünlere göre Fiyat Değişim tablosu/Grafiği
 
    
-            var priceByMonth = db.tblSale.GroupBy(s => new { s.Date.Value.Month, s.tblEntryProduct.tblProduct.Name })
+            var priceByMonth = db.tblSale.GroupBy(s => new { s.Date.Month, s.tblEntryProduct.tblProduct.Name })
              .Select(group => new
              {
                  Product = group.Key.Name,

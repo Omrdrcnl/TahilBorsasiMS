@@ -18,16 +18,17 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <!-- CSS Files -->
     <link href="~/Content/LayoutAssets/assets/css/paper-dashboard.css" rel="stylesheet" />
-    <link href="~/Content/LayoutAssets/assets/css/paper-dashboard.min.css" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="~/Content/LayoutAssets/assets/demo/demo.css" rel="stylesheet" />
     <link href="~/Content/LayoutAssets/assets/css/paper-dashboard.min.css" rel="stylesheet" />
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     @* JS DOSYALAR*@
     <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
     <script>
         let TOKEN = "@Repo.Session.Token"
     </script>
@@ -166,18 +167,11 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="main-panel" style="height: 100vh;">
-
-     
-
-
+        <div class="main-panel" style="height: 100vh;">
             @RenderBody()
-
-
-     
-
+        </div>
     </div>
+
 
     <!--   Core JS Files   -->
     <script src="~/Content/LayoutAssets/assets/js/core/popper.min.js"></script>
@@ -193,34 +187,34 @@
     <script src="~/Content/Layoutassets/assets/demo/demo.js"></script>
     <script src="~/js/site.js"></script>
     <script src="~/js/cityanddist.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     @await RenderSectionAsync("Scripts", required : false)
     <!-- Code injected by live-server -->
     <script>
         $(document).ready(function () {
             demo.initChartPages();
+
+            var btnContainer = document.getElementById("myUl");
+
+            // Get all buttons with class="btn" inside the container
+            var btns = $(".nav li")
+
+            // Loop through the buttons and add the active class to the current/clicked button
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active");
+
+                    // If there's no active class
+                    if (current.length > 0) {
+                        current[0].className = current[0].className.replace(" active", "");
+                    }
+
+                    // Alttaki fonksiyonu çalıstıramadım
+                    this.className += " active";
+                });
+            }
         });
 
-        var btnContainer = document.getElementById("myUl");
-
-        // Get all buttons with class="btn" inside the container
-        var btns = $(".nav li")
-
-        // Loop through the buttons and add the active class to the current/clicked button
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-
-                // If there's no active class
-                if (current.length > 0) {
-                    current[0].className = current[0].className.replace(" active", "");
-                }
-
-                // Alttaki fonksiyonu çalıstıramadım
-                this.className += " active";
-            });
-        }
+       
     </script>
 
 </body>

@@ -14,7 +14,8 @@ namespace TahilBorsaJqeryAjax.Code.Rest
 
         public dynamic Login(string userName, string password)
         {
-            RestClient client = new RestClient(BASE_API_URI, configureSerialization: s => s.UseSystemTextJson(new JsonSerializerOptions { PropertyNamingPolicy = null }));
+            RestClient client = new RestClient(BASE_API_URI,
+                configureSerialization: s => s.UseSystemTextJson(new JsonSerializerOptions { PropertyNamingPolicy = null }));
 
             RestRequest req = new RestRequest("/Auth/Login", RestSharp.Method.Post);
             req.AddJsonBody(new

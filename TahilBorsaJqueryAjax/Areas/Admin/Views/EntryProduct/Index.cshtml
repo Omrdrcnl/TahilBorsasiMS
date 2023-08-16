@@ -1,11 +1,15 @@
-﻿@{
+﻿@model TahilBorsaMS.Models.Entity.tblEntryProduct
+
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
+
+
 <div class="container mt-5">
 
-    <div class="form-control">
+    <div class="form-control" method="post" >
         <h1>Yeni Ürün Veri girişi</h1>
         <br />
         <input type="hidden" id="entryProductId" />
@@ -13,6 +17,7 @@
             <div class="col-md-6">
                 <label>Çiftçi Kayıt no</label>
                 <input type="text" id="tblFarmerId" class="form-control" />
+                @Html.ValidationMessageFor(x=> x.tblFarmerId ,"", new {@class = "text-danger"})
             </div>
             <div class="col-md-6">
                 <label>Ürün Çeşidi</label>
