@@ -1,0 +1,33 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "Rabbit";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+<div class="container">
+    <h2>Ürün Bülteni</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Fiyat</th>
+                <!-- Diğer sütunlar buraya eklenebilir -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>@item.date</td>
+                        <td>@item.productName</td>
+                        <td>@item.totalBasePrice</td>
+                        <td>@item.actualPrice</td>
+                        <!-- Diğer sütunlar buraya eklenebilir -->
+                    </tr>
+            }
+        </tbody>
+    </table>
+</div>

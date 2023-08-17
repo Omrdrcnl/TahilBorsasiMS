@@ -8325,3 +8325,83 @@ FROM [tblProduct] AS [t]
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
 2023-08-16 22:17:37.1325||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7234/api/EntryProduct/UrunGirisYap application/json;+charset=UTF-8 73 - 500 - text/plain;+charset=utf-8 2412.5376ms 
+2023-08-16 23:15:42.7125||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-08-16 23:15:42.9853||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7234 
+2023-08-16 23:15:42.9853||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5107 
+2023-08-16 23:15:42.9853||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-08-16 23:15:42.9853||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-08-16 23:15:42.9905||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api 
+2023-08-16 23:15:44.8694||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - - 
+2023-08-16 23:15:45.3807||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - 
+2023-08-16 23:15:45.3807||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - - 
+2023-08-16 23:15:45.3932||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 520.9139ms 
+2023-08-16 23:15:45.4075||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 26.6740ms 
+2023-08-16 23:15:45.5477||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 166.9040ms 
+2023-08-16 23:15:45.6273||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - 
+2023-08-16 23:15:45.7538||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 126.4899ms 
+2023-08-16 23:16:36.9953||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Product/Bulletin?selectedDate=08.16.2023 - - 
+2023-08-16 23:16:37.0091||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.ProductController.GetBulletin (TahilBorsa.Api)' 
+2023-08-16 23:16:37.0281||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBulletin", controller = "Product"}. Executing controller action with signature System.Object GetBulletin(System.Nullable`1[System.DateTime]) on controller TahilBorsa.Api.Controllers.ProductController (TahilBorsa.Api). 
+2023-08-16 23:16:37.7534||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'ActualPrice' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-16 23:16:37.7534||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Amount' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-16 23:16:37.7534||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'BasePrice' on entity type 'tblSale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-16 23:16:37.7534||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'ActualPrice' on entity type 'V_Bulletin'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-16 23:16:37.7534||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'BasePrice' on entity type 'V_Bulletin'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-16 23:16:37.7559||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'ActualPrice' on entity type 'V_Chart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-16 23:16:37.7559||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Amount' on entity type 'V_Chart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-08-16 23:16:38.5605||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [v].[ActualPrice], [v].[BasePrice], [v].[Date], [v].[Photo], [v].[ProductName], [v].[Quantity]
+FROM [V_Bulletin] AS [v] 
+2023-08-16 23:16:38.6000||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Controllers.GroupedSaleViewModel, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-16 23:16:38.6302||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.ProductController.GetBulletin (TahilBorsa.Api) in 1597.1755ms 
+2023-08-16 23:16:38.6302||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.ProductController.GetBulletin (TahilBorsa.Api)' 
+2023-08-16 23:16:38.6400||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Product/Bulletin?selectedDate=08.16.2023 - - - 200 - application/json;+charset=utf-8 1644.9180ms 
+2023-08-16 23:32:06.4669||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - - 
+2023-08-16 23:32:06.5028||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 36.1895ms 
+2023-08-16 23:32:06.5132||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - - 
+2023-08-16 23:32:06.5132||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - 
+2023-08-16 23:32:06.5132||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 1.5539ms 
+2023-08-16 23:32:06.5635||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 50.2250ms 
+2023-08-16 23:32:06.7445||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - 
+2023-08-16 23:32:06.7749||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 30.5352ms 
+2023-08-16 23:32:28.7081||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-08-16 23:32:29.1292||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7234 
+2023-08-16 23:32:29.1292||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5107 
+2023-08-16 23:32:29.1312||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-08-16 23:32:29.1312||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-08-16 23:32:29.1312||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsa.Api 
+2023-08-16 23:32:31.5476||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - - 
+2023-08-16 23:32:32.2630||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 711.5286ms 
+2023-08-16 23:32:32.2630||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - 
+2023-08-16 23:32:32.2630||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - - 
+2023-08-16 23:32:32.2912||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 26.4833ms 
+2023-08-16 23:32:32.3552||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 90.5846ms 
+2023-08-16 23:32:32.5535||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - 
+2023-08-16 23:32:32.8399||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 285.9443ms 
+2023-08-16 23:46:10.9646||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] - - 
+2023-08-16 23:46:10.9906||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-16 23:46:10.9906||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] - - - 204 - - 30.6242ms 
+2023-08-16 23:47:51.0602||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] - - 
+2023-08-16 23:47:51.0893||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-16 23:47:51.0893||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] - - - 204 - - 29.9186ms 
+2023-08-16 23:47:51.1051||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] application/json;+charset=utf-8 - 
+2023-08-16 23:47:51.1051||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-16 23:47:51.1159||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] application/json;+charset=utf-8 - - 404 0 - 10.6521ms 
+2023-08-16 23:48:38.7773||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] - - 
+2023-08-16 23:48:38.7773||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-16 23:48:38.7773||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] - - - 204 - - 7.1028ms 
+2023-08-16 23:48:38.8286||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] application/json;+charset=utf-8 - 
+2023-08-16 23:48:38.8369||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-16 23:48:38.8369||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] application/json;+charset=utf-8 - - 404 0 - 14.7082ms 
+2023-08-16 23:48:58.2624||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] - - 
+2023-08-16 23:48:58.2624||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-16 23:48:58.2624||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] - - - 204 - - 3.5904ms 
+2023-08-16 23:48:58.2740||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] application/json;+charset=utf-8 - 
+2023-08-16 23:48:58.2740||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-16 23:48:58.2740||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] application/json;+charset=utf-8 - - 404 0 - 2.8427ms 
+2023-08-16 23:53:00.5071||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] - - 
+2023-08-16 23:53:00.5071||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-16 23:53:00.5071||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] - - - 204 - - 7.4138ms 
+2023-08-16 23:53:00.5230||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] application/json;+charset=utf-8 - 
+2023-08-16 23:53:00.5230||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-16 23:53:00.5230||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Product/Bulletin/[object HTMLInputElement] application/json;+charset=utf-8 - - 404 0 - 2.5985ms 

@@ -475,3 +475,4 @@ C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\Sy
 C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\System.Web.WebPages.Razor.xml
 C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\System.Web.Razor.xml
 C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\System.Web.WebPages.Deployment.xml
+C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\libman.json

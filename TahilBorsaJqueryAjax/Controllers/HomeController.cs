@@ -1,5 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RestSharp;
 using System.Diagnostics;
+using TahilBorsaJqeryAjax.Code;
+using TahilBorsaJqeryAjax.Code.Rest;
+using TahilBorsaMS.Models.Entity;
 using TahilBorsaR.Models;
 
 namespace TahilBorsaR.Controllers
@@ -17,11 +21,40 @@ namespace TahilBorsaR.Controllers
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Contact() => View();
+
+        public IActionResult SendMessage(tblContact model)
         {
-            return View();
+            ContactRestClient client = new ContactRestClient();
+            dynamic result = client.Contact(model.Name, model.Subject, model.Message, model.Mail);
+
+            bool success = result.success;
+
+            if(success)
+            {
+                Repo.Session.Subject = model.Subject;
+                Repo.Session.Mail = model.Mail;
+                Repo.Session.Message = model.Message;
+                Repo.Session.Name = model.Name;
+
+                return RedirectToAction("Contact","Home");
+            }
+            else
+            {
+                ViewBag.ContactError = (string)result.message;
+                return View("Contact");
+            }
+
         }
 
+        public IActionResult Rabbit()
+        {
+            SaleRestClient client = new SaleRestClient();
+
+            var result = client.GetProductBulletin();
+
+            return View(result);
+        }
      
 
 

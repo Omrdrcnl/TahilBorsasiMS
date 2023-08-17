@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TahilBorsaMS.Models.Entity;
-
+using TahilBorsaMS.Models.Views;
 
 namespace TahilBorsasi.Repository
 {
@@ -18,5 +18,9 @@ namespace TahilBorsasi.Repository
             RepositoryContext.Products.Where(x => x.Id == productId).ExecuteDelete();
         }
 
+        public List<V_Bulletin> GetBulletins()
+        {
+            return RepositoryContext.Bulletins.ToList<V_Bulletin>();
+        }
     }
 }

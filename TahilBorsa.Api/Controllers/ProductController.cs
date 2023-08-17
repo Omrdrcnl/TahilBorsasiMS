@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations.Schema;
 using TahilBorsa.Repository;
+using TahilBorsaMS.Controllers;
 using TahilBorsaMS.Models.Entity;
 
 namespace TahilBorsa.Api.Controllers
@@ -43,6 +45,42 @@ namespace TahilBorsa.Api.Controllers
             {
                 success = true,
                 data = item
+            };
+        }
+
+        [HttpGet("Bulletin")]
+        public dynamic GetBulletin(DateTime? selectedDate)
+        {
+            var item = repo.ProductRepository.GetBulletins();
+
+            // Varsayılan olarak bugünkü tarihi kullanmak için:
+            if (!selectedDate.HasValue)
+            {
+                selectedDate = DateTime.Today;
+            }
+
+            // Seçilen tarih için günün başlangıcı ve bitişi
+            DateTime startDate = selectedDate.Value.Date;
+            DateTime endDate = startDate.AddDays(1).AddTicks(-1);
+
+            //Yeni bir sınıf olusturup value degerini oraya aktarıyoruz. Liste halınde de bunu viewde cekıyoruz.
+            var groupedSales = item
+                .Where(s => s.Date >= startDate && s.Date <= endDate)
+                .GroupBy(s => new { s.ProductName, s.Date, s.Photo })
+                .Select(group => new GroupedSaleViewModel
+                {
+                    ProductName = group.Key.ProductName,
+                    SaleDate = (DateTime)group.Key.Date,
+                    TotalQuantity = group.Sum(s => s.Quantity),
+                    TotalActualPrice = group.Max(s => s.ActualPrice),
+                    TotalBasePrice = group.Min(s => s.BasePrice),
+                    Photo = group.Key.Photo
+                })
+                .ToList();
+            return new
+            {
+                success = true,
+                data = groupedSales
             };
         }
 

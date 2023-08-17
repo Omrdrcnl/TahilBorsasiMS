@@ -2,7 +2,98 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="col-lg-6 col-md-7 d-flex d-block justify-content-center flex-column m-auto mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-danger">
+                <div class="panel-heading bg-gradient p-2 text-center">
+                    <h2 style="color:black"><i class="fa fa-calendar info"></i> Günlük Fiyat Bilgileri</h2>
+
+                    <div class="form-group">
+
+                        <label style="color:white" for="selectedDate">Tarih Seçin:</label>
+                        <input style="color:black; background-color:antiquewhite" value="@DateTime.Now.ToString("yyyy-MM-dd")" type="date" name="selectedDate" id="selectedDate" class="form-control" />
+                    </div>
+                    <button id="getBulletinButton" type="submit" class="btn btn-primary mt-1 m-auto">Bülten Bilgilerini Getir</button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
 </div>
+
+<div class="container">
+    <div id="col" class="row row-cols-1 row-cols-md-4 g-3">
+        içerik
+    </div>
+</div>
+
+<script>
+
+    function getBulletin(selectedDate) {
+
+
+
+        fetchData(`Product/Bulletin?selectedDate=${selectedDate}`, function (response) {
+
+            console.log("bulten", response);
+
+            var col = $("#col");
+            col.empty();
+
+            $.each(response, function (index, p) {
+                const s = moment(p.saleDate); // Moment objesi oluştur
+                const formattedDate = s.format("DD.MM.YYYY")
+                const row = ` <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                        <img src="${p.photo}" height="200" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title">${p.productName}</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"></li>
+                                            <li class="list-group-item">Toplam Miktar:${p.totalQuantity} kg</li>
+                                                <li class="list-group-item">En Düşük Fiyat:₺ ${p.totalBasePrice}</li>
+                                                <li class="list-group-item">En Yüksek Fiyat:₺ ${p.totalActualPrice}</li>
+                                </ul>
+                                <div class="card-body">
+                                    <p>
+                                                        Tarih:  <b>${formattedDate}</b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>`
+
+                col.append(row);
+            })
+
+        })
+    }
+
+
+    $(document).ready(function () {
+
+        let k = Date.now();
+        const s = moment(k); // Moment objesi oluştur
+        const formDate = s.format("MM.DD.YYYY")
+
+
+        getBulletin(formDate);
+
+        $("#getBulletinButton").click(function () {
+            var selectedDate = $('#selectedDate').val();
+
+            function formatDate(inputDate) {
+                var parts = inputDate.split("-");
+                if (parts.length !== 3) {
+                    return "Geçersiz tarih formatı";
+                }
+                return parts[1] + "." + parts[2] + "." + parts[0];
+            }
+            var formattedDate = formatDate(selectedDate)
+
+            getBulletin(formattedDate);
+        });
+
+    })
+</script>

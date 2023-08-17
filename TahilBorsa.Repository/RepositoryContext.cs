@@ -25,6 +25,7 @@ namespace TahilBorsasi.Repository
             modelBuilder.Entity<V_ReadySale>().HasNoKey();
             modelBuilder.Entity<V_SaledList>().HasNoKey();
             modelBuilder.Entity<V_Chart>().HasNoKey();
+            modelBuilder.Entity<V_Bulletin>().HasNoKey();
        
             //date null hatasını giderdik asagıda da
             modelBuilder.Entity<tblEntryProduct>().Property(d => d.DateTime).HasDefaultValue();
@@ -32,6 +33,7 @@ namespace TahilBorsasi.Repository
             modelBuilder.Entity<tblSale>().Property(d => d.ActualPrice).HasDefaultValue();
             modelBuilder.Entity<tblSale>().Property(d => d.Amount).HasDefaultValue();
             modelBuilder.Entity<tblSale>().Property(d => d.BasePrice).HasDefaultValue();
+            modelBuilder.Entity<tblContact>().Property(d => d.Process).HasDefaultValue();
 
 
 
@@ -54,6 +56,7 @@ namespace TahilBorsasi.Repository
         public DbSet<V_ReadySale> ReadySales{ get; set; }
         public DbSet<V_SaledList> SaledLists { get; set; }
         public DbSet<V_Chart> Charts { get; set; }
+        public DbSet<V_Bulletin> Bulletins { get; set; }
 
         
 

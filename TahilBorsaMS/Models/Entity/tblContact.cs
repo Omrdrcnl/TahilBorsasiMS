@@ -21,5 +21,7 @@ namespace TahilBorsaMS.Models.Entity
         public string Mail { get; set; }
         public string Subject { get; set; }
         public string Message { get; set; }
+        public bool Process { get; set; }
+        public DateTime Date { get; set; }
     }
 }

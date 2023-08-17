@@ -1,91 +1,71 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Contact";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<div class="contact">
-    <div class="container">
-        <div class="row ">
-            <div class="col-md-6">
-                <div class="titlepage text_align_left">
-                    <h2>İletişime Geç</h2>
-                </div>
-                <form id="request" class="main_form">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <input class="contactus" placeholder="Ad" type="type" name="Name">
-                        </div>
-                        <div class="col-md-12">
-                            <input class="contactus" placeholder="Telefon" type="type" name="Phone Number">
-                        </div>
-                        <div class="col-md-12">
-                            <input class="contactus" placeholder="Email" type="type" name="Email">
-                        </div>
-                        <div class="col-md-12">
-                            <textarea class="textarea" placeholder="Mesajınız" type="type" Message="Name"></textarea>
-                        </div>
-                        <div class="col-md-12">
-                            <button class="send_btn">Gönder</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <div class="titlepage text_align_left">
-                    <h2>What Says Clients</h2>
-                </div>
-                <div id="clientsl" class="carousel slide our_clientsl" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#clientsl" data-slide-to="0" class="active"></li>
-                        <li data-target="#clientsl" data-slide-to="1"></li>
-                        <li data-target="#clientsl" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="container">
-                                <div class="carousel-caption posi_in">
-                                    <div class="clientsl_text">
-                                        <i><img src="images/clint.jpg" alt="#" /></i>
-                                        <h3>Deno <img src="images/icon.png" alt="#" /></h3>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem IpsumIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container">
-                                <div class="carousel-caption posi_in">
-                                    <div class="clientsl_text">
-                                        <i><img src="images/clint.jpg" alt="#" /></i>
-                                        <h3>Deno <img src="images/icon.png" alt="#" /></h3>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem IpsumIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container">
-                                <div class="carousel-caption posi_in">
-                                    <div class="clientsl_text">
-                                        <i><img src="images/clint.jpg" alt="#" /></i>
-                                        <h3>Deno <img src="images/icon.png" alt="#" /></h3>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem IpsumIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#clientsl" role="button" data-slide="prev">
-                        <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#clientsl" role="button" data-slide="next">
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column">
+            <div class="position-relative h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center"
+                 style="background-image: url('https://cdn.pixabay.com/photo/2017/07/17/18/13/wheat-2513272_1280.jpg');
+background-size: cover;" loading="lazy"></div>
         </div>
+        @using (Html.BeginForm("SendMessage", "Home"))
+        {
+            <div class="container col-xl-5 col-lg-6 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
+                <div class="card d-flex blur justify-content-center shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg p-3">
+                            <h3 class="text-white mb-0">İletişime Geç</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="pb-3">
+                        </p>
+                        <form id="contact-form" autocomplete="off">
+                            <div class="card-body p-0 my-3">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class=" input-group-static mb-4">
+                                            <label>Ad Soyad</label>
+                                            <input type="text" class="form-control" name="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ps-md-2">
+                                        <div class="input-group-static mb-4">
+                                            <label>Email</label>
+                                            <input type="Email" class="form-control" name="Mail" placeholder="hello@gmail.com">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-0 mt-md-0 mt-4">
+                                    <div class="input-group input-group-static mb-4">
+                                        <label>Konu</label>
+                                        <input name="Subject" class="form-control" id="subject" rows="6" placeholder="Lütfen Konu Belirtiniz..." />
+                                    </div>
+                                </div>
+                                <div class="form-group mb-0 mt-md-0 mt-4">
+                                    <div class="input-group input-group-static mb-4">
+                                        <label>Size Nasıl Yardımcı olabiliriz?</label>
+                                        <textarea name="message" class="form-control" id="message" rows="6" placeholder="Mesajınızı Buraya Yazınız..."></textarea>
+                                    </div>
+                                </div>
+                                @if (!string.IsNullOrEmpty(ViewBag.ContactError))
+                                {
+                                    <div class="alert alert-danger" role="alert">
+                                        @ViewBag.ContactError
+                                    </div>
+                                }
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn bg-gradient-primary mt-3 mb-0">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>

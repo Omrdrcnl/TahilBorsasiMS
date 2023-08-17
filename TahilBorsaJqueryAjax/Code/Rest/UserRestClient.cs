@@ -29,5 +29,7 @@ namespace TahilBorsaJqeryAjax.Code.Rest
             dynamic result = JObject.Parse(msg);
             return result;
         }
+
+      
     }
 }

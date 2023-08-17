@@ -242,6 +242,7 @@
     <Compile Include="Models\Entity\tblUser.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Views\V_Bulletin.cs" />
     <Compile Include="Models\Views\V_EntryProductList.cs" />
     <Compile Include="Models\Views\V_LabList.cs" />
     <Compile Include="Models\Views\V_Chart.cs" />
