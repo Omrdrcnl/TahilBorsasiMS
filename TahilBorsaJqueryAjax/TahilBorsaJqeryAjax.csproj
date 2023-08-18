@@ -355,7 +355,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Model\" />
     <Folder Include="Areas\General\Controllers\" />
     <Folder Include="Areas\General\Model\" />
     <Folder Include="Areas\General\Views\" />

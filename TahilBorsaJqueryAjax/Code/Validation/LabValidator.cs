@@ -1,33 +1,20 @@
 ﻿using FluentValidation;
-using TahilBorsaMS.Models.Entity;
+using TahilBorsaJqeryAjax.Areas.Admin.Model;
 
-namespace TahilBorsa.Api.Code.Validation
+namespace TahilBorsaJqeryAjax.Code.Validation
 {
 
-    public class LabValidator : AbstractValidator<tblLabData>
+    public class LabValidator : AbstractValidator<LabaratuarModel>
     {
-       
+
         public LabValidator()
         {
-            RuleFor(k => k.tblEntryProductId).NotEmpty().WithMessage("Ürün Giriş Numarası Boş Geçilemez");
-                //.Must(BeInProductEntryId).WithMessage("Bu numarada bir ürün girişi Bulunmamaktadır.!");
-            RuleFor(k => k.NutritionalValue).NotEmpty().WithMessage("Besin Değeri Boş Geçilemez")
-                .LessThanOrEqualTo(100).WithMessage("Besin değeri en fazla 100 olabilir");
+            RuleFor(k => k.EntryProductId).NotEmpty().WithMessage("Ürün Giriş Numarası Boş Geçilemez");
+
+            RuleFor(k => k.NutritionalValue).LessThanOrEqualTo(100).WithMessage("Besin değeri en fazla 100 olabilir")
+                .NotEmpty().WithMessage("Besin Değeri Boş Geçilemez");
 
         }
 
-        private bool BeInProductEntryId(int id)
-        {
-            //var k = db.tblEntryProduct.Find(id);
-            //if(k == null)
-            //{
-            //    return false;
-            //}
-            //else
-            //{
-            //    return true;
-            //}
-            return false;
-        }
     }
 }

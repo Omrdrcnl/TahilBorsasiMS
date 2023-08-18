@@ -51,7 +51,7 @@ namespace TahilBorsa.Api.Controllers
                     FullAddress = farmer.tblAddress.FullAddress,
                     tblCityName = farmer.tblAddress.tblDistrict.tblCity.Name,
                     tblDistrictName = farmer.tblAddress.tblDistrict.Name,
-                } 
+                }
             });
 
             return new
@@ -123,7 +123,7 @@ namespace TahilBorsa.Api.Controllers
 
 
             // Çiftçi nesnesini oluştur atamaları yap
-            
+
             var newFarmer = new tblFarmer
             {
                 Id = request.FarmerId,
@@ -142,16 +142,41 @@ namespace TahilBorsa.Api.Controllers
                 }
             };
 
+
+
+
             // Veritabanına ekle
-            if (newFarmer.Id  >0)
+            if (newFarmer.Id > 0)
             {
                 repo.FarmerRepository.Update(newFarmer);
-                
+
             }
             else
             {
-                repo.FarmerRepository.Create(newFarmer);
-                
+                var identy = repo.FarmerRepository.FindByCondition(x => x.IdentityNo == newFarmer.IdentityNo).FirstOrDefault();
+                if (identy == null)
+                {
+                    repo.FarmerRepository.Create(newFarmer);
+                    repo.SaveChanges();
+
+                    //CACHEDEN SİL
+                    cache.Remove("TumCiftciler");
+
+                    return new
+                    {
+                        success = true,
+                        data = newFarmer
+                    };
+                }
+                else
+                {
+                    return new
+                    {
+                        success = false,
+                        message = "Aynı Kimlik numarasına kayıtlı bir Çiftçi bulunmaktadır."
+                    };
+                }
+
             }
 
             repo.SaveChanges();
@@ -164,6 +189,9 @@ namespace TahilBorsa.Api.Controllers
                 success = true,
                 data = newFarmer
             };
+
+
+
         }
 
 

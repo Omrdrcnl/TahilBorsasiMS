@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using TahilBorsaMS.Models.Entity;
 
-namespace TahilBorsa.Api.Code.Validation
+namespace TahilBorsaJqeryAjax.Code.Validation
 {
     public class UserValidator : AbstractValidator<tblUser>
     {

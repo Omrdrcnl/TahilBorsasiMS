@@ -58,7 +58,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpPost("EsnafEkle")]
+        [HttpPost("AddTradesman")]
         public dynamic AddTradesman([FromBody] dynamic model)
         {
             dynamic json = JObject.Parse(model.GetRawText());
@@ -81,23 +81,54 @@ namespace TahilBorsa.Api.Controllers
                 IdentityNo = json.IdentityNo,
                 Birthdate = json.Birthdate,
             };
+
+
+
             if (item.Id > 0)
             {
                 repo.TradesmanRepository.Update(item);
             }
             else
             {
-                repo.TradesmanRepository.Create(item);
+                var identy = repo.TradesmanRepository.FindByCondition(x => x.IdentityNo == item.IdentityNo).FirstOrDefault();
+                if (identy == null)
+                {
+                    repo.TradesmanRepository.Create(item);
+                    repo.SaveChanges();
+
+                    cache.Remove("Esnaflar");
+                    return new
+                    {
+                        success = true,
+                        data = item
+                    };
+
+                }
+                else
+                {
+                    return new
+                    {
+                        success = false,
+                        message = "Aynı kimlik numarasıyla başka bir kayıt bulunmaktadır.!"
+                    };
+                }
             }
 
-            repo.SaveChanges();
+                repo.SaveChanges();
 
-            cache.Remove("Esnaflar");
-            return new
-            {
-                success = true,
-                data = item
-            };
+                cache.Remove("Esnaflar");
+                return new
+                {
+                    success = true,
+                    data = item
+                };
+            
+          
+               
+               
+            
+
+        
         }
 
         [HttpDelete("Delete/{tradesmanId}")]

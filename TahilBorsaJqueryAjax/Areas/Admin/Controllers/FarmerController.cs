@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TahilBorsa.Api.Code.Validation;
-using TahilBorsaMS.Models.Entity;
+using Microsoft.AspNetCore.Mvc.ViewComponents;
+using TahilBorsaJqeryAjax.Code.Validation;
+using TahilBorsaJqeryAjax.Areas.Admin.Model;
+using TahilBorsaJqeryAjax.Code.Rest;
 
 namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 {
@@ -18,7 +20,7 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult AddFarmer(tblFarmer f)
+        public IActionResult AddFarmer(FarmerModel f)
         {
             var validator = new FarmerValidator();
             var validationResult = validator.Validate(f);
@@ -29,8 +31,26 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
                 {
                     ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
                 }
+                return View(f);
             }
-            return View();
+
+            FarmerRestClient client = new FarmerRestClient();
+            dynamic result = client.AddFarmer(f.FirstName, f.LastName, f.IdentityNo, f.Contact, f.BirthDate,
+                f.FullAddress, f.tblCityId, f.tblDistrictId, f.NeighborhoodName);
+
+            bool success = result.success;
+
+            if (success)
+            {
+                return RedirectToAction("Index", "Farmer");
+            }
+            else
+            {
+                ViewBag.FarmerError = (string)result.message;
+                return View("AddFarmer");
+            }
+
+           
         }
 
         public ActionResult CallFarmer()

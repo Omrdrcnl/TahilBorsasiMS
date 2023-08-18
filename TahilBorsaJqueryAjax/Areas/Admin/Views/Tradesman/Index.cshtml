@@ -1,4 +1,6 @@
-﻿@{
+﻿@model TahilBorsaJqeryAjax.Areas.Admin.Model.TradesmanModel
+
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
@@ -6,6 +8,43 @@
 <div class="container mt-5">
     <div class="row">
         <h2>Esnaf Paneli</h2>
+        @if (TempData["ErrorMessages"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Hatalar:</strong>
+                <ul>
+                    @foreach (var errorMessage in (List<string>)TempData["ErrorMessages"])
+                    {
+                        <li>@errorMessage</li>
+                    }
+                </ul>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    setTimeout(function () {
+                        $(".alert").alert("close");
+                    }, 5000);
+                });
+            </script>
+        }
+        @if (ViewBag.SuccessTradesman != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>
+                    @ViewBag.SuccessTradesman
+                </strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <script>
+                $(document).ready(function () {
+                setTimeout(function () {
+                $(".alert").alert("close");
+                }, 5000);
+                });
+            </script>
+        }
         @*Arama işlem penceresi*@
         <div class="form-control input-group row align-items-center">
             <div class="col-md-4">  <input id="searchBox" class="form-control" placeholder="Çiftçi Ara" /></div>
@@ -53,72 +92,92 @@
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Rol Bilgileri</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
 
-                            <form class="form form-control container mt-5">
-                                <h1>Esnaf Bilgilerini Güncelle</h1>
-                                <br />
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label>Esnaf Kayıt No</label>
-                                        <input type="text" readonly id="Id" name="Id" class="form-control" />
-                                    </div>
-                                    <div class="col-6">
-                                        <label>Doğum Tarihi</label>
-                                        <input type="date" id="BirthDate" name="Birthdate" class="form-control" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label>Adı</label>
-                                        <input type="text" id="FirstName" name="FirstName" class="form-control" />
-                                    </div>
-                                    <div class="col-6">
-                                        <label>Soyadı</label>
-                                        <input type="text" id="LastName" name="LastName" class="form-control" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label>Kimlik No</label>
-                                        <input type="text" id="IdentityNo" name="IdentityNo" class="form-control" />
-                                    </div>
-                                    <div class="col-6">
-                                        <label>İletişim</label>
-                                        <input type="text" id="Contact" name="Contact" class="form-control" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <label>Şehir</label>
-                                        <select id="cityDropdown" class="form-control">
-                                      
-                                        </select>
-                                    </div>
-                                    <div class="col-4">
-                                        <label>İlçe</label>
-                                        <select id="districtDropdown" class="form-control">
-                                        </select>
-                                    </div>
-                                    <div class="col-4">
-                                        <label>Mahalle/Köy</label>
-                                        <input type="text" id="neighborhoodName" class="form-control" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Çiftçi Adres</label>
-                                            <input type="text" id="FullAddress" class="form-control" />
+
+                        <div class="modal-body">
+                            @using (Html.BeginForm("Index", "Tradesman"))
+                            {
+                                <form class="form form-control container mt-5" method="post">
+                                    <h1>Esnaf Bilgilerini Güncelle</h1>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label>Esnaf Kayıt No</label>
+                                            <input type="text" readonly id="Id" name="Id" class="form-control" />
+                                        </div>
+                                        <input type="hidden" name="AddressId" />
+                                        <div class="col-6">
+                                            <label>Doğum Tarihi</label>
+                                            <input type="date" id="BirthDate" name="Birthdate" class="form-control" />
+                                            @Html.ValidationMessageFor(x=>x.BirthDate,"", new{@class="text-danger"})
+
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label>Adı</label>
+                                            <input type="text" id="FirstName" name="FirstName" class="form-control" />
+                                            @Html.ValidationMessageFor(x=>x.FirstName,"", new{@class="text-danger"})
+                                        </div>
+                                        <div class="col-6">
+                                            <label>Soyadı</label>
+                                            <input type="text" id="LastName" name="LastName" class="form-control" />
+                                            @Html.ValidationMessageFor(x=>x.LastName,"", new{@class="text-danger"})
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label>Kimlik No</label>
+                                            <input type="text" id="IdentityNo" name="IdentityNo" class="form-control" />
+                                        </div>
+                                        @if (!string.IsNullOrEmpty(ViewBag.FarmerError))
+                                        {
+                                            <div class="alert alert-danger" role="alert">
+                                                @ViewBag.TradesmanError
+                                            </div>
+
+                                        }
+                                        <div class="col-6">
+                                            <label>İletişim</label>
+                                            <input type="text" id="Contact" name="Contact" class="form-control" />
+                                            @Html.ValidationMessageFor(x=>x.Contact,"", new{@class="text-danger"})
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label>Şehir</label>
+                                            <select id="cityDropdown" name="tblCityId" class="form-control">
+                                            </select>
+                                        </div>
+                                        <div class="col-4">
+                                            <label>İlçe</label>
+                                            <select id="districtDropdown" name="tblDistrictId" class="form-control">
+                                            </select>
+                                        </div>
+                                        <div class="col-4">
+                                            <label>Mahalle/Köy</label>
+                                            <input type="text" id="neighborhoodName" name="NeighborhoodName" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Çiftçi Adres</label>
+                                                <input type="text" id="FullAddress" name="FullAddress" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                                    </div>
+                                </form>
+                            }
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
-                            <button type="button" class="btn btn-primary" onclick="AddTradesman()">Kaydet</button>
-                        </div>
+
+
                     </div>
                 </div>
             </div>
@@ -188,21 +247,21 @@
             row.append($("<td>").text(t.tblAddress.neighborhoodName));
             row.append($("<td>").text(t.tblAddress.fullAddress));
             row.append($("<td>").html(`<button type="button" data-tradesman-id="${t.id}"
-                            data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>`));
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Sil</button>`));
             row.append($("<td>").html(`<button onClick="EditTradesman(
-                                            '${t.id}',
-                                            '${t.identityNo}',
-                                            '${t.birthDate}',
-                                            '${t.contact}',
-                                            '${t.firstName}',
-                                            '${t.lastName}',
-                                            '${t.tblAddress.fullAddress}',
-                                            '${t.tblAddress.tblCityId}',
-                                            '${t.tblAddress.tblDistrictId}',
-                                            '${t.tblAddress.neighborhoodName}',
-                                            '${t.tblAddressId}'
-                                        )" class="btn btn-success">Güncelle</button>
-                                        `));
+                                                    '${t.id}',
+                                                    '${t.identityNo}',
+                                                    '${t.birthDate}',
+                                                    '${t.contact}',
+                                                    '${t.firstName}',
+                                                    '${t.lastName}',
+                                                    '${t.tblAddress.fullAddress}',
+                                                    '${t.tblAddress.tblCityId}',
+                                                    '${t.tblAddress.tblDistrictId}',
+                                                    '${t.tblAddress.neighborhoodName}',
+                                                    '${t.tblAddressId}'
+                                                )" class="btn btn-success">Güncelle</button>
+                                                `));
 
             tbody.append(row);
         });
@@ -289,11 +348,11 @@
             tblDistrictId: $('#districtDropdown').val(),
             NeighborhoodName: $('#neighborhoodName').val()
         };
-        postData("Tradesman/EsnafEkle", tr, (data) => {
-            getTradesman();
-            $("#rolModal").modal("hide");
+        //postData("Tradesman/EsnafEkle", tr, (data) => {
+        //    getTradesman();
+        //    $("#rolModal").modal("hide");
 
-        });
+        //});
 
     }
 
@@ -389,3 +448,5 @@
     })
 
 </script>
+
+

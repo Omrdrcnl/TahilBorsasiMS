@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using TahilBorsa.Api.Code.Validation;
-using TahilBorsaMS.Models.Entity;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
+using TahilBorsaJqeryAjax.Areas.Admin.Model;
+using TahilBorsaJqeryAjax.Code.Rest;
+using TahilBorsaJqeryAjax.Code.Validation;
 
 namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 {
@@ -13,8 +15,10 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(tblEntryProduct model)
+        public IActionResult Index(EntryProductModel model)
         {
+
+
             var validator = new EntryProductValidator();
             var validationResult = validator.Validate(model);
 
@@ -28,7 +32,25 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 
                 return View(model);
             }
-            return View();
+
+
+            EntryProductRestClient client = new EntryProductRestClient();
+
+            dynamic result = client.AddEntryProduct(model.FarmerId, 
+                model.DateTime, model.ProductId);
+
+            bool success = result.success;
+
+            if (success)
+            {
+                ViewBag.SuccessEntry = "İşlem Başarıyla Gerçekleşti";
+                return View();
+            }
+            else
+            {
+                ViewBag.EntryProductError = (string)result.message;
+                return View();
+            }
         }
 
         public IActionResult EntryProductList()

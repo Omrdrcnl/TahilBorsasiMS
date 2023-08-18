@@ -54,7 +54,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpPost("VeriGir")]
+        [HttpPost("EnterData")]
         public dynamic AddSale([FromBody] dynamic model)
         {
             dynamic json = JObject.Parse(model.GetRawText());
@@ -70,7 +70,15 @@ namespace TahilBorsa.Api.Controllers
                 repo.EntryProductRepository.Update(entryProduct);
                 repo.SaveChanges();
             }
-
+            else
+            {
+                return new
+                {
+                    success = false,
+                    message = "Bu giriş daha önceden Gerçekleşmiştir...!"
+                };
+            }
+            
             tblLabData item = new tblLabData()
             {
                 Id = json.Id,

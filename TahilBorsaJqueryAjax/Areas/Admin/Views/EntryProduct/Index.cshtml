@@ -1,4 +1,4 @@
-﻿@model TahilBorsaMS.Models.Entity.tblEntryProduct
+﻿@model TahilBorsaJqeryAjax.Areas.Admin.Model.EntryProductModel
 
 @{
     ViewData["Title"] = "Index";
@@ -8,55 +8,93 @@
 
 
 <div class="container mt-5">
-
+    @using (Html.BeginForm("Index","EntryProduct")){
     <div class="form-control" method="post" >
         <h1>Yeni Ürün Veri girişi</h1>
         <br />
-        <input type="hidden" id="entryProductId" />
+            
+            @if (ViewBag.SuccessEntry != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>
+                        @ViewBag.SuccessEntry
+                    </strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <script>
+                    $(document).ready(function () {
+                        setTimeout(function () {
+                            $(".alert").alert("close");
+                        }, 5000);
+                    });
+                </script>
+            }
         <div class="row">
             <div class="col-md-6">
                 <label>Çiftçi Kayıt no</label>
-                <input type="text" id="tblFarmerId" class="form-control" />
-                @Html.ValidationMessageFor(x=> x.tblFarmerId ,"", new {@class = "text-danger"})
+                <input type="text" id="FarmerId" class="form-control" name="FarmerId" />
+                    @if (ViewBag.EntryProductError != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>
+                                @ViewBag.EntryProductError
+                            </strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                setTimeout(function () {
+                                    $(".alert").alert("close");
+                                }, 5000);
+                            });
+                        </script>
+                    }
+                @Html.ValidationMessageFor(x=> x.FarmerId ,"", new {@class = "text-danger"})
             </div>
             <div class="col-md-6">
                 <label>Ürün Çeşidi</label>
-                <select class="form-control" id="tblProductId">
+                <select class="form-control" id="ProductId" name="ProductId">
                     <option value="">Ürün Seçin</option>
                 </select>
+                    @Html.ValidationMessageFor(x=> x.ProductId ,"", new {@class = "text-danger"})
+
             </div>
         </div>
         <br />
         <label>Tarih</label>
-        <input type="date" id="DateTime" name="DateTime" class="form-control" value="@DateTime.Now.ToShortDateString()" />
+        <input type="date" id="DateTime" name="DateTime" class="form-control" />
+            @Html.ValidationMessageFor(x=> x.DateTime ,"", new {@class = "text-danger"})
+
         <br />
         <input type="hidden" name="Process" value="false" />
         <div id="liveAlertPlaceholder"></div>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ürünü Sisteme Gir</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Kaydet</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Ürünü Sisteme Kaydetmek İstiyor musunuz ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     </div>
+    }
     <div class="alert alert-success" id="successAlert" role="alert" style="display: none;">
         Ürün başarıyla eklendi.
     </div>
 
     <div class="mt-5 d-grid gap-2 d-md-flex justify-content-md-end">
         <a class="btn btn-warning" href="/Admin/EntryProduct/EntryProductList">Geçmiş Veriler</a>
-    </div>
-</div>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Kaydet</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                Ürünü Sisteme Kaydetmek İstiyor musunuz ?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
-                <button type="submit" onclick="AddEntryProduct()" class="btn btn-primary">Kaydet</button>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -73,23 +111,23 @@
             Process: false
 
         };
-        postData("EntryProduct/UrunGirisYap", p, (data) => {
+        //postData("EntryProduct/Enter", p, (data) => {
 
-            console.log("Ürün girişi başarılı")
+        //    console.log("Ürün girişi başarılı")
 
-            $("#exampleModal").modal("hide");
+        //    $("#exampleModal").modal("hide");
 
-            $("#successAlert").fadeIn();
+        //    $("#successAlert").fadeIn();
 
-            $(".modal-backdrop").remove();
+        //    $(".modal-backdrop").remove();
 
-            setTimeout(function () {
-                $("#successAlert").fadeOut();
-            }, 3000);
-            setTimeout(function () {
-                location.reload();
-            }, 3500);
-        });
+        //    setTimeout(function () {
+        //        $("#successAlert").fadeOut();
+        //    }, 3000);
+        //    setTimeout(function () {
+        //        location.reload();
+        //    }, 3500);
+        //});
 
     }
 
@@ -99,7 +137,7 @@
         fetchData("Product/TumUrunler", function (response) {
 
             console.log("veri :", response)
-            var tblProductIdDropdown = $("#tblProductId");
+            var tblProductIdDropdown = $("#ProductId");
 
             $.each(response, function (index, product) {
                 tblProductIdDropdown.append($("<option>").val(product.id).text(product.name));

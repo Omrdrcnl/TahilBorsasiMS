@@ -1,15 +1,15 @@
 ﻿using FluentValidation;
 using System.Linq;
-using TahilBorsaMS.Models.Entity;
+using TahilBorsaJqeryAjax.Areas.Admin.Model;
 
-namespace TahilBorsa.Api.Code.Validation
+namespace TahilBorsaJqeryAjax.Code.Validation
 {
-    public class TradesmanValidator: AbstractValidator<tblTradesman>
+    public class TradesmanValidator : AbstractValidator<TradesmanModel>
     {
-        DbGrainExchangeEntities db = new DbGrainExchangeEntities();
-       
-            public TradesmanValidator()
-            {
+
+
+        public TradesmanValidator()
+        {
             RuleFor(k => k.FirstName).NotEmpty().WithMessage(" Adı Boş Geçilemez");
             RuleFor(k => k.LastName).NotEmpty().WithMessage("Soyadı Boş Geçilemez");
             RuleFor(k => k.FirstName).Length(2, 30).WithMessage("Ad En az 2 en fazla 30 karakter olabilir");
@@ -18,19 +18,8 @@ namespace TahilBorsa.Api.Code.Validation
             RuleFor(tradesman => tradesman.IdentityNo)
         .NotEmpty().WithMessage("TC Kimlik No boş olamaz.")
         .Length(11).WithMessage("TC Kimlik No 11 haneli olmalıdır.");
-        //.Must(BeUniqueIdentityNo).WithMessage("Bu TC Kimlik No zaten kayıtlı.");
         }
 
-        private bool BeUniqueIdentityNo(string IdentityNo)
-        {
-            //var uniq = db.tblFarmer.Where(x => x.IdentityNo == IdentityNo).SingleOrDefault();
-            //if (uniq != null)
-            //{
-            //    return false;
-            //}
-            //else { return true; }
-            return false;
-        }
 
 
     }

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model TahilBorsaJqeryAjax.Areas.Admin.Model.LabaratuarModel
+
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
@@ -7,9 +9,59 @@
 
 
     <h2>İşlem Bekleyen Liste</h2>
-    <div class="alert alert-success" id="successAlert" role="alert" style="display: none;">
-        Ürün Besin Değeri Başarıyla eklendi.
-    </div>
+      @if (TempData["ErrorMessagesLab"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Hatalar:</strong>
+                <ul>
+                    @foreach (var errorMessage in (List<string>)TempData["ErrorMessagesLab"])
+                    {
+                        <li>@errorMessage</li>
+                    }
+                </ul>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    setTimeout(function () {
+                        $(".alert").alert("close");
+                    }, 5000);
+                });
+            </script>
+        }
+    @if (ViewBag.ErrorLab != null )
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>
+                @ViewBag.ErrorLab
+            </strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <script>
+            $(document).ready(function () {
+                setTimeout(function () {
+                    $(".alert").alert("close");
+                }, 5000);
+            });
+        </script>
+    }
+    @if (ViewBag.SuccessLab != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>
+                @ViewBag.SuccessLab
+            </strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <script>
+            $(document).ready(function () {
+                setTimeout(function () {
+                    $(".alert").alert("close");
+                }, 5000);
+            });
+        </script>
+    }
     <table class="table table-bordered table-striped" id="Lab">
         <tr class="table-info">
             <th>Ürün Giriş No</th>
@@ -32,37 +84,42 @@
     <div class="modal fade" id="rolModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Besin Değeri</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+                @using (Html.BeginForm("Index", "Labaratuar"))
+                {
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Besin Değeri</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
 
-                    <form class="form form-control container mt-5">
-                        <h1>Ürün Besin Değeri Girişi</h1>
-                        <br />
-                        <div class="row form-group">
-                            <div class="col-md-6">
-                                <label>Ürün Giriş Kayıt No</label>
-                                <input type="text" readonly id="EntryProductId" name="Id" class="form-control" />
+                        <form class="form form-control container mt-5" method="post">
+                            <h1>Ürün Besin Değeri Girişi</h1>
+                            <br />
+                            <div class="row form-group">
+                                <div class="col-md-6">
+                                    <label>Ürün Giriş Kayıt No</label>
+                                    <input type="text" readonly id="EntryProductId" name="EntryProductId" class="form-control" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Ürün Adı</label>
+                                    <input type="text" id="ProductName" class="form-control" />
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <label>Ürün Adı</label>
-                                <input type="text" id="ProductName" class="form-control" />
+                            <div class="row">
+                                <div class="col-12">
+                                    <label>Ürün Besin Değeri</label>
+                                    <input type="text" id="NutritionalValue" name="NutritionalValue" class="form-control" />
+                                    @Html.ValidationMessageFor(x=>x.NutritionalValue,"",new {@class="text-danger"})
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <label>Ürün Besin Değeri</label>
-                                <input type="text" id="NutritionalValue" name="Name" class="form-control" />
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                                <button type="submit" class="btn btn-primary">Kaydet</button>
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
-                    <button type="button" class="btn btn-primary" onclick="AddLabData()">Kaydet</button>
-                </div>
+                        </form>
+                    </div>
+                   
+                }
             </div>
         </div>
     </div>
@@ -87,10 +144,10 @@
                 row.append($("<td>").text(t.name));
                 row.append($("<td>").text(t.dateTime));
                 row.append($("<td>").html(`<button data-bs-toggle="modal" data-bs-target="#rolModal" onClick="OpenLab(
-                                                '${t.entryProductId}',
-                                                '${t.name}'
-                                            )" class="btn btn-success">Değer Gir</button>
-                                            `));
+                                                    '${t.entryProductId}',
+                                                    '${t.name}'
+                                                )" class="btn btn-success">Değer Gir</button>
+                                                `));
 
                 tbody.append(row);
             });
@@ -108,22 +165,23 @@
             Process: true
         };
 
-        postData("Labaratuar/VeriGir", p, (data) => {
-            getEntryProduct();
-            $("#rolModal").modal("hide");
 
-            $("#successAlert").fadeIn();
+        //postData("Labaratuar/EnterData", p, (data) => {
+        //    getEntryProduct();
+        //    $("#rolModal").modal("hide");
 
-            $(".modal-backdrop").remove();
+        //    $("#successAlert").fadeIn();
 
-            setTimeout(function () {
-                $("#successAlert").fadeOut();
-            }, 3000);
-            setTimeout(function () {
-                location.reload();
-            }, 3500);
+        //    $(".modal-backdrop").remove();
 
-        });
+        //    setTimeout(function () {
+        //        $("#successAlert").fadeOut();
+        //    }, 3000);
+        //    setTimeout(function () {
+        //        location.reload();
+        //    }, 3500);
+
+        //});
 
     }
 

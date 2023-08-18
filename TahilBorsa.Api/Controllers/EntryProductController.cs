@@ -28,7 +28,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpPost("UrunGirisYap")]
+        [HttpPost("Enter")]
         public dynamic AddEntryProduct([FromBody] dynamic model)
         {
             dynamic json = JObject.Parse(model.GetRawText());
@@ -47,7 +47,28 @@ namespace TahilBorsa.Api.Controllers
             }
             else
             {
-                repo.EntryProductRepository.Create(item);
+                var farmer = repo.FarmerRepository.FindByCondition(x => x.Id == item.tblFarmerId).FirstOrDefault();
+                if(farmer != null && farmer.Id !=0)
+                {
+                    repo.EntryProductRepository.Create(item);
+
+                    repo.SaveChanges();
+
+
+                    return new
+                    {
+                        success = true,
+                        data = item
+                    };
+                }
+                else
+                {
+                    return new
+                    {
+                        success = false,
+                        message = "Bu kayıt Numarasında Bir Çiftçi Bulunmamaktadır."
+                    };
+                }
             }
 
             repo.SaveChanges();
