@@ -7,15 +7,11 @@ using System.Text.Json;
 
 namespace TahilBorsaJqeryAjax.Code.Rest
 {
-    public class UserRestClient
+    public class UserRestClient : BaseRestClient
     {
-
-        private string BASE_API_URI = "https://localhost:7234/api";
 
         public dynamic Login(string userName, string password)
         {
-            RestClient client = new RestClient(BASE_API_URI,
-                configureSerialization: s => s.UseSystemTextJson(new JsonSerializerOptions { PropertyNamingPolicy = null }));
 
             RestRequest req = new RestRequest("/Auth/Login", RestSharp.Method.Post);
             req.AddJsonBody(new

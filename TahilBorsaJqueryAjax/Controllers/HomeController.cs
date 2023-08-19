@@ -47,14 +47,6 @@ namespace TahilBorsaR.Controllers
 
         }
 
-        public IActionResult Rabbit()
-        {
-            SaleRestClient client = new SaleRestClient();
-
-            var result = client.GetProductBulletin();
-
-            return View(result);
-        }
      
 
 

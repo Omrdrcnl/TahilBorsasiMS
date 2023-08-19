@@ -194,6 +194,7 @@ namespace TahilBorsa.Api.Controllers
 
             decimal amount = actualPrice * quantity;
 
+
             tblSale item = new tblSale()
             {
                 Id = json.Id,
@@ -203,17 +204,29 @@ namespace TahilBorsa.Api.Controllers
                 Quantity = json.Quantity,
                 BasePrice = json.BasePrice,
                 Amount = amount,
-                Date = json.Date,
+                Date = json.DateTime,
                 Process = json.Process,
                 tblTradesmanId = json.TradesmanId,
 
             };
+            var tradesman = repo.TradesmanRepository.FindByCondition(x => x.Id == item.tblTradesmanId).FirstOrDefault();
 
-            if (item != null)
+            if (tradesman != null)
             {
                 repo.SaleRepository.Update(item);
                 repo.SaveChanges();
+
+            }else
+            {
+                return new
+                {
+                    success = false,
+                    message = "Bu Kayıt Numarasında Bir Esnaf Bulunmamaktadır..."
+                };
             }
+
+
+            
 
             return new
             {

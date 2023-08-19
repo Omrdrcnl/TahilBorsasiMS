@@ -6,16 +6,13 @@ using TahilBorsaMS.Models.Entity;
 
 namespace TahilBorsaJqeryAjax.Code.Rest
 {
-    public class LabResClient
+    public class LabResClient : BaseRestClient
     {
-        private string BASE_API_URI = "https://localhost:7234/api";
 
         public dynamic AddLab(int EntryProductId,
             int NutritionalValue)
         {
-            RestClient client = new RestClient(BASE_API_URI,
-                configureSerialization: s => s.UseSystemTextJson(new JsonSerializerOptions { PropertyNamingPolicy = null }));
-
+        
             RestRequest req = new RestRequest("/Labaratuar/EnterData", RestSharp.Method.Post);
             req.AddJsonBody(new
             {
@@ -30,5 +27,7 @@ namespace TahilBorsaJqeryAjax.Code.Rest
             dynamic result = JObject.Parse(msg);
             return result;
         }
+
+     
     }
 }

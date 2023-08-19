@@ -21,6 +21,12 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
             var validator = new LabValidator();
             var validationResult = validator.Validate(l);
 
+            if (l.NutritionalValue > 100)
+            {
+                ViewBag.NatError = "Besin Değeri 100'den Büyük olamaz.";
+                return View();
+            }
+
             if (!ModelState.IsValid)
             {
                 foreach (var error in validationResult.Errors)

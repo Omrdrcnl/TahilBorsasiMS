@@ -1,17 +1,18 @@
 ﻿using FluentValidation;
-using TahilBorsaMS.Models.Entity;
+using TahilBorsaJqeryAjax.Areas.Admin.Model;
 
 namespace TahilBorsaJqeryAjax.Code.Validation
 {
-   
-        public class SaleValidator : AbstractValidator<tblSale>
-        {
 
-            public SaleValidator()
-            {
-                RuleFor(k => k.tblTradesmanId).NotEmpty().WithMessage(" Esnaf Id Boş Geçilemez");
-                RuleFor(k => k.BasePrice).NotEmpty().WithMessage(" Başlangıç Fiyatı Boş Geçilemez");
-                RuleFor(k => k.ActualPrice).NotEmpty().WithMessage(" Satış Fiyatı Boş Geçilemez");
-            }
+    public class SaleValidator : AbstractValidator<SaleModel>
+    {
+
+        public SaleValidator()
+        {
+            RuleFor(k => k.TradesmanId).NotEmpty().WithMessage("Esnaf Kayıt No Boş Geçilemez");
+            RuleFor(k => k.BasePrice).NotEmpty().WithMessage("Başlangıç Fiyatı Boş Geçilemez");
+            RuleFor(k => k.ActualPrice).NotEmpty().WithMessage("Satış Fiyatı Boş Geçilemez");
+            RuleFor(k => k.BasePrice).NotEmpty().WithMessage("Başlangıç Fiyatı Boş Geçilemez");
         }
+    }
 }

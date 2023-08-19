@@ -5,14 +5,13 @@ using System.Text.Json;
 
 namespace TahilBorsaJqeryAjax.Code.Rest
 {
-    public class ContactRestClient
+    public class ContactRestClient : BaseRestClient
     {
-        private string BASE_API_URI = "https://localhost:7234/api";
+        
 
         public dynamic Contact(string Name, string Mail, string Subject, string Message)
         {
-            RestClient client = new RestClient(BASE_API_URI,
-                configureSerialization: s => s.UseSystemTextJson(new JsonSerializerOptions { PropertyNamingPolicy = null }));
+           
 
             RestRequest req = new RestRequest("/Contact/SendMessage", RestSharp.Method.Post);
             req.AddJsonBody(new

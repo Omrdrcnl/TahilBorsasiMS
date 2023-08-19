@@ -17,7 +17,7 @@ namespace TahilBorsa.Api.Controllers
             this.repo = repo;
         }
 
-        [HttpGet("GirisYapanUrunler")]
+        [HttpGet("EnterList")]
         public dynamic AllEntryProduct()
         {
             List<V_EntryProductList> tblEntryProducts = repo.EntryProductRepository.GetEntryProductList();

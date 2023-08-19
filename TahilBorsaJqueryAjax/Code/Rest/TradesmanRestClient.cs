@@ -6,16 +6,13 @@ using TahilBorsaMS.Models.Entity;
 
 namespace TahilBorsaJqeryAjax.Code.Rest
 {
-    public class TradesmanRestClient
+    public class TradesmanRestClient: BaseRestClient
     {
-        private string BASE_API_URI = "https://localhost:7234/api";
 
         public dynamic AddTradesman(int Id,string FirstName, string LastName, string IdentityNo,
             string Contact, DateTime? BirthDate, int AddressId, string FullAddress, int tblCityId,
             int tblDistrictId, string? NeighborhoodName)
         {
-            RestClient client = new RestClient(BASE_API_URI,
-                configureSerialization: s => s.UseSystemTextJson(new JsonSerializerOptions { PropertyNamingPolicy = null }));
 
             RestRequest req = new RestRequest("/Tradesman/AddTradesman", RestSharp.Method.Post);
             req.AddJsonBody(new

@@ -11,9 +11,8 @@ namespace TahilBorsaJqeryAjax.Code.Validation
         {
             RuleFor(k => k.EntryProductId).NotEmpty().WithMessage("Ürün Giriş Numarası Boş Geçilemez");
 
-            RuleFor(k => k.NutritionalValue).LessThanOrEqualTo(100).WithMessage("Besin değeri en fazla 100 olabilir")
-                .NotEmpty().WithMessage("Besin Değeri Boş Geçilemez");
-
+            RuleFor(k => k.NutritionalValue).LessThanOrEqualTo(100).WithMessage("Besin değeri en fazla 100 olabilir");
+            RuleFor(k=> k.NutritionalValue).NotEmpty().WithMessage("Besin Değeri Boş Geçilemez");
         }
 
     }

@@ -5,15 +5,12 @@ using System.Text.Json;
 
 namespace TahilBorsaJqeryAjax.Code.Rest
 {
-    public class EntryProductRestClient
+    public class EntryProductRestClient : BaseRestClient
     {
-        private string BASE_API_URI = "https://localhost:7234/api";
 
         public dynamic AddEntryProduct(int FarmerId, DateTime DateTime,
             int ProductId)
         {
-            RestClient client = new RestClient(BASE_API_URI,
-                configureSerialization: s => s.UseSystemTextJson(new JsonSerializerOptions { PropertyNamingPolicy = null }));
 
             RestRequest req = new RestRequest("/EntryProduct/Enter", RestSharp.Method.Post);
             req.AddJsonBody(new

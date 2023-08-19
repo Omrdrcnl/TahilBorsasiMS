@@ -9,32 +9,33 @@
 
 
     <h2>İşlem Bekleyen Liste</h2>
-      @if (TempData["ErrorMessagesLab"] != null)
-        {
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Hatalar:</strong>
-                <ul>
-                    @foreach (var errorMessage in (List<string>)TempData["ErrorMessagesLab"])
-                    {
-                        <li>@errorMessage</li>
-                    }
-                </ul>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
+    @if (TempData["ErrorMessagesLab"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Hatalar:</strong>
+            <ul>
+                @foreach (var errorMessage in (List<string>)TempData["ErrorMessagesLab"])
+                {
+                    <li>@errorMessage</li>
+                }
+            </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
 
-            <script>
-                $(document).ready(function () {
-                    setTimeout(function () {
-                        $(".alert").alert("close");
-                    }, 5000);
-                });
-            </script>
-        }
-    @if (ViewBag.ErrorLab != null )
+        <script>
+            $(document).ready(function () {
+                setTimeout(function () {
+                    $(".alert").alert("close");
+                }, 5000);
+            });
+        </script>
+    }
+    @if (ViewBag.ErrorLab != null || ViewBag.NatError !=null)
     {
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
             <strong>
                 @ViewBag.ErrorLab
+                @ViewBag.NatError
             </strong>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
@@ -62,6 +63,7 @@
             });
         </script>
     }
+
     <table class="table table-bordered table-striped" id="Lab">
         <tr class="table-info">
             <th>Ürün Giriş No</th>
@@ -114,11 +116,11 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
-                                <button type="submit" class="btn btn-primary">Kaydet</button>
+                                <button type="submit" onclick="AddLabData()" class="btn btn-primary">Kaydet</button>
                             </div>
                         </form>
                     </div>
-                   
+
                 }
             </div>
         </div>
@@ -144,10 +146,10 @@
                 row.append($("<td>").text(t.name));
                 row.append($("<td>").text(t.dateTime));
                 row.append($("<td>").html(`<button data-bs-toggle="modal" data-bs-target="#rolModal" onClick="OpenLab(
-                                                    '${t.entryProductId}',
-                                                    '${t.name}'
-                                                )" class="btn btn-success">Değer Gir</button>
-                                                `));
+                                                        '${t.entryProductId}',
+                                                        '${t.name}'
+                                                    )" class="btn btn-success">Değer Gir</button>
+                                                    `));
 
                 tbody.append(row);
             });
@@ -157,33 +159,36 @@
 
     let selectedEntryProductId = 0;
 
-    function AddLabData() {
-        var p = {
-            Id: 0,
-            EntryProductId: $('#EntryProductId').val(),
-            NutritionalValue: $("#NutritionalValue").val(),
-            Process: true
-        };
+    //function AddLabData() {
+    //    flent tarafında çalısmadı js ile 100den büyük olmayacagını belirttik
+       
+
+    //    var p = {
+    //        Id: 0,
+    //        EntryProductId: $('#EntryProductId').val(),
+    //        NutritionalValue: $("#NutritionalValue").val(),
+    //        Process: true
+    //    };
 
 
-        //postData("Labaratuar/EnterData", p, (data) => {
-        //    getEntryProduct();
-        //    $("#rolModal").modal("hide");
+    //    postData("Labaratuar/EnterData", p, (data) => {
+    //        getEntryProduct();
+    //        $("#rolModal").modal("hide");
 
-        //    $("#successAlert").fadeIn();
+    //        $("#successAlert").fadeIn();
 
-        //    $(".modal-backdrop").remove();
+    //        $(".modal-backdrop").remove();
 
-        //    setTimeout(function () {
-        //        $("#successAlert").fadeOut();
-        //    }, 3000);
-        //    setTimeout(function () {
-        //        location.reload();
-        //    }, 3500);
+    //        setTimeout(function () {
+    //            $("#successAlert").fadeOut();
+    //        }, 3000);
+    //        setTimeout(function () {
+    //            location.reload();
+    //        }, 3500);
 
-        //});
+    //    });
 
-    }
+    //}
 
     function OpenLab(entryProductId, name) {
         selectedEntryProductId = entryProductId;

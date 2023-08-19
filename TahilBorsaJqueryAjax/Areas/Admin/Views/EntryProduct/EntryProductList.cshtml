@@ -91,7 +91,7 @@
 
     function getEntryProduct() {
 
-        fetchData("EntryProduct/GirisYapanUrunler", function (response) {
+        fetchData("EntryProduct/EnterList", function (response) {
 
             console.log("EntryProduct data", response);
 
@@ -157,7 +157,7 @@
 
 
     function performSearch() {
-        fetchData("EntryProduct/GirisYapanUrunler", function (response) {
+        fetchData("EntryProduct/EnterList", function (response) {
             const searchTerm = searchBox.val().toLowerCase();
             const filteredData = response.filter(function (farmer) {
                 return (
@@ -196,7 +196,7 @@
             Process: true
         };
 
-        postData("EntryProduct/UrunGirisYap", p, (data) => {
+        postData("EntryProduct/Enter", p, (data) => {
             getEntryProduct();
             $("#rolModal").modal("hide");
 
