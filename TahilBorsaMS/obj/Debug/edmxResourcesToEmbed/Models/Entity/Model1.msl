@@ -34,6 +34,12 @@
     <EntitySetMapping Name="tblContact">
       <EntityTypeMapping TypeName="DbGrainExchangeModel.tblContact">
         <MappingFragment StoreEntitySet="tblContact">
+          <ScalarProperty Name="Spam" ColumnName="Spam" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Important" ColumnName="Important" />
+          <ScalarProperty Name="Archive" ColumnName="Archive" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Mail" ColumnName="Mail" />

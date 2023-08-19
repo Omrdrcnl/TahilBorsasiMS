@@ -22,6 +22,10 @@ namespace TahilBorsaMS.Models.Entity
         public string Subject { get; set; }
         public string Message { get; set; }
         public bool Process { get; set; }
-        public DateTime Date { get; set; }
+        public System.DateTime Date { get; set; }
+        public Nullable<bool> Archive { get; set; }
+        public Nullable<bool> Important { get; set; }
+        public Nullable<bool> Deleted { get; set; }
+        public Nullable<bool> Spam { get; set; }
     }
 }

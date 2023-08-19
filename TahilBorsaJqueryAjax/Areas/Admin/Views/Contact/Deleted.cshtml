@@ -1,0 +1,28 @@
+﻿@using TahilBorsaJqeryAjax.Models
+@model List<ContactModel>
+
+@{
+    ViewData["Title"] = "Deleted";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<table>
+    <thead>
+        <tr>mesaj</tr>
+        <tr>konu</tr>
+        <tr>içerik</tr>
+        <tr>tarih</tr>
+    </thead>
+    <tbody>
+        @foreach (var k in Model)
+        {
+            <tr>
+                <td>@k.Subject</td>
+                <td>@k.Name</td>
+                <td>@k.Message</td>
+                <td>@k.Date</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

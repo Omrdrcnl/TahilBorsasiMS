@@ -39,9 +39,15 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Process" Type="Boolean" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Archive" Type="Boolean" />
+    <Property Name="Important" Type="Boolean" />
+    <Property Name="Deleted" Type="Boolean" />
+    <Property Name="Spam" Type="Boolean" />
   </EntityType>
   <EntityType Name="tblDistrict">
     <Key>
@@ -117,12 +123,12 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="tblEntryProductId" Type="Int32" Nullable="false" />
     <Property Name="tblLabDataId" Type="Int32" Nullable="false" />
-    <Property Name="BasePrice" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="ActualPrice" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="Quantity" Type="Int32" />
-    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BasePrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ActualPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="tblTradesmanId" Type="Int32" />
-    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Date" Type="DateTime" Precision="7" />
     <Property Name="Process" Type="Boolean" />
     <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblSale_tblEntryProduct" FromRole="tblSale" ToRole="tblEntryProduct" />
     <NavigationProperty Name="tblLabData" Relationship="Self.FK_tblSale_tblLabData" FromRole="tblSale" ToRole="tblLabData" />

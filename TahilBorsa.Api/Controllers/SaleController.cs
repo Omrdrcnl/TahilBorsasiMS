@@ -204,7 +204,7 @@ namespace TahilBorsa.Api.Controllers
                 Quantity = json.Quantity,
                 BasePrice = json.BasePrice,
                 Amount = amount,
-                Date = json.DateTime,
+                Date = json.Date,
                 Process = json.Process,
                 tblTradesmanId = json.TradesmanId,
 

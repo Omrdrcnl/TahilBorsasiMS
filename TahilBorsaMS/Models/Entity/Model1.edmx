@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DbGrainExchangeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DbGrainExchangeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -38,9 +38,15 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="100" />
           <Property Name="Subject" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Process" Type="bit" Nullable="false" />
+          <Property Name="Date" Type="smalldatetime" Nullable="false" />
+          <Property Name="Archive" Type="bit" />
+          <Property Name="Important" Type="bit" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="Spam" Type="bit" />
         </EntityType>
         <EntityType Name="tblDistrict">
           <Key>
@@ -104,12 +110,12 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tblEntryProductId" Type="int" Nullable="false" />
           <Property Name="tblLabDataId" Type="int" Nullable="false" />
-          <Property Name="BasePrice" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="ActualPrice" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Quantity" Type="int" />
-          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="BasePrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ActualPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="tblTradesmanId" Type="int" />
-          <Property Name="Date" Type="smalldatetime" />
+          <Property Name="Date" Type="datetime2" Precision="7" />
           <Property Name="Process" Type="bit" />
         </EntityType>
         <EntityType Name="tblTradesman">
@@ -219,42 +225,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSale_tblEntryProduct">
-          <End Role="tblEntryProduct" Type="Self.tblEntryProduct" Multiplicity="1" />
-          <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblEntryProduct">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblSale">
-              <PropertyRef Name="tblEntryProductId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSale_tblLabData">
-          <End Role="tblLabData" Type="Self.tblLabData" Multiplicity="1" />
-          <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblLabData">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblSale">
-              <PropertyRef Name="tblLabDataId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSale_tblTradesman">
-          <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="0..1" />
-          <End Role="tblSale" Type="Self.tblSale" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblTradesman">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="tblSale">
-              <PropertyRef Name="tblTradesmanId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_tblTradesman_tblAddress">
           <End Role="tblAddress" Type="Self.tblAddress" Multiplicity="1" />
           <End Role="tblTradesman" Type="Self.tblTradesman" Multiplicity="*" />
@@ -321,18 +291,6 @@
             <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
             <End Role="tblLabData" EntitySet="tblLabData" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSale_tblEntryProduct" Association="Self.FK_tblSale_tblEntryProduct">
-            <End Role="tblEntryProduct" EntitySet="tblEntryProduct" />
-            <End Role="tblSale" EntitySet="tblSale" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSale_tblLabData" Association="Self.FK_tblSale_tblLabData">
-            <End Role="tblLabData" EntitySet="tblLabData" />
-            <End Role="tblSale" EntitySet="tblSale" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSale_tblTradesman" Association="Self.FK_tblSale_tblTradesman">
-            <End Role="tblTradesman" EntitySet="tblTradesman" />
-            <End Role="tblSale" EntitySet="tblSale" />
-          </AssociationSet>
           <AssociationSet Name="FK_tblTradesman_tblAddress" Association="Self.FK_tblTradesman_tblAddress">
             <End Role="tblAddress" EntitySet="tblAddress" />
             <End Role="tblTradesman" EntitySet="tblTradesman" />
@@ -342,8 +300,7 @@
             <End Role="tblUser" EntitySet="tblUser" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbGrainExchangeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -386,9 +343,15 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Process" Type="Boolean" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Archive" Type="Boolean" />
+          <Property Name="Important" Type="Boolean" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="Spam" Type="Boolean" />
         </EntityType>
         <EntityType Name="tblDistrict">
           <Key>
@@ -464,12 +427,12 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tblEntryProductId" Type="Int32" Nullable="false" />
           <Property Name="tblLabDataId" Type="Int32" Nullable="false" />
-          <Property Name="BasePrice" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="ActualPrice" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="Quantity" Type="Int32" />
-          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="BasePrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ActualPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="tblTradesmanId" Type="Int32" />
-          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Date" Type="DateTime" Precision="7" />
           <Property Name="Process" Type="Boolean" />
           <NavigationProperty Name="tblEntryProduct" Relationship="Self.FK_tblSale_tblEntryProduct" FromRole="tblSale" ToRole="tblEntryProduct" />
           <NavigationProperty Name="tblLabData" Relationship="Self.FK_tblSale_tblLabData" FromRole="tblSale" ToRole="tblLabData" />
@@ -747,6 +710,12 @@
           <EntitySetMapping Name="tblContact">
             <EntityTypeMapping TypeName="DbGrainExchangeModel.tblContact">
               <MappingFragment StoreEntitySet="tblContact">
+                <ScalarProperty Name="Spam" ColumnName="Spam" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Important" ColumnName="Important" />
+                <ScalarProperty Name="Archive" ColumnName="Archive" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Mail" ColumnName="Mail" />

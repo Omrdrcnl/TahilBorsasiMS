@@ -29,6 +29,66 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
+        [HttpGet("ComeIn")]
+        public dynamic ComeIn()
+        {
+            List<tblContact> items = repo.ContactRepository.
+                FindByCondition(x => x.Process == false).ToList<tblContact>();
+            return new
+            {
+                success = true,
+                data = items
+            };
+        }
+
+        [HttpGet("Archive")]
+        public dynamic Archive()
+        {
+            List<tblContact> items = repo.ContactRepository.
+                FindByCondition(x => x.Archive == true).ToList<tblContact>();
+            return new
+            {
+                success = true,
+                data = items
+            };
+        }
+
+        [HttpGet("Deleted")]
+        public dynamic Deleted()
+        {
+            List<tblContact> items = repo.ContactRepository.
+                FindByCondition(x => x.Deleted == true).ToList<tblContact>();
+            return new
+            {
+                success = true,
+                data = items
+            };
+        }
+
+        [HttpGet("Spam")]
+        public dynamic Spam()
+        {
+            List<tblContact> items = repo.ContactRepository.
+                FindByCondition(x => x.Spam == true).ToList<tblContact>();
+            return new
+            {
+                success = true,
+                data = items
+            };
+        }
+
+        [HttpGet("Important")]
+        public dynamic Important()
+        {
+            List<tblContact> items = repo.ContactRepository.
+                FindByCondition(x => x.Important == true).ToList<tblContact>();
+            return new
+            {
+                success = true,
+                data = items
+            };
+        }
+
         [HttpPost("SendMessage")]
         public dynamic SendMessage([FromBody] dynamic model)
         {
@@ -50,7 +110,7 @@ namespace TahilBorsa.Api.Controllers
 
             if (item != null)
             {
-             
+
                 repo.ContactRepository.Create(item);
                 repo.SaveChanges();
 
