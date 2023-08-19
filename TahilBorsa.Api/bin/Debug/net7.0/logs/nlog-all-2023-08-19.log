@@ -3238,3 +3238,31 @@ FROM [V_ReadySale] AS [v]
 2023-08-19 18:23:16.4408||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.SaleController.ReadySale (TahilBorsa.Api) in 51.7433ms 
 2023-08-19 18:23:16.4408||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.SaleController.ReadySale (TahilBorsa.Api)' 
 2023-08-19 18:23:16.4408||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Sale/ReadySales application/json;+charset=utf-8 - - 200 - application/json;+charset=utf-8 68.5004ms 
+2023-08-19 18:48:12.6852||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Sale/SaledList - - 
+2023-08-19 18:48:12.6852||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-19 18:48:12.6852||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Sale/SaledList - - - 204 - - 2.2207ms 
+2023-08-19 18:48:12.7331||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Sale/SaledList application/json;+charset=utf-8 - 
+2023-08-19 18:48:12.7331||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-19 18:48:12.7331||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.SaleController.SaledList (TahilBorsa.Api)' 
+2023-08-19 18:48:12.7331||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "SaledList", controller = "Sale"}. Executing controller action with signature System.Object SaledList() on controller TahilBorsa.Api.Controllers.SaleController (TahilBorsa.Api). 
+2023-08-19 18:48:12.8831||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (135ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [v].[EntryId], [v].[FarmerFirstName], [v].[FarmerIdentityNo], [v].[FarmerLastName], [v].[NutritionalValue], [v].[ProductName], [v].[Quantity], [v].[SaleId], [v].[TrFirstName], [v].[TrLastName]
+FROM [V_SaledList] AS [v] 
+2023-08-19 18:48:12.8831||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Views.V_SaledList, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-19 18:48:12.9019||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.SaleController.SaledList (TahilBorsa.Api) in 164.2845ms 
+2023-08-19 18:48:12.9019||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.SaleController.SaledList (TahilBorsa.Api)' 
+2023-08-19 18:48:12.9019||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Sale/SaledList application/json;+charset=utf-8 - - 200 - application/json;+charset=utf-8 173.4784ms 
+2023-08-19 18:48:18.0719||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7234/api/Sale/ReadySales - - 
+2023-08-19 18:48:18.0719||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-19 18:48:18.0719||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7234/api/Sale/ReadySales - - - 204 - - 3.2523ms 
+2023-08-19 18:48:18.0719||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7234/api/Sale/ReadySales application/json;+charset=utf-8 - 
+2023-08-19 18:48:18.0719||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2023-08-19 18:48:18.0719||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsa.Api.Controllers.SaleController.ReadySale (TahilBorsa.Api)' 
+2023-08-19 18:48:18.0719||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "ReadySale", controller = "Sale"}. Executing controller action with signature System.Object ReadySale() on controller TahilBorsa.Api.Controllers.SaleController (TahilBorsa.Api). 
+2023-08-19 18:48:18.0994||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [v].[EntryId], [v].[FarmerFirstName], [v].[FarmerId], [v].[FarmerIdentityNo], [v].[FarmerLastName], [v].[LabId], [v].[NutritionalValue], [v].[Process], [v].[ProductName], [v].[SaleId]
+FROM [V_ReadySale] AS [v] 
+2023-08-19 18:48:18.1002||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[TahilBorsaMS.Models.Views.V_ReadySale, TahilBorsaMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-08-19 18:48:18.1002||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsa.Api.Controllers.SaleController.ReadySale (TahilBorsa.Api) in 20.7089ms 
+2023-08-19 18:48:18.1002||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsa.Api.Controllers.SaleController.ReadySale (TahilBorsa.Api)' 
+2023-08-19 18:48:18.1002||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7234/api/Sale/ReadySales application/json;+charset=utf-8 - - 200 - application/json;+charset=utf-8 22.8564ms 
