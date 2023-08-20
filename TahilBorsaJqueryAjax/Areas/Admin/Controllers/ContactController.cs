@@ -17,38 +17,27 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult PartialView()
+        public IActionResult Process(ContactModel model)
         {
-
             ContactRestClient client = new ContactRestClient();
-            dynamic result = client.GetContact();
+            dynamic result = client.Contact(model.Id, model.Name, model.Subject, model.Message,
+                model.Mail, model.Important, model.Archive, model.Deleted, model.Spam, model.Process);
 
-            List<ContactModel> contacts = new List<ContactModel>();
             bool success = result.success;
+
             if (success)
-                contacts = result.data.ToObject<List<ContactModel>>();
-            //ViewBag.Contact = result.data;
-
-
-            int archiveCount = contacts.Count(c => c.Archive == true);
-            int comeInCount = contacts.Count(c => c.Process == true);
-            int deleteCount = contacts.Count(c => c.Deleted == true);
-            int importantCount = contacts.Count(c => c.İmportant == true);
-            int spamCount = contacts.Count(c => c.Spam == true);
-            var model = new ContactNotification()
             {
-                Archive = archiveCount,
-                ComeIn = comeInCount,
-                Delete = deleteCount,
-                Important = importantCount,
-                Spam = spamCount
 
-            };
+                return RedirectToAction("Index", "Contact");
+            }
+            else
+            {
+                ViewBag.ContactError = (string)result.message;
+                return View("Contact");
+            }
 
-          
-
-            return PartialView(model);
         }
+
 
         public IActionResult Deleted(ContactModel c)
         {
@@ -59,7 +48,7 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
             List<ContactModel> contacts = new List<ContactModel>();
             bool success = result.success;
             if (success)
-                // ViewBag.Deleted = result.data;
+                
                 contacts = result.data.ToObject<List<ContactModel>>();
 
             return View(contacts);
@@ -70,11 +59,12 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 
             ContactRestClient client = new ContactRestClient();
             dynamic result = client.GetImportant();
-            List<ContactModel> contacts = new List<ContactModel>();
 
+
+            List<ContactModel> contacts = new List<ContactModel>();
             bool success = result.success;
             if (success)
-                ViewBag.Important = result.data;
+                
 
             contacts = result.data.ToObject<List<ContactModel>>();
 
@@ -90,7 +80,7 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
             List<ContactModel> contacts = new List<ContactModel>();
             bool success = result.success;
             if (success)
-                ViewBag.Spam = result.data;
+                
 
             contacts = result.data.ToObject<List<ContactModel>>();
 
@@ -106,10 +96,25 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
             List<ContactModel> contacts = new List<ContactModel>();
             bool success = result.success;
             if (success)
-                ViewBag.Archive = result.data;
+           
 
                 contacts = result.data.ToObject<List<ContactModel>>();
             return View(contacts);
+        }       
+        
+        public IActionResult ReadMessage(ContactModel model)
+        {
+
+            ContactRestClient client = new ContactRestClient();
+            dynamic result = client.ReadMessage(model.Id);
+
+            ContactModel contact = new ContactModel();
+            bool success = result.success;
+            if (success)
+                ViewBag.Archive = result.data;
+
+                contact = result.data.ToObject<ContactModel>();
+            return View(contact);
         }
 
 

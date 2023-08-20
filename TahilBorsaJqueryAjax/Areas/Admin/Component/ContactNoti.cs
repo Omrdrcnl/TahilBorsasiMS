@@ -2,6 +2,7 @@
 using TahilBorsaJqeryAjax.Areas.Admin.Model;
 using TahilBorsaJqeryAjax.Code.Rest;
 using TahilBorsaJqeryAjax.Models;
+using TahilBorsaMS.Models.Entity;
 
 namespace TahilBorsaJqeryAjax.Areas.Admin.Component
 {
@@ -22,7 +23,7 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Component
             int archiveCount = contacts.Count(c => c.Archive == true);
             int comeInCount = contacts.Count(c => c.Process == true);
             int deleteCount = contacts.Count(c => c.Deleted == true);
-            int importantCount = contacts.Count(c => c.İmportant == true);
+            int importantCount = contacts.Count(c => c.Important == true);
             int spamCount = contacts.Count(c => c.Spam == true);
             var model = new ContactNotification()
             {

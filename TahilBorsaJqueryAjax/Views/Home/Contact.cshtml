@@ -10,7 +10,12 @@
 background-size: cover;" loading="lazy"></div>
         </div>
         @using (Html.BeginForm("SendMessage", "Home"))
-        {
+        {  @if (ViewBag.ContactSuccess != null)
+            {
+                <div class="alert alert-success" role="alert">
+                    @ViewBag.ContactSuccess
+                </div>
+            }
             <div class="container col-xl-5 col-lg-6 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
                 <div class="card d-flex blur justify-content-center shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
@@ -29,6 +34,7 @@ background-size: cover;" loading="lazy"></div>
                                             <label>Ad Soyad</label>
                                             <input type="text" class="form-control" name="Name">
                                         </div>
+                                        <input type="hidden" value="0" name="Id"/>
                                     </div>
                                     <div class="col-md-6 ps-md-2">
                                         <div class="input-group-static mb-4">
@@ -46,7 +52,7 @@ background-size: cover;" loading="lazy"></div>
                                 <div class="form-group mb-0 mt-md-0 mt-4">
                                     <div class="input-group input-group-static mb-4">
                                         <label>Size Nasıl Yardımcı olabiliriz?</label>
-                                        <textarea name="message" class="form-control" id="message" rows="6" placeholder="Mesajınızı Buraya Yazınız..."></textarea>
+                                        <textarea name="Message" class="form-control" id="message" rows="6" placeholder="Mesajınızı Buraya Yazınız..."></textarea>
                                     </div>
                                 </div>
                                 @if (!string.IsNullOrEmpty(ViewBag.ContactError))
@@ -55,9 +61,10 @@ background-size: cover;" loading="lazy"></div>
                                         @ViewBag.ContactError
                                     </div>
                                 }
+                              
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        <button type="submit" class="btn bg-gradient-primary mt-3 mb-0">Send Message</button>
+                                        <button type="submit" class="btn bg-gradient-primary mt-3 mb-0">Mesajı Gönder</button>
                                     </div>
                                 </div>
                             </div>

@@ -1,13 +1,7 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
-
-
-<!DOCTYPE html>
-
-<html>
 
 <head>
 
@@ -105,15 +99,15 @@
 
                                 <button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt"></i></button>
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
+                                <button type="button" class="btn btn-default btn-sm"> <i class="far fa-file-alt"></i></button>
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
+                                <button type="button" class="btn btn-default btn-sm"> <i class="fas fa-filter"></i></button>
 
                             </div>
 
                             <!-- /.btn-group -->
 
-                            <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
+                            <button type="button" class="btn btn-default btn-sm"><i class="far fa-circle text-danger"></i></button>
 
                             <div class="float-right">
 
@@ -140,37 +134,6 @@
                             <table class="table table-hover table-striped">
 
                                 <tbody id="cbody">
-
-                                    <tr>
-
-                                        <td>
-
-                                            <div class="icheck-primary">
-
-                                                <input type="checkbox" value="" id="check15">
-
-                                                <label for="check15"></label>
-
-                                            </div>
-
-                                        </td>
-
-                                        <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-
-                                        <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-
-                                        <td class="mailbox-subject">
-
-                                            <b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
-
-                                        </td>
-
-                                        <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-
-                                        <td class="mailbox-date">15 days ago</td>
-
-                                    </tr>
-
                                 </tbody>
 
                             </table>
@@ -256,9 +219,6 @@
     <!-- /.control-sidebar -->
     <!-- ./wrapper -->
     <!-- jQuery -->
-
-    
-
     <!-- Bootstrap 4 -->
 
     <script src="~/Content/Contact/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -270,30 +230,60 @@
 
     <script>
 
-        function getMessages(){
-            fetchData("Contact/AllContact", function (response) {
+        function getMessages() {
+            fetchData("Contact/ComeIn", function (response) {
 
                 console.log("messages", response)
                 var c = $("#cbody");
                 c.empty();
 
-                $.each(response, function(index, res){
+                $.each(response, function (index, res) {
                     var k = `            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                                <input type="checkbox" value="${res.process}" id="check15">
-                                                        <label for="check15"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                                <td class="mailbox-name"><a href="read-mail.html">${res.name}</a></td>
-                                                <td class="mailbox-subject">
-                                                            <b>${res.subject}</b> - ${res.message}...
-                                                </td>
-                                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                                        <td class="mailbox-date">${res.date}</td>
-                                            </tr>
-                    `
+                                                                <td>
+                                                                    <div class="icheck-primary">
+                                                                                <input type="checkbox" value="${res.process}" id="check15">
+                                                                        <label for="check15"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
+                                                                <td class="mailbox-name"><a href="/Admin/Contact/ReadMessage/${res.id}">${res.name}</a></td>
+                                                                <td class="mailbox-subject">
+                                                                                    <b>Konu: ${res.subject}</b> <br/> <br/> <p> <p>${res.message.length > 100 ? res.message.substring(0, 100) + '...' : res.message}</p>
+                                                                </td>
+                                                                <td>
+                                                                                    <i type="button" onClick="PostDelete(
+                                                                     '${res.id}',
+                                                                    '${res.name}',
+                                                                    '${res.mail}',
+                                                                    '${res.subject}',
+                                                                    '${res.message}',
+                                                                    '${res.date}')" class="far fa-trash-alt"></i>
+                                                                                    <i type="button" onClick="PostArchive(
+                                                                                           '${res.id}',
+                                                                            '${res.name}',
+                                                                            '${res.mail}',
+                                                                            '${res.subject}',
+                                                                            '${res.message}',
+                                                                            '${res.date}'
+                                                                            )" class="far fa-file-alt mx-2"></i>
+                                                                                    <i type="button" onClick="PostSpam(
+                                                                                       '${res.id}',
+                                                                            '${res.name}',
+                                                                                    '${res.mail}',
+                                                                            '${res.subject}',
+                                                                            '${res.message}',
+                                                                            '${res.date}')" class="fas fa-filter"></i>
+                                                                                            <i type="button" onClick="PostImportant(   '${res.id}',
+                                                                            '${res.name}',
+                                                                                    '${res.mail}',
+                                                                            '${res.subject}',
+                                                                            '${res.message}',
+                                                                            '${res.date}')" class="far fa-circle text-danger ml-4"></i>
+                                                                </td>
+                                                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                                        <td class="mailbox-date">${res.date}</td>
+                                                            </tr>
+                                    `
 
                     c.append(k);
                 })
@@ -302,6 +292,78 @@
         }
 
         getMessages();
+
+        function PostDelete(id, name, mail, subject, date, message) {
+            var k = {
+                Id: id,
+                Name: name,
+                Message: message,
+                Mail: mail,
+                Subject: subject,
+                Process: false,
+                Deleted: true,
+                Date: date
+            };
+
+            postData("Contact/SendMessage", k, (response) => {
+                getMessages();
+            });
+        }
+
+
+        function PostArchive(id, name, mail, subject, date, message) {
+            var k = {
+                Id: id,
+                Name: name,
+                Message: message,
+                Mail: mail,
+                Subject: subject,
+                Process: false,
+                Archive: true,
+                Date: date
+            };
+
+            postData("Contact/SendMessage", k, (response) => {
+                getMessages();
+            });
+        }
+
+
+        function PostSpam(id, name, mail, subject, date, message) {
+            var k = {
+                Id: id,
+                Name: name,
+                Message: message,
+                Mail: mail,
+                Subject: subject,
+                Process: false,
+                Spam: true,
+                Date: date
+            };
+
+            postData("Contact/SendMessage", k, (response) => {
+                getMessages();
+            });
+        }
+
+
+        function PostImportant(id, name, mail, subject, date, message) {
+            var k = {
+                Id: id,
+                Name: name,
+                Message: message,
+                Mail: mail,
+                Subject: subject,
+                Process: false,
+                Important: true,
+                Date: date
+            };
+
+            postData("Contact/SendMessage", k, (response) => {
+                getMessages();
+            });
+        }
+
 
 
         $(function () {
@@ -381,5 +443,3 @@
     <script src="~/Content/Contact/js/demo.js"></script>
 
 </body>
-
-</html>

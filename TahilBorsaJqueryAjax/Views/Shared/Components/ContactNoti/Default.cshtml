@@ -4,13 +4,13 @@
 
 <div class="col-md-3">
 
-    <a href="compose.html" class="btn btn-primary btn-block mb-3">Compose</a>
+    <a href="~/Admin/Contact/Index" class="btn btn-primary btn-block mb-3">Gelen Kutusu</a>
 
     <div class="card">
 
         <div class="card-header">
 
-            <h3 class="card-title">Folders</h3>
+            <h3 class="card-title">Klasörler</h3>
 
             <div class="card-tools">
 
@@ -30,9 +30,9 @@
 
                 <li class="nav-item active">
 
-                    <a href="#" class="nav-link">
+                    <a href="/Admin/Contact/Index" class="nav-link">
 
-                        <i class="fas fa-inbox"></i> Gelen İletişim İstekleri
+                        <i  class="fas fa-inbox"></i> Gelen İletişim İstekleri
 
                         <span class="badge bg-primary float-right">@Model.ComeIn</span>
 
@@ -42,17 +42,7 @@
 
                 <li class="nav-item">
 
-                    <a href="#" class="nav-link">
-
-                        <i class="far fa-envelope"></i> Cevaplanan İstekler
-
-                    </a>
-
-                </li>
-
-                <li class="nav-item">
-
-                    <a href="#" class="nav-link">
+                    <a href="/Admin/Contact/Archive" class="nav-link">
 
                         <i class="far fa-file-alt"></i> Taslaklar
                         <span class="badge bg-primary float-right">@Model.Archive</span>
@@ -63,7 +53,7 @@
 
                 <li class="nav-item">
 
-                    <a href="#" class="nav-link">
+                    <a href="/Admin/Contact/Spam" class="nav-link">
 
                         <i class="fas fa-filter"></i> Spam
 
@@ -75,7 +65,7 @@
 
                 <li class="nav-item">
 
-                    <a href="#" class="nav-link">
+                    <a href="/Admin/Contact/Deleted" class="nav-link">
 
                         <i class="far fa-trash-alt"></i> Silenenler
                         <span class="badge bg-primary float-right">@Model.Delete</span>
@@ -118,7 +108,7 @@
 
                 <li class="nav-item">
 
-                    <a href="#" class="nav-link">
+                    <a href="/Admin/Contact/Important" class="nav-link">
 
                         <i class="far fa-circle text-danger"></i>
                         Önemli
@@ -130,7 +120,7 @@
 
                 <li class="nav-item">
 
-                    <a href="#" class="nav-link">
+                    <a href="/Admin/Contact/Deleted/Ads" class="nav-link">
 
                         <i class="far fa-circle text-warning"></i> Tanıtımlar
 
@@ -140,7 +130,7 @@
 
                 <li class="nav-item">
 
-                    <a href="#" class="nav-link">
+                    <a href="/Admin/Contact/Social" class="nav-link">
 
                         <i class="far fa-circle text-primary"></i>
 

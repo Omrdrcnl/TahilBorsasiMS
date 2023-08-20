@@ -16,12 +16,28 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Contact/Archive.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFxBcmNoaXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Contact/Deleted.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFxEZWxldGVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Contact/Important.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFxJbXBvcnRhbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Contact/ReadMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFxSZWFkTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/Contact/Spam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFxTcGFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ASUS/source/repos/TahilBorsaMS/TahilBorsaJqueryAjax/Areas/Admin/Views/EntryProduct/EntryProductList.cshtml]

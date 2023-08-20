@@ -26,18 +26,21 @@ namespace TahilBorsaR.Controllers
         public IActionResult SendMessage(tblContact model)
         {
             ContactRestClient client = new ContactRestClient();
-            dynamic result = client.Contact(model.Name, model.Subject, model.Message, model.Mail);
+            dynamic result = client.Contact(model.Id, model.Name, model.Subject, model.Message,
+                model.Mail, model.Important, model.Archive, model.Deleted, model.Spam, model.Process);
 
             bool success = result.success;
 
-            if(success)
+            if (success)
             {
-                Repo.Session.Subject = model.Subject;
+
                 Repo.Session.Mail = model.Mail;
-                Repo.Session.Message = model.Message;
+
                 Repo.Session.Name = model.Name;
 
-                return RedirectToAction("Contact","Home");
+                ViewBag.ContactSuccess = "Mesaj Gönderme İşlemi Başarılı";
+
+                return RedirectToAction("Contact", "Home");
             }
             else
             {
@@ -47,7 +50,7 @@ namespace TahilBorsaR.Controllers
 
         }
 
-     
+
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

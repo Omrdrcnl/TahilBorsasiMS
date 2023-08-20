@@ -33,11 +33,22 @@ namespace TahilBorsa.Api.Controllers
         public dynamic ComeIn()
         {
             List<tblContact> items = repo.ContactRepository.
-                FindByCondition(x => x.Process == false).ToList<tblContact>();
+                FindByCondition(x => x.Process == true).ToList<tblContact>();
             return new
             {
                 success = true,
                 data = items
+            };
+        }
+        [HttpGet("ReadMessage/{id}")]
+        public dynamic ReadMessage(int id)
+        {
+            tblContact item = repo.ContactRepository.
+                FindByCondition(x => x.Id == id).FirstOrDefault();
+            return new
+            {
+                success = true,
+                data = item
             };
         }
 
@@ -99,14 +110,31 @@ namespace TahilBorsa.Api.Controllers
             //json tokenın authorize işlemlerini aşagıda yapıyoruz
             tblContact item = new tblContact()
             {
-                Id = 0,
+                Id = json.Id,
                 Name = json.Name,
                 Mail = json.Mail,
                 Message = json.Message,
                 Subject = json.Subject,
-                Process = true,
+                Process = json.Process,
                 Date = DateTime.Today,
+                Archive = json.Archive,
+                Deleted = json.Deleted,
+                Spam = json.Spam,
+                Important   = json.Important,
             };
+
+            if(item.Id >0)
+            {
+                repo.ContactRepository.Update(item);
+                repo.SaveChanges();
+
+                return new
+                {
+                    success = true,
+                    data = item
+                };
+
+            }
 
             if (item != null)
             {
