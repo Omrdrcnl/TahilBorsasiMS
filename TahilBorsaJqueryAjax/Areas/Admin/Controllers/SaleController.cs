@@ -1,11 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TahilBorsaJqeryAjax.Areas.Admin.Model;
+using TahilBorsaJqeryAjax.Code.Filters;
 using TahilBorsaJqeryAjax.Code.Rest;
 using TahilBorsaJqeryAjax.Code.Validation;
+using static TahilBorsaMS.Models.Classes.Enums;
 
 namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 {
     [Area("Admin")]
+
+    [AuthActionFilter(Rol = "admin,person")]
 
     public class SaleController : Controller
     {

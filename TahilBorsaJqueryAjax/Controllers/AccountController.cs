@@ -32,6 +32,13 @@ namespace TahilBorsaJqeryAjax.Controllers
                 return View("Login");
             }
         }
+        public IActionResult Logout()
+        {
+            // Kullanıcı oturumunu sonlandır
+            HttpContext.Session.Clear();
 
+            // Çıkış işlemi tamamlandığında ana sayfaya yönlendir
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

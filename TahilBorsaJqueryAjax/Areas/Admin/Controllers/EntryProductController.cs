@@ -1,14 +1,19 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using TahilBorsaJqeryAjax.Areas.Admin.Model;
+using TahilBorsaJqeryAjax.Code.Filters;
 using TahilBorsaJqeryAjax.Code.Rest;
 using TahilBorsaJqeryAjax.Code.Validation;
 
 namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [AuthActionFilter(Rol = "admin,person")]
+
     public class EntryProductController : Controller
     {
+        
+
         public IActionResult Index()
         {
             return View();

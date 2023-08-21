@@ -355,13 +355,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\General\Controllers\" />
-    <Folder Include="Areas\General\Model\" />
-    <Folder Include="Areas\General\Views\" />
-    <Folder Include="Areas\Labaratuar\Controllers\" />
-    <Folder Include="Areas\Labaratuar\Model\" />
-    <Folder Include="Areas\Labaratuar\Views\" />
-    <Folder Include="Areas\Labaratuar\" />
     <Folder Include="wwwroot\hightech-html\icon\" />
   </ItemGroup>
 

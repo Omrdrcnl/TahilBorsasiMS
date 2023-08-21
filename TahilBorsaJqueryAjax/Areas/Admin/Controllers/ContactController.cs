@@ -2,12 +2,14 @@
 using Newtonsoft.Json.Linq;
 using RestSharp;
 using TahilBorsaJqeryAjax.Areas.Admin.Model;
+using TahilBorsaJqeryAjax.Code.Filters;
 using TahilBorsaJqeryAjax.Code.Rest;
 using TahilBorsaJqeryAjax.Models;
 
 namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [AuthActionFilter]
     public class ContactController : Controller
     {
         

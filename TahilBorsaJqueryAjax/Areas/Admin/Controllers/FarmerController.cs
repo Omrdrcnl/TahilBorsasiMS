@@ -3,10 +3,14 @@ using Microsoft.AspNetCore.Mvc.ViewComponents;
 using TahilBorsaJqeryAjax.Code.Validation;
 using TahilBorsaJqeryAjax.Areas.Admin.Model;
 using TahilBorsaJqeryAjax.Code.Rest;
+using static TahilBorsaMS.Models.Classes.Enums;
+using TahilBorsaJqeryAjax.Code.Filters;
 
 namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [AuthActionFilter]
+
     public class FarmerController : Controller
     {
         public IActionResult Index()
@@ -14,11 +18,16 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
             return View();
         }
 
+        [AuthActionFilter(Rol = "admin,person")]
+
         public IActionResult AddFarmer()
         {
           
             return View();
         }
+
+        [AuthActionFilter(Rol = "admin,person")]
+
         [HttpPost]
         public IActionResult AddFarmer(FarmerModel f)
         {
@@ -52,6 +61,7 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 
            
         }
+        [AuthActionFilter(Rol = "admin,person")]
 
         public ActionResult CallFarmer()
         {

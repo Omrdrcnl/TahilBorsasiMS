@@ -1,11 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TahilBorsaJqeryAjax.Areas.Admin.Model;
+using TahilBorsaJqeryAjax.Code.Filters;
 using TahilBorsaJqeryAjax.Code.Rest;
 using TahilBorsaJqeryAjax.Code.Validation;
+using static TahilBorsaMS.Models.Classes.Enums;
 
 namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [AuthActionFilter(Rol = "admin,person")]
+
 
     public class TradesmanController : Controller
     {
@@ -13,7 +17,7 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
         {
             return View();
         }
-    
+
         [HttpPost]
         public IActionResult Index(TradesmanModel f)
         {
@@ -31,8 +35,8 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
             }
 
             TradesmanRestClient client = new TradesmanRestClient();
-            dynamic result = client.AddTradesman(f.Id,f.FirstName, f.LastName, f.IdentityNo, f.Contact, f.BirthDate, f.AddressId,
-                f.FullAddress , f.tblCityId, f.tblDistrictId, f.NeighborhoodName);
+            dynamic result = client.AddTradesman(f.Id, f.FirstName, f.LastName, f.IdentityNo, f.Contact, f.BirthDate, f.AddressId,
+                f.FullAddress, f.tblCityId, f.tblDistrictId, f.NeighborhoodName);
 
             bool success = result.success;
 
@@ -47,11 +51,7 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
                 return View();
             }
 
-           
-        }
-        public IActionResult CallTradesman()
-        {
-            return View();
+
         }
     }
 }

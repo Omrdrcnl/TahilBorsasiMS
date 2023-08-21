@@ -1,5 +1,6 @@
 ﻿using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
+using TahilBorsaJqeryAjax.Code.Filters;
 
 namespace TahilBorsaJqeryAjax
 {
@@ -14,6 +15,10 @@ namespace TahilBorsaJqeryAjax
         {
             services.AddControllersWithViews()
                 .AddFluentValidation();
+
+            services.AddScoped<AuthActionFilter>();
         }
+
+        
     }
 }

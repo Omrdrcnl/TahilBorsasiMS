@@ -65,30 +65,7 @@
                     new HttpContextAccessor().HttpContext.Session.SetString("Mail", value ?? "");
                 }
             }
-            public static string? Message
-            {
-                get
-                {
-                    string message = new HttpContextAccessor().HttpContext.Session.GetString("Message");
-                    return message;
-                }
-                set
-                {
-                    new HttpContextAccessor().HttpContext.Session.SetString("Message", value ?? "");
-                }
-            }
-            public static string? Subject
-            {
-                get
-                {
-                    string subject = new HttpContextAccessor().HttpContext.Session.GetString("Subject");
-                    return subject;
-                }
-                set
-                {
-                    new HttpContextAccessor().HttpContext.Session.SetString("Subject", value ?? "");
-                }
-            }
+
         }
     }
 }

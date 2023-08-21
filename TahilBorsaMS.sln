@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TahilBorsa.Repository", "Ta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TahilBorsaJqeryAjax", "TahilBorsaJqueryAjax\TahilBorsaJqeryAjax.csproj", "{3BC1042C-AFA8-4ED7-9722-11625678C5CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulteinMessage", "BulteinMessage\BulteinMessage.csproj", "{305D0024-3D64-4F76-A115-1A1F3EE899B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatchMessage", "CatchMessage\CatchMessage.csproj", "{19A0E1B6-D75F-4B67-985C-742139ED0817}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{3BC1042C-AFA8-4ED7-9722-11625678C5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BC1042C-AFA8-4ED7-9722-11625678C5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BC1042C-AFA8-4ED7-9722-11625678C5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{305D0024-3D64-4F76-A115-1A1F3EE899B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{305D0024-3D64-4F76-A115-1A1F3EE899B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{305D0024-3D64-4F76-A115-1A1F3EE899B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{305D0024-3D64-4F76-A115-1A1F3EE899B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A0E1B6-D75F-4B67-985C-742139ED0817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A0E1B6-D75F-4B67-985C-742139ED0817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A0E1B6-D75F-4B67-985C-742139ED0817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A0E1B6-D75F-4B67-985C-742139ED0817}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
