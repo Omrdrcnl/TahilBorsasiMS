@@ -5,71 +5,53 @@
 
 <head>
 
-    <meta charset="utf-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>AdminLTE 3 | Mailbox</title>
-
-    <!-- Tell the browser to be responsive to screen width -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Font Awesome -->
 
     <link rel="stylesheet" href="~/Content/Contact/plugins/fontawesome-free/css/all.min.css">
 
-    <!-- Ionicons -->
+
 
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
-    <!-- icheck bootstrap -->
 
     <link rel="stylesheet" href="~/Content/Contact/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
-    <!-- Theme style -->
+
 
     <link rel="stylesheet" href="~/Content/Contact/Css/adminlte.min.css">
 
-    <!-- Google Font: Source Sans Pro -->
+
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
 </head>
 
-<body class="hold-transition sidebar-mini">
 
-    <!-- Main Sidebar Container -->
-    <!-- Main content -->
 
-    <section class="content">
+<section class="content">
 
-        <div class="row">
+    <div class="row">
 
-            @await Component.InvokeAsync("ContactNoti")
-            <!-- /.col -->
+        @await Component.InvokeAsync("ContactNoti")
 
-            <div class="col-md-9">
+        <div class="col-md-9">
 
-                <div class="card card-primary card-outline">
+            <div class="card card-primary card-outline">
 
-                    <div class="card-header">
+                <div class="card-header">
 
-                        <h3 class="card-title">Inbox</h3>
+                    <h3 class="card-title">Inbox</h3>
 
-                        <div class="card-tools">
+                    <div class="card-tools">
 
-                            <div class="input-group input-group-sm">
+                        <div class="input-group input-group-sm">
 
-                                <input type="text" class="form-control" placeholder="Search Mail">
+                            <input type="text" class="form-control" placeholder="Search Mail">
 
-                                <div class="input-group-append">
+                            <div class="input-group-append">
 
-                                    <div class="btn btn-primary">
+                                <div class="btn btn-primary">
 
-                                        <i class="fas fa-search"></i>
-
-                                    </div>
+                                    <i class="fas fa-search"></i>
 
                                 </div>
 
@@ -77,369 +59,364 @@
 
                         </div>
 
-                        <!-- /.card-tools -->
-
                     </div>
 
-                    <!-- /.card-header -->
+                    <!-- /.card-tools -->
 
-                    <div class="card-body p-0">
+                </div>
 
-                        <div class="mailbox-controls">
+                <!-- /.card-header -->
 
-                            <!-- Check all button -->
+                <div class="card-body p-0">
 
-                            <button type="button" class="btn btn-default btn-sm checkbox-toggle">
+                    <div class="mailbox-controls">
 
-                                <i class="far fa-square"></i>
+                        <!-- Check all button -->
 
-                            </button>
+                        <button type="button" class="btn btn-default btn-sm checkbox-toggle">
+
+                            <i class="far fa-square"></i>
+
+                        </button>
+
+                        <div class="btn-group">
+
+                            <button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt"></i></button>
+
+                            <button type="button" class="btn btn-default btn-sm"> <i class="far fa-file-alt"></i></button>
+
+                            <button type="button" class="btn btn-default btn-sm"> <i class="fas fa-filter"></i></button>
+
+                        </div>
+
+                        <!-- /.btn-group -->
+
+                        <button type="button" class="btn btn-default btn-sm"><i class="far fa-circle text-danger"></i></button>
+
+                        <div class="float-right">
+
+                            1-50/200
 
                             <div class="btn-group">
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
 
-                                <button type="button" class="btn btn-default btn-sm"> <i class="far fa-file-alt"></i></button>
-
-                                <button type="button" class="btn btn-default btn-sm"> <i class="fas fa-filter"></i></button>
+                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
 
                             </div>
 
                             <!-- /.btn-group -->
 
-                            <button type="button" class="btn btn-default btn-sm"><i class="far fa-circle text-danger"></i></button>
-
-                            <div class="float-right">
-
-                                1-50/200
-
-                                <div class="btn-group">
-
-                                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
-
-                                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
-
-                                </div>
-
-                                <!-- /.btn-group -->
-
-                            </div>
-
-                            <!-- /.float-right -->
-
                         </div>
 
-                        <div class="table-responsive mailbox-messages">
-
-                            <table class="table table-hover table-striped">
-
-                                <tbody id="cbody">
-                                </tbody>
-
-                            </table>
-
-                            <!-- /.table -->
-
-                        </div>
-
-                        <!-- /.mail-box-messages -->
+                        <!-- /.float-right -->
 
                     </div>
 
-                    <!-- /.card-body -->
+                    <div class="table-responsive mailbox-messages">
 
-                    <div class="card-footer p-0">
+                        <table class="table table-hover table-striped">
 
-                        <div class="mailbox-controls">
+                            <tbody id="cbody">
+                            </tbody>
 
-                            <!-- Check all button -->
+                        </table>
 
-                            <button type="button" class="btn btn-default btn-sm checkbox-toggle">
+                        <!-- /.table -->
 
-                                <i class="far fa-square"></i>
+                    </div>
 
-                            </button>
+                    <!-- /.mail-box-messages -->
+
+                </div>
+
+                <!-- /.card-body -->
+
+                <div class="card-footer p-0">
+
+                    <div class="mailbox-controls">
+
+                        <!-- Check all button -->
+
+                        <button type="button" class="btn btn-default btn-sm checkbox-toggle">
+
+                            <i class="far fa-square"></i>
+
+                        </button>
+
+                        <div class="btn-group">
+
+                            <button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt"></i></button>
+
+                            <button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
+
+                            <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
+
+                        </div>
+
+                        <!-- /.btn-group -->
+
+                        <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
+
+                        <div class="float-right">
+
+                            1-50/200
 
                             <div class="btn-group">
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
-
-                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
+                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
 
                             </div>
 
                             <!-- /.btn-group -->
 
-                            <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
-
-                            <div class="float-right">
-
-                                1-50/200
-
-                                <div class="btn-group">
-
-                                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
-
-                                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
-
-                                </div>
-
-                                <!-- /.btn-group -->
-
-                            </div>
-
-                            <!-- /.float-right -->
-
                         </div>
+
+                        <!-- /.float-right -->
 
                     </div>
 
                 </div>
 
-                <!-- /.card -->
-
             </div>
 
-            <!-- /.col -->
+            <!-- /.card -->
 
         </div>
 
-        <!-- /.row -->
+        <!-- /.col -->
 
-    </section>
+    </div>
 
-    <aside class="control-sidebar control-sidebar-dark">
+    <!-- /.row -->
 
-        <!-- Control sidebar content goes here -->
+</section>
 
-    </aside>
+<script src="~/Content/Contact/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js"></script>
+<script src="~/Content/Contact/js/adminlte.min.js"></script>
+<script src="~/Content/Contact/js/demos.js"></script>
 
-    <!-- /.control-sidebar -->
-    <!-- ./wrapper -->
-    <!-- jQuery -->
-    <!-- Bootstrap 4 -->
+<script>
 
-    <script src="~/Content/Contact/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js"></script>
+    function PostDelete(id, name, mail, subject, date, message) {
+        var k = {
+            Id: id,
+            Name: name,
+            Message: message,
+            Mail: mail,
+            Subject: subject,
+            Process: false,
+            Deleted: true,
+            Date: date
+        };
 
-    <script src="~/Content/Contact/js/adminlte.min.js"></script>
+        postData("Contact/SendMessage", k, (response) => {
+            getMessages();
+        });
+    }
 
-    <!-- Page Script -->
 
-    <script>
+    function PostArchive(id, name, mail, subject, date, message) {
+        var k = {
+            Id: id,
+            Name: name,
+            Message: message,
+            Mail: mail,
+            Subject: subject,
+            Process: false,
+            Archive: true,
+            Date: date
+        };
 
-        function getMessages() {
-            fetchData("Contact/ComeIn", function (response) {
+        postData("Contact/SendMessage", k, (response) => {
+            getMessages();
+        });
+    }
 
-                console.log("messages", response)
-                var c = $("#cbody");
-                c.empty();
 
-                $.each(response, function (index, res) {
-                    var k = `            <tr>
-                                                                <td>
-                                                                    <div class="icheck-primary">
-                                                                                <input type="checkbox" value="${res.process}" id="check15">
-                                                                        <label for="check15"></label>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                                                <td class="mailbox-name"><a href="/Admin/Contact/ReadMessage/${res.id}">${res.name}</a></td>
-                                                                <td class="mailbox-subject">
-                                                                                    <b>Konu: ${res.subject}</b> <br/> <br/> <p> <p>${res.message.length > 100 ? res.message.substring(0, 100) + '...' : res.message}</p>
-                                                                </td>
-                                                                <td>
-                                                                                    <i type="button" onClick="PostDelete(
-                                                                     '${res.id}',
-                                                                    '${res.name}',
-                                                                    '${res.mail}',
-                                                                    '${res.subject}',
-                                                                    '${res.message}',
-                                                                    '${res.date}')" class="far fa-trash-alt"></i>
-                                                                                    <i type="button" onClick="PostArchive(
-                                                                                           '${res.id}',
+    function PostSpam(id, name, mail, subject, date, message) {
+        var k = {
+            Id: id,
+            Name: name,
+            Message: message,
+            Mail: mail,
+            Subject: subject,
+            Process: false,
+            Spam: true,
+            Date: date
+        };
+
+        postData("Contact/SendMessage", k, (response) => {
+            getMessages();
+        });
+    }
+
+
+    function PostImportant(id, name, mail, subject, date, message) {
+        var k = {
+            Id: id,
+            Name: name,
+            Message: message,
+            Mail: mail,
+            Subject: subject,
+            Process: false,
+            Important: true,
+            Date: date
+        };
+
+        postData("Contact/SendMessage", k, (response) => {
+            getMessages();
+        });
+    }
+
+
+
+    function getMessages() {
+        fetchData("Contact/ComeIn", function (response) {
+
+            console.log("messages", response)
+            var c = $("#cbody");
+            c.empty();
+
+            $.each(response, function (index, res) {
+                var k = `            <tr>
+                                                                        <td>
+                                                                            <div class="icheck-primary">
+                                                                                        <input type="checkbox" value="${res.process}" id="check15">
+                                                                                <label for="check15"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
+                                                                        <td class="mailbox-name"><a href="/Admin/Contact/ReadMessage/${res.id}">${res.name}</a></td>
+                                                                        <td class="mailbox-subject">
+                                                                                            <b>Konu: ${res.subject}</b> <br/> <br/> <p> <p>${res.message}</p>
+                                                                        </td>
+                                                                        <td>
+                                                                                            <i type="button"
+                                                         onClick="PostDelete('${res.id}',
                                                                             '${res.name}',
                                                                             '${res.mail}',
                                                                             '${res.subject}',
                                                                             '${res.message}',
-                                                                            '${res.date}'
-                                                                            )" class="far fa-file-alt mx-2"></i>
-                                                                                    <i type="button" onClick="PostSpam(
-                                                                                       '${res.id}',
-                                                                            '${res.name}',
+                                                                            '${res.date}')"
+                                                                            class="far fa-trash-alt"></i>
+                                                                                            <i type="button"
+                                                         onClick="PostArchive('${res.id}',
+                                                                                    '${res.name}',
                                                                                     '${res.mail}',
-                                                                            '${res.subject}',
-                                                                            '${res.message}',
-                                                                            '${res.date}')" class="fas fa-filter"></i>
-                                                                                            <i type="button" onClick="PostImportant(   '${res.id}',
-                                                                            '${res.name}',
-                                                                                    '${res.mail}',
-                                                                            '${res.subject}',
-                                                                            '${res.message}',
-                                                                            '${res.date}')" class="far fa-circle text-danger ml-4"></i>
-                                                                </td>
-                                                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                                                        <td class="mailbox-date">${res.date}</td>
-                                                            </tr>
-                                    `
+                                                                                    '${res.subject}',
+                                                                                    '${res.message}',
+                                                                                    '${res.date}'
+                                                                                    )"
+                                                                                    class="far fa-file-alt mx-2"></i>
+                                                                                            <i type="button"
+                                                        onClick="PostSpam('${res.id}',
+                                                                          '${res.name}',
+                                                                          '${res.mail}',
+                                                                          '${res.subject}',
+                                                                          '${res.message}',
+                                                                          '${res.date}')"
+                                                                          class="fas fa-filter"></i>
+                                                                                                    <i type="button"
+                                                        onClick="PostImportant('${res.id}',
+                                                                               '${res.name}',
+                                                                               '${res.mail}',
+                                                                               '${res.subject}',
+                                                                               '${res.message}',
+                                                                               '${res.date}')"
+                                                                               class="far fa-circle text-danger ml-4"></i>
+                                                                        </td>
+                                                                        <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                                                <td class="mailbox-date">${res.date}</td>
+                                                                    </tr>
+                                            `
 
-                    c.append(k);
-                })
-
+                c.append(k);
             })
-        }
 
+        })
+    }
+
+    $(document).ready(function(){
         getMessages();
 
-        function PostDelete(id, name, mail, subject, date, message) {
-            var k = {
-                Id: id,
-                Name: name,
-                Message: message,
-                Mail: mail,
-                Subject: subject,
-                Process: false,
-                Deleted: true,
-                Date: date
-            };
+    })
 
-            postData("Contact/SendMessage", k, (response) => {
-                getMessages();
-            });
-        }
+ 
 
+    $(function () {
 
-        function PostArchive(id, name, mail, subject, date, message) {
-            var k = {
-                Id: id,
-                Name: name,
-                Message: message,
-                Mail: mail,
-                Subject: subject,
-                Process: false,
-                Archive: true,
-                Date: date
-            };
+        //Enable check and uncheck all functionality
 
-            postData("Contact/SendMessage", k, (response) => {
-                getMessages();
-            });
-        }
+        $('.checkbox-toggle').click(function () {
 
+            var clicks = $(this).data('clicks')
 
-        function PostSpam(id, name, mail, subject, date, message) {
-            var k = {
-                Id: id,
-                Name: name,
-                Message: message,
-                Mail: mail,
-                Subject: subject,
-                Process: false,
-                Spam: true,
-                Date: date
-            };
+            if (clicks) {
 
-            postData("Contact/SendMessage", k, (response) => {
-                getMessages();
-            });
-        }
+                //Uncheck all checkboxes
 
+                $('.mailbox-messages input[type=\'checkbox\']').prop('checked', false)
 
-        function PostImportant(id, name, mail, subject, date, message) {
-            var k = {
-                Id: id,
-                Name: name,
-                Message: message,
-                Mail: mail,
-                Subject: subject,
-                Process: false,
-                Important: true,
-                Date: date
-            };
+                $('.checkbox-toggle .far.fa-check-square').removeClass('fa-check-square').addClass('fa-square')
 
-            postData("Contact/SendMessage", k, (response) => {
-                getMessages();
-            });
-        }
+            } else {
+
+                //Check all checkboxes
+
+                $('.mailbox-messages input[type=\'checkbox\']').prop('checked', true)
+
+                $('.checkbox-toggle .far.fa-square').removeClass('fa-square').addClass('fa-check-square')
+
+            }
+
+            $(this).data('clicks', !clicks)
+
+        })
 
 
 
-        $(function () {
+        //Handle starring for glyphicon and font awesome
 
-            //Enable check and uncheck all functionality
+        $('.mailbox-star').click(function (e) {
 
-            $('.checkbox-toggle').click(function () {
+            e.preventDefault()
 
-                var clicks = $(this).data('clicks')
+            //detect type
 
-                if (clicks) {
+            var $this = $(this).find('a > i')
 
-                    //Uncheck all checkboxes
+            var glyph = $this.hasClass('glyphicon')
 
-                    $('.mailbox-messages input[type=\'checkbox\']').prop('checked', false)
-
-                    $('.checkbox-toggle .far.fa-check-square').removeClass('fa-check-square').addClass('fa-square')
-
-                } else {
-
-                    //Check all checkboxes
-
-                    $('.mailbox-messages input[type=\'checkbox\']').prop('checked', true)
-
-                    $('.checkbox-toggle .far.fa-square').removeClass('fa-square').addClass('fa-check-square')
-
-                }
-
-                $(this).data('clicks', !clicks)
-
-            })
+            var fa = $this.hasClass('fa')
 
 
 
-            //Handle starring for glyphicon and font awesome
+            //Switch states
 
-            $('.mailbox-star').click(function (e) {
+            if (glyph) {
 
-                e.preventDefault()
+                $this.toggleClass('glyphicon-star')
 
-                //detect type
+                $this.toggleClass('glyphicon-star-empty')
 
-                var $this = $(this).find('a > i')
-
-                var glyph = $this.hasClass('glyphicon')
-
-                var fa = $this.hasClass('fa')
+            }
 
 
 
-                //Switch states
+            if (fa) {
 
-                if (glyph) {
+                $this.toggleClass('fa-star')
 
-                    $this.toggleClass('glyphicon-star')
+                $this.toggleClass('fa-star-o')
 
-                    $this.toggleClass('glyphicon-star-empty')
+            }
 
-                }
+        })
 
+    })
 
-
-                if (fa) {
-
-                    $this.toggleClass('fa-star')
-
-                    $this.toggleClass('fa-star-o')
-
-                }
-
-            })
-
-        })</script>
-
-    <!-- AdminLTE for demo purposes -->
-
-    <script src="~/Content/Contact/js/demo.js"></script>
-
-</body>
+</script>

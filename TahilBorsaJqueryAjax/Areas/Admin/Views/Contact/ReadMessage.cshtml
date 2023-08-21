@@ -70,12 +70,6 @@
                             <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Delete">
                                 <i class="far fa-trash-alt"></i>
                             </button>
-                            <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Reply">
-                                <i class="fas fa-reply"></i>
-                            </button>
-                            <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Forward">
-                                <i class="fas fa-share"></i>
-                            </button>
                         </div>
                         <!-- /.btn-group -->
                         <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Print">
@@ -90,18 +84,6 @@
                         @Model.Message
                         </p>
 
-                        <p>
-                        
-                        </p>
-
-                        <p>
-                  
-                        </p>
-
-                        <p>
-
-                        </p>
-
                         <p>Teşekkürler,<br>@Model.Name</p>
                     </div>
                     <!-- /.mailbox-read-message -->
@@ -111,7 +93,6 @@
                 <div class="card-footer">
                     <div class="float-right">
                         <button type="button" class="btn btn-default"><i class="fas fa-reply"></i> Cevapla</button>
-                        <button type="button" class="btn btn-default"><i class="fas fa-share"></i> Alıntıla</button>
                     </div>
                     <button type="button" class="btn btn-default"><i class="far fa-trash-alt"></i> Sil</button>
                     <button type="button" class="btn btn-default"><i class="fas fa-print"></i> Yazdır</button>
@@ -123,85 +104,6 @@
     </div>
 </section>
 
-<script src="~/Content/Contact/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js"></script>
 
-<script src="~/Content/Contact/js/adminlte.min.js"></script>
-<script src="~/Content/Contact/js/demo.js"></script>
-
-<script>
-    $(function () {
-
-        //Enable check and uncheck all functionality
-
-        $('.checkbox-toggle').click(function () {
-
-            var clicks = $(this).data('clicks')
-
-            if (clicks) {
-
-                //Uncheck all checkboxes
-
-                $('.mailbox-messages input[type=\'checkbox\']').prop('checked', false)
-
-                $('.checkbox-toggle .far.fa-check-square').removeClass('fa-check-square').addClass('fa-square')
-
-            } else {
-
-                //Check all checkboxes
-
-                $('.mailbox-messages input[type=\'checkbox\']').prop('checked', true)
-
-                $('.checkbox-toggle .far.fa-square').removeClass('fa-square').addClass('fa-check-square')
-
-            }
-
-            $(this).data('clicks', !clicks)
-
-        })
-
-
-
-        //Handle starring for glyphicon and font awesome
-
-        $('.mailbox-star').click(function (e) {
-
-            e.preventDefault()
-
-            //detect type
-
-            var $this = $(this).find('a > i')
-
-            var glyph = $this.hasClass('glyphicon')
-
-            var fa = $this.hasClass('fa')
-
-
-
-            //Switch states
-
-            if (glyph) {
-
-                $this.toggleClass('glyphicon-star')
-
-                $this.toggleClass('glyphicon-star-empty')
-
-            }
-
-
-
-            if (fa) {
-
-                $this.toggleClass('fa-star')
-
-                $this.toggleClass('fa-star-o')
-
-            }
-
-        })
-
-    })</script>
 
 <!-- AdminLTE for demo purposes -->
-
-</script>

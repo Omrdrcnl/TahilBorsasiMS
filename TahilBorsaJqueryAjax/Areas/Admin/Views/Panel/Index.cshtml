@@ -194,7 +194,7 @@
                     <h5 class="card-title">Ürün Fiyat Grafiği</h5>
                     <p class="card-category">kg/₺</p>
                 </div>
-                <div class="card-body">
+                <div class="card-body" >
                   @*  <canvas id="speedChart" ></canvas>*@
                   <canvas id="priceChart" width="400" height="250"></canvas>
                 </div>
@@ -208,6 +208,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row" id="chartContainer">
+
     </div>
 </div>
 
@@ -322,6 +325,41 @@
 
 
             const products = [...new Set(response.map(item => item.productName))];
+            const chartContainer = $("#chartContainer");
+
+            products.forEach(product => {
+                const productData = response.filter(item => item.productName === product);
+                
+                const productChartId = product.replace(/\s+/g, '_');// ürün adlarından gelen boslukları değiştir
+
+
+                console.log("productDat",productData)
+
+                const card = $('<div>', { class: 'card card-chart' });
+                card.html(`
+                <div class="card-header">
+                    <h5 class="card-title">${product} Ürün Fiyat Grafiği</h5>
+                    <p class="card-category">kg/₺</p>
+                </div>
+                <div class="card-body">
+                    <canvas id="${productChartId}-chart" width="400" height="250"></canvas>
+                </div>
+                <div class="card-footer">
+                    <div class="chart-legend"></div>
+                    <hr />
+                    <div class="card-stats">
+                        <i class="fa fa-check"></i>
+                    </div>
+                </div>
+                `);
+            
+                chartContainer.append(card);
+                createLineChart(product, productData);
+            });
+        
+         
+
+       
 
                 const datasets = products.map(product => {
                     const productData = response.filter(item => item.productName === product);
@@ -511,52 +549,43 @@
         });
     }
     
-    function createPriceChart(){
+   
+    function createLineChart(productName, productData) {
+    const data = Array.from({ length: 12 }, (_, monthIndex) => {
+        const matchingEntry = productData.find(item => item.month === monthIndex + 1);
+        return matchingEntry ? matchingEntry.actualPrice : 0;
+    });
 
-          var speedCanvas = document.getElementById("speedChart");
+     const productChartId = productName.replace(/\s+/g, '_');// ürün adlarından gelen boslukları değiştir
 
-        var dataFirst = {
-            data: [0, 19, 15, 20, 30, 40, 40, 50, 25, 30, 50, 70],
-            fill: false,
-            borderColor: '#fbc658',
-            backgroundColor: 'transparent',
-            pointBorderColor: '#fbc658',
-            pointRadius: 4,
-            pointHoverRadius: 4,
-            pointBorderWidth: 8,
-        };
 
-        var dataSecond = {
-            data: [0, 5, 10, 12, 20, 27, 30, 34, 42, 45, 55, 63],
-            fill: false,
-            borderColor: '#51CACF',
-            backgroundColor: 'transparent',
-            pointBorderColor: '#51CACF',
-            pointRadius: 4,
-            pointHoverRadius: 4,
-            pointBorderWidth: 8
-        };
-
-        var speedData = {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            datasets: [dataFirst, dataSecond]
-        };
-
-        var chartOptions = {
-            legend: {
-                display: false,
-                position: 'top'
+    const canvasId = `${productChartId}-chart`;
+    
+    const ctx = $(`#${canvasId}`);
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Agu", "Eyl", "Eki", "Kas", "Ara"],
+            datasets: [{
+                label: productName,
+                data: data,
+                borderColor: getRandomColor(),
+                fill: false
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
             }
-        };
-
-        var lineChart = new Chart(speedCanvas, {
-            type: 'line',
-            hover: false,
-            data: speedData,
-            options: chartOptions
-        });
-    }
-
+        }
+    });
+}
    
 
 
