@@ -26,6 +26,7 @@ namespace TahilBorsaMS.Models.Entity
         public string Name { get; set; }
         public string Information { get; set; }
         public string Photo { get; set; }
+        public decimal Factor { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblEntryProduct> tblEntryProduct { get; set; }

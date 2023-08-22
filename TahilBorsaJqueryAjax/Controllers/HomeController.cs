@@ -51,6 +51,10 @@ namespace TahilBorsaR.Controllers
         }
 
 
+        public IActionResult How()
+        {
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

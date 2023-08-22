@@ -199,6 +199,8 @@ namespace TahilBorsa.Api.Controllers
         public dynamic Delete(int farmerId)
         {
             repo.FarmerRepository.Delete(farmerId);
+            cache.Remove("AllFarmers");
+
             return new { success = true };
 
         }

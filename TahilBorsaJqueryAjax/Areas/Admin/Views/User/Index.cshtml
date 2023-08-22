@@ -24,7 +24,7 @@
 
             </tr>
 
-            <tbody>
+            <tbody id="tableBody">
             </tbody>
         </table>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -44,6 +44,9 @@
                 </div>
             </div>
         </div>
+            <div class="d-flex justify-content-center pagination" id="paginationContainer">
+        <!-- Sayfalama bağlantıları buraya eklenecek -->
+    </div>
         <button onclick="NewUser()" class="btn btn-primary">Yeni Kullanıcı Kaydı Oluştur</button>
     </div>
 </div>
@@ -105,16 +108,36 @@
 
 <script>
 
-    function getAllUsers() {
 
+    let currentPage = 1;
+    const itemsPerPage = 10;
+
+    function getAllUsers() {
         fetchData("User/AllUsers", function (response) {
 
-            console.log("User data", response);
+            console.log("user data", response);
+            const totalPages = Math.ceil(response.length / itemsPerPage);
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentPageData = response.slice(startIndex, endIndex);
+
+            updateTable(currentPageData);
+
+            uptadePagination(totalPages);
+        });
+
+    }
+
+    function updateTable(response) {
+
+        const tbody = $("#tableBody");
+
+        console.log("baseprice", response)
+        tbody.empty();
 
 
-            var tbody = $("#User tbody");
-
-            $.each(response, function (index, t) {
+          $.each(response, function (index, t) {
                 var row = $("<tr>");
 
                 row.append($("<td>").text(`${t.firstName} ${t.lastName}`));
@@ -136,15 +159,32 @@
                                                                                                   '${t.tblRolId}'
                                                                                             )" class="btn btn-success">Güncelle</button>
                                                                                             `));
-
-
-                tbody.append(row);
-            });
-
+            tbody.append(row);
         });
+
     }
+    // TODO sayfada kaç veri olsun seçeneğini değişkene bağlayıp sayda seçtir
+    
+    function uptadePagination(totalPages) {
+        const paginationContainer = $("#paginationContainer");
+        paginationContainer.empty();
 
+        //sayfalama bağlantıları
 
+        for (let i = 1; i <= totalPages; i++) {
+            const link = $("<button>").text(i).addClass("page-link");
+            if (i === currentPage) {
+                link.addClass("active");
+            } else {
+                link.click(() => {
+                    currentPage = i;
+                    GetAllUsers();
+                });
+            }
+            paginationContainer.append($("<li>").addClass("page-item").append(link));
+        }
+    }
+    
 
     let selectedUserId = 0;
 

@@ -71,6 +71,7 @@
             <th>Çiftçi Ad Soyad</th>
             <th>Çiftçi Kimlik no</th>
             <th>Ürün</th>
+            <th>Taban Fiyat</th>
             <th>Besin Değeri</th>
             <th class="text-center">İşlem</th>
 
@@ -184,6 +185,8 @@
     }
     function updateTable(response) {
         const tbody = $("#tableBody");
+
+        console.log("baseprice", response)
         tbody.empty();
         $.each(response, function (index, t) {
             var row = $("<tr>");
@@ -192,6 +195,7 @@
             row.append($("<td>").text(`${t.farmerFirstName} ${t.farmerLastName}`));
             row.append($("<td>").text(t.farmerIdentityNo));
             row.append($("<td>").text(t.productName));
+            row.append($("<td>").text("₺ " + t.basePrice));
             row.append($("<td>").text(t.nutritionalValue));
             row.append($("<td>").html(`<button data-bs-toggle="modal" data-bs-target="#rolModal" onClick="EnterSale(
 
@@ -199,7 +203,8 @@
                                                                                          '${t.productName}',
                                                                                          '${t.nutritionalValue}',
                                                                                              '${t.saleId}',
-                                                                                             '${t.labId}'
+                                                                                             '${t.labId}',
+                                                                                             '${t.basePrice}'
                                                                                     )" class="btn btn-success">Değer Gir</button>
                                                                                     `));
 
@@ -208,6 +213,7 @@
 
     }
     // TODO sayfada kaç veri olsun seçeneğini değişkene bağlayıp sayda seçtir
+    
     function uptadePagination(totalPages) {
         const paginationContainer = $("#paginationContainer");
         paginationContainer.empty();
@@ -227,6 +233,7 @@
             paginationContainer.append($("<li>").addClass("page-item").append(link));
         }
     }
+    
     let selectedSaleId = 0;
     let selectedLabId = 0;
     let selectedEntryId = 0;
@@ -244,28 +251,9 @@
             Process: true
         };
 
-        //postData("Sale/EnterSale", p, (data) => {
-
-
-        //});
-        //getReadySale();
-
-        //$("#rolModal").modal("hide");
-
-        //$("#successAlert").fadeIn();
-
-        //$(".modal-backdrop").remove();
-
-        //setTimeout(function () {
-        //    $("#successAlert").fadeOut();
-        //}, 3000);
-        //setTimeout(function () {
-        //    location.reload();
-        //}, 3500);
-
     }
 
-    function EnterSale(entryId, ProductName, nutritionalValue, saleId, labId) {
+    function EnterSale(entryId, ProductName, nutritionalValue, saleId, labId, basePrice) {
 
         selectedEntryId = entryId;
 
@@ -274,6 +262,7 @@
         $('#EntryId').val(selectedEntryId);
         $('#SaleId').val(saleId);
         $('#LabId').val(labId);
+        $('#BasePrice').val(basePrice);
         selectedSaleId = saleId;
         selectedLabId = labId;
     }

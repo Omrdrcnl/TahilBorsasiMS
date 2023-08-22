@@ -14,6 +14,7 @@ namespace TahilBorsaMS.Models.Views
         public int FarmerId { get; set; }
         public int SaleId { get; set; }
         public int LabId { get; set; }
+        public decimal BasePrice { get; set; }
         public string FarmerFirstName { get; set; }
         public string FarmerLastName { get; set; }
         public string FarmerIdentityNo { get; set; }

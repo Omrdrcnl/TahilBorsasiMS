@@ -63,6 +63,7 @@ namespace TahilBorsa.Api.Controllers
             int entryProductId = json.EntryProductId;
 
             var entryProduct = repo.EntryProductRepository.FindByCondition(e => e.Id == entryProductId).FirstOrDefault();
+
             if (entryProduct != null)
             {
                 entryProduct.Process = true;
@@ -78,13 +79,20 @@ namespace TahilBorsa.Api.Controllers
                     message = "Bu giriş daha önceden Gerçekleşmiştir...!"
                 };
             }
-            
+
+            var product = repo.ProductRepository.FindByCondition(x => x.Id == entryProduct.tblProductId).FirstOrDefault();
+
+            var nutritionalValue = Convert.ToDecimal(json.NutritionalValue);
+            var price = product.Factor * nutritionalValue;
+
+
             tblLabData item = new tblLabData()
             {
                 Id = json.Id,
                 tblEntryProductId = json.EntryProductId,
                 Process = json.Process,
                 NutritionalValue = json.NutritionalValue,
+
 
             };
 
@@ -98,7 +106,8 @@ namespace TahilBorsa.Api.Controllers
             {
                 Process = false,
                 tblEntryProductId = (int)json.EntryProductId,
-                tblLabDataId = item.Id  // Önce oluşturulan tblLabData'nın Id'sini kullanın
+                tblLabDataId = item.Id,  // Önce oluşturulan tblLabData'nın Id'sini kullanın
+                BasePrice = price
             };
 
             if (sale.tblLabDataId > 0)

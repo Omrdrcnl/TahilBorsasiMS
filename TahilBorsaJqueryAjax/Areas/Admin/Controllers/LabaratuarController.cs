@@ -30,7 +30,7 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
                 return View();
             }
 
-            if (!ModelState.IsValid)
+            if (!validationResult.IsValid)
             {
                 foreach (var error in validationResult.Errors)
                 {

@@ -168,24 +168,25 @@
     $(document).ready(function () {
 
         // işlem yapacağımız ıd degerini tutmak için olusturduk
-        var id = {};
+        var farmerId;
         getFarmer();
 
 
 
         $("#FarmerTable").on("click", ".btn-danger", function () {
-            id.farmerId = $(this).data("farmer-id"); // Çiftçi ID'sini al
+            farmerId = $(this).data("farmer-id"); // Çiftçi ID'sini al
+            console.log(farmerId)
         });
 
         $("#deleteButton").click(function () {
 
             $.ajax({
-                url: 'https://localhost:7234/api/Farmer/' + id.farmerId,
+                url: 'https://localhost:7234/api/Farmer/' + farmerId,
                 type: 'DELETE',
                 success: function (result) {
                     console.log("Silme işlemi başarılı");
                     $('#exampleModal').modal('hide');
-                    location.reload();
+                   
                 },
                 error: function (xhr, status, error) {
 

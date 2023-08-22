@@ -73,7 +73,7 @@ namespace TahilBorsa.Api.Controllers
                     SaleDate = (DateTime)group.Key.Date,
                     TotalQuantity = group.Sum(s => s.Quantity),
                     TotalActualPrice = group.Max(s => s.ActualPrice),
-                    TotalBasePrice = group.Min(s => s.BasePrice),
+                    TotalBasePrice = group.Min(s => s.ActualPrice),
                     Photo = group.Key.Photo
                 })
                 .ToList();
@@ -95,6 +95,7 @@ namespace TahilBorsa.Api.Controllers
                 Name = json.Name,
                 Information = json.Information,
                 Photo = json.Photo,
+                Factor = json.Factor,
             };
             if (item.Id > 0)
             {
