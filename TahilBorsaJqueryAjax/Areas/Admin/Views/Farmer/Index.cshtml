@@ -77,7 +77,7 @@
     //Paginatiobn işlemiyle veri getirme
 
     function getFarmer() {
-        fetchData("Farmer/TumCiftciler", function (response) {
+        fetchData("Farmer/AllFarmers", function (response) {
             const totalPages = Math.ceil(response.length / itemsPerPage);
 
             const startIndex = (currentPage - 1) * itemsPerPage;
@@ -135,7 +135,7 @@
     }
 
     function performSearch() {
-        fetchData("Farmer/TumCiftciler", function (response) {
+        fetchData("Farmer/AllFarmers", function (response) {
             const searchTerm = searchBox.val().toLowerCase();
             const filteredData = response.filter(function (farmer) {
                 return (

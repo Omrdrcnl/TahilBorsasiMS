@@ -15,7 +15,7 @@ namespace TahilBorsa.Api.Controllers
             this.repo = repo;
         }
 
-        [HttpGet("TumAdresler")]
+        [HttpGet("AllAddresses")]
         public dynamic Get()
         {
             List<tblAddress> items = repo.AddressRepository.FindAll().ToList<tblAddress>();

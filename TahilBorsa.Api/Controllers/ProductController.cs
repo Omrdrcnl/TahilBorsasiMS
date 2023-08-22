@@ -20,15 +20,15 @@ namespace TahilBorsa.Api.Controllers
             this.repo = repo;
         }
 
-        [HttpGet("TumUrunler")]
-        public dynamic TumUrunler()
+        [HttpGet("AllProducts")]
+        public dynamic AllProducts()
         {
 
             List<tblProduct> items;
-            if (!cache.TryGetValue("TumUrunler", out items))
+            if (!cache.TryGetValue("AllProducts", out items))
             {
                 items = repo.ProductRepository.FindAll().ToList<tblProduct>();
-                cache.Set("TumUrunler", items, DateTimeOffset.Now.AddHours(120));
+                cache.Set("AllProducts", items, DateTimeOffset.Now.AddHours(120));
             }
             return new
             {
@@ -84,7 +84,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpPost("UrunEkle")]
+        [HttpPost("AddProduct")]
         public dynamic AddProduct([FromBody] dynamic model)
         {
             dynamic json = JObject.Parse(model.GetRawText());
@@ -106,7 +106,7 @@ namespace TahilBorsa.Api.Controllers
             }
 
             repo.SaveChanges();
-            cache.Remove("TumUrunler");
+            cache.Remove("AllProducts");
 
             return new
             {
@@ -119,7 +119,7 @@ namespace TahilBorsa.Api.Controllers
         public dynamic Delete(int id)
         {
             repo.ProductRepository.Delete(id);
-            cache.Remove("TumUrunler");
+            cache.Remove("AllProducts");
 
             return new { success = true };
         }

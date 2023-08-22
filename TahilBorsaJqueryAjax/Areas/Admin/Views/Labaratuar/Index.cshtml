@@ -230,7 +230,7 @@
     //Model açılınca ürünler gelsin
     $("#rolModal").on("show.bs.modal", function () {
 
-        fetchData("Product/TumUrunler", function (response) {
+        fetchData("Product/AllProducts", function (response) {
 
             console.log("veri :", response)
             var tblProductIdDropdown = $("#ProductId");

@@ -9,7 +9,7 @@ using TahilBorsaJqeryAjax.Code.Filters;
 namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AuthActionFilter]
+    [AuthActionFilter(Rol = "admin,person")]
 
     public class FarmerController : Controller
     {
@@ -18,15 +18,13 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
             return View();
         }
 
-        [AuthActionFilter(Rol = "admin,person")]
+       
 
         public IActionResult AddFarmer()
         {
           
             return View();
         }
-
-        [AuthActionFilter(Rol = "admin,person")]
 
         [HttpPost]
         public IActionResult AddFarmer(FarmerModel f)
@@ -44,7 +42,7 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
             }
 
             FarmerRestClient client = new FarmerRestClient();
-            dynamic result = client.AddFarmer(f.FirstName, f.LastName, f.IdentityNo, f.Contact, f.BirthDate,
+            dynamic result = client.AddFarmer(f.Id, f.AddressId,f.FirstName, f.LastName, f.IdentityNo, f.Contact, f.BirthDate,
                 f.FullAddress, f.tblCityId, f.tblDistrictId, f.NeighborhoodName);
 
             bool success = result.success;
@@ -61,7 +59,7 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 
            
         }
-        [AuthActionFilter(Rol = "admin,person")]
+       
 
         public ActionResult CallFarmer()
         {

@@ -17,8 +17,8 @@ namespace TahilBorsa.Api.Controllers
         }
 
 
-        [HttpGet("TumIller")]
-        public dynamic TumIller() {
+        [HttpGet("AllCity")]
+        public dynamic AllCity() {
                 List<tblCity> item = repo.CityRepository.FindAll().ToList<tblCity>();
             return new
             {

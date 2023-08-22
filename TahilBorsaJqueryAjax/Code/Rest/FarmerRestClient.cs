@@ -10,20 +10,22 @@ namespace TahilBorsaJqeryAjax.Code.Rest
     {
 
 
-        public dynamic AddFarmer(string FirstName, string LastName, string IdentityNo,
+        public dynamic AddFarmer(int Id, int AddressId, string FirstName, string LastName, string IdentityNo,
             string Contact, DateTime? BirthDate, string FullAddress, int tblCityId,
             int tblDistrictId, string? NeighborhoodName)
         {
-            RestRequest req = new RestRequest("/Farmer/EkleCiftci", RestSharp.Method.Post);
+            RestRequest req = new RestRequest("/Farmer/AddFarmer", RestSharp.Method.Post);
             req.AddJsonBody(new
             {
+                Id = Id,
+                AddressId = AddressId,
                 FirstName = FirstName,
                 LastName = LastName,
-                Id = 0,
+
                 IdentityNo = IdentityNo,
                 Contact = Contact,
                 BirthDate = BirthDate,
-                AddressId = 0,
+
                 tblCityId = tblCityId,
                 tblDistrictId = tblDistrictId,
                 NeighborhoodName = NeighborhoodName,

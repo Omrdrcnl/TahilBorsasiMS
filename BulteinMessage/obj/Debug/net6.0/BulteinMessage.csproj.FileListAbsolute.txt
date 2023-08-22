@@ -16,3 +16,4 @@ C:\Users\ASUS\source\repos\TahilBorsaMS\BulteinMessage\obj\Debug\net6.0\refint\B
 C:\Users\ASUS\source\repos\TahilBorsaMS\BulteinMessage\obj\Debug\net6.0\BulteinMessage.pdb
 C:\Users\ASUS\source\repos\TahilBorsaMS\BulteinMessage\obj\Debug\net6.0\BulteinMessage.genruntimeconfig.cache
 C:\Users\ASUS\source\repos\TahilBorsaMS\BulteinMessage\obj\Debug\net6.0\ref\BulteinMessage.dll
+C:\Users\ASUS\source\repos\TahilBorsaMS\BulteinMessage\bin\Debug\net6.0\Newtonsoft.Json.dll

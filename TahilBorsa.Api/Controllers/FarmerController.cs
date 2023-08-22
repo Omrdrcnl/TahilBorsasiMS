@@ -5,6 +5,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json.Linq;
 using TahilBorsa.Repository;
 using TahilBorsaMS.Models.Entity;
+using TahilBorsaMS.Models.Classes;
 
 namespace TahilBorsa.Api.Controllers
 {
@@ -18,12 +19,12 @@ namespace TahilBorsa.Api.Controllers
             this.repo = repo;
         }
 
-        [HttpGet("TumCiftciler")]
-        public dynamic TumCiftciler()
+        [HttpGet("AllFarmers")]
+        public dynamic AllFarmers()
         {
             List<tblFarmer> items;
 
-            if (!cache.TryGetValue("TumCiftciler", out items))
+            if (!cache.TryGetValue("AllFarmers", out items))
             {
                 items = repo.FarmerRepository
                 .FindAll()
@@ -32,7 +33,7 @@ namespace TahilBorsa.Api.Controllers
                 .ThenInclude(district => district.tblCity)
                 .ToList();
 
-                cache.Set("TumCiftciler", items, DateTimeOffset.UtcNow.AddMinutes(100));
+                cache.Set("AllFarmers", items, DateTimeOffset.UtcNow.AddMinutes(100));
             }
 
             var mappedItems = items.Select(farmer => new
@@ -108,8 +109,8 @@ namespace TahilBorsa.Api.Controllers
         }
 
 
-        [HttpPost("EkleCiftci")]
-        public dynamic EkleCiftci([FromBody] CiftciEkleRequestModel request)
+        [HttpPost("AddFarmer")]
+        public dynamic AddFarmer([FromBody] CiftciEkleRequestModel request)
         {
             if (request == null)
             {
@@ -126,7 +127,7 @@ namespace TahilBorsa.Api.Controllers
 
             var newFarmer = new tblFarmer
             {
-                Id = request.FarmerId,
+                Id = request.Id,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 IdentityNo = request.IdentityNo,
@@ -160,7 +161,7 @@ namespace TahilBorsa.Api.Controllers
                     repo.SaveChanges();
 
                     //CACHEDEN SİL
-                    cache.Remove("TumCiftciler");
+                    cache.Remove("AllFarmers");
 
                     return new
                     {
@@ -182,7 +183,7 @@ namespace TahilBorsa.Api.Controllers
             repo.SaveChanges();
 
             //CACHEDEN SİL
-            cache.Remove("TumCiftciler");
+            cache.Remove("AllFarmers");
 
             return new
             {
@@ -193,49 +194,6 @@ namespace TahilBorsa.Api.Controllers
 
 
         }
-
-
-        //[HttpPost("CiftciEkle")]
-        //public dynamic AddFarmer([FromBody] dynamic model)
-        //{
-        //    dynamic json = JObject.Parse(model.GetRawText());
-
-        //    tblFarmer item = new tblFarmer()
-        //    {
-        //        Id = json.Id,
-        //        FirstName = json.FirstName,
-        //        LastName = json.LastName,
-        //        BirthDate = json.BirthDate,
-        //        tblAddress = new tblAddress()
-        //        {
-        //            Id = json.tblAddresId,
-        //            tblCityId = json.tblAddress.tblCityId,
-        //            tblDistrictId = json.tblAddress.tblDistrictId,
-        //            NeighborhoodName = json.tblAddress.NeighborhoodName,
-        //            FullAddress = json.tblAddress.FullAddress,
-        //        },
-        //        Contact = json.Contact,
-        //        IdentityNo = json.IdentityNo,
-        //    };
-        //    if (item.Id > 0 && item.tblAddress.Id >0)
-        //    {
-        //        repo.FarmerRepository.Update(item);
-        //        repo.AddressRepository.Update(item.tblAddress);
-        //    }
-        //    else
-        //    {
-        //        repo.FarmerRepository.Create(item);
-        //        repo.AddressRepository.Create(item.tblAddress);
-        //    }
-
-        //    repo.SaveChanges();
-
-        //    return new
-        //    {
-        //        success = true,
-        //        data = item
-        //    };
-        //}
 
         [HttpDelete("{farmerId}")]
         public dynamic Delete(int farmerId)

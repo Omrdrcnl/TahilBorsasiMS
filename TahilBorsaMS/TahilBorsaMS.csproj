@@ -175,6 +175,7 @@
     <Compile Include="Controllers\EntryProductController.cs" />
     <Compile Include="Controllers\FarmerController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Models\Classes\CiftciEkleRequestModel.cs" />
     <Compile Include="Models\Classes\Enums.cs" />
     <Compile Include="Models\Classes\GroupedSaleViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />

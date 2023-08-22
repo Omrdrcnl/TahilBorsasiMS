@@ -77,7 +77,7 @@
 
         var productList = $("#productList");
 
-        fetchData("Product/TumUrunler", function (response) {
+        fetchData("Product/AllProducts", function (response) {
 
             console.log("ürünler res", response)
 
@@ -144,7 +144,7 @@
             Photo: $('#Photo').val(),
 
         };
-        postData("Product/UrunEkle", p, (data) => {
+        postData("Product/AddProduct", p, (data) => {
             getProduct();
             $("#rolModal").modal("hide");
 

@@ -18,12 +18,12 @@ namespace TahilBorsa.Api.Controllers
             this.repo = repo;
         }
 
-        [HttpGet("Esnaflar")]
+        [HttpGet("Tradesmans")]
         public dynamic AllTradesman()
         {
             List<tblTradesman> items;
 
-            if (!cache.TryGetValue("Esnaflar", out items))
+            if (!cache.TryGetValue("Tradesmans", out items))
             {
                 items = repo.TradesmanRepository
                 .FindAll()
@@ -34,10 +34,23 @@ namespace TahilBorsa.Api.Controllers
                 //sacma bir şekide tblCity Tablosuna erişemiyorum
 
 
-                cache.Set("Esnaflar", items, DateTimeOffset.UtcNow.AddMinutes(100));
+                cache.Set("Tradesmans", items, DateTimeOffset.UtcNow.AddMinutes(100));
             }
 
 
+
+            return new
+            {
+                success = true,
+                data = items
+            };
+        }
+
+
+        [HttpGet("GetNumbers")]
+        public dynamic GetNumbersTradesman()
+        {
+            var items = repo.TradesmanRepository.GetNumbers();
 
             return new
             {
@@ -96,7 +109,7 @@ namespace TahilBorsa.Api.Controllers
                     repo.TradesmanRepository.Create(item);
                     repo.SaveChanges();
 
-                    cache.Remove("Esnaflar");
+                    cache.Remove("Tradesmans");
                     return new
                     {
                         success = true,
@@ -116,7 +129,7 @@ namespace TahilBorsa.Api.Controllers
 
                 repo.SaveChanges();
 
-                cache.Remove("Esnaflar");
+                cache.Remove("Tradesmans");
                 return new
                 {
                     success = true,
@@ -136,7 +149,7 @@ namespace TahilBorsa.Api.Controllers
         {
             repo.TradesmanRepository.Delete(tradesmanId);
 
-            cache.Remove("Esnaflar");
+            cache.Remove("Tradesmans");
             return new { success = true };
 
         }

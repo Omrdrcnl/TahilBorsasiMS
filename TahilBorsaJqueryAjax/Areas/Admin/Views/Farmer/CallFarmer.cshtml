@@ -2,7 +2,7 @@
     ViewData["Title"] = "CallFarmer";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
-
+@using (Html.BeginForm("AddFarmer","Farmer")){
 <form id="farmerForm" class="form-control container mt-5" method="post">
     <div class="col-md-12">
         <div class="card card-user">
@@ -14,7 +14,7 @@
                     <div class="col-md-6 pr-1">
                         <div class="form-group">
                             <label>Çiftçi Kayıt No</label>
-                            <input type="text" id="FarmerId" class="form-control" name="FarmerId" placeholder="Çiftçi Kayıt No" readonly />
+                            <input type="text" id="FarmerId" class="form-control" name="Id" placeholder="Çiftçi Kayıt No" readonly />
                         </div>
                     </div>
                     <div class="col-md-6 pl-1">
@@ -34,7 +34,7 @@
                     <div class="col-md-3 px-1">
                         <div class="form-group">
                             <label>Doğum Tarihi</label>
-                            <input type="date" class="form-control" id="BirthDate">
+                            <input type="date" class="form-control" id="BirthDate" name="BirthDate">
                         </div>
                     </div>
                     <div class="col-md-4 pl-1">
@@ -70,7 +70,7 @@
                     <div class="col-md-4 pr-1">
                         <div class="form-group">
                             <label for="cityDropdown">Şehir</label>
-                            <select class="form-control" id="cityDropdown">
+                            <select class="form-control" id="cityDropdown" name="tblCityId">
                                 <option id="il" value="">İl Seçin</option>
                             </select>
                         </div>
@@ -78,7 +78,7 @@
                     <div class="col-md-4 px-1">
                         <div class="districtDropdown">
                             <label for="districtDropdown">İlçe</label>
-                            <select class="form-control" id="districtDropdown">
+                            <select class="form-control" id="districtDropdown" name="tblDistrictId">
                                 <option id="ilce" value="">İlçe Seçin</option>
                             </select>
                         </div>
@@ -113,13 +113,13 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
-                    <button type="submit" id="GuncelleButton" onclick="AddTradesman()" class="btn btn-primary">Kaydet</button>
+                    <button type="submit" id="GuncelleButton" class="btn btn-primary">Kaydet</button>
                 </div>
             </div>
         </div>
     </div>
 </form>
-
+}
 <script>
 
 
@@ -128,35 +128,13 @@
     const farmerId = parseInt(url.substring(url.lastIndexOf('/') + 1));
     console.log("farmerId", farmerId)
     var adres = {};
-
-    function AddTradesman() {
-        var tr = {
-            FarmerId: farmerId,
-            AddressId: $('#AddressId').val(),
-            IdentityNo: $('#IdentityNo').val(),
-            BirthDate: $("#BirthDate").val(),
-            Contact: $('#Contact').val(),
-            FirstName: $('#FirstName').val(),
-            LastName: $('#LastName').val(),
-            FullAddress: $('#FullAddress').val(),
-            tblCityId: $('#cityDropdown').val(),
-            tblDistrictId: $('#districtDropdown').val(),
-            NeighborhoodName: $('#NeighborhoodName').val()
-        };
-        postData("Farmer/EkleCiftci", tr, (data) => {
-            console.log("Güncelleme işlemi başarılı", data);
-            window.location.href = "Farmer/Index"
-
-        });
-
-    };
   
 
     $(document).ready(function () {
 
 
         //İl ve İlçeler
-        fetchData("City/TumIller", (response) => {
+        fetchData("City/AllCity", (response) => {
 
             console.log("veri :", response)
             var cityDropdown = $("#cityDropdown");
@@ -186,46 +164,31 @@
      
 
         // Çiftçi bilgilerini getiren AJAX isteği
-        $.ajax({
-            url: "https://localhost:7234/api/Farmer/" + farmerId,
-            type: "GET",
-            dataType: "json",
-            success: function (response) {
-                if (response.success) {
-                    console.log("veri çekme basarılı", response.data)
-                    //moment.js kütüphanesi kullanıldı
+     function CallFarmerId(){ 
+         
+         fetchData("Farmer/" + farmerId,(res)=>{
+            const formattedDate = moment(res.birthDate).format('YYYY-MM-DD');
+                    console.log("cekilen veri dogum tarıhı", formattedDate);
+                    adres.adresId = res.tblAddress.AddressId
 
-                    const formattedDate = moment(response.data.birthDate).format('YYYY-MM-DD');
-                    console.log("cekilen veri dogum tarıhı", formattedDate)
-                    adres.adresId = response.data.tblAddress.AddressId
-
-                    $("#IdentityNo").val(response.data.identityNo);
-                    $("#AddressId").val(response.data.tblAddress.addressId);
-                    $("#FarmerId").val(response.data.id);
+                    $("#IdentityNo").val(res.identityNo);
+                    $("#AddressId").val(res.tblAddress.addressId);
+                    $("#FarmerId").val(res.id);
                     $("#BirthDate").val(formattedDate);
 
-                    $("#FirstName").val(response.data.firstName);
-                    $("#LastName").val(response.data.lastName);
-                    $("#Contact").val(response.data.contact);
-                    $("#FullAddress").val(response.data.tblAddress.fullAddress);
+                    $("#FirstName").val(res.firstName);
+                    $("#LastName").val(res.lastName);
+                    $("#Contact").val(res.contact);
+                    $("#FullAddress").val(res.tblAddress.fullAddress);
 
-                    $("#il").val(response.data.tblAddress.CityId);
-                    $("#ilce").val(response.data.tblAddress.DistrictId);
+                    $("#cityDropdown").val(res.tblAddress.CityId);
+                    $("#districtDropdown").val(res.tblAddress.DistrictId);
 
-                    $("#NeighborhoodName").val(response.data.tblAddress.neighborhoodName);
-                } else {
-                    alert(response.message);
-                }
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("Error:", textStatus, errorThrown);
-            }
-        });
+                    $("#NeighborhoodName").val(res.tblAddress.neighborhoodName);
+             });
+     }            
 
-
-
-
-
+     CallFarmerId();
 
     });
 

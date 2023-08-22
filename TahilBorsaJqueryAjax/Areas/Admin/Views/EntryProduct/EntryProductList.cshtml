@@ -7,7 +7,7 @@
     <h2>Geçmiş Ürün Girdileri</h2>
 
     <div class="form-control input-group row align-items-center">
-        <div class="col-md-4">  <input id="searchBox" class="form-control" placeholder="Çiftçi Ara" /></div>
+        <div class="col-md-4">  <input id="searchBox" class="form-control" placeholder="Çiftçi Kimlik No Ara" /></div>
         <div class="col-md-2"><button id="searchButton" class="btn btn-outline-primary">Ara</button></div>
     </div>
     <div class="alert alert-success" id="successAlert" role="alert" style="display: none;">
@@ -236,7 +236,7 @@
     //Model açılınca ürünler gelsin
     $("#rolModal").on("show.bs.modal", function () {
 
-        fetchData("Product/TumUrunler", function (response) {
+        fetchData("Product/AllProducts", function (response) {
 
             console.log("veri :", response)
             var tblProductIdDropdown = $("#ProductId");

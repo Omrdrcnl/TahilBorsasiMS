@@ -216,7 +216,7 @@
     var searchButton = $("#searchButton");
 
     function getTradesman() {
-        fetchData("Tradesman/Esnaflar", function (response) {
+        fetchData("Tradesman/Tradesmans", function (response) {
             const totalPages = Math.ceil(response.length / itemsPerPage);
 
             const startIndex = (currentPage - 1) * itemsPerPage;
@@ -288,7 +288,7 @@
     }
 
     function performSearch() {
-        fetchData("Tradesman/Esnaflar", function (response) {
+        fetchData("Tradesman/Tradesmans", function (response) {
             const searchTerm = searchBox.val().toLowerCase();
             const filteredData = response.filter(function (t) {
                 return (
@@ -385,7 +385,7 @@
     //İller ve ilçeler base func
     $("#rolModal").on("show.bs.modal", function () {
 
-        fetchData("City/TumIller", (response) => {
+        fetchData("City/AllCity", (response) => {
 
             console.log("veri :", response)
             var cityDropdown = $("#cityDropdown");

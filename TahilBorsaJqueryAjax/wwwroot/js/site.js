@@ -82,43 +82,6 @@ function deleteData(endpoint, success) {
 }
 
 
-//İller ve ilçeler base func
-
-//function CityAndDistrict() {
-//    $("#rolModal").on("show.bs.modal", function () {
-
-//        fetchData("City/TumIller", (response) => {
-
-//            console.log("veri :", response)
-//            var cityDropdown = $("#cityDropdown");
-
-//            $.each(response, function (index, city) {
-//                cityDropdown.append($("<option>").val(city.id).text(city.name));
-//            });
-//        });
-
-//        //Seçilen ile göre ilçeleri listeleme
-//        $("#cityDropdown").change(function () {
-
-//            var selectedCityId = $(this).val();
-//            fetchData(`District/${selectedCityId}`, (data) => {
-
-//                console.log("İlçe data", data)
-//                var districtDropdown = $("#districtDropdown");
-//                districtDropdown.empty();
-//                districtDropdown.append($("<option>").val("").text("İlçe Seçiniz"));
-
-//                $.each(data, function (index, district) {
-//                    districtDropdown.append($("<option>").val(district.id).text(district.name));
-//                });
-//            });
-
-//        });
-//    });
-//}
-
-
-
 $(document).ready(function () {
 
 

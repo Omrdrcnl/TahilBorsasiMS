@@ -18,7 +18,7 @@ namespace TahilBorsa.Api.Controllers
             this.repo = repo;
         }
 
-        [HttpGet("TumLabaratuarVeriler")]
+        [HttpGet("AllLabData")]
         public dynamic AllLabData()
         {
             List<tblAddress> item = repo.AddressRepository.FindAll().ToList();

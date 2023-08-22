@@ -26,7 +26,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-        [HttpPost("Kaydet")]
+        [HttpPost("Save")]
         public dynamic Save([FromBody] dynamic model)
         {
             dynamic json = JObject.Parse(model.GetRawText());

@@ -34,7 +34,8 @@
                             <label>Doğum Tarihi</label>
                             <input type="date" class="form-control" name="BirthDate">
                                 @Html.ValidationMessageFor(x => x.BirthDate, "",new { @class = "text-danger" })
-
+                            <input type="hidden" name="Id" value="0"/>
+                            <input type="hidden" name="AddressId" value="0"/>
                         </div>
                     </div>
                     <div class="col-md-4 pl-1">
@@ -136,61 +137,10 @@
 <script>
 
 
-    //document.addEventListener('DOMContentLoaded', function () {
-    //    const kaydetButton = document.getElementById('kaydetButton');
-
-    //    kaydetButton.addEventListener('click', function () {
-    //        const IdentityNo = document.getElementById('IdentityNo').value;
-    //        const BirthDate = document.querySelector('input[name="BirthDate"]').value;
-    //        const Contact = document.getElementById('Contact').value;
-    //        const FirstName = document.getElementById('FirstName').value;
-    //        const LastName = document.getElementById('LastName').value;
-    //        const FullAddress = document.getElementById('FullAddress').value;
-    //        const tblCityId = document.getElementById('cityDropdown').value;
-    //        const tblDistrictId = document.getElementById('districtDropdown').value;
-    //        const NeighborhoodName = document.getElementById('NeighborhoodName').value;
-
-    //        const requestBody = {
-    //            id: 0,
-    //            birthDate: BirthDate,
-    //            contact: Contact,
-    //            firstName: FirstName,
-    //            identityNo: IdentityNo,
-    //            lastName: LastName,
-    //            addressId: 0,
-    //            fullAddress: FullAddress,
-    //            neighborhoodName: NeighborhoodName,
-    //            tblDistrictId: tblDistrictId,
-    //            tblCityId: tblCityId
-    //        };
-
-    //         AJAX isteği gönderme
-    //        fetch('https:localhost:7234/api/Farmer/EkleCiftci', {
-    //            method: 'POST',
-    //            headers: {
-    //                'Content-Type': 'application/json'
-    //            },
-    //            body: JSON.stringify(requestBody)
-    //        })
-    //            .then(response => response.json())
-    //            .then(data => {
-    //                 Başarılı yanıtı işleme alma
-    //                console.log(data);
-                    
-                    
-    //            })
-    //            .catch(error => {
-                    
-    //                console.error('Hata:', error);
-    //            });
-    //    });
-    //});
-
-
     $(document).ready(function () {
         //Şehirleri listeleme
         $.ajax({
-            url: "https://localhost:7234/api/City/TumIller",
+            url: "https://localhost:7234/api/City/AllCity",
             type: "GET",
             dataType: "json",
             contentType: "application/json; charset=utf-8",

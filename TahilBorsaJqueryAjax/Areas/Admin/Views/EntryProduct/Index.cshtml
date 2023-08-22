@@ -8,11 +8,12 @@
 
 
 <div class="container mt-5">
-    @using (Html.BeginForm("Index","EntryProduct")){
-    <div class="form-control" method="post" >
-        <h1>Yeni Ürün Veri girişi</h1>
-        <br />
-            
+    @using (Html.BeginForm("Index", "EntryProduct"))
+    {
+        <div class="form-control" method="post">
+            <h1>Yeni Ürün Veri girişi</h1>
+            <br />
+
             @if (ViewBag.SuccessEntry != null)
             {
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -29,10 +30,10 @@
                     });
                 </script>
             }
-        <div class="row">
-            <div class="col-md-6">
-                <label>Çiftçi Kayıt no</label>
-                <input type="text" id="FarmerId" class="form-control" name="FarmerId" />
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Çiftçi Kayıt no</label>
+                    <input type="text" id="FarmerId" class="form-control" name="FarmerId" />
                     @if (ViewBag.EntryProductError != null)
                     {
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -49,26 +50,29 @@
                             });
                         </script>
                     }
-                @Html.ValidationMessageFor(x=> x.FarmerId ,"", new {@class = "text-danger"})
-            </div>
-            <div class="col-md-6">
-                <label>Ürün Çeşidi</label>
-                <select class="form-control" id="ProductId" name="ProductId">
-                    <option value="">Ürün Seçin</option>
-                </select>
+                    @Html.ValidationMessageFor(x=> x.FarmerId ,"", new {@class = "text-danger"})
+                </div>
+                <div class="col-md-6">
+                    <label>Ürün Çeşidi</label>
+                    <select class="form-control" id="ProductId" name="ProductId">
+                        <option value="">Ürün Seçin</option>
+                    </select>
                     @Html.ValidationMessageFor(x=> x.ProductId ,"", new {@class = "text-danger"})
 
+                </div>
             </div>
-        </div>
-        <br />
-        <label>Tarih</label>
-        <input type="date" id="DateTime" name="DateTime" class="form-control" />
-            @Html.ValidationMessageFor(x=> x.DateTime ,"", new {@class = "text-danger"})
-
-        <br />
-        <input type="hidden" name="Process" value="false" />
-        <div id="liveAlertPlaceholder"></div>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ürünü Sisteme Gir</button>
+            <div class="row">
+                <div class="col-md-6">
+                <br />
+                <label>Tarih</label>
+                <input type="date" id="DateTime" name="DateTime" class="form-control" />
+                @Html.ValidationMessageFor(x=> x.DateTime ,"", new {@class = "text-danger"})
+                </div>
+            </div>
+            <br />
+            <input type="hidden" name="Process" value="false" />
+            <div id="liveAlertPlaceholder"></div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ürünü Sisteme Gir</button>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -87,7 +91,7 @@
                 </div>
             </div>
 
-    </div>
+        </div>
     }
     <div class="alert alert-success" id="successAlert" role="alert" style="display: none;">
         Ürün başarıyla eklendi.
@@ -134,7 +138,7 @@
     $(document).ready(function () {
 
 
-        fetchData("Product/TumUrunler", function (response) {
+        fetchData("Product/AllProducts", function (response) {
 
             console.log("veri :", response)
             var tblProductIdDropdown = $("#ProductId");
