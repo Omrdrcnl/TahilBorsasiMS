@@ -1,0 +1,31 @@
+2023-08-23 18:51:50.1696||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-08-23 18:51:50.6160||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7189 
+2023-08-23 18:51:50.6160||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5141 
+2023-08-23 18:51:50.6160||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-08-23 18:51:50.6202||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-08-23 18:51:50.6202||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\ 
+2023-08-23 18:51:54.1399||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7189/ - - 
+2023-08-23 18:51:54.3350||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsaR.Controllers.HomeController.Index (TahilBorsaJqeryAjax)' 
+2023-08-23 18:51:54.4262||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller TahilBorsaR.Controllers.HomeController (TahilBorsaJqeryAjax). 
+2023-08-23 18:51:54.4510||INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index. 
+2023-08-23 18:51:54.8661||INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 421.6885ms. 
+2023-08-23 18:51:54.8758||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsaR.Controllers.HomeController.Index (TahilBorsaJqeryAjax) in 448.1169ms 
+2023-08-23 18:51:54.8758||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsaR.Controllers.HomeController.Index (TahilBorsaJqeryAjax)' 
+2023-08-23 18:51:54.9316||WARN|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page. 
+2023-08-23 18:51:54.9466||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7189/ - - - 200 - text/html;+charset=utf-8 813.1871ms 
+2023-08-23 18:51:54.9820||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7189/js/home/index.js - - 
+2023-08-23 18:51:54.9820||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /js/home/index.js was not modified 
+2023-08-23 18:51:54.9951||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7189/js/home/index.js - - - 304 - application/javascript 12.9922ms 
+2023-08-23 18:51:54.9951||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - - 
+2023-08-23 18:51:55.0511||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 40.3618ms 
+2023-08-23 18:51:55.4107||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7189/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - 
+2023-08-23 18:51:55.4616||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map' 
+2023-08-23 18:51:55.4616||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7189/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 51.3483ms 
+2023-08-23 18:51:55.7699||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7189/ - - 
+2023-08-23 18:51:55.7699||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'TahilBorsaR.Controllers.HomeController.Index (TahilBorsaJqeryAjax)' 
+2023-08-23 18:51:55.7699||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller TahilBorsaR.Controllers.HomeController (TahilBorsaJqeryAjax). 
+2023-08-23 18:51:55.7699||INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index. 
+2023-08-23 18:51:55.7699||INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 3.6113ms. 
+2023-08-23 18:51:55.7699||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action TahilBorsaR.Controllers.HomeController.Index (TahilBorsaJqeryAjax) in 4.2641ms 
+2023-08-23 18:51:55.7699||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'TahilBorsaR.Controllers.HomeController.Index (TahilBorsaJqeryAjax)' 
+2023-08-23 18:51:55.7769||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7189/ - - - 200 - text/html;+charset=utf-8 7.0691ms 

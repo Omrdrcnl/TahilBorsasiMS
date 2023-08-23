@@ -182,7 +182,52 @@ namespace TahilBorsa.Api.Controllers
                 data = salesByMonthAndProduct
             };
         }
+        //en iyi 10 satıcı
+        [HttpGet("BestFarmers")]
+        public dynamic BestFarmer()
+        {
+            var best = repo.SaleRepository.GetSaledList();
 
+            var bestfarmers = best.GroupBy(s => new { s.FarmerFirstName, s.FarmerLastName, })
+                .Select(group => new
+                {
+                    Name = group.Key.FarmerFirstName,
+                    LastName = group.Key.FarmerLastName,
+                    TotalQuantity = group.Sum(x => x.Quantity)
+                }).OrderByDescending(x => x.TotalQuantity)
+                .Take(10).ToList();
+
+
+            return new
+            {
+                success = true,
+                data = bestfarmers
+            };
+
+        }
+
+        //En iyi 10 alıcı
+        [HttpGet("BestTradesmans")]
+        public dynamic BestTradesmans()
+        {
+            var best = repo.SaleRepository.GetSaledList();
+
+            var bestTradesman = best.GroupBy(x => new { x.TrFirstName, x.TrLastName})
+                .Select(group => new
+                {
+                    Name = group.Key.TrFirstName,
+                    LastName = group.Key.TrLastName,
+                    TotalQuantity = group.Sum(x => x.Quantity)
+                }).OrderByDescending(x => x.TotalQuantity)
+                .Take(10).ToList();
+
+            return new
+            {
+                success = true,
+                data = bestTradesman
+            };
+
+        }
 
         [HttpPost("EnterSale")]
         public dynamic EnterSale([FromBody] dynamic model)
@@ -216,7 +261,8 @@ namespace TahilBorsa.Api.Controllers
                 repo.SaleRepository.Update(item);
                 repo.SaveChanges();
 
-            }else
+            }
+            else
             {
                 return new
                 {
@@ -226,7 +272,7 @@ namespace TahilBorsa.Api.Controllers
             }
 
 
-            
+
 
             return new
             {

@@ -1,3 +1,6 @@
+using NLog.Extensions.Logging;
+using NLog;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +15,19 @@ builder.Services.AddSession(options => {
 
 // Actif HttpContext'e eriþebilmek için bunu ekliyoruz
 builder.Services.AddHttpContextAccessor();
+
+
+//log kayýtlarý için tutulan servis alaný
+var config = new ConfigurationBuilder().AddJsonFile("appsettings.json", optional: true, reloadOnChange: true).Build();
+LogManager.Configuration = new NLogLoggingConfiguration(config.GetSection("NLog"));
+
+builder.Services.AddLogging(loggingBuilder => {
+    loggingBuilder.ClearProviders();
+    loggingBuilder.AddNLog();
+});
+//--
+
+
 
 var app = builder.Build();
 

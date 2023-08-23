@@ -32,7 +32,7 @@ namespace TahilBorsa.Api.Controllers
 
             if(item!= null)
             {
-                tblRol rol = repo.RolRepository.FindByCondition(r => r.Id == item.Id).SingleOrDefault<tblRol>();
+                tblRol rol = repo.RolRepository.FindByCondition(r => r.Id == item.tblRolId).SingleOrDefault<tblRol>();
 
                 Dictionary<string, object> claims = new Dictionary<string, object>();
 

@@ -269,27 +269,6 @@
     <None Remove="wwwroot\Content\LayoutAssets\assets\fonts\nucleo-icons.ttf" />
     <None Remove="wwwroot\Content\LayoutAssets\assets\fonts\nucleo-icons.woff" />
     <None Remove="wwwroot\Content\LayoutAssets\assets\fonts\nucleo-icons.woff2" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\apple-icon.png" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\bg5.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\damir-bosnjak.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\default-avatar.png" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\faces\ayo-ogunseinde-1.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\faces\ayo-ogunseinde-2.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\faces\clem-onojeghuo-1.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\faces\clem-onojeghuo-2.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\faces\clem-onojeghuo-3.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\faces\clem-onojeghuo-4.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\faces\erik-lucatero-1.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\faces\erik-lucatero-2.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\faces\joe-gardner-1.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\faces\joe-gardner-2.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\faces\kaci-baum-1.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\faces\kaci-baum-2.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\favicon.png" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\header.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\jan-sendereks.jpg" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\logo-small.png" />
-    <None Remove="wwwroot\Content\LayoutAssets\assets\img\mike.jpg" />
     <None Remove="wwwroot\Content\LayoutAssets\assets\js\core\bootstrap.min.js" />
     <None Remove="wwwroot\Content\LayoutAssets\assets\js\core\jquery.min.js" />
     <None Remove="wwwroot\Content\LayoutAssets\assets\js\core\popper.min.js" />
@@ -430,6 +409,7 @@
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.3" />
     <PackageReference Include="RestSharp" Version="110.2.0" />
   </ItemGroup>
 

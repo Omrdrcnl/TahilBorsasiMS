@@ -1,5 +1,6 @@
 ﻿using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
+using NLog.Extensions.Logging;
 using TahilBorsaJqeryAjax.Code.Filters;
 
 namespace TahilBorsaJqeryAjax
@@ -17,8 +18,11 @@ namespace TahilBorsaJqeryAjax
                 .AddFluentValidation();
 
             services.AddScoped<AuthActionFilter>();
+
+            services.AddControllers();
+            services.AddLogging(builder => builder.AddNLog());
         }
 
-        
+
     }
 }

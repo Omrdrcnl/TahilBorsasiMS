@@ -493,90 +493,6 @@
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\fonts\\nucleo-icons.woff2"
     },
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\apple-icon.png",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\apple-icon.png"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\bg5.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\bg5.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\damir-bosnjak.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\damir-bosnjak.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\default-avatar.png",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\default-avatar.png"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\ayo-ogunseinde-1.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\ayo-ogunseinde-1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\ayo-ogunseinde-2.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\ayo-ogunseinde-2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-1.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-2.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-3.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-4.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\clem-onojeghuo-4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\erik-lucatero-1.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\erik-lucatero-1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\erik-lucatero-2.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\erik-lucatero-2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\joe-gardner-1.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\joe-gardner-1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\joe-gardner-2.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\joe-gardner-2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\kaci-baum-1.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\kaci-baum-1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\faces\\kaci-baum-2.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\faces\\kaci-baum-2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\favicon.png",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\favicon.png"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\header.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\header.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\jan-sendereks.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\jan-sendereks.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\logo-small.png",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\logo-small.png"
-    },
-    {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\img\\mike.jpg",
-      "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\img\\mike.jpg"
-    },
-    {
       "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\Content\\LayoutAssets\\assets\\js\\core\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\Content\\LayoutAssets\\assets\\js\\core\\bootstrap.min.js"
     },
@@ -2075,6 +1991,42 @@
     {
       "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\hightech-html\\js\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\hightech-html\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\js\\Admin\\Contact.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\Contact.js"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\js\\Admin\\EntryProduct.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\EntryProduct.js"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\js\\Admin\\Labaratuar.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\Labaratuar.js"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\js\\Admin\\Panel.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\Panel.js"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\js\\Admin\\Product.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\Product.js"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\js\\Admin\\Sale.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\Sale.js"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\js\\Admin\\Tradesman.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\Tradesman.js"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\js\\Admin\\User.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\User.js"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\js\\Home\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Home\\Index.js"
     },
     {
       "Id": "C:\\Users\\ASUS\\source\\repos\\TahilBorsaMS\\TahilBorsaJqueryAjax\\wwwroot\\js\\site.js",

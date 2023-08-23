@@ -476,3 +476,6 @@ C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\Sy
 C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\System.Web.Razor.xml
 C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\System.Web.WebPages.Deployment.xml
 C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\libman.json
+C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\NLog.dll
+C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+C:\Users\ASUS\source\repos\TahilBorsaMS\TahilBorsaJqueryAjax\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
