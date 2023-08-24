@@ -14,6 +14,9 @@ namespace TahilBorsaJqeryAjax.Code.Validation
         {
             RuleFor(k => k.FirstName).NotEmpty().WithMessage(" Adı Boş Geçilemez");
             RuleFor(k => k.LastName).NotEmpty().WithMessage("Soyadı Boş Geçilemez");
+            RuleFor(k => k.tblCityId).NotEmpty().WithMessage("Şehir Boş Geçilemez");
+            RuleFor(k => k.tblDistrictId).NotEmpty().WithMessage("İlçe Boş Geçilemez");
+
             RuleFor(k => k.FirstName).Length(2, 30).WithMessage("Ad En az 2 en fazla 30 karakter olabilir");
             RuleFor(k => k.LastName).Length(2, 20).WithMessage("Ad En az 2 en fazla 20 karakter olabilir");
             RuleFor(k => k.Contact).Length(11).WithMessage("Nu 11 hane olmalıdır");

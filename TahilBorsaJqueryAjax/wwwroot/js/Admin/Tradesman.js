@@ -128,25 +128,6 @@ function NewTradesman() {
 }
 
 
-
-function AddTradesman() {
-    var tr = {
-        Id: SelectedTradesmanId,
-        AddressId: SelectedAddressId,
-        IdentityNo: $('#IdentityNo').val(),
-        BirthDate: $("#BirthDate").val(),
-        Contact: $('#Contact').val(),
-        FirstName: $('#FirstName').val(),
-        LastName: $('#LastName').val(),
-        FullAddress: $('#FullAddress').val(),
-        tblCityId: $('#cityDropdown').val(),
-        tblDistrictId: $('#districtDropdown').val(),
-        NeighborhoodName: $('#neighborhoodName').val()
-    };
-
-}
-
-
 //Delete İşlemi
 $("#exampleModal").on("show.bs.modal", function (event) {
     var button = $(event.relatedTarget); // Tetikleyici düğme
