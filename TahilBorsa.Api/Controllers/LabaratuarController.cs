@@ -98,27 +98,40 @@ namespace TahilBorsa.Api.Controllers
 
 
             };
-
-
-            repo.LabDataRepository.Create(item);
-            repo.SaveChanges();
-
-            //Satışta sıraya koymak içinde satış verisi olustur processi 0'a çek
-
-            tblSale sale = new tblSale()
+            if(item.Id == 0)
             {
-                Process = false,
-                tblEntryProductId = (int)json.EntryProductId,
-                tblLabDataId = item.Id,  // Önce oluşturulan tblLabData'nın Id'sini kullanın
-                BasePrice = price
-            };
+                repo.LabDataRepository.Create(item);
+                repo.SaveChanges();
 
-            if (sale.tblLabDataId > 0)
+                //Satışta sıraya koymak içinde satış verisi olustur processi 0'a çek
+
+                tblSale sale = new tblSale()
+                {
+                    Process = false,
+                    tblEntryProductId = (int)json.EntryProductId,
+                    tblLabDataId = item.Id,  // Önce oluşturulan tblLabData'nın Id'sini kullanın
+                    BasePrice = price
+                };
+
+                if (sale.tblLabDataId > 0)
+                {
+                    repo.SaleRepository.Create(sale);
+                    repo.SaveChanges();
+                }
+
+
+
+                return new
+                {
+                    success = true,
+                    data = item
+                };
+            }
+            else
             {
-                repo.SaleRepository.Create(sale);
+                repo.LabDataRepository.Update(item);
                 repo.SaveChanges();
             }
-
 
 
             return new

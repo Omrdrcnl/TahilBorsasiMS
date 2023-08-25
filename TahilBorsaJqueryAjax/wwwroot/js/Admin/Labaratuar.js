@@ -76,6 +76,7 @@ function OpenLab(entryProductId, name) {
 
     $('#EntryProductId').val(selectedEntryProductId);
     $("#ProductName").val(name);
+    $("#Id").val("0");
 }
 
 function EditEntryProduct(entryProductId, farmerId, dateTime, productId) {

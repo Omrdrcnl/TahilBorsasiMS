@@ -10,6 +10,7 @@ namespace TahilBorsaMS.Models.Views
 
     public class V_LabList
     {
+        public int LabId { get; set; }
         public int? EntryProductId { get; set; }
         public int? FarmerId { get; set; }
         public int NutritionalValue { get; set; }

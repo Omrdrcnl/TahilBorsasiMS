@@ -23,4 +23,6 @@ $(document).ready(function () {
             tblProductIdDropdown.append($("<option>").val(product.id).text(product.name));
         });
     });
+    var currentDate = new Date().toISOString().split('T')[0]; // Bugünkü tarihi alıyoruz
+    $("#DateTime").val(currentDate);
 })

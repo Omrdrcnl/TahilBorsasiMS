@@ -14,6 +14,7 @@ namespace TahilBorsa.Api.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class SaleController : BaseController
     {
 

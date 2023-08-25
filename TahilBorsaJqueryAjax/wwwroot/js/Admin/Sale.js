@@ -74,20 +74,6 @@ let selectedSaleId = 0;
 let selectedLabId = 0;
 let selectedEntryId = 0;
 
-function AddSale() {
-    var p = {
-        Id: selectedSaleId,
-        EntryId: selectedEntryId,
-        LabDataId: selectedLabId,
-        BasePrice: $('#BasePrice').val(),
-        ActualPrice: $("#ActualPrice").val(),
-        Quantity: $("#Quantity").val(),
-        TradesmanId: $("#TradesmanId").val(),
-        Date: $("#Date").val(),
-        Process: true
-    };
-
-}
 
 function EnterSale(entryId, ProductName, nutritionalValue, saleId, labId, basePrice) {
 

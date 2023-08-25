@@ -9,7 +9,6 @@ using TahilBorsaJqeryAjax.Code.Filters;
 namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AuthActionFilter(Rol = "admin,person")]
 
     public class FarmerController : Controller
     {
@@ -18,13 +17,15 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
             return View();
         }
 
-       
+
+        [AuthActionFilter(Rol = "admin,person")]
 
         public IActionResult AddFarmer()
         {
           
             return View();
         }
+        [AuthActionFilter(Rol = "admin,person")]
 
         [HttpPost]
         public IActionResult AddFarmer(FarmerModel f)
@@ -59,7 +60,8 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 
            
         }
-       
+
+        [AuthActionFilter(Rol = "admin,person")]
 
         public ActionResult CallFarmer()
         {

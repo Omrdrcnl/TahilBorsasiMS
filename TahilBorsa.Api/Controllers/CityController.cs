@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using TahilBorsa.Repository;
@@ -8,6 +9,7 @@ namespace TahilBorsa.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CityController : BaseController
     {
 
@@ -18,8 +20,9 @@ namespace TahilBorsa.Api.Controllers
 
 
         [HttpGet("AllCity")]
-        public dynamic AllCity() {
-                List<tblCity> item = repo.CityRepository.FindAll().ToList<tblCity>();
+        public dynamic AllCity()
+        {
+            List<tblCity> item = repo.CityRepository.FindAll().ToList<tblCity>();
             return new
             {
                 success = true,

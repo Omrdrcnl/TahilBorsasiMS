@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using TahilBorsa.Repository;
 using TahilBorsaMS.Models.Entity;
@@ -9,6 +10,7 @@ namespace TahilBorsa.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class DistrictController : BaseController
     {
 

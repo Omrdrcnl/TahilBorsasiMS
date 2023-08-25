@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json.Linq;
@@ -10,6 +11,8 @@ using TahilBorsaMS.Models.Entity;
 
 namespace TahilBorsa.Api.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class ContactController : BaseController
     {
         public ContactController(RepositoryWrapper repo, IMemoryCache cache) : base(repo, cache)
@@ -17,7 +20,7 @@ namespace TahilBorsa.Api.Controllers
             this.repo = repo;
         }
 
-
+        [Authorize]
         [HttpGet("AllContact")]
         public dynamic AllMessages()
         {
@@ -28,6 +31,8 @@ namespace TahilBorsa.Api.Controllers
                 data = item
             };
         }
+
+        [Authorize]
 
         [HttpGet("ComeIn")]
         public dynamic ComeIn()
@@ -52,6 +57,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
+        [Authorize]
         [HttpGet("Archive")]
         public dynamic Archive()
         {
@@ -64,6 +70,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
+        [Authorize]
         [HttpGet("Deleted")]
         public dynamic Deleted()
         {
@@ -76,6 +83,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
+        [Authorize]
         [HttpGet("Spam")]
         public dynamic Spam()
         {
@@ -88,6 +96,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
+        [Authorize]
         [HttpGet("Important")]
         public dynamic Important()
         {
@@ -100,6 +109,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
+       
         [HttpPost("SendMessage")]
         public dynamic SendMessage([FromBody] dynamic model)
         {

@@ -10,7 +10,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace TahilBorsa.Api.Controllers
 {
-    [Authorize(Roles = "admin, person")]
 
     [Route("api/[controller]")]
     [ApiController]
@@ -22,6 +21,7 @@ namespace TahilBorsa.Api.Controllers
             this.repo = repo;
         }
 
+        [Authorize]
         [HttpGet("AllFarmers")]
         public dynamic AllFarmers()
         {
@@ -65,7 +65,7 @@ namespace TahilBorsa.Api.Controllers
             };
         }
 
-
+        [Authorize]
         [HttpGet("{farmerId}")]
         public dynamic Get(int farmerId)
         {
@@ -111,6 +111,7 @@ namespace TahilBorsa.Api.Controllers
 
         }
 
+        [Authorize(Roles = "admin, person")]
 
         [HttpPost("AddFarmer")]
         public dynamic AddFarmer([FromBody] CiftciEkleRequestModel request)
@@ -197,6 +198,9 @@ namespace TahilBorsa.Api.Controllers
 
 
         }
+
+        [Authorize(Roles = "admin, person")]
+
 
         [HttpDelete("{farmerId}")]
         public dynamic Delete(int farmerId)

@@ -9,7 +9,7 @@ namespace TahilBorsaJqeryAjax.Code.Rest
     public class LabResClient : BaseRestClient
     {
 
-        public dynamic AddLab(int EntryProductId,
+        public dynamic AddLab(int Id,int EntryProductId,
             int NutritionalValue)
         {
         
@@ -19,7 +19,7 @@ namespace TahilBorsaJqeryAjax.Code.Rest
             req.AddHeader("Authorization", $"Bearer {Repo.Session.Token}");
             req.AddJsonBody(new
             {
-                Id = 0,
+                Id = Id,
                 NutritionalValue = NutritionalValue,
                 EntryProductId = EntryProductId,
                 Process = false

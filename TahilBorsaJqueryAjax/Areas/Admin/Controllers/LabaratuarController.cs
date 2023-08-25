@@ -42,9 +42,10 @@ namespace TahilBorsaJqeryAjax.Areas.Admin.Controllers
 
                 return View(l);
             }
+
             LabResClient client = new LabResClient();
 
-            dynamic result = client.AddLab(l.EntryProductId, l.NutritionalValue);
+            dynamic result = client.AddLab(l.Id,l.EntryProductId, l.NutritionalValue);
 
             bool success = result.success;
 

@@ -41,6 +41,8 @@ namespace TahilBorsaJqeryAjax.Code.Rest
         public dynamic GetComeInMessage()
         {
             RestRequest req = new RestRequest("/Contact/ComeIn", Method.Get);
+            req.AddHeader("Authorization", $"Bearer {Repo.Session.Token}");
+
             RestResponse res = client.Get(req);
             string msg = res.Content.ToString();
 
@@ -51,6 +53,7 @@ namespace TahilBorsaJqeryAjax.Code.Rest
         public dynamic GetSpam()
         {
             RestRequest req = new RestRequest("/Contact/Spam", Method.Get);
+            req.AddHeader("Authorization", $"Bearer {Repo.Session.Token}");
             RestResponse res = client.Get(req);
             string msg = res.Content.ToString();
 
@@ -61,6 +64,7 @@ namespace TahilBorsaJqeryAjax.Code.Rest
         public dynamic GetArchive()
         {
             RestRequest req = new RestRequest("/Contact/Archive", Method.Get);
+            req.AddHeader("Authorization", $"Bearer {Repo.Session.Token}");
             RestResponse res = client.Get(req);
             string msg = res.Content.ToString();
 
@@ -71,6 +75,7 @@ namespace TahilBorsaJqeryAjax.Code.Rest
         public dynamic GetDeleted()
         {
             RestRequest req = new RestRequest("/Contact/Deleted", Method.Get);
+            req.AddHeader("Authorization", $"Bearer {Repo.Session.Token}");
             RestResponse res = client.Get(req);
             string msg = res.Content.ToString();
 
@@ -81,6 +86,7 @@ namespace TahilBorsaJqeryAjax.Code.Rest
         public dynamic GetImportant()
         {
             RestRequest req = new RestRequest("/Contact/Important", Method.Get);
+            req.AddHeader("Authorization", $"Bearer {Repo.Session.Token}");
             RestResponse res = client.Get(req);
             string msg = res.Content.ToString();
 
@@ -91,6 +97,7 @@ namespace TahilBorsaJqeryAjax.Code.Rest
         public dynamic GetContact()
         {
             RestRequest req = new RestRequest("/Contact/AllContact", Method.Get);
+            req.AddHeader("Authorization", $"Bearer {Repo.Session.Token}");
             RestResponse res = client.Get(req);
             string msg = res.Content.ToString();
 
@@ -101,6 +108,7 @@ namespace TahilBorsaJqeryAjax.Code.Rest
         public dynamic ReadMessage(int id)
         {
             RestRequest req = new RestRequest("/Contact/ReadMessage/" + id, Method.Get);
+            req.AddHeader("Authorization", $"Bearer {Repo.Session.Token}");
             RestResponse res = client.Get(req);
             string msg = res.Content.ToString();
 

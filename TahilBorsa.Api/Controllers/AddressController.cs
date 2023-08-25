@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using TahilBorsa.Repository;
@@ -8,10 +9,12 @@ namespace TahilBorsa.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class AddressController : BaseController
     {
 
-        public AddressController(RepositoryWrapper repo, IMemoryCache cache) : base(repo, cache) {
+        public AddressController(RepositoryWrapper repo, IMemoryCache cache) : base(repo, cache)
+        {
             this.repo = repo;
         }
 

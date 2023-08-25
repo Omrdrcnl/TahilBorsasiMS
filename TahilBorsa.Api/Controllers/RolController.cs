@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json.Linq;
 using TahilBorsa.Repository;
@@ -7,6 +8,10 @@ using static TahilBorsaMS.Models.Classes.Enums;
 
 namespace TahilBorsa.Api.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
+    [Authorize(Roles = "admin")]
+
     public class RolController : BaseController
     {
         public RolController(RepositoryWrapper repo, IMemoryCache cache) : base(repo, cache)
