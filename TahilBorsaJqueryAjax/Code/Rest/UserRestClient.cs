@@ -14,6 +14,9 @@ namespace TahilBorsaJqeryAjax.Code.Rest
         {
 
             RestRequest req = new RestRequest("/Auth/Login", RestSharp.Method.Post);
+
+            //**Önemli**Tokeni requestimizin headırına burada ekliyor gönderiyoruz
+            req.AddHeader("Authorization", $"Bearer {Repo.Session.Token}");
             req.AddJsonBody(new
             {
                 Username = userName,

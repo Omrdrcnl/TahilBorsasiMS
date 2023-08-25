@@ -8,13 +8,11 @@ function fetchData(action, success) {
         url: `${baseUrl}${action}`,
         beforeSend: function (xhr) {
             xhr.setRequestHeader('Authorization', `Bearer ${TOKEN}`);
-        },
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        beforeSend: function () {
             // Ajax isteği başlamadan önce yüklenme göstergesini görünür yap
             $("#loading-indicator").show();
         },
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
         complete: function () {
             // Ajax isteği tamamlandığında yüklenme göstergesini gizle
             $("#loading-indicator").hide();
@@ -64,6 +62,9 @@ function deleteData(endpoint, success) {
     $.ajax({
         url: baseUrl + endpoint,
         type: "DELETE",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', `Bearer ${TOKEN}`);
+        },
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         success: function (response) {

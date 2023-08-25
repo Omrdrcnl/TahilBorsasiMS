@@ -6,9 +6,12 @@ using Newtonsoft.Json.Linq;
 using TahilBorsa.Repository;
 using TahilBorsaMS.Models.Entity;
 using TahilBorsaMS.Models.Classes;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TahilBorsa.Api.Controllers
 {
+    [Authorize(Roles = "admin, person")]
+
     [Route("api/[controller]")]
     [ApiController]
     public class FarmerController : BaseController

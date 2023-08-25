@@ -313,27 +313,12 @@
     <None Remove="wwwroot\Content\LayoutAssets\assets\scss\paper-dashboard\_tables.scss" />
     <None Remove="wwwroot\Content\LayoutAssets\assets\scss\paper-dashboard\_typography.scss" />
     <None Remove="wwwroot\Content\LayoutAssets\assets\scss\paper-dashboard\_variables.scss" />
-    <None Remove="wwwroot\Content\Mylogo\eps\logo-black.eps" />
-    <None Remove="wwwroot\Content\Mylogo\eps\logo-color.eps" />
-    <None Remove="wwwroot\Content\Mylogo\eps\logo-no-background.eps" />
-    <None Remove="wwwroot\Content\Mylogo\eps\logo-white.eps" />
-    <None Remove="wwwroot\Content\Mylogo\pdf\logo-black.pdf" />
-    <None Remove="wwwroot\Content\Mylogo\pdf\logo-color.pdf" />
-    <None Remove="wwwroot\Content\Mylogo\pdf\logo-no-background.pdf" />
-    <None Remove="wwwroot\Content\Mylogo\pdf\logo-white.pdf" />
-    <None Remove="wwwroot\Content\Mylogo\png\logo-black.png" />
-    <None Remove="wwwroot\Content\Mylogo\png\logo-color.png" />
-    <None Remove="wwwroot\Content\Mylogo\png\logo-no-background.png" />
-    <None Remove="wwwroot\Content\Mylogo\png\logo-white.png" />
-    <None Remove="wwwroot\Content\Mylogo\svg\logo-black.svg" />
-    <None Remove="wwwroot\Content\Mylogo\svg\logo-color.svg" />
-    <None Remove="wwwroot\Content\Mylogo\svg\logo-no-background.svg" />
-    <None Remove="wwwroot\Content\Mylogo\svg\logo-white.svg" />
     <None Remove="wwwroot\Content\PagedList.css" />
     <None Remove="wwwroot\Content\Site.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\Content\Mylogo\" />
     <Folder Include="wwwroot\hightech-html\icon\" />
   </ItemGroup>
 

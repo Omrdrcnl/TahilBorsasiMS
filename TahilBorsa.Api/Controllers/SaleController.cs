@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json.Linq;
@@ -9,6 +10,8 @@ using TahilBorsaMS.Models.Views;
 
 namespace TahilBorsa.Api.Controllers
 {
+   
+
     [Route("api/[controller]")]
     [ApiController]
     public class SaleController : BaseController
@@ -228,6 +231,8 @@ namespace TahilBorsa.Api.Controllers
             };
 
         }
+
+        [Authorize(Roles = "admin, person")]
 
         [HttpPost("EnterSale")]
         public dynamic EnterSale([FromBody] dynamic model)

@@ -15,6 +15,8 @@ namespace TahilBorsaJqeryAjax.Code.Rest
             int tblDistrictId, string? NeighborhoodName)
         {
             RestRequest req = new RestRequest("/Farmer/AddFarmer", RestSharp.Method.Post);
+            //**Önemli**Tokeni requestimizin headırına burada ekliyor gönderiyoruz
+            req.AddHeader("Authorization", $"Bearer {Repo.Session.Token}");
             req.AddJsonBody(new
             {
                 Id = Id,

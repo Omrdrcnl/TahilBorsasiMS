@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json.Linq;
@@ -8,6 +9,8 @@ using TahilBorsaMS.Models.Views;
 
 namespace TahilBorsa.Api.Controllers
 {
+    [Authorize(Roles = "admin, lab")]
+
     [Route("api/[controller]")]
     [ApiController]
     public class LabaratuarController : BaseController

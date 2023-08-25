@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
@@ -10,6 +11,7 @@ using TahilBorsaMS.Models.Entity;
 
 namespace TahilBorsa.Api.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : BaseController
@@ -19,6 +21,7 @@ namespace TahilBorsa.Api.Controllers
         {
             this.repo = repo;
         }
+        [Authorize(Roles = "admin, person")]
 
         [HttpGet("AllProducts")]
         public dynamic AllProducts()
@@ -36,6 +39,7 @@ namespace TahilBorsa.Api.Controllers
                 data = items
             };
         }
+        [Authorize(Roles = "admin, person")]
 
         [HttpGet("{Id}")]
         public dynamic Get(int id)
@@ -83,6 +87,7 @@ namespace TahilBorsa.Api.Controllers
                 data = groupedSales
             };
         }
+        [Authorize(Roles = "admin, person")]
 
         [HttpPost("AddProduct")]
         public dynamic AddProduct([FromBody] dynamic model)
@@ -115,6 +120,7 @@ namespace TahilBorsa.Api.Controllers
                 data = item
             };
         }
+        [Authorize(Roles = "admin, person")]
 
         [HttpDelete("{id}")]
         public dynamic Delete(int id)

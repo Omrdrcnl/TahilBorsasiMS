@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using NuGet.Common;
 using RestSharp;
 using RestSharp.Serializers.Json;
 using System.Text.Json;
@@ -13,6 +14,10 @@ namespace TahilBorsaJqeryAjax.Code.Rest
         {
 
             RestRequest req = new RestRequest("/EntryProduct/Enter", RestSharp.Method.Post);
+            //**Önemli**Tokeni requestimizin headırına burada ekliyor gönderiyoruz
+            req.AddHeader("Authorization", $"Bearer {Repo.Session.Token}");
+
+
             req.AddJsonBody(new
             {
                 Id = 0,

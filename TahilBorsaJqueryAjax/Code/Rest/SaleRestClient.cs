@@ -12,6 +12,9 @@ namespace TahilBorsaJqeryAjax.Code.Rest
             decimal BasePrice, int Quantity)
         {
             RestRequest req = new RestRequest("/Sale/EnterSale", RestSharp.Method.Post);
+
+            //**Önemli**Tokeni requestimizin headırına burada ekliyor gönderiyoruz
+            req.AddHeader("Authorization", $"Bearer {Repo.Session.Token}");
             req.AddJsonBody(new
             {
                 Id = SaleId,
